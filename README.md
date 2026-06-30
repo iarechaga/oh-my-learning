@@ -1,0 +1,124 @@
+# Learning by Lesson + Socratic Discussion
+
+A learning repository with an unusual workflow. An AI coding agent writes a deep,
+self-contained **lesson** for each concept; you read it on your own; then you ask the
+agent to **discuss** that concept with you. The discussion is Socratic - the agent
+asks questions instead of lecturing, finds the gaps in your understanding, guides you
+to the right conclusions, and records where you are solid versus shaky.
+
+This is not a code project. There is nothing to build or run. The "program" is the
+loop of *read a lesson, then get grilled on it until you actually understand it.*
+
+> Driven by an AI agent. The discussions, lesson authoring, and progress tracking are
+> all performed by an AI coding agent (such as [OpenCode](https://opencode.ai) or
+> Claude Code) that reads [`AGENTS.md`](AGENTS.md). Without an agent you can still read
+> the lessons as standalone notes, but the interactive part needs one.
+
+---
+
+## The loop
+
+1. The agent authors one lesson per concept - a complete deep reading, written so you
+   do **not** need the source book.
+2. You read the lesson.
+3. You tell the agent: *"discuss `ddia/07`"* (see Concept IDs below).
+4. The agent runs a Socratic session: one question at a time, hints instead of
+   answers, at least one applied scenario, scaling difficulty to how you do.
+5. The agent writes a **discussion record** (what you got, your weak spots, a mastery
+   verdict) and updates the progress tables and summaries.
+
+---
+
+## Layout
+
+```
+AGENTS.md                 the operating manual the agent follows (authoritative)
+templates/                lesson + discussion templates
+SUMMARY.md                cross-subject summary + aggregated focus areas
+<subject>/
+  README.md               concept index + progress table for that subject
+  lessons/<NN>-<slug>.md   one lesson per concept
+  discussions/             one folder per concept, holding session records
+  SUMMARY.md              comprehensive recap of the subject
+```
+
+**Concept IDs** are `<subject>/<NN>`, e.g. `ddia/07` or `system-design/03`. Refer to a
+concept by its full ID, by its number when the subject is obvious, or by name.
+
+**Status** is `drafted` or `discussed`. **Mastery** (from your latest discussion) is
+`solid` / `partial` / `shaky` / `not-yet`.
+
+---
+
+## Subjects
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **DDIA** | *Designing Data-Intensive Applications* - the theory of data systems (replication, partitioning, transactions, consistency, batch/stream). | 16 | [ddia/README.md](ddia/README.md) |
+| **System Design** | *System Design Guide for Software Professionals* - applying that theory to real systems (load balancing, caching, sharding, queues, APIs, plus end-to-end case studies). Cross-linked to DDIA. | 20 | [system-design/README.md](system-design/README.md) |
+
+Planned next: *Software Architecture: The Hard Parts* and *Fundamentals of Software
+Architecture*.
+
+---
+
+## How to use it
+
+1. **Open the repo with an AI coding agent** that reads `AGENTS.md`.
+2. **Work on your own branch, not `main`.** `main` is the shared, public library of
+   lessons. Your learning is personal - discussion records, mastery updates, and
+   summary edits are *your* progress, not everyone's. Keep `main` clean by doing your
+   sessions on a branch or a fork:
+   ```bash
+   git checkout -b learn/your-name   # or fork the repo
+   ```
+   This is the deliberate split: the canonical lessons live on `main`; the *execution*
+   of the lessons (your discussions and progress) lives on your branch.
+3. **Read a lesson**, then ask the agent to discuss it: *"discuss `system-design/03`"*.
+4. The agent records the session under `<subject>/discussions/` and updates your
+   progress tables on your branch. Pull new lessons from `main` whenever you like.
+
+You do not need the source books. Each lesson teaches its concept from first
+principles, with worked examples, trade-offs, and self-check questions. The cited book
+is only an optional "go deeper".
+
+---
+
+## How to contribute
+
+Contributions are new subjects, new or deeper lessons, and corrections. The full,
+authoritative rules are in [`AGENTS.md`](AGENTS.md); the essentials:
+
+- **One concept per lesson.** Copy [`templates/lesson-template.md`](templates/lesson-template.md)
+  and fill **every** section with real content - no placeholders.
+- **Lessons are deep, self-sufficient readings.** Assume the reader does not have the
+  book: teach from first principles, with multiple concrete worked examples, edge
+  cases, and small ASCII diagrams or tables where they help.
+- **Front matter is required and stable.** Fill `id`, `subject`, `title`, `slug`,
+  `status`, `mastery`, `source`, `prerequisites`, `created`, `updated`. Never change an
+  `id` once assigned.
+- **Order by dependency** and cross-link prerequisites, including across subjects
+  (e.g. a System Design lesson listing `ddia/07`).
+- **Keep the indexes in sync.** Update the subject `README.md` table and regenerate the
+  subject `SUMMARY.md` and the root `SUMMARY.md` when you add or restructure lessons.
+- **Style:** clear, learner-focused prose, ASCII by default, concrete over abstract.
+- **Adding a whole subject?** Follow `AGENTS.md` Workflow A (propose a concept list,
+  scaffold, then author). **Adding one lesson?** Follow Workflow B.
+
+### Pull requests
+
+- Open PRs against `main` for **lesson and subject content** only.
+- Do **not** put personal learning artifacts in `main` - your `discussions/` records,
+  mastery/status edits, and progress-table changes belong on personal learning
+  branches or forks, never in a content PR.
+- Generated/agent artifacts are gitignored (`.omo/`, `.code-review-graph/`); don't
+  commit them.
+
+---
+
+## The agent's contract
+
+The agent's behavior - the lesson template, the Socratic discussion protocol, the
+verification steps, and the rule that summaries must never drift - is defined in
+[`AGENTS.md`](AGENTS.md). Read it if you want to understand exactly how lessons are
+written and how discussions are run and recorded.
