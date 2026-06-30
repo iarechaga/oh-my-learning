@@ -147,3 +147,22 @@ The agent's behavior - the lesson template, the Socratic discussion protocol, th
 verification steps, and the rule that summaries must never drift - is defined in
 [`AGENTS.md`](AGENTS.md). Read it if you want to understand exactly how lessons are
 written and how discussions are run and recorded.
+
+---
+
+## License & attribution
+
+The lessons in this repository are **original explanations written from first
+principles**. Each lesson cites the source book it draws its concepts from, but the
+prose, structure, worked examples, and diagrams are the author's own - the books are a
+source and an optional "go deeper", never reproduced here.
+
+This work is licensed under the **Creative Commons Attribution-ShareAlike 4.0
+International License** ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/));
+the full text is in [`LICENSE`](LICENSE). In short: you may share and adapt the material,
+even commercially, as long as you **give appropriate credit** and **license your
+derivatives under the same terms**.
+
+Cited book titles and author names (Kleppmann; Sinha & Chopra; Ford, Richards, Sadalage
+& Dehghani; Richards & Ford) are referenced for attribution only and remain the property
+of their respective rights holders; they are not covered by this license.

@@ -311,6 +311,27 @@ The full rules are in [agent-docs/git-policy.md](agent-docs/git-policy.md). The 
 
 ---
 
+## Licensing of contributions
+
+This repository is licensed under **Creative Commons Attribution-ShareAlike 4.0
+International** ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); see
+[`LICENSE`](LICENSE)). By submitting a contribution (a PR or content authored on your
+behalf), you agree that:
+
+- Your contribution is **your own original work** - lessons re-explain concepts from first
+  principles in your own words; do **not** copy passages, figures, or distinctive
+  examples from the source books, and do not paste text from other copyrighted or
+  incompatibly-licensed material.
+- Each lesson **cites its source** (book + chapter) for attribution, but the prose,
+  structure, and examples are original.
+- Your contribution is licensed to the project and the public under **CC BY-SA 4.0**, the
+  same terms as the rest of the repository.
+
+If you are unsure whether something is original enough, paraphrase further or ask in the
+PR before merging.
+
+---
+
 ## Pre-submit checklist
 
 Before opening a PR (or before the maintainer pushes), confirm:
