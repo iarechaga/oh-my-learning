@@ -14,9 +14,16 @@ batch/stream processing.
 See [ddia/README.md](ddia/README.md) (progress table) and
 [ddia/SUMMARY.md](ddia/SUMMARY.md) (concept-by-concept recap).
 
-### 2. System Design: A Guide to Building Scalable, Reliable, and High-Performance Systems
-**Status:** planned, not started. Purpose in the track: apply the DDIA theory to
-concrete system design.
+### 2. System Design - System Design Guide for Software Professionals (Sinha & Chopra)
+**Status:** lessons authored (20/20, all `drafted`); not yet discussed - mastery
+pending. The applied layer of the track: takes DDIA theory and uses it to design real
+systems - distributed-system attributes, CAP/PACELC and consensus, consistent hashing,
+DNS and load balancing, gateways, databases and sharding, caching, pub/sub, API design,
+security, rate limiting, observability, a repeatable design method, and case studies
+(news feed, real-time collaboration, video streaming, proximity). Most lessons
+cross-link to the DDIA concept they build on.
+See [system-design/README.md](system-design/README.md) (progress table) and
+[system-design/SUMMARY.md](system-design/SUMMARY.md) (concept-by-concept recap).
 
 ### 3. Software Architecture: The Hard Parts
 **Status:** planned, not started. Purpose: making architectural decisions and managing
