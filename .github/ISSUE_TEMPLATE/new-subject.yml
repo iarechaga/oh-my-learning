@@ -1,0 +1,119 @@
+name: "New subject (book) request"
+description: "Propose a new subject - one book - and the concepts it should be broken into."
+title: "[subject] <subject name>"
+labels: ["content", "new-subject"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new **subject**. A subject is **one book**, broken into
+        one lesson per concept, living under a **domain** as
+        `<domain-slug>/<subject-slug>/`.
+
+        The agent decides the final concept breakdown and ordering (foundational
+        concepts first), but a concrete proposal here makes the first draft far closer.
+        See [CONTRIBUTING.md](https://github.com/iarechaga/oh-my-learning/blob/main/CONTRIBUTING.md)
+        (Adding a new subject) and Workflow A in
+        [agent-docs/learning-workflows.md](https://github.com/iarechaga/oh-my-learning/blob/main/agent-docs/learning-workflows.md).
+
+  - type: input
+    id: subject-name
+    attributes:
+      label: "Subject name"
+      description: "Human-readable name for the subject."
+      placeholder: "Refactoring"
+    validations:
+      required: true
+
+  - type: input
+    id: subject-slug
+    attributes:
+      label: "Subject slug"
+      description: "lowercase-kebab-case folder name (e.g. refactoring). MUST be unique across the whole repo - it is the prefix of every concept ID (<subject-slug>/<NN>)."
+      placeholder: "refactoring"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: domain-placement
+    attributes:
+      label: "Which domain should hold this subject?"
+      description: "Reuse an existing domain if it fits. Pick 'New domain' only if none fits - then file a New domain request too (or describe it below)."
+      options:
+        - "architecture"
+        - "New domain (describe below)"
+    validations:
+      required: true
+
+  - type: input
+    id: new-domain
+    attributes:
+      label: "New domain slug (only if you picked 'New domain' above)"
+      description: "lowercase-kebab-case. Leave blank when reusing an existing domain."
+      placeholder: "engineering-practices"
+    validations:
+      required: false
+
+  - type: input
+    id: source-book
+    attributes:
+      label: "Source book"
+      description: "Title, author(s), publisher and year. Used verbatim in the subject README's 'Source book' line and each lesson's `source` front matter."
+      placeholder: "Refactoring, 2nd ed. - Martin Fowler (Addison-Wesley, 2018)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: positioning
+    attributes:
+      label: "What this subject is (2-4 sentences)"
+      description: "The 'about this subject' intro for its README - scope, and how it relates to existing subjects (note any cross-links, e.g. builds on ddia/* or system-design/*)."
+      placeholder: "A catalog of behaviour-preserving code transformations and the 'code smells' that trigger them..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: concept-list
+    attributes:
+      label: "Proposed concept list (ordered by dependency)"
+      description: "One concept per line, foundational first. Format: NN - title - one-line scope. NN is zero-padded; these become concept IDs <subject-slug>/NN and lesson filenames <NN>-<slug>.md. The agent may adjust, but this is the core input."
+      placeholder: |
+        01 - What is refactoring - definition, the two hats, why behaviour must be preserved
+        02 - Code smells - the catalog of triggers that signal a refactor is due
+        03 - Extract Function - the most common refactoring, step by step
+        04 - Test coverage as a safety net - why refactoring needs tests first
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: cross-links
+    attributes:
+      label: "Cross-subject prerequisites (optional)"
+      description: "If lessons here should depend on concepts from other subjects, list them as concept IDs so the agent wires prerequisites. Example: 'tests-first lesson -> system-design/14'."
+      placeholder: |
+        04 (test safety net) builds on any existing testing lesson, if present
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope-mode
+    attributes:
+      label: "Authoring scope"
+      description: "How much should the agent write up front?"
+      options:
+        - "Confirm the concept list with me first, then author"
+        - "Write them all (I'm confident in the list)"
+        - "Author just the first few as a sample"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: "Acknowledgements"
+      options:
+        - label: "Lessons must be deep and self-sufficient (the reader does NOT have the book), filling every template section with real content."
+          required: true
+        - label: "I understand new subjects/lessons land as `status: drafted` with empty mastery, and that discussion records / progress are personal and never part of this content."
+          required: true

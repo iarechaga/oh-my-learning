@@ -1,0 +1,75 @@
+name: "New domain request"
+description: "Propose a new top-level domain (a broad theme that groups subjects/books)."
+title: "[domain] <domain name>"
+labels: ["content", "new-domain"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new **domain**. A domain is a broad theme that groups
+        subjects (one book each) - for example `architecture`, later `clean-code` or
+        `engineering-practices`.
+
+        Create a new domain **only when a subject genuinely does not fit an existing
+        one**. If your idea is really a single book, file a **New subject request**
+        instead. See [CONTRIBUTING.md](https://github.com/iarechaga/oh-my-learning/blob/main/CONTRIBUTING.md)
+        and [agent-docs/repository-model.md](https://github.com/iarechaga/oh-my-learning/blob/main/agent-docs/repository-model.md).
+
+  - type: input
+    id: domain-name
+    attributes:
+      label: "Domain name"
+      description: "Human-readable name of the theme."
+      placeholder: "Clean Code"
+    validations:
+      required: true
+
+  - type: input
+    id: domain-slug
+    attributes:
+      label: "Domain slug"
+      description: "lowercase-kebab-case folder name created at the repo root (e.g. clean-code). Must be unique."
+      placeholder: "clean-code"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Why a new domain (not an existing one)?"
+      description: "Explain why no current domain fits. Current domains: architecture/. The agent needs this to justify creating a new top-level folder."
+      placeholder: "These subjects are about code-level craft, not system architecture, so they don't belong under architecture/."
+    validations:
+      required: true
+
+  - type: textarea
+    id: subjects
+    attributes:
+      label: "Subjects this domain will hold"
+      description: "List the book-subjects that will live here. At least one is strongly preferred so the domain does not land empty. One per line: subject name - book title (author)."
+      placeholder: |
+        Clean Code - Clean Code (Robert C. Martin)
+        Refactoring - Refactoring, 2nd ed. (Martin Fowler)
+    validations:
+      required: true
+
+  - type: textarea
+    id: first-subject-concepts
+    attributes:
+      label: "First subject's proposed concept list (optional)"
+      description: "If you already know the first book's breakdown, list concepts ordered by dependency (NN - title - one-line scope). This lets the agent scaffold immediately. You can also file a separate New subject request for this."
+      placeholder: |
+        01 - Meaningful names - why naming is the cheapest, highest-leverage readability lever
+        02 - Functions - small, single-purpose functions and the Stepdown Rule
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: "Acknowledgements"
+      options:
+        - label: "This domain is genuinely broader than a single book (otherwise I'll file a New subject request instead)."
+          required: true
+        - label: "I understand a domain needs a README.md index and a section in the root SUMMARY.md, which the agent will create."
+          required: true

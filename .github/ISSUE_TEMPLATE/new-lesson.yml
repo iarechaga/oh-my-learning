@@ -1,0 +1,95 @@
+name: "New lesson request"
+description: "Propose a single new lesson (one concept) inside an existing subject."
+title: "[lesson] <subject-slug>: <concept title>"
+labels: ["content", "new-lesson"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a **lesson**. A lesson covers **exactly one concept** and
+        lives at `<domain-slug>/<subject-slug>/lessons/<NN>-<concept-slug>.md`.
+
+        If you're proposing a whole book, use the **New subject request** instead. See
+        [CONTRIBUTING.md](https://github.com/iarechaga/oh-my-learning/blob/main/CONTRIBUTING.md)
+        (Adding a single lesson) and Workflow B in
+        [agent-docs/learning-workflows.md](https://github.com/iarechaga/oh-my-learning/blob/main/agent-docs/learning-workflows.md).
+
+  - type: input
+    id: subject-slug
+    attributes:
+      label: "Subject slug"
+      description: "The existing subject this lesson belongs to (e.g. ddia, system-design, hard-parts, fundamentals). The agent assigns the next free NN within it."
+      placeholder: "system-design"
+    validations:
+      required: true
+
+  - type: input
+    id: concept-title
+    attributes:
+      label: "Concept title"
+      description: "The lesson title (becomes the front-matter `title` and the H1)."
+      placeholder: "Backpressure in streaming systems"
+    validations:
+      required: true
+
+  - type: input
+    id: concept-slug
+    attributes:
+      label: "Concept slug (optional)"
+      description: "lowercase-kebab-case for the filename (<NN>-<slug>.md). Leave blank to let the agent derive it from the title."
+      placeholder: "backpressure"
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Scope - what this one concept covers (and what it does NOT)"
+      description: "Define the single idea precisely. If it sprawls into two ideas it must be split into two lessons, so draw the boundary. The agent needs this to keep the lesson to one concept."
+      placeholder: |
+        Covers: what backpressure is, why unbounded queues fail, the main strategies
+        (buffer, drop, throttle, blocking/credit-based), and how to choose.
+        Does NOT cover: a full queueing-theory derivation, or vendor-specific config.
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: "Prerequisites (concept IDs)"
+      description: "Other concepts this builds on, INCLUDING cross-subject ones, as IDs. These go into the lesson's front-matter `prerequisites` and are named in prose. Use 'none' if it's foundational."
+      placeholder: |
+        system-design/11
+        ddia/11
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: "Source (book chapter/section)"
+      description: "Where in the subject's source book this concept lives. Becomes the `source` front matter and the References section."
+      placeholder: "System Design Guide for Software Professionals, Ch. 8"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Anything the lesson must include (optional)"
+      description: "Specific worked examples, edge cases, diagrams, alternatives, or common misconceptions you want covered. The more concrete, the better the first draft."
+      placeholder: |
+        Please include a worked example with concrete numbers (producer 10k msg/s,
+        consumer 6k msg/s) and an ASCII diagram of a credit-based flow.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: "Acknowledgements"
+      options:
+        - label: "This is a single concept (not a whole book), filling every template section with real, self-sufficient content."
+          required: true
+        - label: "I understand the lesson lands as `status: drafted` with empty mastery, and that flipping status/mastery happens only after a real discussion, off `main`."
+          required: true

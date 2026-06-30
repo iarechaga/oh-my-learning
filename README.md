@@ -103,8 +103,11 @@ is only an optional "go deeper".
 
 ## How to contribute
 
-Contributions are new subjects, new or deeper lessons, and corrections. The full,
-authoritative rules are in [`AGENTS.md`](AGENTS.md); the essentials:
+Contributions are new domains, new subjects, new or deeper lessons, and corrections.
+The step-by-step guide is in [`CONTRIBUTING.md`](CONTRIBUTING.md); the agent's
+authoritative rules are in [`AGENTS.md`](AGENTS.md). Don't want to author it yourself?
+Open a structured request from **Issues -> New issue** (new domain / new subject / new
+lesson). The essentials:
 
 - **One concept per lesson.** Copy [`templates/lesson-template.md`](templates/lesson-template.md)
   and fill **every** section with real content - no placeholders.
@@ -119,8 +122,8 @@ authoritative rules are in [`AGENTS.md`](AGENTS.md); the essentials:
 - **Keep the indexes in sync.** Update the subject `README.md` table and regenerate the
   subject `SUMMARY.md` and the root `SUMMARY.md` when you add or restructure lessons.
 - **Style:** clear, learner-focused prose, ASCII by default, concrete over abstract.
-- **Adding a whole subject?** Follow `AGENTS.md` Workflow A (propose a concept list,
-  scaffold, then author). **Adding one lesson?** Follow Workflow B.
+- **Adding a whole domain, subject, or single lesson?** See the matching section in
+  [`CONTRIBUTING.md`](CONTRIBUTING.md) (it maps to `AGENTS.md` Workflows A and B).
 
 ### Pull requests
 

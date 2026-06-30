@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "How to contribute (read first)"
+    url: "https://github.com/iarechaga/oh-my-learning/blob/main/CONTRIBUTING.md"
+    about: "How domains, subjects, and lessons are added, the quality bar, and PR rules."
+  - name: "Agent operating manual (AGENTS.md)"
+    url: "https://github.com/iarechaga/oh-my-learning/blob/main/AGENTS.md"
+    about: "The authoritative rules the AI agent follows to author lessons and run discussions."
+  - name: "Question or correction (start a discussion)"
+    url: "https://github.com/iarechaga/oh-my-learning/discussions"
+    about: "For questions, lesson corrections, or ideas that are not a domain/subject/lesson request."
