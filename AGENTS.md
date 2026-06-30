@@ -115,7 +115,8 @@ Required sections (the template enforces these):
   `prerequisites`, `created`, `updated`.
 - **TL;DR** — 1-3 sentences.
 - **The idea** — the problem it solves and the intuition behind it.
-- **How it works** — the mechanism/approach, with at least one concrete example.
+- **How it works** — the mechanism/approach in depth, with multiple concrete worked
+  examples.
 - **Pros**.
 - **Cons**.
 - **Alternatives** — name them and state how each differs.
@@ -125,6 +126,17 @@ Required sections (the template enforces these):
 - **Self-check questions** — a few prompts the learner should be able to answer
   (these seed the discussion).
 - **References** — book chapter and any links.
+
+**Depth and self-sufficiency (assume the learner does NOT have the book).** Each
+lesson is the complete learning material for its concept: a deep reading, not a
+summary. Teach every idea needed from first principles; never assume the reader has
+read or owns the source. "How it works" carries the weight - break it into labelled
+subsections, give multiple concrete worked examples (with numbers and step-by-step
+reasoning), cover the important edge cases, and explain the *why* behind each
+mechanism and trade-off. Use small ASCII diagrams or comparison tables where they aid
+understanding. Prioritise completeness and clarity over brevity (most lessons run well
+beyond a page); never pad with filler. The cited book is a source and an optional
+"go deeper", never required reading.
 
 3. Set front matter: `status: drafted`, `mastery:` empty, fill `source` and
    `prerequisites` (other concept IDs, if any).
