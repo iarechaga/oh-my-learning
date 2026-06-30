@@ -129,6 +129,10 @@ lesson). The essentials:
 - **Style:** clear, learner-focused prose, ASCII by default, concrete over abstract.
 - **Adding a whole domain, subject, or single lesson?** See the matching section in
   [`CONTRIBUTING.md`](CONTRIBUTING.md) (it maps to `AGENTS.md` Workflows A and B).
+- **Note your change in [`CHANGELOG.md`](CHANGELOG.md).** Add a bullet under `[Unreleased]`
+  for any content or agent-rule change; the rules live in
+  [`agent-docs/release-policy.md`](agent-docs/release-policy.md). Personal progress is
+  never listed.
 
 ### Pull requests
 

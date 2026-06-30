@@ -35,6 +35,8 @@ maintainer of all progress records. The human is the learner.
   read [agent-docs/learning-workflows.md](agent-docs/learning-workflows.md).
 - Before committing, pushing, creating branches, opening pull requests, or deciding
   whether work belongs on `main`, read [agent-docs/git-policy.md](agent-docs/git-policy.md).
+- Before cutting a release, writing a `CHANGELOG.md` entry, choosing a version number, or
+  tagging, read [agent-docs/release-policy.md](agent-docs/release-policy.md).
 
 ---
 
@@ -54,6 +56,9 @@ maintainer of all progress records. The human is the learner.
   and update the slug everywhere it is referenced.
 - Keep summaries in sync. Regenerate subject and root summaries after every discussion
   and whenever lessons are added or restructured.
+- Keep the changelog honest. When library content or agent rules change on `main`, add a
+  matching entry under `[Unreleased]` in `CHANGELOG.md`; never list personal learning
+  progress there. See [agent-docs/release-policy.md](agent-docs/release-policy.md).
 - ASCII by default; introduce other characters only when a concept genuinely needs them
   or an existing template already uses them.
 - Do not commit or push unless the git policy allows it and the current task requires

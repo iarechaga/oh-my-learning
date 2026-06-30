@@ -256,6 +256,10 @@ Drift is the main failure mode. After adding or restructuring lessons, update **
   callout that aggregates open weak spots across every subject.
 - The domain **`README.md`** and root **`README.md`** tables when a subject's lesson count
   or a domain/subject set changes.
+- **`CHANGELOG.md`** - add a bullet under `[Unreleased]` for the content or agent-rule
+  change, in the right category. The full versioning and category rules are in
+  [agent-docs/release-policy.md](agent-docs/release-policy.md). Never list personal
+  progress.
 
 Regenerate the subject `SUMMARY.md` and root `SUMMARY.md` after every discussion **and**
 whenever lessons are added or restructured.
@@ -344,6 +348,10 @@ Before opening a PR (or before the maintainer pushes), confirm:
 - [ ] The subject `README.md` table has an accurate row for each new lesson.
 - [ ] Subject `SUMMARY.md` and root `SUMMARY.md` are regenerated and consistent.
 - [ ] Domain `README.md` / root `README.md` updated if a domain or subject set changed.
+- [ ] `CHANGELOG.md` `[Unreleased]` has a bullet for this change, under the right category
+      (Added / Deepened / Changed / Restructured / Fixed / Removed) - see
+      [agent-docs/release-policy.md](agent-docs/release-policy.md). Personal progress is
+      never listed.
 - [ ] No personal learning artifacts in the diff (no `discussions/` records, no
       `status`/`mastery` flips, no progress-table edits).
 - [ ] No generated artifacts staged (`.omo/`, `.code-review-graph/`).

@@ -26,6 +26,10 @@ email (`git config user.email`):
 - Personal learning artifacts (discussion records, `status`/`mastery` edits,
   progress-table changes) are never committed to `main` directly; they live on a branch
   or fork, even for the maintainer's own sessions.
+- **Tagging and releases** - cutting a versioned release, writing the `CHANGELOG.md`
+  entry, and creating a `vX.Y.Z` tag or GitHub Release follow
+  [release-policy.md](release-policy.md). Only the maintainer tags/releases, and only when
+  the human explicitly asks; contributors never tag or publish releases.
 
 Use the repo's commit-message style, and never fabricate progress in a message.
 
