@@ -27,27 +27,33 @@ the maintainer of all progress records. The human is the learner.
 
 ## Repository layout
 
-Create exactly this structure. One concept = one lesson file. Slugs are
-lowercase-kebab-case.
+Subjects are grouped by **domain** (a broad theme, e.g. `architecture`). One domain
+holds one or more subjects; one subject holds one lesson per concept. Create exactly
+this structure. Slugs are lowercase-kebab-case.
 
 ```
-<subject-slug>/                         e.g. system-design/
-  README.md                             subject overview + concept index/progress table
-  lessons/
-    <NN>-<concept-slug>.md              e.g. 01-load-balancing.md   (NN is zero-padded)
-  discussions/
-    <NN>-<concept-slug>/                one folder per concept
-      <YYYY-MM-DD>-<SS>.md              one record per session (SS = session # that day, e.g. 01)
-  SUMMARY.md                            comprehensive recap of THIS subject
-SUMMARY.md                              root: cross-subject comprehensive summary
+<domain-slug>/                          e.g. architecture/
+  README.md                             domain index: lists the subjects in this domain
+  <subject-slug>/                       e.g. ddia/, system-design/
+    README.md                           subject overview + concept index/progress table
+    lessons/
+      <NN>-<concept-slug>.md            e.g. 01-load-balancing.md   (NN is zero-padded)
+    discussions/
+      <NN>-<concept-slug>/              one folder per concept
+        <YYYY-MM-DD>-<SS>.md            one record per session (SS = session # that day, e.g. 01)
+    SUMMARY.md                          comprehensive recap of THIS subject
+SUMMARY.md                              root: cross-domain comprehensive summary
 templates/
   lesson-template.md                    copy this to author a lesson
   discussion-template.md                copy this to write a discussion record
 AGENTS.md                               this file
 ```
 
-Do not invent additional top-level files unless the human asks. Keep everything for
-a subject inside that subject's folder.
+Current domains: `architecture/` (holds `ddia`, `system-design`). Create a new domain
+folder only when a subject does not fit an existing one (e.g. later `clean-code/`,
+`engineering-practices/`). Do not invent additional top-level files unless the human
+asks. Keep everything for a subject inside that subject's folder, and each subject
+inside its domain folder.
 
 ---
 
@@ -55,7 +61,10 @@ a subject inside that subject's folder.
 
 Every concept has a stable ID: **`<subject-slug>/<NN>`** (e.g. `system-design/03`).
 `NN` is the zero-padded lesson number within the subject and never changes once
-assigned. The lesson filename embeds the same number.
+assigned. The lesson filename embeds the same number. The ID is **subject-scoped, not
+path-scoped**: the domain folder (e.g. `architecture/`) organizes files on disk but is
+NOT part of the ID. Subject slugs are unique across the whole repo, so `ddia/07` is
+unambiguous regardless of which domain holds `ddia`.
 
 When the human refers to a concept to discuss, resolve it in this order:
 1. A full ID like `system-design/03`.
@@ -96,8 +105,11 @@ Trigger: the human names a subject and/or provides a book.
 2. Propose a numbered concept list (ID, title, one-line scope each) and confirm
    scope with the human before mass-authoring, unless they explicitly said "write
    them all."
-3. Scaffold the subject: create `<subject-slug>/`, an initial `README.md` (using the
-   index-table format below), and the `lessons/` and `discussions/` folders.
+3. Scaffold the subject: choose its **domain** (reuse an existing `<domain-slug>/` or
+   create a new one with a domain `README.md` index), then create
+   `<domain-slug>/<subject-slug>/`, an initial subject `README.md` (using the
+   index-table format below), and the `lessons/` and `discussions/` folders. Add the
+   new subject's row to the domain `README.md`.
 4. Author lessons per `Workflow B`, either the agreed batch or on demand.
 
 ---

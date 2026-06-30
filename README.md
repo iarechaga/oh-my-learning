@@ -31,19 +31,26 @@ loop of *read a lesson, then get grilled on it until you actually understand it.
 
 ## Layout
 
+Subjects (one per book) are grouped by **domain** - a broad theme such as
+`architecture`. New domains (e.g. `clean-code`, `engineering-practices`) get added
+beside it as the library grows.
+
 ```
-AGENTS.md                 the operating manual the agent follows (authoritative)
-templates/                lesson + discussion templates
-SUMMARY.md                cross-subject summary + aggregated focus areas
-<subject>/
-  README.md               concept index + progress table for that subject
-  lessons/<NN>-<slug>.md   one lesson per concept
-  discussions/             one folder per concept, holding session records
-  SUMMARY.md              comprehensive recap of the subject
+AGENTS.md                   the operating manual the agent follows (authoritative)
+templates/                  lesson + discussion templates
+SUMMARY.md                  cross-domain summary + aggregated focus areas
+<domain>/                   e.g. architecture/
+  README.md                 domain index: the subjects in this domain
+  <subject>/                e.g. ddia/, system-design/
+    README.md               concept index + progress table for that subject
+    lessons/<NN>-<slug>.md   one lesson per concept
+    discussions/            one folder per concept, holding session records
+    SUMMARY.md              comprehensive recap of the subject
 ```
 
-**Concept IDs** are `<subject>/<NN>`, e.g. `ddia/07` or `system-design/03`. Refer to a
-concept by its full ID, by its number when the subject is obvious, or by name.
+**Concept IDs** are `<subject>/<NN>`, e.g. `ddia/07` or `system-design/03` - they are
+subject-scoped, so the domain folder does not appear in the ID. Refer to a concept by
+its full ID, by its number when the subject is obvious, or by name.
 
 **Status** is `drafted` or `discussed`. **Mastery** (from your latest discussion) is
 `solid` / `partial` / `shaky` / `not-yet`.
@@ -52,13 +59,16 @@ concept by its full ID, by its number when the subject is obvious, or by name.
 
 ## Subjects
 
+**[architecture/](architecture/README.md)** - the current domain:
+
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
-| **DDIA** | *Designing Data-Intensive Applications* - the theory of data systems (replication, partitioning, transactions, consistency, batch/stream). | 16 | [ddia/README.md](ddia/README.md) |
-| **System Design** | *System Design Guide for Software Professionals* - applying that theory to real systems (load balancing, caching, sharding, queues, APIs, plus end-to-end case studies). Cross-linked to DDIA. | 20 | [system-design/README.md](system-design/README.md) |
+| **DDIA** | *Designing Data-Intensive Applications* - the theory of data systems (replication, partitioning, transactions, consistency, batch/stream). | 16 | [architecture/ddia/README.md](architecture/ddia/README.md) |
+| **System Design** | *System Design Guide for Software Professionals* - applying that theory to real systems (load balancing, caching, sharding, queues, APIs, plus end-to-end case studies). Cross-linked to DDIA. | 20 | [architecture/system-design/README.md](architecture/system-design/README.md) |
 
-Planned next: *Software Architecture: The Hard Parts* and *Fundamentals of Software
-Architecture*.
+Planned next, also under `architecture/`: *Software Architecture: The Hard Parts* and
+*Fundamentals of Software Architecture*. Future domains (e.g. `clean-code`,
+`engineering-practices`) will sit beside `architecture/`.
 
 ---
 
@@ -75,8 +85,8 @@ Architecture*.
    This is the deliberate split: the canonical lessons live on `main`; the *execution*
    of the lessons (your discussions and progress) lives on your branch.
 3. **Read a lesson**, then ask the agent to discuss it: *"discuss `system-design/03`"*.
-4. The agent records the session under `<subject>/discussions/` and updates your
-   progress tables on your branch. Pull new lessons from `main` whenever you like.
+4. The agent records the session under `<domain>/<subject>/discussions/` and updates
+   your progress tables on your branch. Pull new lessons from `main` whenever you like.
 
 You do not need the source books. Each lesson teaches its concept from first
 principles, with worked examples, trade-offs, and self-check questions. The cited book
