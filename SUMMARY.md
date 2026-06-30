@@ -23,10 +23,13 @@ The applied layer of the track: takes DDIA theory and uses it to design real sys
 - **Covers:** distributed-system attributes; CAP/PACELC and consensus; consistent hashing; DNS and load balancing; API gateways and proxies; databases, storage and sharding; distributed caching; pub/sub and queues; API design and communication; security and auth; rate limiting and resilience; observability; a repeatable design method; and case studies (URL shortener, news feed, real-time collaboration, video streaming, proximity service).
 - **Read:** [progress table](architecture/system-design/README.md) and [concept-by-concept recap](architecture/system-design/SUMMARY.md).
 
-### 3. Software Architecture: The Hard Parts
+### 3. The Hard Parts - Software Architecture: The Hard Parts
 
-- **Status:** planned, not started.
-- **Focus:** making architectural decisions and managing trade-offs.
+The trade-off layer of the track: how to pull a monolith apart and put it back together, reasoning about everything as explicit trade-offs. Cross-links to DDIA and System Design.
+
+- **Status:** 17/17 lessons authored (all `drafted`); not yet discussed, mastery pending.
+- **Covers:** trade-offs and "no best practices"; static and dynamic coupling and the architecture quantum; architectural modularity and decomposition; component-based decomposition patterns; service and data granularity; reuse patterns; data ownership; distributed transactions and eventual consistency; distributed data access; orchestration vs choreography; the eight transactional saga patterns; strict vs loose contracts; and analytical data (warehouse, lake, mesh).
+- **Read:** [progress table](architecture/hard-parts/README.md) and [concept-by-concept recap](architecture/hard-parts/SUMMARY.md).
 
 ### 4. Fundamentals of Software Architecture
 
