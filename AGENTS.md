@@ -17,10 +17,12 @@ the maintainer of all progress records. The human is the learner.
    reference book. The agent decides the concept breakdown.
 2. The agent writes one **lesson** per **concept** as a Markdown file.
 3. The human reads the lesson on their own.
-4. The human says something like *"discuss `system-design/03`"* (see Concept IDs).
-5. The agent runs a **discussion**: Socratic questioning, not lecturing — see
+4. When the human asks to open/start a lesson, the agent first shows the available
+   topics and progress so the learner can choose deliberately - see `Workflow C0`.
+5. The human says something like *"discuss `system-design/03`"* (see Concept IDs).
+6. The agent runs a **discussion**: Socratic questioning, not lecturing — see
    `Workflow C`.
-6. The agent writes a **discussion record** (summary, weak spots, verdict) and
+7. The agent writes a **discussion record** (summary, weak spots, verdict) and
    updates every dependent summary so nothing drifts.
 
 ---
@@ -166,6 +168,42 @@ beyond a page); never pad with filler. The cited book is a source and an optiona
 
 ---
 
+## Workflow C0 — Open a lesson / show topic progress
+
+Trigger: *"open a lesson"*, *"start learning"*, *"show lessons"*, *"what should I
+study next?"*, *"let's cover architecture"*, or any request to begin choosing a lesson
+rather than discussing a specific concept immediately.
+
+Before pointing the learner at a lesson, present a compact topic catalog:
+
+1. Read the relevant domain `README.md`, subject `README.md` files, and root
+   `SUMMARY.md` as needed. If no domain or subject is specified, show the top-level
+   subject catalog first.
+2. For each relevant subject, compute progress from its concept table:
+   - total lessons;
+   - drafted/not yet discussed count;
+   - discussed count;
+   - mastery counts (`solid`, `partial`, `shaky`, `not-yet`, and not-yet-rated);
+   - suggested next undiscussed concept, respecting prerequisite/order.
+3. Present available topics grouped by subject. Mark each concept as:
+   - **not started** — `drafted` and no discussion record;
+   - **started** — at least one discussion record exists or status is `discussed`;
+   - **needs revisit** — latest mastery is `partial`, `shaky`, or `not-yet`;
+   - **solid** — latest mastery is `solid`.
+4. Keep the catalog short by default: show subject-level progress plus the next few
+   candidate topics. Offer to expand a subject instead of dumping every lesson when the
+   catalog is large.
+5. Ask the learner to pick a concept, or recommend one specific next concept with a
+   one-sentence reason. Never start quizzing until the learner has selected or accepted
+   a concept.
+
+When a specific concept is already named (e.g. *"discuss `ddia/07`"*), do not show the
+full catalog first. Resolve the concept, read the lesson, and proceed with `Workflow C`.
+You may still mention one line of current progress for that subject before the first
+question.
+
+---
+
 ## Workflow C — Run a discussion
 
 Trigger: *"discuss `<ID>`"*, *"let's go over X"*, or similar.
@@ -173,7 +211,9 @@ Trigger: *"discuss `<ID>`"*, *"let's go over X"*, or similar.
 This is the heart of the repo. The goal is to find out what the learner actually
 understands and to guide them to the correct conclusions **themselves**.
 
-**Before starting:** read the full lesson file for that concept. Never quiz on
+**Before starting:** read the full lesson file for that concept. Also inspect the
+lesson front matter `prerequisites`, the subject `README.md`, and any nearby
+cross-subject references so you know what related concepts exist. Never quiz on
 anything not covered by the lesson. Confirm which concept and, if helpful, ask the
 learner how confident they already feel.
 
@@ -197,6 +237,11 @@ learner how confident they already feel.
 - **Track weak spots and misconceptions as they surface** — you will record them.
 - **End** when the core sub-areas have been probed and the learner has either shown
   solid understanding or hit a clear ceiling for this session.
+- **Close with related next topics.** After the verdict, recommend 1-3 concrete related
+  concepts to study next. Prefer prerequisites that were weak, direct follow-ons in the
+  same subject, and cross-subject lessons that cover the same idea from another angle
+  (for example, a Fundamentals style lesson may point to System Design components or
+  Hard Parts trade-off lessons). Explain each recommendation in one short sentence.
 
 **After the discussion — record + propagate:**
 1. Write the discussion record (copy `templates/discussion-template.md`) to
@@ -211,6 +256,8 @@ learner how confident they already feel.
    - **Reached expected understanding?** — Yes / Partially / No.
    - **Recommended follow-up** — sections to re-read, prerequisites to shore up,
      whether to re-discuss and roughly when.
+   - **Related next topics** — 1-3 concept IDs with one-line reasons, or `None` if no
+     useful follow-up exists.
 2. Update the lesson front matter: `status: discussed`, `mastery: <verdict>`,
    bump `updated`.
 3. Update the subject `README.md` row: status, mastery, last-discussed date, and a
@@ -224,6 +271,8 @@ learner how confident they already feel.
 - `README.md` row updated (status, mastery, date, record link).
 - Subject `SUMMARY.md` and root `SUMMARY.md` reflect the latest verdict and weak
   spots.
+- The record captures related next topics and the learner was told those recommendations
+  before the session ended.
 
 ---
 

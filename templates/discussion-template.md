@@ -31,3 +31,7 @@ reached_expected_understanding: <Yes | Partially | No>
 
 ## Recommended follow-up
 <Sections to re-read, prerequisites to shore up, whether and roughly when to re-discuss.>
+
+## Related next topics
+<1-3 concept IDs to study next, each with a one-line reason. Use `None` only when no useful related topic exists.>
+- <subject-slug>/<NN> — <why this follows from the discussion.>

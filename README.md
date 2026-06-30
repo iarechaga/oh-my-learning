@@ -89,6 +89,12 @@ Future domains (e.g. `clean-code`, `engineering-practices`) will sit beside
 4. The agent records the session under `<domain>/<subject>/discussions/` and updates
    your progress tables on your branch. Pull new lessons from `main` whenever you like.
 
+If you are not sure what to read next, ask the agent to open the lesson catalog, for
+example: *"show architecture lessons"* or *"what should I study next?"* The agent will
+summarize available topics, which ones are started or not started, progress per subject,
+and a recommended next concept. After a discussion, it will also suggest related topics
+from the same or another book that deepen what you just studied.
+
 You do not need the source books. Each lesson teaches its concept from first
 principles, with worked examples, trade-offs, and self-check questions. The cited book
 is only an optional "go deeper".
