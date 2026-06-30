@@ -33,8 +33,9 @@ The trade-off layer of the track: how to pull a monolith apart and put it back t
 
 ### 4. Fundamentals of Software Architecture
 
-- **Status:** planned, not started.
-- **Focus:** consolidating architectural concepts and vocabulary.
+- **Status:** 22/22 lessons authored (all `drafted`); not yet discussed, mastery pending.
+- **Covers:** architectural thinking and the architect role; architectural characteristics and how to discover, measure, and govern them; modularity, components, and architecture quanta; monolithic vs distributed topology and the fallacies of distributed computing; core architecture styles (layered, modular monolith, pipeline, microkernel, service-based, event-driven, space-based, SOA, microservices); choosing styles; ADRs; risk analysis; communication; leadership and career growth.
+- **Read:** [progress table](architecture/fundamentals/README.md) and [concept-by-concept recap](architecture/fundamentals/SUMMARY.md).
 
 ## Other domains
 

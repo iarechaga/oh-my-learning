@@ -65,10 +65,11 @@ its full ID, by its number when the subject is obvious, or by name.
 | --- | --- | --- | --- |
 | **DDIA** | *Designing Data-Intensive Applications* - the theory of data systems (replication, partitioning, transactions, consistency, batch/stream). | 16 | [architecture/ddia/README.md](architecture/ddia/README.md) |
 | **System Design** | *System Design Guide for Software Professionals* - applying that theory to real systems (load balancing, caching, sharding, queues, APIs, plus end-to-end case studies). Cross-linked to DDIA. | 20 | [architecture/system-design/README.md](architecture/system-design/README.md) |
+| **The Hard Parts** | *Software Architecture: The Hard Parts* - advanced distributed trade-off analysis around decomposition, service/data granularity, ownership, sagas, contracts, and analytical data. | 17 | [architecture/hard-parts/README.md](architecture/hard-parts/README.md) |
+| **Fundamentals** | *Fundamentals of Software Architecture* - architectural vocabulary, characteristics, modularity, styles, decisions, risk, communication, and architect leadership. | 22 | [architecture/fundamentals/README.md](architecture/fundamentals/README.md) |
 
-Planned next, also under `architecture/`: *Software Architecture: The Hard Parts* and
-*Fundamentals of Software Architecture*. Future domains (e.g. `clean-code`,
-`engineering-practices`) will sit beside `architecture/`.
+Future domains (e.g. `clean-code`, `engineering-practices`) will sit beside
+`architecture/` as the library grows.
 
 ---
 
