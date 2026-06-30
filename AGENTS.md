@@ -1,4 +1,4 @@
-# AGENTS.md — Learning Repository Operating Manual
+# AGENTS.md — Oh My Learning Operating Manual
 
 This repository is a personal learning workspace. The human reads self-authored
 lessons on a concept, then asks the agent to **discuss** that concept to test and

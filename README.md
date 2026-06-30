@@ -1,4 +1,4 @@
-# Learning by Lesson + Socratic Discussion
+# Oh My Learning - Lessons + Socratic Discussion
 
 A learning repository with an unusual workflow. An AI coding agent writes a deep,
 self-contained **lesson** for each concept; you read it on your own; then you ask the

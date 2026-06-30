@@ -1,4 +1,4 @@
-# Learning - Cross-Domain Summary
+# Oh My Learning - Cross-Domain Summary
 
 A top-level view of every domain and subject, its coverage, and overall mastery.
 Regenerated as lessons are added and after every discussion.
