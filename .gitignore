@@ -1,0 +1,5 @@
+# OhMyOpenCode / agent runtime artifacts
+.omo/
+
+# Code review graph index
+.code-review-graph/
