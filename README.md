@@ -1,5 +1,10 @@
 # Oh My Learning - Lessons + Socratic Discussion
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/iarechaga)
+
+If this learning library is useful to you, consider [sponsoring its
+upkeep](https://github.com/sponsors/iarechaga). Thank you!
+
 A learning repository with an unusual workflow. An AI coding agent writes a deep,
 self-contained **lesson** for each concept; you read it on your own; then you ask the
 agent to **discuss** that concept with you. The discussion is Socratic - the agent
