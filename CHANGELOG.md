@@ -14,6 +14,8 @@ this file.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-02
+
 ### Added
 
 - **Learner onboarding and personalization** - on first contact (and at the start of
@@ -101,6 +103,10 @@ this file.
   Engineer** (Larson) 12, **The Staff Engineer's Path** (Reilly) 14, **An Elegant Puzzle**
   (Larson) 13, **The Manager's Path** (Fournier) 13, **Accelerate** (Forsgren, Humble, Kim)
   12, **Thinking, Fast and Slow** (Kahneman) 14, **How to Measure Anything** (Hubbard) 11.
+- **Local static website** for browsing lessons in a browser instead of reading raw
+  Markdown. Added `website/build.py`, `website/serve.py`, `website/requirements.txt`,
+  templates under `website/templates/`, and `website/static/style.css`; documented in
+  [agent-docs/website.md](agent-docs/website.md) and the root [README.md](README.md).
 
 ### Changed
 
@@ -114,6 +120,16 @@ this file.
   cross-reference to the Data Engineering domain.
 - **Root [README.md](README.md)** subjects section expanded to all eight domains, with a
   seniority explanation and a link to [SENIORITY.md](SENIORITY.md).
+
+### Deepened
+
+- **Microservices Patterns** subject - authored all 12 lesson bodies (was scaffolded):
+  `microservices-patterns/01` through `microservices-patterns/12`. See
+  [architecture/microservices-patterns/README.md](architecture/microservices-patterns/README.md).
+- **Designing Distributed Systems** subject - authored all 12 lesson bodies (was
+  scaffolded): `designing-distributed-systems/01` through
+  `designing-distributed-systems/12`. See
+  [architecture/designing-distributed-systems/README.md](architecture/designing-distributed-systems/README.md).
 
 
 ## [0.1.0] - 2026-06-30
@@ -170,5 +186,6 @@ repository tooling.
   ([.github/FUNDING.yml](.github/FUNDING.yml)), and the
   [CC BY-SA 4.0 license](LICENSE).
 
-[Unreleased]: https://github.com/iarechaga/oh-my-learning/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/iarechaga/oh-my-learning/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/iarechaga/oh-my-learning/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/iarechaga/oh-my-learning/releases/tag/v0.1.0
