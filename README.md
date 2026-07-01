@@ -174,15 +174,14 @@ scaffolded:
 ## How to use it
 
 1. **Open the repo with an AI coding agent** that reads `AGENTS.md`.
-2. **Work on your own branch, not `main`.** `main` is the shared, public library of
-   lessons. Your learning is personal - discussion records, mastery updates, and
-   summary edits are *your* progress, not everyone's. Keep `main` clean by doing your
-   sessions on a branch or a fork:
-   ```bash
-   git checkout -b learn/your-name   # or fork the repo
-   ```
-   This is the deliberate split: the canonical lessons live on `main`; the *execution*
-   of the lessons (your discussions and progress) lives on your branch.
+2. **The agent puts you on your own branch, not `main`.** `main` is the shared, public
+   library of lessons; your learning is personal - discussion records, mastery updates,
+   and summary edits are *your* progress, not everyone's. You don't have to run any git
+   commands: on your first session the agent creates and switches you to a `learn/<name>`
+   branch itself and keeps your personal notes off `main`. (Prefer to work in a fork?
+   Fork the repo and open it there instead.) This is the deliberate split: the canonical
+   lessons live on `main`; the *execution* of the lessons (your discussions and progress)
+   lives on your branch.
 3. **On your first session, the agent gets to know you.** Before proposing what to
    study, it asks your name and how you'd like to be addressed, your seniority level
    (offering to briefly assess it if you're unsure), and what you want to learn and why -

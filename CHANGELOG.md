@@ -17,17 +17,21 @@ this file.
 ### Added
 
 - **Learner onboarding and personalization** - on first contact (and at the start of
-  every session) the agent now gets to know the learner before advising: it asks their
-  name and how they want to be addressed, their seniority (briefly assessing it when the
-  learner is unsure), and their goals/concerns, then proposes a learning path calibrated
-  to their level. It keeps durable, per-learner notes in a personal `LEARNER.md` at the
-  repo root - read at the start of every session and updated whenever the learner changes
-  their name, address, seniority, goals, or how they want to be treated. New authoritative
-  agent doc [agent-docs/learner-profile.md](agent-docs/learner-profile.md) (wired into
+  every session) the agent now gets to know the learner before advising: it first makes
+  sure the session is on a personal `learn/<name>` branch - creating and switching to one
+  itself so the learner never runs git commands and personal progress never lands on
+  `main` - then asks their name and how they want to be addressed, their seniority (briefly
+  assessing it when the learner is unsure), and their goals/concerns, then proposes a
+  learning path calibrated to their level. It keeps durable, per-learner notes in a
+  personal `LEARNER.md` at the repo root - read at the start of every session and updated
+  whenever the learner changes their name, address, seniority, goals, or how they want to
+  be treated. New authoritative agent doc
+  [agent-docs/learner-profile.md](agent-docs/learner-profile.md) (wired into
   [AGENTS.md](AGENTS.md) as a load-on-demand doc, a core-loop step, and a non-negotiable)
-  and a copyable [templates/learner-profile-template.md](templates/learner-profile-template.md).
-  `LEARNER.md` is personal: it is gitignored and never committed to `main` (like
-  discussion records and progress).
+  and a copyable [templates/learner-profile-template.md](templates/learner-profile-template.md);
+  the agent-managed learner-branch rule is documented in
+  [agent-docs/git-policy.md](agent-docs/git-policy.md). `LEARNER.md` is personal: it is
+  gitignored and never committed to `main` (like discussion records and progress).
 - **Seniority model** - every lesson now carries a `seniority` band
   (`junior`/`mid`/`senior`/`staff`/`principal`) and every subject declares a seniority
   baseline. The band measures whose job a concept anchors, not reading difficulty, and it

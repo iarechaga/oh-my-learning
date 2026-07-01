@@ -22,14 +22,19 @@ between sessions so the learner never has to repeat themselves.
 
 At the very start of any session, before doing learning work:
 
-1. Check whether `LEARNER.md` exists at the repo root.
+1. **Make sure you are on a learner branch, not `main`.** If the current branch is `main`
+   (or any shared branch), create and switch to a `learn/<slug>` branch yourself before
+   anything else - the learner never has to run git commands. See the learner-branch rule
+   in [git-policy.md](git-policy.md). (`LEARNER.md` is gitignored, but discussion records
+   and progress edits must not land on `main`, so the branch comes first.)
+2. Check whether `LEARNER.md` exists at the repo root.
    - **It exists** -> read it fully. Greet the learner by their preferred name, honor
      their stated tone/address and behavior preferences, and use their seniority (global
      band plus any per-subject override) to calibrate everything. Do **not** re-ask
      onboarding questions you already have answers to.
    - **It does not exist** -> this is a new learning relationship. Run **Workflow O -
      Onboarding** below before proposing or starting any learning path.
-2. If the learner immediately asks to discuss a specific concept and no profile exists,
+3. If the learner immediately asks to discuss a specific concept and no profile exists,
    you may run a lightweight onboarding first (at least name, how to be addressed, and
    seniority) rather than the full path proposal - but still create `LEARNER.md`. Never
    skip onboarding entirely just because the learner jumped straight in.
@@ -47,6 +52,15 @@ dump all questions at once), and write answers into `LEARNER.md` as you go.
 
 Copy [templates/learner-profile-template.md](../templates/learner-profile-template.md) to
 `LEARNER.md` first, then fill it through these steps.
+
+### Step 0 - Set up the learner branch (before asking anything)
+If the session is on `main` (or any shared branch), the agent **creates and switches to a
+`learn/<slug>` branch itself** - the learner never runs git commands and onboarding never
+happens on `main`. See the learner-branch rule in [git-policy.md](git-policy.md). Until you
+know the learner's name, a placeholder like `learn/session` is fine; once they give their
+preferred name in Step 1, you may rename the branch to `learn/<their-name>` (e.g.
+`git branch -m learn/alex`) or simply keep the placeholder - either is acceptable. This is
+a non-destructive setup step; do it automatically without asking.
 
 ### Step 1 - Name and how to be treated (personalization)
 Ask the learner:

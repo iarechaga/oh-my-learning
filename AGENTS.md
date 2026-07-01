@@ -12,11 +12,13 @@ maintainer of all progress records. The human is the learner.
 
 ## Core loop
 
-1. **On first contact, and at the start of every session, know the learner.** Read
-   `LEARNER.md` if it exists and honor it; if it does not, onboard the learner first -
-   name, how they want to be addressed, seniority (assess briefly if they are unsure),
-   and goals - then propose a learning path. Keep those notes updated across sessions.
-   See [agent-docs/learner-profile.md](agent-docs/learner-profile.md).
+1. **On first contact, and at the start of every session, know the learner.** First make
+   sure you are on a learner branch, not `main` - if not, the agent creates and switches to
+   a `learn/<slug>` branch itself (the learner never runs git). Then read `LEARNER.md` if
+   it exists and honor it; if it does not, onboard the learner first - name, how they want
+   to be addressed, seniority (assess briefly if they are unsure), and goals - then propose
+   a learning path. Keep those notes updated across sessions. See
+   [agent-docs/learner-profile.md](agent-docs/learner-profile.md).
 2. The human picks a **subject** (e.g. "system design") and usually points to a
    reference book. The agent decides the concept breakdown.
 3. The agent writes one **lesson** per **concept** as a Markdown file.
@@ -55,11 +57,13 @@ maintainer of all progress records. The human is the learner.
 ## Non-negotiables
 
 - Know the learner before advising. On first contact (no `LEARNER.md`), onboard first:
-  ask their name and how they want to be addressed, their seniority (assess it briefly if
-  they are unsure), and their goals/concerns; only then propose a learning path. Read
-  `LEARNER.md` at the start of every session and honor it, and update it the moment the
-  learner changes their name, address, seniority, goals, or how they want to be treated.
-  `LEARNER.md` is personal, gitignored, and never on `main`. See
+  make sure you are on a learner branch, not `main` - if not, create and switch to a
+  `learn/<slug>` branch yourself (the learner never runs git); then ask their name and how
+  they want to be addressed, their seniority (assess it briefly if they are unsure), and
+  their goals/concerns; only then propose a learning path. Read `LEARNER.md` at the start
+  of every session and honor it, and update it the moment the learner changes their name,
+  address, seniority, goals, or how they want to be treated. `LEARNER.md` is personal,
+  gitignored, and never on `main`. See
   [agent-docs/learner-profile.md](agent-docs/learner-profile.md).
 - Write lessons and discussion prose in clear, plain language aimed at a learner;
   concrete examples beat abstraction.
