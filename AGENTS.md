@@ -51,6 +51,9 @@ maintainer of all progress records. The human is the learner.
   whether work belongs on `main`, read [agent-docs/git-policy.md](agent-docs/git-policy.md).
 - Before cutting a release, writing a `CHANGELOG.md` entry, choosing a version number, or
   tagging, read [agent-docs/release-policy.md](agent-docs/release-policy.md).
+- Before changing the website generator, templates, or build process, or when adding
+  lessons and wondering whether the site needs updating, read
+  [agent-docs/website.md](agent-docs/website.md).
 
 ---
 
@@ -99,5 +102,8 @@ maintainer of all progress records. The human is the learner.
   [agent-docs/learning-workflows.md](agent-docs/learning-workflows.md).
 - Record a discussion -> copy `templates/discussion-template.md` and follow Workflow C
   in [agent-docs/learning-workflows.md](agent-docs/learning-workflows.md).
+- Build or update the local website -> read [agent-docs/website.md](agent-docs/website.md)
+  and run `python website/build.py`.
 - Resolve concept IDs and progress states using
   [agent-docs/repository-model.md](agent-docs/repository-model.md).
+
