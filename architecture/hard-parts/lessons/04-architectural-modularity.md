@@ -5,6 +5,7 @@ title: Architectural Modularity
 slug: architectural-modularity
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 3
 prerequisites: [hard-parts/01]
 created: 2026-06-30

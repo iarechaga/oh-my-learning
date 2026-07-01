@@ -5,6 +5,7 @@ title: Pub/Sub and Distributed Queues
 slug: pubsub-distributed-queues
 status: drafted
 mastery:
+seniority: mid
 source: System Design Guide for Software Professionals (Sinha & Chopra), Chapter 7
 prerequisites: [ddia/15]
 created: 2026-06-30

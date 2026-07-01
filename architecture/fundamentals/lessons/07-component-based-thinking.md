@@ -5,6 +5,7 @@ title: Component-Based Thinking
 slug: component-based-thinking
 status: drafted
 mastery:
+seniority: mid
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 8
 prerequisites: [fundamentals/06]
 created: 2026-06-30

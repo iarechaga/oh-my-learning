@@ -5,6 +5,7 @@ title: SOA and Microservices
 slug: soa-and-microservices
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 18
 prerequisites: [fundamentals/09, fundamentals/10]
 created: 2026-06-30

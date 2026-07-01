@@ -5,6 +5,7 @@ title: "Case Study: News Feed and Timelines"
 slug: case-study-news-feed
 status: drafted
 mastery:
+seniority: senior
 source: System Design Guide for Software Professionals (Sinha & Chopra), Chapters 11 and 12
 prerequisites: [system-design/16, ddia/01, ddia/10, ddia/15]
 created: 2026-06-30

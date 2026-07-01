@@ -5,6 +5,7 @@ title: The Architecture Quantum and Static Coupling
 slug: architecture-quantum-static-coupling
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 2
 prerequisites: [hard-parts/01]
 created: 2026-06-30

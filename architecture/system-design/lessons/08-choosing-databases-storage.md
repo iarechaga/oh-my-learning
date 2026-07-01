@@ -5,6 +5,7 @@ title: "Choosing Databases and Storage"
 slug: choosing-databases-storage
 status: drafted
 mastery:
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 5"
 prerequisites: [ddia/02, ddia/05]
 created: 2026-06-30

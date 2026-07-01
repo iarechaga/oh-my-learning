@@ -5,6 +5,7 @@ title: "DNS and Load Balancing"
 slug: dns-load-balancing
 status: drafted
 mastery:
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 4"
 prerequisites: []
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: Decomposing Operational Data
 slug: decomposing-operational-data
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 6
 prerequisites: [hard-parts/04, ddia/10]
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: "CAP, PACELC, and Consensus in Practice"
 slug: cap-pacelc-consensus
 status: drafted
 mastery:
+seniority: senior
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 3"
 prerequisites: [ddia/09, ddia/13]
 created: 2026-06-30

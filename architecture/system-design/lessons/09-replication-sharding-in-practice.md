@@ -5,6 +5,7 @@ title: Replication and Sharding in Practice
 slug: replication-sharding-in-practice
 status: drafted
 mastery:
+seniority: senior
 source: System Design Guide for Software Professionals (Sinha & Chopra), Chapter 5
 prerequisites: [ddia/07, ddia/08, ddia/10]
 created: 2026-06-30

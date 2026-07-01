@@ -5,6 +5,7 @@ title: Modular Monolith
 slug: modular-monolith
 status: drafted
 mastery:
+seniority: mid
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 12
 prerequisites: [fundamentals/11]
 created: 2026-06-30

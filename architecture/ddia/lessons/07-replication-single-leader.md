@@ -5,6 +5,7 @@ title: "Replication: Single-Leader"
 slug: replication-single-leader
 status: drafted
 mastery:
+seniority: mid
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 5"
 prerequisites: [ddia/01]
 created: 2026-06-30

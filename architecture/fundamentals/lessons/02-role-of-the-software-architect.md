@@ -5,6 +5,7 @@ title: Role of the Software Architect
 slug: role-of-the-software-architect
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 3
 prerequisites: [fundamentals/01]
 created: 2026-06-30

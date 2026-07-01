@@ -5,6 +5,7 @@ title: Choosing an Architecture Style
 slug: choosing-an-architecture-style
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 19
 prerequisites: [fundamentals/03, fundamentals/08, fundamentals/09, fundamentals/18]
 created: 2026-06-30

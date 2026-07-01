@@ -5,6 +5,7 @@ title: "API Gateways and Reverse Proxies"
 slug: api-gateways-proxies
 status: drafted
 mastery:
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapters 4 and 8"
 prerequisites: []
 created: 2026-06-30

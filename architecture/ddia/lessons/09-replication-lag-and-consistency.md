@@ -5,6 +5,7 @@ title: "Replication Lag and Consistency Guarantees"
 slug: replication-lag-and-consistency
 status: drafted
 mastery:
+seniority: senior
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 5"
 prerequisites: [ddia/07]
 created: 2026-06-30

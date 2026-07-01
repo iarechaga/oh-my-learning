@@ -5,6 +5,7 @@ title: System Design Fundamentals
 slug: fundamentals
 status: drafted
 mastery:
+seniority: junior
 source: "System Design Guide for Software Professionals (Sinha & Chopra, Packt 2024), Chapter 1"
 prerequisites: []
 created: 2026-06-30

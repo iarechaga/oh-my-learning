@@ -5,6 +5,7 @@ title: Trade-offs and "No Best Practices"
 slug: tradeoffs-no-best-practices
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 1
 prerequisites: []
 created: 2026-06-30

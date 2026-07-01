@@ -5,6 +5,7 @@ title: Build Your Own Trade-Off Analysis
 slug: build-your-own-trade-off-analysis
 status: drafted
 mastery:
+seniority: staff
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 15
 prerequisites: [hard-parts/01]
 created: 2026-06-30

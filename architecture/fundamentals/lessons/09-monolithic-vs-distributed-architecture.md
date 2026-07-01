@@ -5,6 +5,7 @@ title: Monolithic vs Distributed Architecture
 slug: monolithic-vs-distributed-architecture
 status: drafted
 mastery:
+seniority: mid
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 10
 prerequisites: [fundamentals/08]
 created: 2026-06-30

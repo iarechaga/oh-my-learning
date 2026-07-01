@@ -5,6 +5,7 @@ title: Distributed Caching
 slug: distributed-caching
 status: drafted
 mastery:
+seniority: mid
 source: System Design Guide for Software Professionals (Sinha & Chopra), Chapter 6
 prerequisites: [ddia/01]
 created: 2026-06-30

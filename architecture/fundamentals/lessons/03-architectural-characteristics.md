@@ -5,6 +5,7 @@ title: Architectural Characteristics
 slug: architectural-characteristics
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 4
 prerequisites: [fundamentals/01, ddia/01, system-design/02]
 created: 2026-06-30

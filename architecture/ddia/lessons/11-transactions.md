@@ -5,6 +5,7 @@ title: Transactions: ACID, Isolation, and Serializability
 slug: transactions
 status: drafted
 mastery:
+seniority: senior
 source: Designing Data-Intensive Applications (Martin Kleppmann), Chapter 7
 prerequisites: [ddia/01]
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: "The Future of Data Systems"
 slug: future-of-data-systems
 status: drafted
 mastery:
+seniority: staff
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 12"
 prerequisites: [ddia/13, ddia/15]
 created: 2026-06-30

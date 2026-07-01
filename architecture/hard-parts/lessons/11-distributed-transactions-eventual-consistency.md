@@ -5,6 +5,7 @@ title: Distributed Transactions and Eventual Consistency
 slug: distributed-transactions-eventual-consistency
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 9
 prerequisites: [hard-parts/10, ddia/11, ddia/09]
 created: 2026-06-30

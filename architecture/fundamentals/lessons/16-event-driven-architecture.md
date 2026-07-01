@@ -5,6 +5,7 @@ title: Event-Driven Architecture
 slug: event-driven-architecture
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 16
 prerequisites: [fundamentals/10, system-design/11]
 created: 2026-06-30

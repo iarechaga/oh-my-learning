@@ -5,6 +5,7 @@ title: Managing Analytical Data
 slug: managing-analytical-data
 status: drafted
 mastery:
+seniority: staff
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 14
 prerequisites: [hard-parts/08, ddia/05, ddia/16]
 created: 2026-06-30

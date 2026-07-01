@@ -5,6 +5,7 @@ title: Reliability, Scalability, and Maintainability
 slug: reliability-scalability-maintainability
 status: drafted
 mastery:
+seniority: mid
 source: Designing Data-Intensive Applications (Martin Kleppmann), Chapter 1
 prerequisites: []
 created: 2026-06-30
