@@ -3,3 +3,6 @@
 
 # Code review graph index
 .code-review-graph/
+
+# Personal learner profile (per-learner notes, never on main)
+LEARNER.md

@@ -183,8 +183,15 @@ scaffolded:
    ```
    This is the deliberate split: the canonical lessons live on `main`; the *execution*
    of the lessons (your discussions and progress) lives on your branch.
-3. **Read a lesson**, then ask the agent to discuss it: *"discuss `system-design/03`"*.
-4. The agent records the session under `<domain>/<subject>/discussions/` and updates
+3. **On your first session, the agent gets to know you.** Before proposing what to
+   study, it asks your name and how you'd like to be addressed, your seniority level
+   (offering to briefly assess it if you're unsure), and what you want to learn and why -
+   then proposes a learning path. It writes these notes to a personal `LEARNER.md`
+   (gitignored, never on `main`), reads it at the start of every session so you never
+   repeat yourself, and updates it whenever you ask to change your level or how you're
+   treated.
+4. **Read a lesson**, then ask the agent to discuss it: *"discuss `system-design/03`"*.
+5. The agent records the session under `<domain>/<subject>/discussions/` and updates
    your progress tables on your branch. Pull new lessons from `main` whenever you like.
 
 If you are not sure what to read next, ask the agent to open the lesson catalog, for

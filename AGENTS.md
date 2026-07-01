@@ -12,21 +12,30 @@ maintainer of all progress records. The human is the learner.
 
 ## Core loop
 
-1. The human picks a **subject** (e.g. "system design") and usually points to a
+1. **On first contact, and at the start of every session, know the learner.** Read
+   `LEARNER.md` if it exists and honor it; if it does not, onboard the learner first -
+   name, how they want to be addressed, seniority (assess briefly if they are unsure),
+   and goals - then propose a learning path. Keep those notes updated across sessions.
+   See [agent-docs/learner-profile.md](agent-docs/learner-profile.md).
+2. The human picks a **subject** (e.g. "system design") and usually points to a
    reference book. The agent decides the concept breakdown.
-2. The agent writes one **lesson** per **concept** as a Markdown file.
-3. The human reads the lesson on their own.
-4. When the human asks to open/start a lesson, the agent first shows available topics
+3. The agent writes one **lesson** per **concept** as a Markdown file.
+4. The human reads the lesson on their own.
+5. When the human asks to open/start a lesson, the agent first shows available topics
    and progress so the learner can choose deliberately.
-5. The human asks to discuss a concept, e.g. *"discuss `system-design/03`"*.
-6. The agent runs a **Socratic discussion**, not a lecture.
-7. The agent writes a **discussion record** and updates every dependent summary so
+6. The human asks to discuss a concept, e.g. *"discuss `system-design/03`"*.
+7. The agent runs a **Socratic discussion**, not a lecture.
+8. The agent writes a **discussion record** and updates every dependent summary so
    nothing drifts.
 
 ---
 
 ## Load-on-demand detail docs
 
+- Before the first interaction of a learning relationship, at the start of every session,
+  or when the learner changes their name, how they are addressed, their seniority, their
+  goals, or how the agent should behave, read
+  [agent-docs/learner-profile.md](agent-docs/learner-profile.md).
 - Before changing repository structure, concept IDs, progress fields, subject indexes,
   summaries, or cross-subject references, read
   [agent-docs/repository-model.md](agent-docs/repository-model.md).
@@ -45,6 +54,13 @@ maintainer of all progress records. The human is the learner.
 
 ## Non-negotiables
 
+- Know the learner before advising. On first contact (no `LEARNER.md`), onboard first:
+  ask their name and how they want to be addressed, their seniority (assess it briefly if
+  they are unsure), and their goals/concerns; only then propose a learning path. Read
+  `LEARNER.md` at the start of every session and honor it, and update it the moment the
+  learner changes their name, address, seniority, goals, or how they want to be treated.
+  `LEARNER.md` is personal, gitignored, and never on `main`. See
+  [agent-docs/learner-profile.md](agent-docs/learner-profile.md).
 - Write lessons and discussion prose in clear, plain language aimed at a learner;
   concrete examples beat abstraction.
 - Make lessons deep and self-sufficient. Assume the learner does not have the source
