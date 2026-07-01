@@ -54,17 +54,17 @@ Service-decomposition practice: splitting a system into independently deployable
 
 The microservices pattern catalog. Cross-links to DDIA and The Hard Parts.
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** the monolithic hell; decomposition strategies; IPC patterns; sagas; aggregates and domain events; event sourcing; CQRS; the API gateway; testing strategies; production-ready services; deployment patterns; refactoring a monolith.
-- **Read:** [progress table](architecture/microservices-patterns/README.md).
+- **Read:** [progress table](architecture/microservices-patterns/README.md) and [concept-by-concept recap](architecture/microservices-patterns/SUMMARY.md).
 
 ### 7. Designing Distributed Systems
 
 Reusable container/orchestration patterns and batch-processing patterns. Cross-links to DDIA and System Design.
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid-senior (mid->senior).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid-senior (mid->senior).
 - **Covers:** containers as building blocks; sidecar, ambassador, adapter; replicated load-balanced and sharded services; scatter/gather; event-driven functions; leader election; work queues; event-driven and coordinated batch processing.
-- **Read:** [progress table](architecture/designing-distributed-systems/README.md).
+- **Read:** [progress table](architecture/designing-distributed-systems/README.md) and [concept-by-concept recap](architecture/designing-distributed-systems/SUMMARY.md).
 
 ### 8. Distributed Systems (principles)
 

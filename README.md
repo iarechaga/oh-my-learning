@@ -68,7 +68,7 @@ a concept anchors and calibrates how deeply a discussion probes; see
 ## Subjects
 
 **[architecture/](architecture/README.md)** - designing scalable, maintainable,
-distributed systems. Four subjects are fully authored; six are scaffolded (concept lists
+distributed systems. Six subjects are fully authored; four are scaffolded (concept lists
 ready, lesson bodies pending):
 
 | Subject | What it is | Lessons | Start here |
@@ -78,8 +78,8 @@ ready, lesson bodies pending):
 | **The Hard Parts** | *Software Architecture: The Hard Parts* - advanced distributed trade-off analysis around decomposition, service/data granularity, ownership, sagas, contracts, and analytical data. | 17 | [architecture/hard-parts/README.md](architecture/hard-parts/README.md) |
 | **Fundamentals** | *Fundamentals of Software Architecture* - architectural vocabulary, characteristics, modularity, styles, decisions, risk, communication, and architect leadership. | 22 | [architecture/fundamentals/README.md](architecture/fundamentals/README.md) |
 | **Building Microservices** | *Building Microservices*, 2nd ed. (Newman) - service boundaries, communication, per-service data, delivery, testing, observability, resilience, teams. | 17 *(scaffold)* | [architecture/building-microservices/README.md](architecture/building-microservices/README.md) |
-| **Microservices Patterns** | *Microservices Patterns* (Richardson) - decomposition, IPC, sagas, event sourcing, CQRS, API gateway, testing, production concerns. | 12 *(scaffold)* | [architecture/microservices-patterns/README.md](architecture/microservices-patterns/README.md) |
-| **Designing Distributed Systems** | *Designing Distributed Systems* (Burns) - reusable container/orchestration patterns (sidecar, ambassador, sharding, scatter/gather) and batch patterns. | 12 *(scaffold)* | [architecture/designing-distributed-systems/README.md](architecture/designing-distributed-systems/README.md) |
+| **Microservices Patterns** | *Microservices Patterns* (Richardson) - decomposition, IPC, sagas, event sourcing, CQRS, API gateway, testing, production concerns. | 12 | [architecture/microservices-patterns/README.md](architecture/microservices-patterns/README.md) |
+| **Designing Distributed Systems** | *Designing Distributed Systems* (Burns) - reusable container/orchestration patterns (sidecar, ambassador, sharding, scatter/gather) and batch patterns. | 12 | [architecture/designing-distributed-systems/README.md](architecture/designing-distributed-systems/README.md) |
 | **Distributed Systems** | *Distributed Systems*, 3rd ed. (van Steen & Tanenbaum) - the formal principles: coordination, consistency/replication, fault tolerance, consensus, security. | 12 *(scaffold)* | [architecture/distributed-systems/README.md](architecture/distributed-systems/README.md) |
 | **Evolutionary Architectures** | *Building Evolutionary Architectures*, 2nd ed. - fitness functions, incremental change, appropriate coupling, governance. | 9 *(scaffold)* | [architecture/evolutionary-architectures/README.md](architecture/evolutionary-architectures/README.md) |
 | **System Design Interview** | *System Design Interview*, Vol. 1 (Xu) - an interview framework, estimation, and worked end-to-end designs. | 15 *(scaffold)* | [architecture/system-design-interview/README.md](architecture/system-design-interview/README.md) |
