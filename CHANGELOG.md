@@ -14,6 +14,25 @@ this file.
 
 ## [Unreleased]
 
+### Added
+
+- **Seniority model** - every lesson now carries a `seniority` band
+  (`junior`/`mid`/`senior`/`staff`/`principal`) and every subject declares a seniority
+  baseline. The band measures whose job a concept anchors, not reading difficulty, and it
+  calibrates how deeply the agent runs a Socratic discussion. New authoritative agent doc
+  [agent-docs/seniority-model.md](agent-docs/seniority-model.md) (wired into
+  [AGENTS.md](AGENTS.md)) and learner-facing [SENIORITY.md](SENIORITY.md); the lesson
+  template, [repository-model.md](agent-docs/repository-model.md), and
+  [learning-workflows.md](agent-docs/learning-workflows.md) updated accordingly. Every
+  existing subject `README.md` gained a **Seniority** column and a baseline line.
+
+### Changed
+
+- **Every existing subject `README.md`** (the four authored architecture subjects and all
+  scaffolded subjects) gained a **Seniority** column and a seniority-baseline line as part
+  of introducing the seniority model.
+
+
 ## [0.1.0] - 2026-06-30
 
 Initial public release of the library: the **architecture** domain with four subjects and

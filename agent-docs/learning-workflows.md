@@ -61,13 +61,19 @@ with filler. The cited book is a source and an optional "go deeper", never requi
 reading.
 
 3. Set front matter: `status: drafted`, `mastery:` empty, fill `source` and
-   `prerequisites` (other concept IDs, if any).
-4. Add or update the concept's row in the subject `README.md` index.
+   `prerequisites` (other concept IDs, if any). Assign `seniority` (one of
+   `junior`/`mid`/`senior`/`staff`/`principal`) using the rubric in
+   [seniority-model.md](seniority-model.md) - tag by whose job the concept anchors, and
+   prefer the lower band on a tie.
+4. Add or update the concept's row in the subject `README.md` index, including the
+   **Seniority** column, and keep the subject's seniority baseline line accurate.
 
 **Verify a lesson before declaring done:**
 - Every required section is present and non-empty.
-- Front matter is complete and `id` matches the filename number.
-- The `README.md` index contains an accurate row for this concept.
+- Front matter is complete, `id` matches the filename number, and `seniority` is one of
+  the five bands.
+- The `README.md` index contains an accurate row for this concept (Seniority column
+  filled), and the subject baseline still reflects the lessons.
 - Internal links (to prerequisites, references) resolve.
 
 ## Workflow C0 - Open a lesson / show topic progress
@@ -86,8 +92,11 @@ Before pointing the learner at a lesson, present a compact topic catalog:
    - drafted/not yet discussed count;
    - discussed count;
    - mastery counts (`solid`, `partial`, `shaky`, `not-yet`, and not-yet-rated);
+   - the subject's **seniority baseline** and, where useful, the band spread across
+     lessons (e.g. "ranges junior->staff");
    - suggested next undiscussed concept, respecting prerequisite/order.
-3. Present available topics grouped by subject. Mark each concept as:
+3. Present available topics grouped by subject. Show each concept's **seniority** band
+   alongside its state, and mark each concept as:
    - **not started** - `drafted` and no discussion record;
    - **started** - at least one discussion record exists or status is `discussed`;
    - **needs revisit** - latest mastery is `partial`, `shaky`, or `not-yet`;
@@ -96,8 +105,9 @@ Before pointing the learner at a lesson, present a compact topic catalog:
    candidate topics. Offer to expand a subject instead of dumping every lesson when the
    catalog is large.
 5. Ask the learner to pick a concept, or recommend one specific next concept with a
-   one-sentence reason. Never start quizzing until the learner has selected or accepted
-   a concept.
+   one-sentence reason (you may factor in seniority - e.g. suggest a lower-band concept to
+   build confidence or a higher-band one to stretch). Never start quizzing until the
+   learner has selected or accepted a concept.
 
 When a specific concept is already named (e.g. *"discuss `ddia/07`"*), do not show the
 full catalog first. Resolve the concept, read the lesson, and proceed with `Workflow C`.
@@ -112,10 +122,10 @@ This is the heart of the repo. The goal is to find out what the learner actually
 understands and to guide them to the correct conclusions **themselves**.
 
 **Before starting:** read the full lesson file for that concept. Also inspect the lesson
-front matter `prerequisites`, the subject `README.md`, and any nearby cross-subject
-references so you know what related concepts exist. Never quiz on anything not covered
-by the lesson. Confirm which concept and, if helpful, ask the learner how confident they
-already feel.
+front matter `prerequisites` and `seniority`, the subject `README.md`, and any nearby
+cross-subject references so you know what related concepts exist and at what level to pitch
+the session. Never quiz on anything not covered by the lesson. Confirm which concept and,
+if helpful, ask the learner how confident they already feel.
 
 **During the discussion - rules:**
 - **Socratic, not a lecture.** Ask one focused question at a time, then wait for the
@@ -132,8 +142,20 @@ already feel.
 - **Test transfer, not recall.** Include at least one applied scenario - *"Given a
   system with constraint Y, would you reach for this? Why or why not?"* - to check they
   can use the idea, not just recite it.
-- **Scale difficulty** to their performance: go deeper when they are solid, slow down
-  and rebuild from fundamentals when they struggle.
+- **Calibrate to the lesson's `seniority` band.** Pitch the questioning to the band and
+  adapt if the learner clearly over- or under-performs it (see
+  [seniority-model.md](seniority-model.md) for the per-band script):
+  - `junior` - correctness and mechanism; one applied scenario with a mostly-clear answer.
+  - `mid` - option-selection and first-order trade-offs; compare named alternatives.
+  - `senior` - trade-offs, failure modes, and when NOT to; the applied scenario has no
+    clean answer.
+  - `staff` - cross-system/cross-team effects, second-order consequences, evolution over
+    time; introduce conflicting constraints.
+  - `principal` - strategy, leverage, and measurement; interrogate ambiguity rather than
+    resolving it.
+- **Scale difficulty** to their performance within the band: go deeper when they are
+  solid, slow down and rebuild from fundamentals when they struggle. Judge the mastery
+  verdict against the concept's own band.
 - **Track weak spots and misconceptions as they surface** - you will record them.
 - **End** when the core sub-areas have been probed and the learner has either shown
   solid understanding or hit a clear ceiling for this session.

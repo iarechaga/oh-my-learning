@@ -3,6 +3,11 @@
 A top-level view of every domain and subject, its coverage, and overall mastery.
 Regenerated as lessons are added and after every discussion.
 
+Every subject carries a **seniority baseline** (and every lesson a per-lesson band, from
+`junior`/`mid`/`senior`/`staff`/`principal`) - see [SENIORITY.md](SENIORITY.md). The
+baseline shown per subject below is the typical band; the per-lesson tags live in each
+subject's table.
+
 ## Architecture
 
 The domain covering how to design software systems - theory and applied practice.

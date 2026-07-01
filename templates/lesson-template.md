@@ -5,6 +5,7 @@ title: <Concept Title>             # e.g. Load Balancing
 slug: <concept-slug>               # lowercase-kebab, matches filename (e.g. load-balancing)
 status: drafted                    # drafted | discussed
 mastery:                           # empty until first discussion; then solid | partial | shaky | not-yet
+seniority: <band>                  # junior | mid | senior | staff | principal (whose job the concept anchors; see agent-docs/seniority-model.md)
 source: <Book Title, Chapter/Section>
 prerequisites: []                  # list of other concept IDs, e.g. [system-design/01]
 created: <YYYY-MM-DD>

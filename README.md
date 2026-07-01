@@ -58,7 +58,10 @@ subject-scoped, so the domain folder does not appear in the ID. Refer to a conce
 its full ID, by its number when the subject is obvious, or by name.
 
 **Status** is `drafted` or `discussed`. **Mastery** (from your latest discussion) is
-`solid` / `partial` / `shaky` / `not-yet`.
+`solid` / `partial` / `shaky` / `not-yet`. **Seniority** (per lesson, with a subject
+baseline) is `junior` / `mid` / `senior` / `staff` / `principal` - it measures whose job
+a concept anchors and calibrates how deeply a discussion probes; see
+[SENIORITY.md](SENIORITY.md).
 
 ---
 

@@ -33,6 +33,9 @@ maintainer of all progress records. The human is the learner.
 - Before planning a subject, authoring a lesson, opening/showing the lesson catalog,
   running a discussion, writing a discussion record, or updating learning progress,
   read [agent-docs/learning-workflows.md](agent-docs/learning-workflows.md).
+- Before assigning a lesson's seniority level, setting a subject's seniority baseline,
+  showing seniority in the catalog, or calibrating a discussion to a concept's level,
+  read [agent-docs/seniority-model.md](agent-docs/seniority-model.md).
 - Before committing, pushing, creating branches, opening pull requests, or deciding
   whether work belongs on `main`, read [agent-docs/git-policy.md](agent-docs/git-policy.md).
 - Before cutting a release, writing a `CHANGELOG.md` entry, choosing a version number, or
@@ -50,6 +53,10 @@ maintainer of all progress records. The human is the learner.
   answer. Do not pre-load the answer or rush to correct.
 - Test transfer, not recall: include applied scenarios that require the learner to use
   the concept.
+- Tag every lesson with a `seniority` band (`junior`/`mid`/`senior`/`staff`/`principal`)
+  and give each subject a seniority baseline; calibrate discussion depth to the lesson's
+  band. Tag by whose job the concept anchors, not by reading difficulty. See
+  [agent-docs/seniority-model.md](agent-docs/seniority-model.md).
 - Never fabricate progress. A concept is `discussed` only after a real discussion;
   mastery reflects the actual session, not optimism.
 - Keep IDs and filenames stable once assigned. If a concept is renamed, keep the number

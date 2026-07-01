@@ -15,27 +15,29 @@ Pramod Sadalage, and Zhamak Dehghani (O'Reilly, 2021).
 analytical foundations (trade-offs, coupling) first, then *pulling things apart*, then
 *putting them back together*, then the capstone trade-off method.
 
+**Seniority baseline:** senior (lessons range senior->staff).
+
 ## Concepts
 
-| ID  | Concept | Status | Mastery | Last discussed | Lesson | Records |
-| --- | ------- | ------ | ------- | -------------- | ------ | ------- |
-| 01  | Trade-offs and "no best practices" | drafted | — | — | [lesson](lessons/01-tradeoffs-no-best-practices.md) | — |
-| 02  | The architecture quantum and static coupling | drafted | — | — | [lesson](lessons/02-architecture-quantum-static-coupling.md) | — |
-| 03  | Dynamic coupling | drafted | — | — | [lesson](lessons/03-dynamic-coupling.md) | — |
-| 04  | Architectural modularity | drafted | — | — | [lesson](lessons/04-architectural-modularity.md) | — |
-| 05  | Architectural decomposition | drafted | — | — | [lesson](lessons/05-architectural-decomposition.md) | — |
-| 06  | Component-based decomposition patterns | drafted | — | — | [lesson](lessons/06-component-based-decomposition-patterns.md) | — |
-| 07  | Service granularity | drafted | — | — | [lesson](lessons/07-service-granularity.md) | — |
-| 08  | Decomposing operational data | drafted | — | — | [lesson](lessons/08-decomposing-operational-data.md) | — |
-| 09  | Reuse patterns | drafted | — | — | [lesson](lessons/09-reuse-patterns.md) | — |
-| 10  | Data ownership | drafted | — | — | [lesson](lessons/10-data-ownership.md) | — |
-| 11  | Distributed transactions and eventual consistency | drafted | — | — | [lesson](lessons/11-distributed-transactions-eventual-consistency.md) | — |
-| 12  | Distributed data access | drafted | — | — | [lesson](lessons/12-distributed-data-access.md) | — |
-| 13  | Distributed workflows: orchestration vs choreography | drafted | — | — | [lesson](lessons/13-distributed-workflows-orchestration-choreography.md) | — |
-| 14  | Transactional sagas | drafted | — | — | [lesson](lessons/14-transactional-sagas.md) | — |
-| 15  | Contracts: strict vs loose | drafted | — | — | [lesson](lessons/15-contracts.md) | — |
-| 16  | Managing analytical data | drafted | — | — | [lesson](lessons/16-managing-analytical-data.md) | — |
-| 17  | Build your own trade-off analysis | drafted | — | — | [lesson](lessons/17-build-your-own-trade-off-analysis.md) | — |
+| ID  | Concept | Seniority | Status | Mastery | Last discussed | Lesson | Records |
+| --- | ------- | --------- | ------ | ------- | -------------- | ------ | ------- |
+| 01  | Trade-offs and "no best practices" | senior | drafted | — | — | [lesson](lessons/01-tradeoffs-no-best-practices.md) | — |
+| 02  | The architecture quantum and static coupling | senior | drafted | — | — | [lesson](lessons/02-architecture-quantum-static-coupling.md) | — |
+| 03  | Dynamic coupling | senior | drafted | — | — | [lesson](lessons/03-dynamic-coupling.md) | — |
+| 04  | Architectural modularity | senior | drafted | — | — | [lesson](lessons/04-architectural-modularity.md) | — |
+| 05  | Architectural decomposition | senior | drafted | — | — | [lesson](lessons/05-architectural-decomposition.md) | — |
+| 06  | Component-based decomposition patterns | senior | drafted | — | — | [lesson](lessons/06-component-based-decomposition-patterns.md) | — |
+| 07  | Service granularity | senior | drafted | — | — | [lesson](lessons/07-service-granularity.md) | — |
+| 08  | Decomposing operational data | senior | drafted | — | — | [lesson](lessons/08-decomposing-operational-data.md) | — |
+| 09  | Reuse patterns | mid | drafted | — | — | [lesson](lessons/09-reuse-patterns.md) | — |
+| 10  | Data ownership | senior | drafted | — | — | [lesson](lessons/10-data-ownership.md) | — |
+| 11  | Distributed transactions and eventual consistency | senior | drafted | — | — | [lesson](lessons/11-distributed-transactions-eventual-consistency.md) | — |
+| 12  | Distributed data access | senior | drafted | — | — | [lesson](lessons/12-distributed-data-access.md) | — |
+| 13  | Distributed workflows: orchestration vs choreography | senior | drafted | — | — | [lesson](lessons/13-distributed-workflows-orchestration-choreography.md) | — |
+| 14  | Transactional sagas | staff | drafted | — | — | [lesson](lessons/14-transactional-sagas.md) | — |
+| 15  | Contracts: strict vs loose | senior | drafted | — | — | [lesson](lessons/15-contracts.md) | — |
+| 16  | Managing analytical data | staff | drafted | — | — | [lesson](lessons/16-managing-analytical-data.md) | — |
+| 17  | Build your own trade-off analysis | staff | drafted | — | — | [lesson](lessons/17-build-your-own-trade-off-analysis.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent
