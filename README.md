@@ -205,6 +205,33 @@ is only an optional "go deeper".
 
 ---
 
+## Local website
+
+If you prefer browsing in a browser instead of reading raw Markdown, there is a
+self-contained static site generator under `website/`. It discovers lessons from the
+same `<domain>/<subject>/lessons/<NN>-<slug>.md` files used by the agent and renders
+them as HTML pages with navigation, seniority badges, and completion status.
+
+Install dependencies once:
+
+```bash
+pip3 install -r website/requirements.txt
+```
+
+Build and serve:
+
+```bash
+python3 website/build.py
+python3 website/serve.py
+```
+
+Then open `http://localhost:8000`. New lessons are picked up automatically when you
+rebuild; the agent is responsible for rebuilding after it authors a lesson or records a
+discussion. See [`agent-docs/website.md`](agent-docs/website.md) for the agent
+maintenance rules.
+
+---
+
 ## How to contribute
 
 Contributions are new domains, new subjects, new or deeper lessons, and corrections.

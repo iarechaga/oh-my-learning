@@ -6,3 +6,6 @@
 
 # Personal learner profile (per-learner notes, never on main)
 LEARNER.md
+
+# Generated website build output
+website/dist/
