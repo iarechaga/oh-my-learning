@@ -5,6 +5,7 @@ title: Distributed-System Attributes and Scaling
 slug: distributed-system-attributes
 status: drafted
 mastery:
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra, Packt 2024), Chapter 2"
 prerequisites: [ddia/01]
 created: 2026-06-30

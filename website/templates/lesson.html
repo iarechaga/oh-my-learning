@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="lesson">
+  <header class="lesson-header">
+    <p class="breadcrumb">
+      <a href="/index.html">Home</a> /
+      <a href="{{ domain.url }}">{{ domain.title }}</a> /
+      <a href="{{ subject.url }}">{{ subject.title }}</a>
+    </p>
+    <h1>{{ lesson.title }}</h1>
+    <div class="lesson-meta">
+      <span class="badge badge-id">{{ lesson.id }}</span>
+      {% if lesson.seniority %}
+      <span class="badge badge-seniority-{{ lesson.seniority }}">{{ lesson.seniority }}</span>
+      {% endif %}
+      {% if lesson.is_discussed %}
+      <span class="badge badge-mastery-{{ lesson.mastery or 'discussed' }}">{{ lesson.mastery or 'discussed' }}</span>
+      {% else %}
+      <span class="badge badge-status">drafted</span>
+      {% endif %}
+      {% if lesson.source %}
+      <span class="meta-source">{{ lesson.source }}</span>
+      {% endif %}
+    </div>
+    {% if lesson.prerequisites %}
+    <div class="lesson-prereqs">
+      <strong>Prerequisites:</strong>
+      {% for prereq in lesson.prerequisites %}
+      <span class="badge badge-prereq">{{ prereq }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="lesson-body markdown-body">
+    {{ lesson.body_html|safe }}
+  </div>
+
+  <footer class="lesson-footer">
+    <a class="btn" href="{{ subject.url }}">Back to {{ subject.title }}</a>
+  </footer>
+</article>
+{% endblock %}

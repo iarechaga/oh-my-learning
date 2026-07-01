@@ -5,6 +5,7 @@ title: "Case Study: Proximity / Geo Service"
 slug: case-study-proximity-service
 status: drafted
 mastery:
+seniority: senior
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 10"
 prerequisites: [system-design/16, ddia/10]
 created: 2026-06-30

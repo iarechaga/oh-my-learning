@@ -5,6 +5,7 @@ title: Measuring and Governing Characteristics
 slug: measuring-governing-characteristics
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 6
 prerequisites: [fundamentals/03, fundamentals/04]
 created: 2026-06-30

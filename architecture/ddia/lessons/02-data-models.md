@@ -5,6 +5,7 @@ title: "Data Models: Relational, Document, and Graph"
 slug: data-models
 status: drafted
 mastery:
+seniority: junior
 source: Designing Data-Intensive Applications (Martin Kleppmann), Chapter 2
 prerequisites: [ddia/01]
 created: 2026-06-30

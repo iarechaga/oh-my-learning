@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+  <p class="breadcrumb"><a href="/index.html">Home</a> / {{ domain.title }}</p>
+  <h1>{{ domain.title }}</h1>
+  {% set progress = domain.progress %}
+  <p class="lead">{{ domain.subjects|length }} subject{{ 's' if domain.subjects|length != 1 else '' }} · {{ progress[0] }}/{{ progress[1] }} lessons discussed</p>
+</header>
+
+<section class="card-grid">
+  {% for subject in domain.subjects %}
+  {% set s_progress = subject.progress %}
+  <a class="card" href="{{ subject.url }}">
+    <div class="card-body">
+      <h2>{{ subject.title }}</h2>
+      <p>{{ subject.lessons|length }} lesson{{ 's' if subject.lessons|length != 1 else '' }}</p>
+      {% if subject.seniority_baseline %}
+      <span class="badge badge-seniority-{{ subject.seniority_baseline }}">{{ subject.seniority_baseline }}</span>
+      {% endif %}
+    </div>
+    <div class="card-footer">
+      <span class="badge badge-progress">{{ s_progress[0] }}/{{ s_progress[1] }} discussed</span>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+{% endblock %}

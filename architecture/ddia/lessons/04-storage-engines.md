@@ -5,6 +5,7 @@ title: "Storage Engines: LSM-Trees and B-Trees"
 slug: storage-engines
 status: drafted
 mastery:
+seniority: senior
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 3"
 prerequisites: [ddia/02]
 created: 2026-06-30

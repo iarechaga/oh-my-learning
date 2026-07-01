@@ -5,6 +5,7 @@ title: Service Granularity
 slug: service-granularity
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 7
 prerequisites: [hard-parts/05]
 created: 2026-06-30

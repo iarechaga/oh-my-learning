@@ -5,6 +5,7 @@ title: Fallacies of Distributed Computing
 slug: fallacies-of-distributed-computing
 status: drafted
 mastery:
+seniority: mid
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 10
 prerequisites: [fundamentals/09]
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: "Probabilistic Data Structures for Scale"
 slug: probabilistic-data-structures
 status: drafted
 mastery:
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 3"
 prerequisites: []
 created: 2026-06-30

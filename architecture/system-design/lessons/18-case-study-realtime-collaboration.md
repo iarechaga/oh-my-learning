@@ -5,6 +5,7 @@ title: "Case Study: Real-Time Collaboration (Google Docs)"
 slug: case-study-realtime-collaboration
 status: drafted
 mastery:
+seniority: senior
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 13"
 prerequisites: [system-design/16, ddia/08]
 created: 2026-06-30

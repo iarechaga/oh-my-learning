@@ -5,6 +5,7 @@ title: The Trouble with Distributed Systems
 slug: distributed-systems-trouble
 status: drafted
 mastery:
+seniority: senior
 source: Designing Data-Intensive Applications (Martin Kleppmann), Chapter 8
 prerequisites: [ddia/07]
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: "Encoding and Schema Evolution"
 slug: encoding-and-schema-evolution
 status: drafted
 mastery:
+seniority: mid
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 4"
 prerequisites: [ddia/02]
 created: 2026-06-30

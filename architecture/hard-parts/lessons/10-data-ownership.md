@@ -5,6 +5,7 @@ title: Data Ownership
 slug: data-ownership
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 9
 prerequisites: [hard-parts/08]
 created: 2026-06-30

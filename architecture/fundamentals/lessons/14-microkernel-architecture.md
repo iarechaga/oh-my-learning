@@ -5,6 +5,7 @@ title: Microkernel Architecture
 slug: microkernel-architecture
 status: drafted
 mastery:
+seniority: mid
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 14
 prerequisites: [fundamentals/09, fundamentals/11]
 created: 2026-06-30

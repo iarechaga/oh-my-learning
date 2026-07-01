@@ -5,6 +5,7 @@ title: "Rate Limiting and Resilience"
 slug: rate-limiting-resilience
 status: drafted
 mastery:
+seniority: senior
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 8"
 prerequisites: []
 created: 2026-06-30

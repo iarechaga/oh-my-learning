@@ -5,6 +5,7 @@ title: "Security: Authentication and Authorization"
 slug: security-auth
 status: drafted
 mastery:
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 8"
 prerequisites: []
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: Architectural Decomposition
 slug: architectural-decomposition
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 4
 prerequisites: [hard-parts/02, hard-parts/04]
 created: 2026-06-30

@@ -58,13 +58,18 @@ subject-scoped, so the domain folder does not appear in the ID. Refer to a conce
 its full ID, by its number when the subject is obvious, or by name.
 
 **Status** is `drafted` or `discussed`. **Mastery** (from your latest discussion) is
-`solid` / `partial` / `shaky` / `not-yet`.
+`solid` / `partial` / `shaky` / `not-yet`. **Seniority** (per lesson, with a subject
+baseline) is `junior` / `mid` / `senior` / `staff` / `principal` - it measures whose job
+a concept anchors and calibrates how deeply a discussion probes; see
+[SENIORITY.md](SENIORITY.md).
 
 ---
 
 ## Subjects
 
-**[architecture/](architecture/README.md)** - the current domain:
+**[architecture/](architecture/README.md)** - designing scalable, maintainable,
+distributed systems. Six subjects are fully authored; four are scaffolded (concept lists
+ready, lesson bodies pending):
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
@@ -72,26 +77,120 @@ its full ID, by its number when the subject is obvious, or by name.
 | **System Design** | *System Design Guide for Software Professionals* - applying that theory to real systems (load balancing, caching, sharding, queues, APIs, plus end-to-end case studies). Cross-linked to DDIA. | 20 | [architecture/system-design/README.md](architecture/system-design/README.md) |
 | **The Hard Parts** | *Software Architecture: The Hard Parts* - advanced distributed trade-off analysis around decomposition, service/data granularity, ownership, sagas, contracts, and analytical data. | 17 | [architecture/hard-parts/README.md](architecture/hard-parts/README.md) |
 | **Fundamentals** | *Fundamentals of Software Architecture* - architectural vocabulary, characteristics, modularity, styles, decisions, risk, communication, and architect leadership. | 22 | [architecture/fundamentals/README.md](architecture/fundamentals/README.md) |
+| **Building Microservices** | *Building Microservices*, 2nd ed. (Newman) - service boundaries, communication, per-service data, delivery, testing, observability, resilience, teams. | 17 *(scaffold)* | [architecture/building-microservices/README.md](architecture/building-microservices/README.md) |
+| **Microservices Patterns** | *Microservices Patterns* (Richardson) - decomposition, IPC, sagas, event sourcing, CQRS, API gateway, testing, production concerns. | 12 | [architecture/microservices-patterns/README.md](architecture/microservices-patterns/README.md) |
+| **Designing Distributed Systems** | *Designing Distributed Systems* (Burns) - reusable container/orchestration patterns (sidecar, ambassador, sharding, scatter/gather) and batch patterns. | 12 | [architecture/designing-distributed-systems/README.md](architecture/designing-distributed-systems/README.md) |
+| **Distributed Systems** | *Distributed Systems*, 3rd ed. (van Steen & Tanenbaum) - the formal principles: coordination, consistency/replication, fault tolerance, consensus, security. | 12 *(scaffold)* | [architecture/distributed-systems/README.md](architecture/distributed-systems/README.md) |
+| **Evolutionary Architectures** | *Building Evolutionary Architectures*, 2nd ed. - fitness functions, incremental change, appropriate coupling, governance. | 9 *(scaffold)* | [architecture/evolutionary-architectures/README.md](architecture/evolutionary-architectures/README.md) |
+| **System Design Interview** | *System Design Interview*, Vol. 1 (Xu) - an interview framework, estimation, and worked end-to-end designs. | 15 *(scaffold)* | [architecture/system-design-interview/README.md](architecture/system-design-interview/README.md) |
 
-Future domains (e.g. `clean-code`, `engineering-practices`) will sit beside
-`architecture/` as the library grows.
+**[software-engineering/](software-engineering/README.md)** - writing maintainable,
+evolvable software. All nine subjects are scaffolded (concept lists ready, lesson bodies
+pending):
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **The Pragmatic Programmer** | *The Pragmatic Programmer* (Hunt & Thomas) - the pragmatic philosophy and everyday habits: DRY, orthogonality, tracer bullets, decoupling. | 15 *(scaffold)* | [software-engineering/pragmatic-programmer/README.md](software-engineering/pragmatic-programmer/README.md) |
+| **Code Complete** | *Code Complete*, 2nd ed. (McConnell) - construction craftsmanship: defensive programming, variables, routines, class design. | 14 *(scaffold)* | [software-engineering/code-complete/README.md](software-engineering/code-complete/README.md) |
+| **Clean Architecture** | *Clean Architecture* (Martin) - SOLID, component principles, and the dependency rule. | 13 *(scaffold)* | [software-engineering/clean-architecture/README.md](software-engineering/clean-architecture/README.md) |
+| **Clean Code** | *Clean Code* (Martin) - readable code in the small: naming, functions, comments, smells. | 12 *(scaffold)* | [software-engineering/clean-code/README.md](software-engineering/clean-code/README.md) |
+| **Refactoring** | *Refactoring*, 2nd ed. (Fowler) - code smells and a catalog of named refactorings, backed by tests. | 12 *(scaffold)* | [software-engineering/refactoring/README.md](software-engineering/refactoring/README.md) |
+| **A Philosophy of Software Design** | *A Philosophy of Software Design* (Ousterhout) - complexity, deep modules, information hiding. | 11 *(scaffold)* | [software-engineering/philosophy-of-software-design/README.md](software-engineering/philosophy-of-software-design/README.md) |
+| **Working Effectively with Legacy Code** | *Working Effectively with Legacy Code* (Feathers) - seams, dependency-breaking, characterization tests. | 12 *(scaffold)* | [software-engineering/legacy-code/README.md](software-engineering/legacy-code/README.md) |
+| **Enterprise Application Patterns** | *Patterns of Enterprise Application Architecture* (Fowler) - domain logic, O/R mapping, concurrency, sessions, distribution. | 14 *(scaffold)* | [software-engineering/enterprise-patterns/README.md](software-engineering/enterprise-patterns/README.md) |
+| **Design Patterns** | *Design Patterns* (Gang of Four) - the classic 23 OO patterns: creational, structural, behavioral. | 11 *(scaffold)* | [software-engineering/design-patterns/README.md](software-engineering/design-patterns/README.md) |
+
+More domains (e.g. domain modeling, data engineering, CS fundamentals, software quality,
+DevOps/reliability, technical leadership) will sit beside these as the library grows.
+*(scaffold)* subjects have their concept list and index in place; the deep lesson bodies
+are authored next.
+
+**[domain-modeling/](domain-modeling/README.md)** - modeling business complexity with
+Domain-Driven Design. All scaffolded:
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **DDD (Evans)** | *Domain-Driven Design* (Evans, the "blue book") - ubiquitous language, aggregates, bounded contexts, strategic design. | 16 *(scaffold)* | [domain-modeling/ddd-evans/README.md](domain-modeling/ddd-evans/README.md) |
+| **Implementing DDD** | *Implementing Domain-Driven Design* (Vernon, the "red book") - aggregates, domain events, context integration in depth. | 15 *(scaffold)* | [domain-modeling/implementing-ddd/README.md](domain-modeling/implementing-ddd/README.md) |
+| **Learning DDD** | *Learning Domain-Driven Design* (Khononov) - a modern, strategic-design-first path. | 14 *(scaffold)* | [domain-modeling/learning-ddd/README.md](domain-modeling/learning-ddd/README.md) |
+| **DDD Distilled** | *Domain-Driven Design Distilled* (Vernon) - a concise primer of the core ideas. | 9 *(scaffold)* | [domain-modeling/ddd-distilled/README.md](domain-modeling/ddd-distilled/README.md) |
+
+**[data-engineering/](data-engineering/README.md)** - choosing, designing, and
+understanding storage systems (DDIA is the theory, cross-referenced from `architecture/`).
+All scaffolded:
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **Database Internals** | *Database Internals* (Petrov) - storage engines (B-Trees, LSM) through replication, partitioning, and consensus. | 16 *(scaffold)* | [data-engineering/database-internals/README.md](data-engineering/database-internals/README.md) |
+| **SQL Performance Explained** | *SQL Performance Explained* (Winand) - indexing and query-shape reasoning for predictable SQL performance. | 10 *(scaffold)* | [data-engineering/sql-performance-explained/README.md](data-engineering/sql-performance-explained/README.md) |
+| **Seven Databases in Seven Weeks** | *Seven Databases in Seven Weeks* (Perkins et al.) - a comparative tour of relational, document, wide-column, graph, and key-value stores. | 9 *(scaffold)* | [data-engineering/seven-databases/README.md](data-engineering/seven-databases/README.md) |
+
+**[cs-fundamentals/](cs-fundamentals/README.md)** - core CS: algorithms, data structures,
+and concurrency. All scaffolded:
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **Introduction to Algorithms (CLRS)** | *Introduction to Algorithms* (CLRS) - the comprehensive algorithms reference. | 20 *(scaffold)* | [cs-fundamentals/clrs/README.md](cs-fundamentals/clrs/README.md) |
+| **Algorithms (Sedgewick & Wayne)** | *Algorithms* (Sedgewick & Wayne) - practical, implementation-focused algorithms and data structures. | 14 *(scaffold)* | [cs-fundamentals/algorithms-sedgewick/README.md](cs-fundamentals/algorithms-sedgewick/README.md) |
+| **Algorithm Design** | *Algorithm Design* (Kleinberg & Tardos) - design techniques: greedy, D&C, DP, network flow, NP-completeness. | 12 *(scaffold)* | [cs-fundamentals/algorithm-design/README.md](cs-fundamentals/algorithm-design/README.md) |
+| **Java Concurrency in Practice** | *Java Concurrency in Practice* (Goetz et al.) - JVM thread safety, the memory model, concurrent components. | 15 *(scaffold)* | [cs-fundamentals/java-concurrency/README.md](cs-fundamentals/java-concurrency/README.md) |
+| **The Art of Multiprocessor Programming** | *The Art of Multiprocessor Programming* (Herlihy & Shavit) - concurrent algorithms, linearizability, lock-free structures. | 13 *(scaffold)* | [cs-fundamentals/multiprocessor-programming/README.md](cs-fundamentals/multiprocessor-programming/README.md) |
+
+**[software-quality/](software-quality/README.md)** - testing and reliability through
+better test design. All scaffolded:
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **GOOS** | *Growing Object-Oriented Software, Guided by Tests* (Freeman & Pryce) - outside-in TDD, walking skeleton, mock objects. | 12 *(scaffold)* | [software-quality/goos/README.md](software-quality/goos/README.md) |
+| **Unit Testing** | *Unit Testing* (Khorikov) - valuable vs brittle tests, the four pillars, doubles, integration strategy. | 13 *(scaffold)* | [software-quality/unit-testing/README.md](software-quality/unit-testing/README.md) |
+| **xUnit Test Patterns** | *xUnit Test Patterns* (Meszaros) - the catalog of test smells, patterns, and test-code refactorings. | 12 *(scaffold)* | [software-quality/xunit-test-patterns/README.md](software-quality/xunit-test-patterns/README.md) |
+
+**[devops-reliability/](devops-reliability/README.md)** - operating software in
+production: flow, feedback, and reliability engineering. All scaffolded:
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **The Phoenix Project** | *The Phoenix Project* (Kim et al.) - a novel teaching the Three Ways, flow, WIP, and constraints. | 10 *(scaffold)* | [devops-reliability/phoenix-project/README.md](devops-reliability/phoenix-project/README.md) |
+| **The DevOps Handbook** | *The DevOps Handbook* (Kim et al.) - the practical implementation of flow, feedback, and continual learning. | 16 *(scaffold)* | [devops-reliability/devops-handbook/README.md](devops-reliability/devops-handbook/README.md) |
+| **Site Reliability Engineering** | *Site Reliability Engineering* (Beyer et al.) - SLIs/SLOs, error budgets, toil, on-call, incidents. | 16 *(scaffold)* | [devops-reliability/sre/README.md](devops-reliability/sre/README.md) |
+| **Seeking SRE** | *Seeking SRE* (Blank-Edelman, ed.) - applying and evolving SRE: culture, human factors, strategy. | 12 *(scaffold)* | [devops-reliability/seeking-sre/README.md](devops-reliability/seeking-sre/README.md) |
+
+**[technical-leadership/](technical-leadership/README.md)** - growing beyond coding:
+staff-plus IC leadership, management, delivery science, and decision-making. All
+scaffolded:
+
+| Subject | What it is | Lessons | Start here |
+| --- | --- | --- | --- |
+| **Staff Engineer** | *Staff Engineer* (Larson) - staff-plus roles, archetypes, and operating with broad influence. | 12 *(scaffold)* | [technical-leadership/staff-engineer/README.md](technical-leadership/staff-engineer/README.md) |
+| **The Staff Engineer's Path** | *The Staff Engineer's Path* (Reilly) - big-picture thinking, execution, leveling up others. | 14 *(scaffold)* | [technical-leadership/staff-engineers-path/README.md](technical-leadership/staff-engineers-path/README.md) |
+| **An Elegant Puzzle** | *An Elegant Puzzle* (Larson) - engineering management as systems: org design, team topology. | 13 *(scaffold)* | [technical-leadership/elegant-puzzle/README.md](technical-leadership/elegant-puzzle/README.md) |
+| **The Manager's Path** | *The Manager's Path* (Fournier) - the management ladder from tech lead to CTO. | 13 *(scaffold)* | [technical-leadership/managers-path/README.md](technical-leadership/managers-path/README.md) |
+| **Accelerate** | *Accelerate* (Forsgren, Humble, Kim) - the DORA metrics and what predicts delivery performance. | 12 *(scaffold)* | [technical-leadership/accelerate/README.md](technical-leadership/accelerate/README.md) |
+| **Thinking, Fast and Slow** | *Thinking, Fast and Slow* (Kahneman) - biases, heuristics, and decision-making under uncertainty. | 14 *(scaffold)* | [technical-leadership/thinking-fast-and-slow/README.md](technical-leadership/thinking-fast-and-slow/README.md) |
+| **How to Measure Anything** | *How to Measure Anything* (Hubbard) - calibrated estimation and the value of information. | 11 *(scaffold)* | [technical-leadership/how-to-measure-anything/README.md](technical-leadership/how-to-measure-anything/README.md) |
 
 ---
 
 ## How to use it
 
 1. **Open the repo with an AI coding agent** that reads `AGENTS.md`.
-2. **Work on your own branch, not `main`.** `main` is the shared, public library of
-   lessons. Your learning is personal - discussion records, mastery updates, and
-   summary edits are *your* progress, not everyone's. Keep `main` clean by doing your
-   sessions on a branch or a fork:
-   ```bash
-   git checkout -b learn/your-name   # or fork the repo
-   ```
-   This is the deliberate split: the canonical lessons live on `main`; the *execution*
-   of the lessons (your discussions and progress) lives on your branch.
-3. **Read a lesson**, then ask the agent to discuss it: *"discuss `system-design/03`"*.
-4. The agent records the session under `<domain>/<subject>/discussions/` and updates
+2. **The agent puts you on your own branch, not `main`.** `main` is the shared, public
+   library of lessons; your learning is personal - discussion records, mastery updates,
+   and summary edits are *your* progress, not everyone's. You don't have to run any git
+   commands: on your first session the agent creates and switches you to a `learn/<name>`
+   branch itself and keeps your personal notes off `main`. (Prefer to work in a fork?
+   Fork the repo and open it there instead.) This is the deliberate split: the canonical
+   lessons live on `main`; the *execution* of the lessons (your discussions and progress)
+   lives on your branch.
+3. **On your first session, the agent gets to know you.** Before proposing what to
+   study, it asks your name and how you'd like to be addressed, your seniority level
+   (offering to briefly assess it if you're unsure), and what you want to learn and why -
+   then proposes a learning path. It writes these notes to a personal `LEARNER.md`
+   (gitignored, never on `main`), reads it at the start of every session so you never
+   repeat yourself, and updates it whenever you ask to change your level or how you're
+   treated.
+4. **Read a lesson**, then ask the agent to discuss it: *"discuss `system-design/03`"*.
+5. The agent records the session under `<domain>/<subject>/discussions/` and updates
    your progress tables on your branch. Pull new lessons from `main` whenever you like.
 
 If you are not sure what to read next, ask the agent to open the lesson catalog, for
@@ -103,6 +202,33 @@ from the same or another book that deepen what you just studied.
 You do not need the source books. Each lesson teaches its concept from first
 principles, with worked examples, trade-offs, and self-check questions. The cited book
 is only an optional "go deeper".
+
+---
+
+## Local website
+
+If you prefer browsing in a browser instead of reading raw Markdown, there is a
+self-contained static site generator under `website/`. It discovers lessons from the
+same `<domain>/<subject>/lessons/<NN>-<slug>.md` files used by the agent and renders
+them as HTML pages with navigation, seniority badges, and completion status.
+
+Install dependencies once:
+
+```bash
+pip3 install -r website/requirements.txt
+```
+
+Build and serve:
+
+```bash
+python3 website/build.py
+python3 website/serve.py
+```
+
+Then open `http://localhost:8000`. New lessons are picked up automatically when you
+rebuild; the agent is responsible for rebuilding after it authors a lesson or records a
+discussion. See [`agent-docs/website.md`](agent-docs/website.md) for the agent
+maintenance rules.
 
 ---
 

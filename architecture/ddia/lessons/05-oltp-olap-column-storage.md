@@ -5,6 +5,7 @@ title: "OLTP vs OLAP and Column-Oriented Storage"
 slug: oltp-olap-column-storage
 status: drafted
 mastery:
+seniority: mid
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 3"
 prerequisites: [ddia/04]
 created: 2026-06-30

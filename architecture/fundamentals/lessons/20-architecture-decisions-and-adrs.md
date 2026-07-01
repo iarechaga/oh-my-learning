@@ -5,6 +5,7 @@ title: Architecture Decisions and ADRs
 slug: architecture-decisions-and-adrs
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 20
 prerequisites: [hard-parts/01]
 created: 2026-06-30

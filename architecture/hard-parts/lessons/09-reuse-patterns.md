@@ -5,6 +5,7 @@ title: Reuse Patterns
 slug: reuse-patterns
 status: drafted
 mastery:
+seniority: mid
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 8
 prerequisites: [hard-parts/02, hard-parts/07]
 created: 2026-06-30

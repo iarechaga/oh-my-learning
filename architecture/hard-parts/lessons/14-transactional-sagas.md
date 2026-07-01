@@ -5,6 +5,7 @@ title: Transactional Sagas
 slug: transactional-sagas
 status: drafted
 mastery:
+seniority: staff
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 12
 prerequisites: [hard-parts/11, hard-parts/13, ddia/13]
 created: 2026-06-30

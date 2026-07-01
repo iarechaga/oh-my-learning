@@ -5,6 +5,7 @@ title: "A System-Design Method (URL Shortener)"
 slug: design-method-url-shortener
 status: drafted
 mastery: 
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapters 9, 15, 16"
 prerequisites: [system-design/01]
 created: 2026-06-30

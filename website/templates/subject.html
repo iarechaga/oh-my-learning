@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+  <p class="breadcrumb"><a href="/index.html">Home</a> / <a href="{{ domain.url }}">{{ domain.title }}</a> / {{ subject.title }}</p>
+  <h1>{{ subject.title }}</h1>
+  {% set progress = subject.progress %}
+  <p class="lead">{{ subject.lessons|length }} lesson{{ 's' if subject.lessons|length != 1 else '' }} · {{ progress[0] }}/{{ progress[1] }} discussed</p>
+</header>
+
+<section class="lesson-list">
+  {% for lesson in subject.lessons %}
+  <a class="lesson-row" href="{{ lesson.url }}">
+    <span class="lesson-number">{{ "%02d"|format(lesson.number) }}</span>
+    <span class="lesson-title">{{ lesson.title }}</span>
+    <span class="lesson-badges">
+      {% if lesson.seniority %}
+      <span class="badge badge-seniority-{{ lesson.seniority }}">{{ lesson.seniority }}</span>
+      {% endif %}
+      {% if lesson.is_discussed %}
+      <span class="badge badge-mastery-{{ lesson.mastery or 'discussed' }}">{{ lesson.mastery or 'discussed' }}</span>
+      {% else %}
+      <span class="badge badge-status">drafted</span>
+      {% endif %}
+    </span>
+  </a>
+  {% endfor %}
+</section>
+{% endblock %}

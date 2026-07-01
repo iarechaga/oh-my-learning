@@ -5,6 +5,7 @@ title: "Consistent Hashing"
 slug: consistent-hashing
 status: drafted
 mastery: 
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapters 3 and 5"
 prerequisites: [ddia/10]
 created: 2026-06-30

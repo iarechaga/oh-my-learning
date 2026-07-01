@@ -68,15 +68,29 @@ Track two independent fields per concept.
 
 Both fields live in the lesson's front matter and in the subject `README.md` table.
 
+## Seniority
+
+Every authored lesson also carries a **`seniority`** band in its front matter, from a
+fixed five-value vocabulary: `junior` < `mid` < `senior` < `staff` < `principal`. It
+measures whose job the concept anchors, not how hard the lesson reads. Each subject also
+declares a **seniority baseline** (its typical band) in its `README.md`. The full rubric,
+the discussion-depth calibration, and worked examples live in
+[seniority-model.md](seniority-model.md); load that file before assigning or showing
+seniority. While a subject is only scaffolded, per-lesson bands are provisional and the
+subject baseline is the reliable signal.
+
 ## Subject README index
 
-Short "about this subject" line + the source book, then a table:
+Short "about this subject" line + the source book + a **seniority baseline** line, then a
+table:
 
 ```
-| ID  | Concept | Status | Mastery | Last discussed | Lesson | Records |
-| --- | ------- | ------ | ------- | -------------- | ------ | ------- |
-| 01  | Load balancing | discussed | solid | 2026-06-30 | [lesson](lessons/01-load-balancing.md) | [01](discussions/01-load-balancing/) |
+| ID  | Concept | Seniority | Status | Mastery | Last discussed | Lesson | Records |
+| --- | ------- | --------- | ------ | ------- | -------------- | ------ | ------- |
+| 01  | Load balancing | mid | discussed | solid | 2026-06-30 | [lesson](lessons/01-load-balancing.md) | [01](discussions/01-load-balancing/) |
 ```
+
+The **Seniority** column sits between `Concept` and `Status` and uses the five bands.
 
 ## Subject SUMMARY.md
 

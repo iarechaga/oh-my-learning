@@ -5,6 +5,7 @@ title: Dynamic Coupling
 slug: dynamic-coupling
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 2
 prerequisites: [hard-parts/02]
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: Space-Based Architecture
 slug: space-based-architecture
 status: drafted
 mastery:
+seniority: senior
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 17
 prerequisites: [fundamentals/10, system-design/10]
 created: 2026-06-30

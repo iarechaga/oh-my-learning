@@ -5,6 +5,7 @@ title: API Design and Communication
 slug: api-design-communication
 status: drafted
 mastery:
+seniority: mid
 source: System Design Guide for Software Professionals (Sinha & Chopra), Chapter 8
 prerequisites: [ddia/06]
 created: 2026-06-30

@@ -11,26 +11,28 @@ transactions, consistency/consensus, and batch/stream processing.
 top-to-bottom is a sensible reading order. After each discussion, the row below is
 updated with your mastery rating and a link to the session record.
 
+**Seniority baseline:** senior (lessons range mid->staff).
+
 ## Concepts
 
-| ID  | Concept | Status | Mastery | Last discussed | Lesson | Records |
-| --- | ------- | ------ | ------- | -------------- | ------ | ------- |
-| 01  | Reliability, scalability, maintainability | drafted | — | — | [lesson](lessons/01-reliability-scalability-maintainability.md) | — |
-| 02  | Data models (relational / document / graph) | drafted | — | — | [lesson](lessons/02-data-models.md) | — |
-| 03  | Query languages | drafted | — | — | [lesson](lessons/03-query-languages.md) | — |
-| 04  | Storage engines (LSM-trees vs B-trees) | drafted | — | — | [lesson](lessons/04-storage-engines.md) | — |
-| 05  | OLTP vs OLAP and column-oriented storage | drafted | — | — | [lesson](lessons/05-oltp-olap-column-storage.md) | — |
-| 06  | Encoding and schema evolution | drafted | — | — | [lesson](lessons/06-encoding-and-schema-evolution.md) | — |
-| 07  | Replication: single-leader | drafted | — | — | [lesson](lessons/07-replication-single-leader.md) | — |
-| 08  | Replication: multi-leader and leaderless | drafted | — | — | [lesson](lessons/08-replication-multi-leader-leaderless.md) | — |
-| 09  | Replication lag and consistency | drafted | — | — | [lesson](lessons/09-replication-lag-and-consistency.md) | — |
-| 10  | Partitioning (sharding) | drafted | — | — | [lesson](lessons/10-partitioning.md) | — |
-| 11  | Transactions (ACID, isolation, serializability) | drafted | — | — | [lesson](lessons/11-transactions.md) | — |
-| 12  | The trouble with distributed systems | drafted | — | — | [lesson](lessons/12-distributed-systems-trouble.md) | — |
-| 13  | Consistency and consensus | drafted | — | — | [lesson](lessons/13-consistency-and-consensus.md) | — |
-| 14  | Batch processing | drafted | — | — | [lesson](lessons/14-batch-processing.md) | — |
-| 15  | Stream processing | drafted | — | — | [lesson](lessons/15-stream-processing.md) | — |
-| 16  | The future of data systems | drafted | — | — | [lesson](lessons/16-future-of-data-systems.md) | — |
+| ID  | Concept | Seniority | Status | Mastery | Last discussed | Lesson | Records |
+| --- | ------- | --------- | ------ | ------- | -------------- | ------ | ------- |
+| 01  | Reliability, scalability, maintainability | mid | drafted | — | — | [lesson](lessons/01-reliability-scalability-maintainability.md) | — |
+| 02  | Data models (relational / document / graph) | junior | drafted | — | — | [lesson](lessons/02-data-models.md) | — |
+| 03  | Query languages | junior | drafted | — | — | [lesson](lessons/03-query-languages.md) | — |
+| 04  | Storage engines (LSM-trees vs B-trees) | senior | drafted | — | — | [lesson](lessons/04-storage-engines.md) | — |
+| 05  | OLTP vs OLAP and column-oriented storage | mid | drafted | — | — | [lesson](lessons/05-oltp-olap-column-storage.md) | — |
+| 06  | Encoding and schema evolution | mid | drafted | — | — | [lesson](lessons/06-encoding-and-schema-evolution.md) | — |
+| 07  | Replication: single-leader | mid | drafted | — | — | [lesson](lessons/07-replication-single-leader.md) | — |
+| 08  | Replication: multi-leader and leaderless | senior | drafted | — | — | [lesson](lessons/08-replication-multi-leader-leaderless.md) | — |
+| 09  | Replication lag and consistency | senior | drafted | — | — | [lesson](lessons/09-replication-lag-and-consistency.md) | — |
+| 10  | Partitioning (sharding) | senior | drafted | — | — | [lesson](lessons/10-partitioning.md) | — |
+| 11  | Transactions (ACID, isolation, serializability) | senior | drafted | — | — | [lesson](lessons/11-transactions.md) | — |
+| 12  | The trouble with distributed systems | senior | drafted | — | — | [lesson](lessons/12-distributed-systems-trouble.md) | — |
+| 13  | Consistency and consensus | staff | drafted | — | — | [lesson](lessons/13-consistency-and-consensus.md) | — |
+| 14  | Batch processing | senior | drafted | — | — | [lesson](lessons/14-batch-processing.md) | — |
+| 15  | Stream processing | senior | drafted | — | — | [lesson](lessons/15-stream-processing.md) | — |
+| 16  | The future of data systems | staff | drafted | — | — | [lesson](lessons/16-future-of-data-systems.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` — set from the most recent

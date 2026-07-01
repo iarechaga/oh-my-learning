@@ -5,6 +5,7 @@ title: Distributed Data Access
 slug: distributed-data-access
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 10
 prerequisites: [hard-parts/10, system-design/10]
 created: 2026-06-30

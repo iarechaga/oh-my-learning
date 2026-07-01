@@ -5,6 +5,7 @@ title: "Contracts: Strict vs Loose"
 slug: contracts
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 13
 prerequisites: [hard-parts/03]
 created: 2026-06-30

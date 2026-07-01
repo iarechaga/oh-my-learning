@@ -5,6 +5,7 @@ title: "Observability: Logging, Metrics, and Tracing"
 slug: observability
 status: drafted
 mastery: 
+seniority: mid
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 8"
 prerequisites: []
 created: 2026-06-30

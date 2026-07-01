@@ -5,6 +5,7 @@ title: Modularity Fundamentals
 slug: modularity-fundamentals
 status: drafted
 mastery:
+seniority: mid
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 7
 prerequisites: [fundamentals/05, hard-parts/04]
 created: 2026-06-30

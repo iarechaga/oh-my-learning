@@ -5,6 +5,7 @@ title: "Case Study: Video Streaming (Netflix)"
 slug: case-study-video-streaming
 status: drafted
 mastery:
+seniority: senior
 source: "System Design Guide for Software Professionals (Sinha & Chopra), Chapter 14"
 prerequisites: [system-design/16, system-design/10]
 created: 2026-06-30

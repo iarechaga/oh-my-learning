@@ -5,6 +5,7 @@ title: "Distributed Workflows: Orchestration vs Choreography"
 slug: distributed-workflows-orchestration-choreography
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 11
 prerequisites: [hard-parts/03]
 created: 2026-06-30

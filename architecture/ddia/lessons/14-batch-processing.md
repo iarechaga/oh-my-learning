@@ -5,6 +5,7 @@ title: "Batch Processing"
 slug: batch-processing
 status: drafted
 mastery:
+seniority: senior
 source: "Designing Data-Intensive Applications (Martin Kleppmann), Chapter 10"
 prerequisites: [ddia/06]
 created: 2026-06-30

@@ -5,6 +5,7 @@ title: Architect Leadership and Career
 slug: architect-leadership-and-career
 status: drafted
 mastery:
+seniority: staff
 source: Fundamentals of Software Architecture (Richards & Ford, O'Reilly 2nd ed. 2025), Chapter 22
 prerequisites: [fundamentals/21]
 created: 2026-06-30

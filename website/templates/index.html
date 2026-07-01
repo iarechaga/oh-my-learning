@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+  <h1>Oh My Learning</h1>
+  <p class="lead">Choose a domain to browse lessons, track progress, and see seniority levels.</p>
+</header>
+
+<section class="card-grid">
+  {% for domain in domains %}
+  {% set done, total = domain.progress %}
+  <a class="card" href="{{ domain.url }}">
+    <div class="card-body">
+      <h2>{{ domain.title }}</h2>
+      <p>{{ domain.subjects|length }} subject{{ 's' if domain.subjects|length != 1 else '' }}</p>
+    </div>
+    <div class="card-footer">
+      <span class="badge badge-progress">{{ done }}/{{ total }} discussed</span>
+    </div>
+  </a>
+  {% endfor %}
+</section>
+{% endblock %}

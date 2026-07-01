@@ -5,6 +5,7 @@ title: Component-Based Decomposition Patterns
 slug: component-based-decomposition-patterns
 status: drafted
 mastery:
+seniority: senior
 source: Software Architecture: The Hard Parts (Ford, Richards, Sadalage, Dehghani), Chapter 5
 prerequisites: [hard-parts/05]
 created: 2026-06-30

@@ -15,6 +15,30 @@ email (`git config user.email`):
   `learn/<name>`) and do all work there, then open a pull request against `main`. Only
   the maintainer merges to `main`.
 
+## The learner branch (the agent sets it up)
+
+Personal learning - discussion records, `status`/`mastery` edits, progress tables, and
+the learner's `LEARNER.md` - never happens on `main`. **The agent creates the branch; the
+learner never has to.** On the first interaction with a learner (see
+[learner-profile.md](learner-profile.md)), before onboarding:
+
+1. Check the current branch. If it is `main` (or any shared/protected branch), the agent
+   **creates and switches to a dedicated learner branch itself** - do not ask the learner
+   to run git commands, and do not begin onboarding on `main`.
+2. Name it `learn/<slug>`, where `<slug>` is a lowercase-kebab-case form of the learner's
+   preferred name once known (e.g. `learn/alex`); if onboarding hasn't reached the name
+   yet, start on `learn/session` (or similar) and it is fine to keep that name. Never
+   reuse a name that would collide with a content branch (`book/<subject-slug>`).
+3. If a suitable learner branch already exists (e.g. a returning learner, or the session
+   already started on a non-`main` branch), just switch to / stay on it rather than
+   creating another.
+4. Creating and switching to this branch is a normal, non-destructive setup step the agent
+   performs automatically - it does not require asking the human first. (Pushing that
+   branch to the remote still follows "When to commit and push" below.)
+
+This applies to **both identities**: even the maintainer, who *may* push to `main`, does
+personal learning on a `learn/<slug>` branch and keeps `LEARNER.md` off `main`.
+
 ## When to commit and push
 
 - **Creating a new subject (book):** when the subject is complete per Workflow A (all

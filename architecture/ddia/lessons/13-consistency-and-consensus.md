@@ -5,6 +5,7 @@ title: Consistency and Consensus
 slug: consistency-and-consensus
 status: drafted
 mastery:
+seniority: staff
 source: Designing Data-Intensive Applications (Martin Kleppmann), Chapter 9
 prerequisites: [ddia/11, ddia/12]
 created: 2026-06-30
