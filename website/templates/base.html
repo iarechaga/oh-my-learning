@@ -3,32 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
   <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/highlight.css">
   <link rel="stylesheet" href="/static/style.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("oml-theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
   <div class="layout">
     <aside class="sidebar">
-      <a class="brand" href="/index.html">Oh My Learning</a>
+      <div class="sidebar-head">
+        <a class="brand" href="/index.html">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-text">Oh My Learning</span>
+        </a>
+        <button type="button" class="theme-btn" id="theme-btn" aria-label="Toggle color theme" title="Toggle theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+        </button>
+      </div>
+
       <nav class="nav" aria-label="Domains">
         <p class="nav-section">Domains</p>
         <ul>
           {% for d in domains %}
           <li>
-            <a href="{{ d.url }}" class="{% if domain and d.slug == domain.slug %}active{% endif %}">
+            <a href="{{ d.url }}" class="nav-link {% if domain and d.slug == domain.slug %}active{% endif %}">
               {{ d.title }}
             </a>
           </li>
           {% endfor %}
         </ul>
       </nav>
+
       {% if domain %}
       <nav class="nav nav-sub" aria-label="Subjects in {{ domain.title }}">
         <p class="nav-section">{{ domain.title }}</p>
         <ul>
           {% for s in domain.subjects %}
           <li>
-            <a href="{{ s.url }}" class="{% if subject and s.slug == subject.slug %}active{% endif %}">
+            <a href="{{ s.url }}" class="nav-link {% if subject and s.slug == subject.slug %}active{% endif %}">
               {{ s.title }}
             </a>
           </li>
@@ -37,9 +60,34 @@
       </nav>
       {% endif %}
     </aside>
-    <main class="content">
-      {% block content %}{% endblock %}
-    </main>
+
+    <div class="main-col">
+      <header class="topbar">
+        <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </label>
+        <a class="topbar-brand" href="/index.html">Oh My Learning</a>
+      </header>
+      <main class="content">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
   </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById("theme-btn");
+      function current() {
+        return root.getAttribute("data-theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      }
+      btn.addEventListener("click", function () {
+        var next = current() === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("oml-theme", next); } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>

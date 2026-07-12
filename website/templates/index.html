@@ -1,9 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-<header class="page-header">
+<header class="hero">
+  <p class="eyebrow">Personal learning library</p>
   <h1>Oh My Learning</h1>
-  <p class="lead">Choose a domain to browse lessons, track progress, and see seniority levels.</p>
+  <p class="lead">Self-authored lessons on software engineering, refined through Socratic
+    discussion. Browse a domain to read lessons, track what you've mastered, and gauge the
+    seniority each concept anchors to.</p>
+  <div class="stat-row">
+    <div class="stat">
+      <span class="stat-value">{{ domains|length }}</span>
+      <span class="stat-label">domain{{ 's' if domains|length != 1 else '' }}</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">{{ domains|map(attribute='subjects')|map('length')|sum }}</span>
+      <span class="stat-label">subjects</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">{{ domains|map(attribute='lesson_count')|sum }}</span>
+      <span class="stat-label">lessons</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value">{{ domains|map(attribute='progress')|map('first')|sum }}</span>
+      <span class="stat-label">discussed</span>
+    </div>
+  </div>
 </header>
 
 <section class="card-grid">
@@ -12,10 +33,17 @@
   <a class="card" href="{{ domain.url }}">
     <div class="card-body">
       <h2>{{ domain.title }}</h2>
-      <p>{{ domain.subjects|length }} subject{{ 's' if domain.subjects|length != 1 else '' }}</p>
+      <p>{{ domain.subjects|length }} subject{{ 's' if domain.subjects|length != 1 else '' }}
+        · {{ domain.lesson_count }} lesson{{ 's' if domain.lesson_count != 1 else '' }}</p>
     </div>
     <div class="card-footer">
-      <span class="badge badge-progress">{{ done }}/{{ total }} discussed</span>
+      <div class="progress" role="img" aria-label="{{ done }} of {{ total }} lessons discussed">
+        <div class="progress-bar" style="width: {{ domain.percent }}%"></div>
+      </div>
+      <div class="progress-meta">
+        <span>{{ done }}/{{ total }} discussed</span>
+        <span>{{ domain.percent }}%</span>
+      </div>
     </div>
   </a>
   {% endfor %}

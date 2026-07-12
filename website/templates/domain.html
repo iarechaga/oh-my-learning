@@ -2,15 +2,23 @@
 
 {% block content %}
 <header class="page-header">
-  <p class="breadcrumb"><a href="/index.html">Home</a> / {{ domain.title }}</p>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a>
+    <span class="sep">/</span>
+    <span aria-current="page">{{ domain.title }}</span>
+  </nav>
   <h1>{{ domain.title }}</h1>
-  {% set progress = domain.progress %}
-  <p class="lead">{{ domain.subjects|length }} subject{{ 's' if domain.subjects|length != 1 else '' }} · {{ progress[0] }}/{{ progress[1] }} lessons discussed</p>
+  {% set done, total = domain.progress %}
+  <p class="lead">{{ domain.subjects|length }} subject{{ 's' if domain.subjects|length != 1 else '' }}
+    · {{ domain.lesson_count }} lessons · {{ done }}/{{ total }} discussed</p>
+  <div class="progress progress-lg" role="img" aria-label="{{ done }} of {{ total }} lessons discussed">
+    <div class="progress-bar" style="width: {{ domain.percent }}%"></div>
+  </div>
 </header>
 
 <section class="card-grid">
   {% for subject in domain.subjects %}
-  {% set s_progress = subject.progress %}
+  {% set s_done, s_total = subject.progress %}
   <a class="card" href="{{ subject.url }}">
     <div class="card-body">
       <h2>{{ subject.title }}</h2>
@@ -20,7 +28,13 @@
       {% endif %}
     </div>
     <div class="card-footer">
-      <span class="badge badge-progress">{{ s_progress[0] }}/{{ s_progress[1] }} discussed</span>
+      <div class="progress" role="img" aria-label="{{ s_done }} of {{ s_total }} lessons discussed">
+        <div class="progress-bar" style="width: {{ subject.percent }}%"></div>
+      </div>
+      <div class="progress-meta">
+        <span>{{ s_done }}/{{ s_total }} discussed</span>
+        <span>{{ subject.percent }}%</span>
+      </div>
     </div>
   </a>
   {% endfor %}

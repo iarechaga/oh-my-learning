@@ -14,6 +14,18 @@ this file.
 
 ## [Unreleased]
 
+### Changed
+
+- **Website redesign** - the static reading site (`website/`) got a full visual
+  overhaul: a light/dark theme with a persisted toggle and system-preference default;
+  refined typography and a constrained reading measure; a landing hero with library
+  stats; progress bars on domain and subject cards; and richer lesson rows showing
+  seniority, status, and estimated reading time. Lesson pages now render a sticky "On
+  this page" table of contents, previous/next navigation within a subject, and properly
+  styled code blocks (the generator now emits theme-aware Pygments syntax-highlighting
+  CSS, which was previously missing). `website/build.py` computes reading time, the TOC,
+  and lesson neighbors; the templates and stylesheet were rewritten to match.
+
 ## [0.2.0] - 2026-07-02
 
 ### Added

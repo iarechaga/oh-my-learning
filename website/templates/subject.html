@@ -2,17 +2,35 @@
 
 {% block content %}
 <header class="page-header">
-  <p class="breadcrumb"><a href="/index.html">Home</a> / <a href="{{ domain.url }}">{{ domain.title }}</a> / {{ subject.title }}</p>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/index.html">Home</a>
+    <span class="sep">/</span>
+    <a href="{{ domain.url }}">{{ domain.title }}</a>
+    <span class="sep">/</span>
+    <span aria-current="page">{{ subject.title }}</span>
+  </nav>
   <h1>{{ subject.title }}</h1>
-  {% set progress = subject.progress %}
-  <p class="lead">{{ subject.lessons|length }} lesson{{ 's' if subject.lessons|length != 1 else '' }} · {{ progress[0] }}/{{ progress[1] }} discussed</p>
+  {% set done, total = subject.progress %}
+  <p class="lead">{{ subject.lessons|length }} lesson{{ 's' if subject.lessons|length != 1 else '' }}
+    · {{ done }}/{{ total }} discussed
+    {% if subject.seniority_baseline %}· baseline
+    <span class="badge badge-seniority-{{ subject.seniority_baseline }}">{{ subject.seniority_baseline }}</span>
+    {% endif %}</p>
+  <div class="progress progress-lg" role="img" aria-label="{{ done }} of {{ total }} lessons discussed">
+    <div class="progress-bar" style="width: {{ subject.percent }}%"></div>
+  </div>
 </header>
 
 <section class="lesson-list">
   {% for lesson in subject.lessons %}
-  <a class="lesson-row" href="{{ lesson.url }}">
+  <a class="lesson-row {% if lesson.is_discussed %}is-done{% endif %}" href="{{ lesson.url }}">
     <span class="lesson-number">{{ "%02d"|format(lesson.number) }}</span>
-    <span class="lesson-title">{{ lesson.title }}</span>
+    <span class="lesson-main">
+      <span class="lesson-title">{{ lesson.title }}</span>
+      {% if lesson.reading_minutes %}
+      <span class="lesson-read">{{ lesson.reading_minutes }} min read</span>
+      {% endif %}
+    </span>
     <span class="lesson-badges">
       {% if lesson.seniority %}
       <span class="badge badge-seniority-{{ lesson.seniority }}">{{ lesson.seniority }}</span>
