@@ -86,9 +86,9 @@ Guiding architectural change over time with fitness functions. Cross-links to Fu
 
 A repeatable interview framework plus worked end-to-end designs. Cross-links to System Design and DDIA.
 
-- **Status:** scaffolded - 15 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid-senior (junior->senior).
+- **Status:** 15/15 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid-senior (junior->senior).
 - **Covers:** the interview framework; back-of-the-envelope estimation; scaling zero-to-millions; and case studies (rate limiter, consistent hashing, key-value store, unique ID generator, URL shortener, web crawler, notifications, news feed, chat, autocomplete, YouTube, Google Drive).
-- **Read:** [progress table](architecture/system-design-interview/README.md).
+- **Read:** [progress table](architecture/system-design-interview/README.md) and [concept-by-concept recap](architecture/system-design-interview/SUMMARY.md).
 
 ## Software Engineering
 
