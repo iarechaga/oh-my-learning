@@ -186,9 +186,9 @@ organizational language and constraints - Domain-Driven Design, strategic and ta
 
 ### 3. Learning Domain-Driven Design (Khononov)
 
-- **Status:** scaffolded - 14 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
-- **Covers:** a modern, accessible route starting from strategic design (subdomains, bounded contexts) and connecting it to tactical implementation and evolving architectures.
-- **Read:** [progress table](domain-modeling/learning-ddd/README.md).
+- **Status:** 14/14 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
+- **Covers:** why domain complexity drives design choices; subdomains and bounded contexts; context maps; ubiquitous language and event storming for collaborative discovery; business logic patterns (transaction script, active record, domain model); aggregates and domain events in tactical design; data ownership and integration patterns; architecture alignment, evolutionary design, and socio-technical/team-topology fit.
+- **Read:** [progress table](domain-modeling/learning-ddd/README.md) and [concept-by-concept recap](domain-modeling/learning-ddd/SUMMARY.md).
 
 ### 4. Domain-Driven Design Distilled (Vernon)
 

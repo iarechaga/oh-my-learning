@@ -103,13 +103,13 @@ reliability) will sit beside these as the library grows. *(scaffold)* subjects h
 their concept list and index in place; the deep lesson bodies are authored next.
 
 **[domain-modeling/](domain-modeling/README.md)** - modeling business complexity with
-Domain-Driven Design. Being authored (DDD Distilled complete, the rest scaffolded):
+Domain-Driven Design. All four subjects are fully authored:
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
 | **DDD (Evans)** | *Domain-Driven Design* (Evans, the "blue book") - ubiquitous language, aggregates, bounded contexts, strategic design. | 16 | [domain-modeling/ddd-evans/README.md](domain-modeling/ddd-evans/README.md) |
 | **Implementing DDD** | *Implementing Domain-Driven Design* (Vernon, the "red book") - aggregates, domain events, context integration in depth. | 15 | [domain-modeling/implementing-ddd/README.md](domain-modeling/implementing-ddd/README.md) |
-| **Learning DDD** | *Learning Domain-Driven Design* (Khononov) - a modern, strategic-design-first path. | 14 *(scaffold)* | [domain-modeling/learning-ddd/README.md](domain-modeling/learning-ddd/README.md) |
+| **Learning DDD** | *Learning Domain-Driven Design* (Khononov) - a modern, strategic-design-first path. | 14 | [domain-modeling/learning-ddd/README.md](domain-modeling/learning-ddd/README.md) |
 | **DDD Distilled** | *Domain-Driven Design Distilled* (Vernon) - a concise primer of the core ideas. | 9 | [domain-modeling/ddd-distilled/README.md](domain-modeling/ddd-distilled/README.md) |
 
 **[data-engineering/](data-engineering/README.md)** - choosing, designing, and
