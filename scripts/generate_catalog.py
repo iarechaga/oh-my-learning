@@ -225,7 +225,7 @@ def render(domains: list[Domain]) -> str:
         lines.append("")
 
     lines.append(
-        "Back to [README.md](README.md#dominios-de-un-vistazo) for the condensed "
+        "Back to [README.md](README.md#domains-at-a-glance) for the condensed "
         "domain overview and how to get started."
     )
     lines.append("")

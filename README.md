@@ -22,59 +22,59 @@ until you actually understand it.*
 
 ---
 
-## Cómo empezar (2 minutos)
+## Getting started (2 minutes)
 
-1. **Fork o clona el repo**, y ábrelo con un agente de código que lea `AGENTS.md`
-   (OpenCode, Claude Code, o similar).
-2. **Dile que quieres empezar a aprender.** El agente te pone en tu propia rama, no en
-   `main` (`main` es la biblioteca compartida; tu aprendizaje es personal - tu progreso,
-   tus notas). No necesitas ejecutar comandos de git: en tu primera sesión el agente
-   crea y cambia a una rama `learn/<tu-nombre>` por ti.
-3. **El agente te conoce primero.** Te pregunta tu nombre, tu nivel de seniority
-   (te ayuda a estimarlo si no lo tienes claro) y qué quieres aprender y por qué. Con
-   eso, te propone un **track de estudio ordenado**: una lista concreta de conceptos, en
-   el orden correcto, con el motivo de cada uno - no una lección al azar.
-4. **Lee una lección** y pídele al agente que la discuta contigo: *"discute
-   `system-design/03`"*. Una pregunta cada vez, pistas en vez de respuestas, al menos un
-   escenario aplicado, y un veredicto de dominio (`solid` / `partial` / `shaky` /
-   `not-yet`) al final.
-5. **El agente lleva tu progreso por ti**, en `PROGRESS.md` en la raíz de tu rama: qué
-   sigue (*Next up*), dónde flojeas (*Focus areas*), y estadísticas por dominio y
-   seniority. Pregúntale en cualquier momento *"¿qué sigo?"*, *"¿cómo voy?"* o *"quiero
-   más foco en bases de datos"* - te responde al momento, sin tener que repasar el repo
-   entero, y ajusta el track si se lo pides.
+1. **Fork or clone the repo**, and open it with a coding agent that reads `AGENTS.md`
+   (OpenCode, Claude Code, or similar).
+2. **Tell it you want to start learning.** The agent puts you on your own branch, not
+   `main` (`main` is the shared library; your learning is personal - your progress, your
+   notes). You don't need to run any git commands: on your first session the agent
+   creates and switches you to a `learn/<your-name>` branch itself.
+3. **The agent gets to know you first.** It asks your name, your seniority level (it
+   helps estimate it if you're not sure), and what you want to learn and why. With that,
+   it proposes an **ordered study track**: a concrete list of concepts, in the right
+   order, with a reason for each - not a random lesson.
+4. **Read a lesson**, then ask the agent to discuss it with you: *"discuss
+   `system-design/03`"*. One question at a time, hints instead of answers, at least one
+   applied scenario, and a mastery verdict (`solid` / `partial` / `shaky` / `not-yet`) at
+   the end.
+5. **The agent tracks your progress for you**, in `PROGRESS.md` at the root of your
+   branch: what's next (*Next up*), where you're shaky (*Focus areas*), and stats per
+   domain and seniority. Ask it anytime *"what's next"*, *"how am I doing"*, or *"I want
+   more focus on databases"* - it answers instantly, without re-reading the whole repo,
+   and adjusts the track if you ask it to.
 
-No necesitas los libros originales: cada lección enseña el concepto desde cero, con
-ejemplos trabajados, trade-offs y preguntas de autoevaluación. El libro citado es solo
-un "profundiza más" opcional.
+You don't need the source books: each lesson teaches its concept from scratch, with
+worked examples, trade-offs, and self-check questions. The cited book is only an
+optional "go deeper".
 
 ---
 
-## Dominios de un vistazo
+## Domains at a glance
 
-| Dominio | De qué trata | Subjects | Lecciones |
+| Domain | What it's about | Subjects | Lessons |
 | --- | --- | --- | --- |
-| **[Architecture](architecture/README.md)** | Diseño de sistemas escalables, mantenibles y distribuidos - de la teoría (DDIA) a la práctica (System Design, microservicios, arquitecturas evolutivas). | 10 | 152 |
-| **[Software Engineering](software-engineering/README.md)** | Escribir código mantenible y evolutivo: pragmatismo, Clean Code/Architecture, refactoring, patrones. | 9 | 114 |
-| **[Technical Leadership](technical-leadership/README.md)** | Crecer más allá de programar: liderazgo IC staff-plus, management, delivery science, toma de decisiones. | 7 | 89 |
-| **[CS Fundamentals](cs-fundamentals/README.md)** | Algoritmos, estructuras de datos y concurrencia - la base formal. | 5 | 74 |
-| **[DevOps, Cloud & Reliability](devops-reliability/README.md)** | Operar software en producción: flujo, feedback, y SRE (SLOs, error budgets, incidentes). | 4 | 54 |
-| **[Domain Modeling](domain-modeling/README.md)** | Modelar complejidad de negocio con Domain-Driven Design. | 4 | 54 |
-| **[Data Engineering & Databases](data-engineering/README.md)** | Elegir, diseñar y entender sistemas de almacenamiento. | 3 | 35 |
-| **[Software Quality](software-quality/README.md)** | Testing y fiabilidad a través de mejor diseño de tests. | 3 | 37 |
+| **[Architecture](architecture/README.md)** | Designing scalable, maintainable, distributed systems - from theory (DDIA) to practice (System Design, microservices, evolutionary architectures). | 10 | 152 |
+| **[Software Engineering](software-engineering/README.md)** | Writing maintainable, evolvable code: pragmatism, Clean Code/Architecture, refactoring, patterns. | 9 | 114 |
+| **[Technical Leadership](technical-leadership/README.md)** | Growing beyond coding: staff-plus IC leadership, management, delivery science, decision-making. | 7 | 89 |
+| **[CS Fundamentals](cs-fundamentals/README.md)** | Algorithms, data structures, and concurrency - the formal foundation. | 5 | 74 |
+| **[DevOps, Cloud & Reliability](devops-reliability/README.md)** | Operating software in production: flow, feedback, and SRE (SLOs, error budgets, incidents). | 4 | 54 |
+| **[Domain Modeling](domain-modeling/README.md)** | Modeling business complexity with Domain-Driven Design. | 4 | 54 |
+| **[Data Engineering & Databases](data-engineering/README.md)** | Choosing, designing, and understanding storage systems. | 3 | 35 |
+| **[Software Quality](software-quality/README.md)** | Testing and reliability through better test design. | 3 | 37 |
 
-**-> [Mira las 609 lecciones: CATALOG.md](CATALOG.md)** - el catálogo completo,
-dominio -> subject -> lección, con seniority y enlace directo a cada una. Se genera
-programáticamente desde el front matter de las lecciones (ver
-[scripts/generate_catalog.py](scripts/generate_catalog.py)), así que nunca se
-desincroniza a mano.
+**-> [See all 609 lessons: CATALOG.md](CATALOG.md)** - the full catalog,
+domain -> subject -> lesson, with seniority and a direct link to each one. It's
+generated programmatically from lesson front matter (see
+[scripts/generate_catalog.py](scripts/generate_catalog.py)), so it never drifts out of
+sync by hand.
 
 ---
 
-## Otras formas de leer
+## Other ways to read
 
-Además de leer el Markdown directamente en GitHub o en tu editor, hay una web estática
-local con navegación, badges de seniority y estado de lectura:
+Besides reading the Markdown directly on GitHub or in your editor, there's a local
+static website with navigation, seniority badges, and reading status:
 
 ```bash
 pip3 install -r website/requirements.txt
@@ -82,27 +82,27 @@ python3 website/build.py
 python3 website/serve.py
 ```
 
-Abre `http://localhost:8000`. Se reconstruye a partir de los mismos ficheros de
-lección; ver [`agent-docs/website.md`](agent-docs/website.md) para el detalle.
+Open `http://localhost:8000`. It rebuilds from the same lesson files; see
+[`agent-docs/website.md`](agent-docs/website.md) for details.
 
 ---
 
-## Para quien quiere contribuir o entender los internals
+## For contributors, or to understand the internals
 
-El modelo del repositorio en corto: los **subjects** (un libro cada uno) se agrupan por
-**domain**; cada subject tiene una lección por concepto, identificada por un ID estable
-`<subject>/<NN>` (p.ej. `ddia/07`). Cada lección lleva `status` (`drafted` ->
-`discussed`), `mastery` (`solid`/`partial`/`shaky`/`not-yet`, personal y por rama) y
-`seniority` (`junior`/`mid`/`senior`/`staff`/`principal`, qué puesto ancla el concepto -
-ver [SENIORITY.md](SENIORITY.md)).
+The repository model in short: **subjects** (one book each) are grouped by **domain**;
+each subject has one lesson per concept, identified by a stable ID `<subject>/<NN>`
+(e.g. `ddia/07`). Each lesson carries `status` (`drafted` -> `discussed`), `mastery`
+(`solid`/`partial`/`shaky`/`not-yet`, personal and per-branch), and `seniority`
+(`junior`/`mid`/`senior`/`staff`/`principal`, whose job the concept anchors - see
+[SENIORITY.md](SENIORITY.md)).
 
-- **El modelo completo del repositorio**, con el árbol de carpetas y las reglas de IDs,
-  está en [`CONTRIBUTING.md`](CONTRIBUTING.md#repository-model-in-one-screen).
-- **Cómo contribuir** (nueva lección, subject o domain; o pedirlo por Issues) está en
-  [`CONTRIBUTING.md`](CONTRIBUTING.md).
-- **El contrato del agente** - la plantilla de lección, el protocolo de discusión
-  socrática, el sistema de progreso (`PROGRESS.md`), y todas las reglas de
-  verificación - vive en [`AGENTS.md`](AGENTS.md) y su detalle en `agent-docs/`.
+- **The full repository model**, with the folder tree and ID rules, is in
+  [`CONTRIBUTING.md`](CONTRIBUTING.md#repository-model-in-one-screen).
+- **How to contribute** (a new lesson, subject, or domain; or request one via Issues) is
+  in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+- **The agent's contract** - the lesson template, the Socratic discussion protocol, the
+  progress-tracking system (`PROGRESS.md`), and all the verification rules - lives in
+  [`AGENTS.md`](AGENTS.md) and its detail docs in `agent-docs/`.
 
 ---
 

@@ -1071,4 +1071,4 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 
 ---
 
-Back to [README.md](README.md#dominios-de-un-vistazo) for the condensed domain overview and how to get started.
+Back to [README.md](README.md#domains-at-a-glance) for the condensed domain overview and how to get started.

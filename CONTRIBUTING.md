@@ -120,7 +120,7 @@ an existing one** - do not spin up a domain for a single loosely-related book.
 3. Add a section for the domain to the root [`SUMMARY.md`](SUMMARY.md), and remove it from
    the "Other domains: none yet" note once it has real content.
 4. Add a row for the domain to the condensed domain table in the root
-   [`README.md`](README.md#dominios-de-un-vistazo) (theme, subject count, lesson count).
+   [`README.md`](README.md#domains-at-a-glance) (theme, subject count, lesson count).
 5. Place the first subject inside it via [Adding a new subject](#adding-a-new-subject-a-book).
 6. Regenerate `CATALOG.md`: `python3 scripts/generate_catalog.py` (see
    [agent-docs/repository-model.md](agent-docs/repository-model.md)).
