@@ -210,9 +210,9 @@ cross-referenced here rather than duplicated.
 
 ### 2. SQL Performance Explained (Winand)
 
-- **Status:** scaffolded - 10 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 10/10 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** practical index and query-shape reasoning for predictable SQL performance - B-tree indexes, joins, ordering, clustering, and pagination.
-- **Read:** [progress table](data-engineering/sql-performance-explained/README.md).
+- **Read:** [progress table](data-engineering/sql-performance-explained/README.md) and [concept-by-concept recap](data-engineering/sql-performance-explained/SUMMARY.md).
 
 ### 3. Seven Databases in Seven Weeks (Perkins, Redmond, Wilson)
 

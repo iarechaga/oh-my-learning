@@ -119,7 +119,7 @@ All scaffolded:
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
 | **Database Internals** | *Database Internals* (Petrov) - storage engines (B-Trees, LSM) through replication, partitioning, and consensus. | 16 *(scaffold)* | [data-engineering/database-internals/README.md](data-engineering/database-internals/README.md) |
-| **SQL Performance Explained** | *SQL Performance Explained* (Winand) - indexing and query-shape reasoning for predictable SQL performance. | 10 *(scaffold)* | [data-engineering/sql-performance-explained/README.md](data-engineering/sql-performance-explained/README.md) |
+| **SQL Performance Explained** | *SQL Performance Explained* (Winand) - indexing and query-shape reasoning for predictable SQL performance. | 10 | [data-engineering/sql-performance-explained/README.md](data-engineering/sql-performance-explained/README.md) |
 | **Seven Databases in Seven Weeks** | *Seven Databases in Seven Weeks* (Perkins et al.) - a comparative tour of relational, document, wide-column, graph, and key-value stores. | 9 *(scaffold)* | [data-engineering/seven-databases/README.md](data-engineering/seven-databases/README.md) |
 
 **[cs-fundamentals/](cs-fundamentals/README.md)** - core CS: algorithms, data structures,
