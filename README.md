@@ -123,7 +123,7 @@ All scaffolded:
 | **Seven Databases in Seven Weeks** | *Seven Databases in Seven Weeks* (Perkins et al.) - a comparative tour of relational, document, wide-column, graph, and key-value stores. | 9 *(scaffold)* | [data-engineering/seven-databases/README.md](data-engineering/seven-databases/README.md) |
 
 **[cs-fundamentals/](cs-fundamentals/README.md)** - core CS: algorithms, data structures,
-and concurrency. Three subjects are fully authored; two are scaffolded:
+and concurrency. Four subjects are fully authored; one is scaffolded:
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
@@ -131,7 +131,7 @@ and concurrency. Three subjects are fully authored; two are scaffolded:
 | **Algorithms (Sedgewick & Wayne)** | *Algorithms* (Sedgewick & Wayne) - practical, implementation-focused algorithms and data structures. | 14 | [cs-fundamentals/algorithms-sedgewick/README.md](cs-fundamentals/algorithms-sedgewick/README.md) |
 | **Algorithm Design** | *Algorithm Design* (Kleinberg & Tardos) - design techniques: greedy, D&C, DP, network flow, NP-completeness. | 12 | [cs-fundamentals/algorithm-design/README.md](cs-fundamentals/algorithm-design/README.md) |
 | **Java Concurrency in Practice** | *Java Concurrency in Practice* (Goetz et al.) - JVM thread safety, the memory model, concurrent components. | 15 *(scaffold)* | [cs-fundamentals/java-concurrency/README.md](cs-fundamentals/java-concurrency/README.md) |
-| **The Art of Multiprocessor Programming** | *The Art of Multiprocessor Programming* (Herlihy & Shavit) - concurrent algorithms, linearizability, lock-free structures. | 13 *(scaffold)* | [cs-fundamentals/multiprocessor-programming/README.md](cs-fundamentals/multiprocessor-programming/README.md) |
+| **The Art of Multiprocessor Programming** | *The Art of Multiprocessor Programming* (Herlihy & Shavit) - concurrent algorithms, linearizability, lock-free structures. | 13 | [cs-fundamentals/multiprocessor-programming/README.md](cs-fundamentals/multiprocessor-programming/README.md) |
 
 **[software-quality/](software-quality/README.md)** - testing and reliability through
 better test design. All scaffolded:

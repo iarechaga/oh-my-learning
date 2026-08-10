@@ -251,9 +251,9 @@ design paradigms, and concurrency correctness.
 
 ### 5. The Art of Multiprocessor Programming (Herlihy & Shavit)
 
-- **Status:** scaffolded - 13 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
-- **Covers:** the theory and practice of concurrent data structures - mutual exclusion, linearizability, locks, and lock-free/wait-free structures.
-- **Read:** [progress table](cs-fundamentals/multiprocessor-programming/README.md).
+- **Status:** 13/13 lessons authored (all `drafted`); not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Covers:** the theory and practice of concurrent data structures - mutual exclusion, linearizability, locks, progress guarantees, consensus power, and lock-free/wait-free structures.
+- **Read:** [progress table](cs-fundamentals/multiprocessor-programming/README.md) · [summary](cs-fundamentals/multiprocessor-programming/SUMMARY.md).
 
 ## Software Quality
 
