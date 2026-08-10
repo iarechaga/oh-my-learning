@@ -103,6 +103,19 @@ maintainer of all progress records. The human is the learner.
 - Keep the changelog honest. When library content or agent rules change on `main`, add a
   matching entry under `[Unreleased]` in `CHANGELOG.md`; never list personal learning
   progress there. See [agent-docs/release-policy.md](agent-docs/release-policy.md).
+- **English is the only language allowed in repository content on `main`.** Every
+  versioned artifact - lesson files, `README.md`/`SUMMARY.md`/`CATALOG.md`, `AGENTS.md`
+  and every `agent-docs/` file, `templates/`, `scripts/`, website source, code comments
+  and docstrings, commit messages, tag messages, and release notes - is written in
+  English, with no exceptions. This holds regardless of what language the human uses to
+  talk to the agent in chat: a conversation in Spanish (or any other language) must
+  never leak into a committed file, a commit message, or a GitHub Release. It applies
+  identically to any subagent or delegated task that touches repository content -
+  briefing a subagent in another language does not license it to write repo content in
+  that language; its output must still land in English before it is committed. The only
+  exception is `LEARNER.md` and `PROGRESS.md` on a personal `learn/<slug>` branch/fork
+  (never on `main`), where the learner's own notes may reasonably reflect the language
+  they work in.
 - ASCII by default; introduce other characters only when a concept genuinely needs them
   or an existing template already uses them.
 - Do not commit or push unless the git policy allows it and the current task requires
