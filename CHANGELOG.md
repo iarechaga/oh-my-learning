@@ -14,16 +14,57 @@ this file.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-08-10
+
+First stable release: the full library is authored (609 lessons, 45 subjects, 8
+domains), concept IDs and repository structure are frozen, and the agent's operating
+system (onboarding, discussions, progress tracking, public catalog) is complete and
+self-consistent. No renames, renumbering, or layout changes shipped in this release -
+see [agent-docs/release-policy.md](agent-docs/release-policy.md) for what a `1.0.0`
+commits to.
+
 ### Added
 
+- **Architecture domain completed (10/10 subjects, 152 lessons)** - authored the four
+  subjects that were index-only scaffolds at `0.2.0`: System Design Interview (15),
+  Distributed Systems (12), Evolutionary Architectures (9), Building Microservices (17).
+  See [architecture/README.md](architecture/README.md).
+- **Computer Science Fundamentals domain authored (5/5 subjects, 74 lessons)** -
+  Introduction to Algorithms/CLRS (20), Algorithms - Sedgewick & Wayne (14), Algorithm
+  Design (12), Java Concurrency in Practice (15), The Art of Multiprocessor Programming
+  (13). See [cs-fundamentals/README.md](cs-fundamentals/README.md).
+- **Data Engineering & Databases domain authored (3/3 subjects, 35 lessons)** - Database
+  Internals (16), SQL Performance Explained (10), Seven Databases in Seven Weeks (9).
+  See [data-engineering/README.md](data-engineering/README.md).
+- **DevOps, Cloud & Reliability domain authored (4/4 subjects, 54 lessons)** - The
+  Phoenix Project (10), The DevOps Handbook (16), Site Reliability Engineering (16),
+  Seeking SRE (12). See [devops-reliability/README.md](devops-reliability/README.md).
+- **Domain Modeling domain authored (4/4 subjects, 54 lessons)** - Domain-Driven Design
+  / Evans (16), Implementing Domain-Driven Design (15), Learning Domain-Driven Design
+  (14), Domain-Driven Design Distilled (9). See
+  [domain-modeling/README.md](domain-modeling/README.md).
+- **Software Engineering domain authored (9/9 subjects, 114 lessons)** - The Pragmatic
+  Programmer (15), Code Complete (14), Clean Architecture (13), Clean Code (12),
+  Refactoring (12), A Philosophy of Software Design (11), Working Effectively with
+  Legacy Code (12), Patterns of Enterprise Application Architecture (14), Design
+  Patterns (11). See
+  [software-engineering/README.md](software-engineering/README.md).
+- **Software Quality domain authored (3/3 subjects, 37 lessons)** - Growing
+  Object-Oriented Software, Guided by Tests (12), Unit Testing (13), xUnit Test Patterns
+  (12). See [software-quality/README.md](software-quality/README.md).
+- **Technical Leadership domain authored (7/7 subjects, 89 lessons)** - Staff Engineer
+  (12), The Staff Engineer's Path (14), An Elegant Puzzle (13), The Manager's Path (13),
+  Accelerate (12), Thinking, Fast and Slow (14), How to Measure Anything (11). See
+  [technical-leadership/README.md](technical-leadership/README.md).
 - **Generated `CATALOG.md`** - a full public catalog of all 609 lessons
   (domain -> subject -> concept, with seniority and a direct link to each lesson),
   produced programmatically by the new `scripts/generate_catalog.py` (stdlib only) from
   lesson front matter, so it can never drift by hand. `--check` mode verifies it is
   current. `AGENTS.md`, `agent-docs/repository-model.md`, and
-  `agent-docs/learning-workflows.md` now require regenerating it whenever a lesson,
-  subject, or domain is added, renumbered, or removed; `CONTRIBUTING.md`'s workflows and
-  pre-submit checklist updated to match.
+  `agent-docs/learning-workflows.md` now require regenerating it - together with the
+  root README's domain table, in the same commit - whenever a lesson, subject, or
+  domain is added, renumbered, or removed; `CONTRIBUTING.md`'s workflows and pre-submit
+  checklist updated to match.
 - **Structured progress tracking** - a new `agent-docs/progress-tracking.md` defines
   `PROGRESS.md`, a per-learner, LLM-optimized index (structured track, Next up, Focus
   areas, Stats, Recent sessions) derived from lesson front matter, plus Workflow P for
