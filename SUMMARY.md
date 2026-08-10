@@ -99,73 +99,73 @@ discipline of code itself, as distinct from system-level design.
 
 The pragmatic philosophy and everyday habits of effective developers.
 
-- **Status:** scaffolded - 15 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 15/15 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** the pragmatic philosophy and responsibility; software entropy; DRY; orthogonality; reversibility and tracer bullets; prototyping and estimating; plain text and the shell; debugging; design by contract; decoupling and the Law of Demeter; concurrency; transforming programming; pragmatic testing; requirements; pragmatic teams.
-- **Read:** [progress table](software-engineering/pragmatic-programmer/README.md).
+- **Read:** [progress table](software-engineering/pragmatic-programmer/README.md) and [concept-by-concept recap](software-engineering/pragmatic-programmer/SUMMARY.md).
 
 ### 2. Code Complete
 
 Construction-level craftsmanship in the small.
 
-- **Status:** scaffolded - 14 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 14/14 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** construction metaphors; managing complexity; design in construction; working classes; high-quality routines; defensive programming; variables and data; naming; organizing code and conditionals; loops and control structures; taming complexity; collaborative construction; developer testing; refactoring and code tuning.
-- **Read:** [progress table](software-engineering/code-complete/README.md).
+- **Read:** [progress table](software-engineering/code-complete/README.md) and [concept-by-concept recap](software-engineering/code-complete/SUMMARY.md).
 
 ### 3. Clean Architecture
 
 SOLID, component principles, and the dependency rule. Cross-links to Fundamentals.
 
-- **Status:** scaffolded - 13 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->senior).
+- **Status:** 13/13 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->senior).
 - **Covers:** what architecture is for; the three paradigms; SOLID (SRP/OCP/LSP/ISP/DIP); component cohesion and coupling; business rules (entities/use cases); the dependency rule and layers; boundaries and the humble object; policy and level; details (DB/web); the main component; screaming architecture.
-- **Read:** [progress table](software-engineering/clean-architecture/README.md).
+- **Read:** [progress table](software-engineering/clean-architecture/README.md) and [concept-by-concept recap](software-engineering/clean-architecture/SUMMARY.md).
 
 ### 4. Clean Code
 
 Readable code in the small: naming, functions, comments, smells.
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** junior-mid (junior->senior).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** junior-mid (junior->senior).
 - **Covers:** what clean code is; meaningful names; functions; comments; formatting; objects vs data structures; error handling; boundaries; clean tests (F.I.R.S.T.); classes; systems; code smells and heuristics.
-- **Read:** [progress table](software-engineering/clean-code/README.md).
+- **Read:** [progress table](software-engineering/clean-code/README.md) and [concept-by-concept recap](software-engineering/clean-code/SUMMARY.md).
 
 ### 5. Refactoring
 
 Improving the design of existing code safely, driven by tests. Cross-links to Clean Code and Legacy Code.
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** what refactoring is; why and when; tests as the safety net; the code-smells catalog; composing methods; moving features; organizing data; simplifying conditionals; refactoring APIs; inheritance; big refactorings; refactoring, architecture, and YAGNI.
-- **Read:** [progress table](software-engineering/refactoring/README.md).
+- **Read:** [progress table](software-engineering/refactoring/README.md) and [concept-by-concept recap](software-engineering/refactoring/SUMMARY.md).
 
 ### 6. A Philosophy of Software Design
 
 Complexity as the enemy: deep modules and information hiding. A deliberate counterpoint to Clean Code on specifics.
 
-- **Status:** scaffolded - 11 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->senior).
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->senior).
 - **Covers:** complexity (symptoms and causes); strategic vs tactical programming; deep modules; information hiding; general-purpose modules; pulling complexity downward; layers and abstractions; defining errors out of existence; comments; naming and consistency; design tensions.
-- **Read:** [progress table](software-engineering/philosophy-of-software-design/README.md).
+- **Read:** [progress table](software-engineering/philosophy-of-software-design/README.md) and [concept-by-concept recap](software-engineering/philosophy-of-software-design/SUMMARY.md).
 
 ### 7. Working Effectively with Legacy Code
 
 Getting untested code under test: seams, dependency-breaking, characterization tests. Cross-links to Refactoring.
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->senior).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->senior).
 - **Covers:** the change dilemma; seams and enabling points; characterization tests; sensing and separation; breaking dependencies; slow-to-change codebases; adding features to untested code; getting classes and methods into a test harness; finding where to change; the dependency-breaking techniques catalog; big tangled methods.
-- **Read:** [progress table](software-engineering/legacy-code/README.md).
+- **Read:** [progress table](software-engineering/legacy-code/README.md) and [concept-by-concept recap](software-engineering/legacy-code/SUMMARY.md).
 
 ### 8. Patterns of Enterprise Application Architecture
 
 The enterprise pattern catalog: domain logic, O/R mapping, concurrency, sessions, distribution. Cross-links to DDIA and Design Patterns.
 
-- **Status:** scaffolded - 14 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->senior).
+- **Status:** 14/14 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->senior).
 - **Covers:** layering; domain-logic patterns (Transaction Script, Domain Model, Table Module, Service Layer); data-source gateways; Active Record; Data Mapper; Unit of Work; Identity Map and Lazy Load; O/R structural and metadata mapping; web presentation (MVC); concurrency and locking; session state; distribution (Remote Facade, DTO).
-- **Read:** [progress table](software-engineering/enterprise-patterns/README.md).
+- **Read:** [progress table](software-engineering/enterprise-patterns/README.md) and [concept-by-concept recap](software-engineering/enterprise-patterns/SUMMARY.md).
 
 ### 9. Design Patterns (Gang of Four)
 
 The classic 23 object-oriented patterns. Underpins the later pattern catalogs.
 
-- **Status:** scaffolded - 11 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** what patterns are and programming to an interface; composition over inheritance; creational (Factory Method, Abstract Factory, Builder, Prototype, Singleton); structural (Adapter, Bridge, Composite, Decorator, Facade, Proxy, Flyweight); behavioral (Strategy, Template Method, Observer, Command, State, Chain of Responsibility, Iterator, Mediator, Visitor, and the rest).
-- **Read:** [progress table](software-engineering/design-patterns/README.md).
+- **Read:** [progress table](software-engineering/design-patterns/README.md) and [concept-by-concept recap](software-engineering/design-patterns/SUMMARY.md).
 
 ## Domain Modeling
 
