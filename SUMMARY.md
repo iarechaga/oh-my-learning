@@ -297,9 +297,9 @@ feedback, and reliability engineering as one operating model.
 
 ### 3. Site Reliability Engineering (Beyer, Jones, Petoff, Murphy)
 
-- **Status:** scaffolded - 16 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 16/16 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** SLIs/SLOs and error budgets, eliminating toil, on-call and incident management, release engineering, and running production systems reliably.
-- **Read:** [progress table](devops-reliability/sre/README.md).
+- **Read:** [progress table](devops-reliability/sre/README.md) and [concept-by-concept recap](devops-reliability/sre/SUMMARY.md).
 
 ### 4. Seeking SRE (Blank-Edelman, ed.)
 

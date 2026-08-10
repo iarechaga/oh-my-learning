@@ -143,13 +143,13 @@ better test design. All three subjects are fully authored:
 | **xUnit Test Patterns** | *xUnit Test Patterns* (Meszaros) - the catalog of test smells, patterns, and test-code refactorings. | 12 | [software-quality/xunit-test-patterns/README.md](software-quality/xunit-test-patterns/README.md) |
 
 **[devops-reliability/](devops-reliability/README.md)** - operating software in
-production: flow, feedback, and reliability engineering. All scaffolded:
+production: flow, feedback, and reliability engineering. All four subjects are fully authored:
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
 | **The Phoenix Project** | *The Phoenix Project* (Kim et al.) - a novel teaching the Three Ways, flow, WIP, and constraints. | 10 | [devops-reliability/phoenix-project/README.md](devops-reliability/phoenix-project/README.md) |
 | **The DevOps Handbook** | *The DevOps Handbook* (Kim et al.) - the practical implementation of flow, feedback, and continual learning. | 16 | [devops-reliability/devops-handbook/README.md](devops-reliability/devops-handbook/README.md) |
-| **Site Reliability Engineering** | *Site Reliability Engineering* (Beyer et al.) - SLIs/SLOs, error budgets, toil, on-call, incidents. | 16 *(scaffold)* | [devops-reliability/sre/README.md](devops-reliability/sre/README.md) |
+| **Site Reliability Engineering** | *Site Reliability Engineering* (Beyer et al.) - SLIs/SLOs, error budgets, toil, on-call, incidents. | 16 | [devops-reliability/sre/README.md](devops-reliability/sre/README.md) |
 | **Seeking SRE** | *Seeking SRE* (Blank-Edelman, ed.) - applying and evolving SRE: culture, human factors, strategy. | 12 | [devops-reliability/seeking-sre/README.md](devops-reliability/seeking-sre/README.md) |
 
 **[technical-leadership/](technical-leadership/README.md)** - growing beyond coding:
