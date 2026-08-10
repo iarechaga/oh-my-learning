@@ -303,9 +303,9 @@ feedback, and reliability engineering as one operating model.
 
 ### 4. Seeking SRE (Blank-Edelman, ed.)
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** applying and evolving SRE across different organizations - culture, human factors, and long-term reliability strategy.
-- **Read:** [progress table](devops-reliability/seeking-sre/README.md).
+- **Read:** [progress table](devops-reliability/seeking-sre/README.md) and [concept-by-concept recap](devops-reliability/seeking-sre/SUMMARY.md).
 
 ## Technical Leadership
 

@@ -150,7 +150,7 @@ production: flow, feedback, and reliability engineering. All scaffolded:
 | **The Phoenix Project** | *The Phoenix Project* (Kim et al.) - a novel teaching the Three Ways, flow, WIP, and constraints. | 10 | [devops-reliability/phoenix-project/README.md](devops-reliability/phoenix-project/README.md) |
 | **The DevOps Handbook** | *The DevOps Handbook* (Kim et al.) - the practical implementation of flow, feedback, and continual learning. | 16 *(scaffold)* | [devops-reliability/devops-handbook/README.md](devops-reliability/devops-handbook/README.md) |
 | **Site Reliability Engineering** | *Site Reliability Engineering* (Beyer et al.) - SLIs/SLOs, error budgets, toil, on-call, incidents. | 16 *(scaffold)* | [devops-reliability/sre/README.md](devops-reliability/sre/README.md) |
-| **Seeking SRE** | *Seeking SRE* (Blank-Edelman, ed.) - applying and evolving SRE: culture, human factors, strategy. | 12 *(scaffold)* | [devops-reliability/seeking-sre/README.md](devops-reliability/seeking-sre/README.md) |
+| **Seeking SRE** | *Seeking SRE* (Blank-Edelman, ed.) - applying and evolving SRE: culture, human factors, strategy. | 12 | [devops-reliability/seeking-sre/README.md](devops-reliability/seeking-sre/README.md) |
 
 **[technical-leadership/](technical-leadership/README.md)** - growing beyond coding:
 staff-plus IC leadership, management, delivery science, and decision-making. All seven
