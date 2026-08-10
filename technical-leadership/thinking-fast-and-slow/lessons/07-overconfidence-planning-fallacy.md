@@ -1,0 +1,76 @@
+---
+id: thinking-fast-and-slow/07
+subject: thinking-fast-and-slow
+title: Overconfidence, planning fallacy, and optimism bias
+slug: overconfidence-planning-fallacy
+status: drafted
+mastery:
+seniority: senior
+source: Thinking, Fast and Slow (Daniel Kahneman), Part III, Chapters 20-24
+prerequisites: [thinking-fast-and-slow/03, thinking-fast-and-slow/06]
+created: 2026-08-10
+updated: 2026-08-10
+---
+
+# Overconfidence, planning fallacy, and optimism bias
+
+## TL;DR
+People are systematically overconfident about how well they understand the past and can predict the future, and this shows up concretely in project planning as the "planning fallacy": estimates that describe the best-case scenario as if it were the expected scenario, ignoring the long tail of things that plausibly go wrong. Optimism bias is not a personality flaw of bad estimators — it's a predictable, near-universal feature of how System 1 generates plans.
+
+## The idea
+This lesson connects two of Kahneman's related findings. First, **overconfidence**: people's subjective confidence in a judgment is systematically higher than the judgment's actual accuracy warrants, because confidence is generated from the *coherence* of the story you can tell yourself (`thinking-fast-and-slow/08`), not from a calibrated assessment of the evidence's real strength. Second, the **planning fallacy**: plans and forecasts that are unrealistically close to best-case scenarios, produced by focusing on the specific plan in front of you (the "inside view") while ignoring the statistics of how similar plans have actually turned out before (the "outside view"). Both exist because the alternative — genuinely uncertain, hedged, wide-range thinking — is effortful, unpleasant, and often organizationally punished (nobody wants to present a roadmap with huge error bars to leadership).
+
+## How it works
+
+### The inside view vs. the outside view
+The **inside view** is what you get when you focus on the specific case: gathering details about this particular project, this particular team, and constructing a scenario for how it will unfold, then estimating from that scenario. The **outside view** ignores the specifics and instead asks: "How did similar projects, done by similar teams, actually turn out historically?" Kahneman recounts his own experience building a curriculum-writing textbook with a team of experts: asked individually, the inside-view estimate was 1.5-2 years. When one team member, an expert in curriculum-writing projects specifically, was asked "of all the teams you've seen attempt something like this, how many finished, and how long did the ones that finished take?" — the answer was 40% never finished at all, and those that did took 7-10 years. The inside view (this specific plan, these specific talented people) and the outside view (the actual base rate of similar efforts) diverged by a factor of roughly 5x, and the outside view turned out to be far closer to correct (the actual project took about 8 years).
+
+**Engineering application:** when your team estimates a migration at "6 weeks" by walking through the specific steps you can currently foresee, that's an inside view. The outside view asks: "Looking at our last five migrations of comparable scope, how long did they actually take, from the same initial 6-week-ish estimate?" If the honest answer is "they took 12-16 weeks on average," that historical multiplier is more informative than any amount of additional inside-view detail about *this* migration's specific steps.
+
+### Why the inside view is always optimistic: it can't see the unknown unknowns
+The planning fallacy isn't just "people are bad at estimating tasks they can see" — it's that inside-view planning, by construction, only accounts for risks you can currently imagine. It systematically omits: the specific unforeseeable obstacles that *always* occur but differ in nature each time (a key dependency team is short-staffed, a third-party API changes, a critical teammate goes on leave), and the well-known but individually-dismissed risks ("that always happens to other projects, but we're careful"). Outside-view base rates implicitly bake in the *statistical presence* of unknown unknowns, even without naming them, because the base rate is drawn from real projects that actually experienced them.
+
+**Worked example — the 90% rule:** a commonly observed engineering pattern (echoing the planning fallacy) is that a project reported as "90% done" stays at roughly 90% done for a disproportionate share of its remaining timeline — because the remaining 10% disproportionately contains exactly the unforeseen, non-routine work that inside-view estimation systematically underweights (integration issues, edge cases, the parts nobody wanted to think hard about during planning).
+
+### Overconfidence and the illusion of validity
+Kahneman describes the "illusion of validity" — the subjective sense of confidence in a judgment is generated by how coherent and available the supporting story feels (see `thinking-fast-and-slow/03` and `08`), not by any actual measure of predictive accuracy. In a striking real-world example from the book, experienced stock pickers at a wealth-management firm showed year-over-year investment performance correlations close to zero (i.e., no more skill than chance) — yet reported high confidence in their own picks, and the firm continued paying them as if skill were being demonstrated. Confidence and accuracy were completely decoupled, and nobody inside the system noticed, because the felt confidence was generated by fluent, coherent internal narratives about "why this stock will do well," not by any track record check.
+
+**Engineering application:** a senior engineer's confident claim that "this architecture will scale to 10x load" is a coherence-based confidence judgment (the story hangs together, they can picture the components handling more load) unless it's backed by an actual track record of similar predictions being checked against outcomes. Confidently-delivered architecture opinions and actually-accurate architecture opinions are two different things that feel identical from the inside.
+
+### Optimism bias as a feature, not just a bug
+Kahneman is careful to note optimism bias is not purely dysfunctional — a realistic, unbiased view of the odds of entrepreneurial or ambitious success (most startups fail; most major software rewrites go over budget) would rationally discourage a large fraction of valuable risk-taking. Optimism drives people to attempt things that, on realistic base-rate odds, they "shouldn't" — and society benefits in aggregate even though most individual optimistic bets fail. This is a genuine trade-off, not simply an error to eliminate.
+
+**Engineering application:** if every engineer accurately internalized the true base rate of "how often do ambitious rewrites actually deliver on time and meet their promised goals," fewer ambitious rewrites would ever be proposed — some of which turn out, ex post, to be exactly the bets worth having made. The goal of debiasing (`thinking-fast-and-slow/14`) is calibrated realism in *estimation and planning*, not eliminating ambition in *what gets attempted*.
+
+## Pros
+- Recognizing the inside view/outside view distinction is one of the highest-leverage, cheapest debiasing tools available — asking "how long did similar projects actually take" is a five-minute question with an outsized correction effect on estimate accuracy.
+- Understanding overconfidence as a structural, coherence-driven illusion (not a personal failing) makes it easier to build organizational processes (premortems, reference-class checks — see `thinking-fast-and-slow/14`) instead of just telling individuals to "be more realistic," which doesn't work.
+- Knowing optimism bias has real upside (it enables ambitious bets society benefits from) prevents overcorrecting into paralysis-inducing pessimism when the goal is really just *calibrated* estimates, not *lower* ones.
+
+## Cons
+- Outside-view base rates require actually having tracked historical data on similar projects — most engineering orgs don't systematically record "estimated vs. actual" across projects, so the correction is often unavailable in practice even when desired.
+- Presenting outside-view-adjusted (i.e., much longer) estimates to stakeholders is organizationally uncomfortable and sometimes actively punished — teams that give realistic estimates can lose work to teams that give optimistic ones, creating a perverse incentive against calibration.
+- Overcorrecting into constant historical-base-rate pessimism can suppress legitimately different situations — sometimes a team genuinely has learned from past mistakes and the current project really is different in a way that justifies deviating from the historical average; the outside view is a strong prior, not an unquestionable verdict.
+
+## Alternatives
+- **Reference-class forecasting (Flyvbjerg's formalization)** — a structured version of the outside view: identify a reference class of comparable past projects, compute their actual outcome distribution, and apply that distribution's uplift factor to the current estimate; more rigorous and less subjective than an informal "how did similar projects go" gut check.
+- **Premortems (Gary Klein)** — imagine the project has already failed and work backward to explain why; this reframes the planning conversation to surface risks the optimistic inside view would otherwise suppress (covered further in `thinking-fast-and-slow/14`).
+- **Monte Carlo / three-point (PERT) estimation** — instead of a single point estimate, elicit best-case, worst-case, and most-likely estimates and compute a probability distribution; doesn't fix optimism at the input level (each point can still be optimistic) but forces explicit acknowledgment of uncertainty and tail risk that single-point estimates hide.
+
+## When to use it
+Apply outside-view thinking and explicit overconfidence checks for any estimate that will drive external commitments (customer-facing deadlines, budget asks, cross-team dependencies) or that has a track record of past similar efforts to draw on. The larger and more novel the project, the more the inside view alone should be distrusted.
+
+## When NOT to use it
+Don't demand outside-view rigor for small, low-stakes, well-understood tasks where an inside-view estimate is cheap to get and cheap to be wrong about — a one-day ticket doesn't need a reference-class analysis. And don't let outside-view pessimism become an excuse to avoid ambitious bets entirely; the tool is for calibrating the *estimate*, not for vetoing the *attempt*.
+
+## Key takeaways / mental model
+Before committing to any estimate that matters, ask: "Am I estimating from the inside (walking through this specific plan) or the outside (how did similar efforts actually turn out)?" If you only have an inside-view number, treat it as a lower bound, not a point estimate, and actively seek the outside-view data point before committing publicly.
+
+## Self-check questions
+1. Recall your team's most recent significant delivery. Estimate the ratio of actual time taken to originally estimated time. What would an "outside view" estimate, based on that ratio, predict for your current in-flight project?
+2. Explain why the wealth-management stock pickers felt confident despite near-zero real predictive skill. What is the general mechanism connecting felt confidence to actual accuracy?
+3. Kahneman argues optimism bias has genuine upside for society even though it produces inaccurate individual estimates. Do you agree this trade-off applies to engineering project bets? Give a concrete example either way.
+4. Your project is reported as "90% done" for the third week in a row. Using the planning-fallacy framework, explain why this specific pattern is predictable rather than bad luck.
+
+## References
+- Thinking, Fast and Slow (Daniel Kahneman), Part III: Chapters 20-24 ("The Illusion of Validity," "Intuitions vs. Formulas," "Expert Intuition," "The Outside View," "The Engine of Capitalism").
