@@ -245,9 +245,9 @@ design paradigms, and concurrency correctness.
 
 ### 4. Java Concurrency in Practice (Goetz et al.)
 
-- **Status:** scaffolded - 15 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->senior).
-- **Covers:** the definitive JVM guide to thread safety - the memory model, building thread-safe classes, concurrent collections, synchronizers, thread pools, and liveness/performance.
-- **Read:** [progress table](cs-fundamentals/java-concurrency/README.md).
+- **Status:** 15/15 lessons authored (all `drafted`); not yet discussed. **Seniority baseline:** senior (mid->senior).
+- **Covers:** the definitive JVM guide to thread safety - the memory model, building thread-safe classes, concurrent collections, synchronizers, thread pools, liveness/performance, testing, and designing resilient concurrent services.
+- **Read:** [progress table](cs-fundamentals/java-concurrency/README.md) · [summary](cs-fundamentals/java-concurrency/SUMMARY.md).
 
 ### 5. The Art of Multiprocessor Programming (Herlihy & Shavit)
 
