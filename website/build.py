@@ -246,6 +246,35 @@ def discover_domains() -> list[Domain]:
     return domains
 
 
+LESSON_LINK_RE = re.compile(r'href="([^"#]+\.md)(#[^"]*)?"')
+
+
+def rewrite_lesson_links(html: str, source_file: Path) -> str:
+    """Point relative in-prose links at sibling/cross-subject lesson `.md` files to
+    the rendered `.html` page instead.
+
+    Lesson bodies sometimes reference another concept with a plain relative
+    Markdown link (`[01-fundamentals.md](01-fundamentals.md)`, `../ddia/lessons/07-....md`,
+    etc.) - that resolves fine when GitHub renders the raw file, but 404s on this site
+    since only `.html` pages exist here. Leaves anything that isn't a resolvable
+    in-repo lesson file (external links, non-lesson `.md` files) untouched.
+    """
+
+    def repl(match: re.Match[str]) -> str:
+        rel_path, fragment = match.group(1), match.group(2) or ""
+        target = (source_file.parent / rel_path).resolve()
+        try:
+            domain, subject, lessons_dir, filename = target.relative_to(REPO_ROOT).parts
+        except ValueError:
+            return match.group(0)
+        if lessons_dir != "lessons" or not filename.endswith(".md"):
+            return match.group(0)
+        new_href = f"{BASE_PATH}{domain}/{subject}/{filename[:-3]}.html{fragment}"
+        return f'href="{new_href}"'
+
+    return LESSON_LINK_RE.sub(repl, html)
+
+
 def parse_lesson(file_path: Path, domain_slug: str, subject_slug: str) -> Lesson | None:
     """Parse a single lesson Markdown file into a Lesson object."""
     match = re.match(r"^(\d+)-(.+)\.md$", file_path.name)
@@ -270,7 +299,7 @@ def parse_lesson(file_path: Path, domain_slug: str, subject_slug: str) -> Lesson
             "toc": {"permalink": "#", "toc_depth": "2-3"},
         },
     )
-    body_html = md.convert(body)
+    body_html = rewrite_lesson_links(md.convert(body), file_path)
     toc_html = getattr(md, "toc", "") or ""
     word_count = len(re.findall(r"\w+", body))
     reading_minutes = max(1, round(word_count / 200))

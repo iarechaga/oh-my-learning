@@ -22,9 +22,14 @@ this file.
   `workflow_dispatch`); no manual build/publish step is required. `website/build.py`
   gained a `--base-path` option so generated links and static assets work correctly
   under a GitHub Pages project-site subpath (`/oh-my-learning/`) instead of only at
-  the domain root; the `website/templates/` were updated to use it. Documented in
-  [`agent-docs/website.md`](agent-docs/website.md). `README.md` links to the published
-  site and the repository's GitHub "homepage" URL now points to it.
+  the domain root; the `website/templates/` were updated to use it. Also fixed: 44
+  lessons' in-prose relative links to sibling/cross-subject lessons
+  (`[01-fundamentals.md](01-fundamentals.md)`-style) resolved to `.md` files that don't
+  exist in the generated site (only `.html` pages do) - `website/build.py` now rewrites
+  those to the correct rendered page during the build instead of leaving them as dead
+  links; verified zero broken internal links across all 663 generated pages. Documented
+  in [`agent-docs/website.md`](agent-docs/website.md). `README.md` links to the
+  published site and the repository's GitHub "homepage" URL now points to it.
 
 ## [1.0.0] - 2026-08-10
 
