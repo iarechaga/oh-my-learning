@@ -120,23 +120,27 @@ every subject. "Greater detail where needed" means: expand on concepts rated `sh
 Regenerate the subject `SUMMARY.md` and root `SUMMARY.md` after every discussion and
 whenever lessons are added or restructured.
 
-## Root README.md
+## Root README.md and CATALOG.md - always update together
 
-The root `README.md` is public-facing and keeps only a **condensed domain-level table**
-(domain, one-line theme, subject count, lesson count) plus a link to
-[`CATALOG.md`](../CATALOG.md) for the full subject/lesson detail - it does not enumerate
-subjects itself. Whenever a domain's subject or lesson count changes (new lessons
-authored, a new subject or domain scaffolded), update that domain's row in the same
-commit. This is a separate step from updating `SUMMARY.md`; both must be kept current
-together.
+These two are a matched pair and **always change together, in the same commit**,
+whenever a lesson, subject, or domain is added, renumbered, or removed - this is a
+standing rule for every future addition to the library, not a one-time cleanup:
 
-## Root CATALOG.md
+1. **Root `README.md`** is public-facing and keeps only a **condensed domain-level
+   table** (domain, one-line theme, subject count, lesson count) plus a link to
+   [`CATALOG.md`](../CATALOG.md) for the full subject/lesson detail - it does not
+   enumerate subjects itself. Update the affected domain's row (subject count, lesson
+   count; add a new row for a brand-new domain).
+2. **Root `CATALOG.md`** is the full public catalog - every domain, subject, and lesson,
+   with seniority and a direct link - and is **generated, never hand-edited**. Run:
+   ```
+   python3 scripts/generate_catalog.py
+   ```
+   (stdlib only, no install needed - it reads lesson front matter directly, so it is
+   always consistent with the source of truth). Run
+   `python3 scripts/generate_catalog.py --check` to confirm it is current before
+   declaring the work done; it exits non-zero if stale.
 
-`CATALOG.md` is the full public catalog - every domain, subject, and lesson, with
-seniority and a direct link - and is **generated, not hand-edited**. Run
-`python3 scripts/generate_catalog.py` (stdlib only, no install needed) after adding,
-renumbering, or removing lessons, subjects, or domains, and commit the regenerated file
-in the same change as the content that caused it to change. `scripts/generate_catalog.py
---check` exits non-zero if the file is stale (useful before declaring a subject done).
-It reads lesson front matter directly (`id`, `title`, `seniority`), so it is always
-consistent with the source of truth - never patch `CATALOG.md` by hand.
+This is a separate step from updating `SUMMARY.md` (previous section) - all three
+(`README.md`'s domain table, `CATALOG.md`, and the summaries) must be kept current
+together, and none of them substitutes for another.

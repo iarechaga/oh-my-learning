@@ -89,12 +89,16 @@ maintainer of all progress records. The human is the learner.
   and update the slug everywhere it is referenced.
 - Keep summaries in sync. Regenerate subject and root summaries after every discussion
   and whenever lessons are added or restructured.
-- Keep the root `README.md` in sync. Whenever a domain's subject/lesson counts change,
-  update that domain's row in the root `README.md`'s condensed domain table in the same
-  commit. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
-- Keep `CATALOG.md` in sync. It is generated, never hand-edited: run
-  `python3 scripts/generate_catalog.py` whenever a lesson, subject, or domain is added,
-  renumbered, or removed, and commit the result in the same change. See
+- **Keep the root README's domain table and `CATALOG.md` in step - always together, same
+  commit.** Whenever a lesson, subject, or domain is added, renumbered, or removed:
+  1. update that domain's row (subject count, lesson count) in the root `README.md`'s
+     condensed domain table, and
+  2. regenerate `CATALOG.md` by running `python3 scripts/generate_catalog.py` (stdlib
+     only, no install needed) - **never hand-edit `CATALOG.md`**, it is derived straight
+     from lesson front matter. `python3 scripts/generate_catalog.py --check` confirms it
+     is current before you declare the work done.
+  Do both in the same commit as the content change that triggered them - this rule
+  applies every time the library grows, not just today's domains. See
   [agent-docs/repository-model.md](agent-docs/repository-model.md).
 - Keep the changelog honest. When library content or agent rules change on `main`, add a
   matching entry under `[Unreleased]` in `CHANGELOG.md`; never list personal learning
