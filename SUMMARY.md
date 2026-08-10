@@ -233,9 +233,9 @@ design paradigms, and concurrency correctness.
 
 ### 2. Algorithms (Sedgewick & Wayne)
 
-- **Status:** scaffolded - 14 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 14/14 lessons authored (all `drafted`); not yet discussed. **Seniority baseline:** mid (junior->senior).
 - **Covers:** a practical, implementation-focused treatment of core algorithms and data structures - sorting, searching, symbol tables, graphs, and strings.
-- **Read:** [progress table](cs-fundamentals/algorithms-sedgewick/README.md).
+- **Read:** [progress table](cs-fundamentals/algorithms-sedgewick/README.md) · [summary](cs-fundamentals/algorithms-sedgewick/SUMMARY.md).
 
 ### 3. Algorithm Design (Kleinberg & Tardos)
 
