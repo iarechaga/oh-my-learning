@@ -291,9 +291,9 @@ feedback, and reliability engineering as one operating model.
 
 ### 2. The DevOps Handbook (Kim, Humble, Debois, Willis)
 
-- **Status:** scaffolded - 16 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 16/16 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** the practical implementation of the Three Ways - flow (CI/CD, deployment), feedback (telemetry, monitoring), and continual learning.
-- **Read:** [progress table](devops-reliability/devops-handbook/README.md).
+- **Read:** [progress table](devops-reliability/devops-handbook/README.md) and [concept-by-concept recap](devops-reliability/devops-handbook/SUMMARY.md).
 
 ### 3. Site Reliability Engineering (Beyer, Jones, Petoff, Murphy)
 
