@@ -216,9 +216,9 @@ cross-referenced here rather than duplicated.
 
 ### 3. Seven Databases in Seven Weeks (Perkins, Redmond, Wilson)
 
-- **Status:** scaffolded - 9 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 9/9 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** a comparative tour of relational, document, wide-column, graph, and key-value systems, ending in workload-driven database selection.
-- **Read:** [progress table](data-engineering/seven-databases/README.md).
+- **Read:** [progress table](data-engineering/seven-databases/README.md) and [concept-by-concept recap](data-engineering/seven-databases/SUMMARY.md).
 
 ## Computer Science Fundamentals
 
@@ -274,9 +274,9 @@ code with confidence through better test design and strategy.
 
 ### 3. xUnit Test Patterns (Meszaros)
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
 - **Covers:** the canonical catalog of test smells, test patterns, and test-code refactorings for long-term maintainability.
-- **Read:** [progress table](software-quality/xunit-test-patterns/README.md).
+- **Read:** [progress table](software-quality/xunit-test-patterns/README.md) and [concept-by-concept recap](software-quality/xunit-test-patterns/SUMMARY.md).
 
 ## DevOps, Cloud & Reliability
 

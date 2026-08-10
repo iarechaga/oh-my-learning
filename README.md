@@ -120,7 +120,7 @@ All scaffolded:
 | --- | --- | --- | --- |
 | **Database Internals** | *Database Internals* (Petrov) - storage engines (B-Trees, LSM) through replication, partitioning, and consensus. | 16 *(scaffold)* | [data-engineering/database-internals/README.md](data-engineering/database-internals/README.md) |
 | **SQL Performance Explained** | *SQL Performance Explained* (Winand) - indexing and query-shape reasoning for predictable SQL performance. | 10 | [data-engineering/sql-performance-explained/README.md](data-engineering/sql-performance-explained/README.md) |
-| **Seven Databases in Seven Weeks** | *Seven Databases in Seven Weeks* (Perkins et al.) - a comparative tour of relational, document, wide-column, graph, and key-value stores. | 9 *(scaffold)* | [data-engineering/seven-databases/README.md](data-engineering/seven-databases/README.md) |
+| **Seven Databases in Seven Weeks** | *Seven Databases in Seven Weeks* (Perkins et al.) - a comparative tour of relational, document, wide-column, graph, and key-value stores. | 9 | [data-engineering/seven-databases/README.md](data-engineering/seven-databases/README.md) |
 
 **[cs-fundamentals/](cs-fundamentals/README.md)** - core CS: algorithms, data structures,
 and concurrency. All five subjects are fully authored:
@@ -140,7 +140,7 @@ better test design. All scaffolded:
 | --- | --- | --- | --- |
 | **GOOS** | *Growing Object-Oriented Software, Guided by Tests* (Freeman & Pryce) - outside-in TDD, walking skeleton, mock objects. | 12 *(scaffold)* | [software-quality/goos/README.md](software-quality/goos/README.md) |
 | **Unit Testing** | *Unit Testing* (Khorikov) - valuable vs brittle tests, the four pillars, doubles, integration strategy. | 13 *(scaffold)* | [software-quality/unit-testing/README.md](software-quality/unit-testing/README.md) |
-| **xUnit Test Patterns** | *xUnit Test Patterns* (Meszaros) - the catalog of test smells, patterns, and test-code refactorings. | 12 *(scaffold)* | [software-quality/xunit-test-patterns/README.md](software-quality/xunit-test-patterns/README.md) |
+| **xUnit Test Patterns** | *xUnit Test Patterns* (Meszaros) - the catalog of test smells, patterns, and test-code refactorings. | 12 | [software-quality/xunit-test-patterns/README.md](software-quality/xunit-test-patterns/README.md) |
 
 **[devops-reliability/](devops-reliability/README.md)** - operating software in
 production: flow, feedback, and reliability engineering. All scaffolded:
