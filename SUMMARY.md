@@ -315,45 +315,45 @@ high-stakes decisions. This is the most senior-weighted domain in the library.
 
 ### 1. Staff Engineer (Larson)
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** what staff-plus roles are, the archetypes, earning the title, and operating with broad technical influence.
-- **Read:** [progress table](technical-leadership/staff-engineer/README.md).
+- **Read:** [progress table](technical-leadership/staff-engineer/README.md) - [subject summary](technical-leadership/staff-engineer/SUMMARY.md).
 
 ### 2. The Staff Engineer's Path (Reilly)
 
-- **Status:** scaffolded - 14 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 14/14 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** practical staff engineering through the three pillars - big-picture thinking, execution, and leveling up others.
-- **Read:** [progress table](technical-leadership/staff-engineers-path/README.md).
+- **Read:** [progress table](technical-leadership/staff-engineers-path/README.md) - [subject summary](technical-leadership/staff-engineers-path/SUMMARY.md).
 
 ### 3. An Elegant Puzzle (Larson)
 
-- **Status:** scaffolded - 13 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 13/13 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** engineering management as systems - org design, team sizing and topology, planning, systems thinking, and career ladders.
-- **Read:** [progress table](technical-leadership/elegant-puzzle/README.md).
+- **Read:** [progress table](technical-leadership/elegant-puzzle/README.md) - [subject summary](technical-leadership/elegant-puzzle/SUMMARY.md).
 
 ### 4. The Manager's Path (Fournier)
 
-- **Status:** scaffolded - 13 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 13/13 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** the management ladder from mentoring and tech lead through engineering manager, director, and up to CTO scope.
-- **Read:** [progress table](technical-leadership/managers-path/README.md).
+- **Read:** [progress table](technical-leadership/managers-path/README.md) - [subject summary](technical-leadership/managers-path/SUMMARY.md).
 
 ### 5. Accelerate (Forsgren, Humble, Kim)
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (senior->staff).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (senior->staff).
 - **Covers:** the research behind the four key (DORA) delivery metrics, the capabilities that predict performance, and capability-based improvement.
-- **Read:** [progress table](technical-leadership/accelerate/README.md).
+- **Read:** [progress table](technical-leadership/accelerate/README.md) - [subject summary](technical-leadership/accelerate/SUMMARY.md).
 
 ### 6. Thinking, Fast and Slow (Kahneman)
 
-- **Status:** scaffolded - 14 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->senior).
+- **Status:** 14/14 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->senior).
 - **Covers:** System 1/System 2, the major cognitive biases and heuristics, and prospect theory - a decision-maker's toolkit for judgment under uncertainty.
-- **Read:** [progress table](technical-leadership/thinking-fast-and-slow/README.md).
+- **Read:** [progress table](technical-leadership/thinking-fast-and-slow/README.md) - [subject summary](technical-leadership/thinking-fast-and-slow/SUMMARY.md).
 
 ### 7. How to Measure Anything (Hubbard)
 
-- **Status:** scaffolded - 11 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** applied measurement - calibrated estimation, reducing uncertainty, and the value of information for high-stakes decisions.
-- **Read:** [progress table](technical-leadership/how-to-measure-anything/README.md).
+- **Read:** [progress table](technical-leadership/how-to-measure-anything/README.md) - [subject summary](technical-leadership/how-to-measure-anything/SUMMARY.md).
 
 ## Focus areas (aggregated weak spots)
 
