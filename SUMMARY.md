@@ -46,9 +46,9 @@ The trade-off layer of the track: how to pull a monolith apart and put it back t
 
 Service-decomposition practice: splitting a system into independently deployable services and keeping them shippable. Cross-links to DDIA and The Hard Parts.
 
-- **Status:** scaffolded - 17 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 17/17 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** what microservices are; modelling services and boundaries; splitting the monolith; communication styles (sync/async/event-driven); per-service data; distributed transactions and sagas; build/CI, deployment, testing, and consumer-driven contracts; observability; resilience; scaling; security; Conway's law and teams.
-- **Read:** [progress table](architecture/building-microservices/README.md).
+- **Read:** [progress table](architecture/building-microservices/README.md) and [concept-by-concept recap](architecture/building-microservices/SUMMARY.md).
 
 ### 6. Microservices Patterns
 
@@ -70,17 +70,17 @@ Reusable container/orchestration patterns and batch-processing patterns. Cross-l
 
 The formal principles of distributed systems. Cross-links to DDIA and System Design.
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** goals and pitfalls; architectures and middleware; processes and threads; communication (RPC, messaging, multicast); naming; clocks and logical time; coordination; consistency and replication models; fault tolerance; consensus and agreement; distributed commit and recovery; security.
-- **Read:** [progress table](architecture/distributed-systems/README.md).
+- **Read:** [progress table](architecture/distributed-systems/README.md) and [concept-by-concept recap](architecture/distributed-systems/SUMMARY.md).
 
 ### 9. Building Evolutionary Architectures
 
 Guiding architectural change over time with fitness functions. Cross-links to Fundamentals and The Hard Parts.
 
-- **Status:** scaffolded - 9 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->staff).
+- **Status:** 9/9 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->staff).
 - **Covers:** what an evolutionary architecture is; fitness functions and their categories; incremental change; architectural coupling and quanta; evolutionary data; retrofitting evolvability; pitfalls and antipatterns; governance.
-- **Read:** [progress table](architecture/evolutionary-architectures/README.md).
+- **Read:** [progress table](architecture/evolutionary-architectures/README.md) and [concept-by-concept recap](architecture/evolutionary-architectures/SUMMARY.md).
 
 ### 10. System Design Interview
 
