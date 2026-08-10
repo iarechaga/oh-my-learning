@@ -138,7 +138,7 @@ better test design. All scaffolded:
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
-| **GOOS** | *Growing Object-Oriented Software, Guided by Tests* (Freeman & Pryce) - outside-in TDD, walking skeleton, mock objects. | 12 *(scaffold)* | [software-quality/goos/README.md](software-quality/goos/README.md) |
+| **GOOS** | *Growing Object-Oriented Software, Guided by Tests* (Freeman & Pryce) - outside-in TDD, walking skeleton, mock objects. | 12 | [software-quality/goos/README.md](software-quality/goos/README.md) |
 | **Unit Testing** | *Unit Testing* (Khorikov) - valuable vs brittle tests, the four pillars, doubles, integration strategy. | 13 | [software-quality/unit-testing/README.md](software-quality/unit-testing/README.md) |
 | **xUnit Test Patterns** | *xUnit Test Patterns* (Meszaros) - the catalog of test smells, patterns, and test-code refactorings. | 12 | [software-quality/xunit-test-patterns/README.md](software-quality/xunit-test-patterns/README.md) |
 

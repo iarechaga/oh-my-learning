@@ -262,9 +262,9 @@ code with confidence through better test design and strategy.
 
 ### 1. Growing Object-Oriented Software, Guided by Tests (Freeman & Pryce)
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** outside-in TDD, the walking skeleton, mock objects, and designing a system through its tests.
-- **Read:** [progress table](software-quality/goos/README.md).
+- **Read:** [progress table](software-quality/goos/README.md) and [concept-by-concept recap](software-quality/goos/SUMMARY.md).
 
 ### 2. Unit Testing: Principles, Practices, and Patterns (Khorikov)
 
