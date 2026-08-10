@@ -192,9 +192,9 @@ organizational language and constraints - Domain-Driven Design, strategic and ta
 
 ### 4. Domain-Driven Design Distilled (Vernon)
 
-- **Status:** scaffolded - 9 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
-- **Covers:** a concise primer of core DDD ideas - bounded contexts, ubiquitous language, subdomains, aggregates, domain events - and adoption patterns.
-- **Read:** [progress table](domain-modeling/ddd-distilled/README.md).
+- **Status:** 9/9 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (junior->senior).
+- **Covers:** a concise primer of core DDD ideas - what DDD is and when to reach for it, ubiquitous language and collaborative modeling, bounded contexts and context maps, distilling the core domain, entities and value objects, aggregates and consistency boundaries, repositories and domain services, domain events and eventual consistency, and strategic redesign / incremental adoption for existing systems.
+- **Read:** [progress table](domain-modeling/ddd-distilled/README.md) and [concept-by-concept recap](domain-modeling/ddd-distilled/SUMMARY.md).
 
 ## Data Engineering & Databases
 
