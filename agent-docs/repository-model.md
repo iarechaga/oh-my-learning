@@ -122,10 +122,21 @@ whenever lessons are added or restructured.
 
 ## Root README.md
 
-The root `README.md` is public-facing and states, per subject, whether it is
-`*(scaffold)*` (concept list only) or fully authored, plus its lesson count. Whenever a
-subject's lesson count changes (new lessons authored, a subject reaches N/N complete) or
-a new domain/subject is scaffolded, update its row in `README.md`'s subject tables in the
-same commit - do not leave it describing a subject as `*(scaffold)*` once its lessons are
-authored, and keep lesson counts accurate. This is a separate step from updating
-`SUMMARY.md`; both must be kept current together.
+The root `README.md` is public-facing and keeps only a **condensed domain-level table**
+(domain, one-line theme, subject count, lesson count) plus a link to
+[`CATALOG.md`](../CATALOG.md) for the full subject/lesson detail - it does not enumerate
+subjects itself. Whenever a domain's subject or lesson count changes (new lessons
+authored, a new subject or domain scaffolded), update that domain's row in the same
+commit. This is a separate step from updating `SUMMARY.md`; both must be kept current
+together.
+
+## Root CATALOG.md
+
+`CATALOG.md` is the full public catalog - every domain, subject, and lesson, with
+seniority and a direct link - and is **generated, not hand-edited**. Run
+`python3 scripts/generate_catalog.py` (stdlib only, no install needed) after adding,
+renumbering, or removing lessons, subjects, or domains, and commit the regenerated file
+in the same change as the content that caused it to change. `scripts/generate_catalog.py
+--check` exits non-zero if the file is stale (useful before declaring a subject done).
+It reads lesson front matter directly (`id`, `title`, `seniority`), so it is always
+consistent with the source of truth - never patch `CATALOG.md` by hand.

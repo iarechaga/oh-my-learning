@@ -20,9 +20,12 @@ Trigger: the human names a subject and/or provides a book.
    `discussions/` folders. Add the new subject's row to the domain `README.md`.
 4. Author lessons per `Workflow B`, either the agreed batch or on demand.
 5. When the subject is complete (all agreed lessons authored and verified, indexes in
-   sync), **commit and push it automatically** - creating a new book is the one case
-   where you do not wait to be asked. Follow [git-policy.md](git-policy.md) for where to
-   push (maintainer -> `main`; contributor -> a new branch + pull request).
+   sync), regenerate the root catalog: `python3 scripts/generate_catalog.py` (see
+   [repository-model.md](repository-model.md)), and update the domain's row in the root
+   `README.md`'s condensed domain table (subject/lesson counts). Then **commit and push
+   it automatically** - creating a new book is the one case where you do not wait to be
+   asked. Follow [git-policy.md](git-policy.md) for where to push (maintainer ->
+   `main`; contributor -> a new branch + pull request).
 
 ## Workflow B - Author a lesson
 
@@ -67,6 +70,8 @@ reading.
    prefer the lower band on a tie.
 4. Add or update the concept's row in the subject `README.md` index, including the
    **Seniority** column, and keep the subject's seniority baseline line accurate.
+5. Regenerate `CATALOG.md` (`python3 scripts/generate_catalog.py`) so the public catalog
+   picks up the new lesson - see [repository-model.md](repository-model.md).
 
 **Verify a lesson before declaring done:**
 - Every required section is present and non-empty.
@@ -75,6 +80,7 @@ reading.
 - The `README.md` index contains an accurate row for this concept (Seniority column
   filled), and the subject baseline still reflects the lessons.
 - Internal links (to prerequisites, references) resolve.
+- `CATALOG.md` is regenerated (`python3 scripts/generate_catalog.py --check` passes).
 
 ## Workflow C0 - Open a lesson / show topic progress
 

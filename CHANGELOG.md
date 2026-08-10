@@ -16,6 +16,14 @@ this file.
 
 ### Added
 
+- **Generated `CATALOG.md`** - a full public catalog of all 609 lessons
+  (domain -> subject -> concept, with seniority and a direct link to each lesson),
+  produced programmatically by the new `scripts/generate_catalog.py` (stdlib only) from
+  lesson front matter, so it can never drift by hand. `--check` mode verifies it is
+  current. `AGENTS.md`, `agent-docs/repository-model.md`, and
+  `agent-docs/learning-workflows.md` now require regenerating it whenever a lesson,
+  subject, or domain is added, renumbered, or removed; `CONTRIBUTING.md`'s workflows and
+  pre-submit checklist updated to match.
 - **Structured progress tracking** - a new `agent-docs/progress-tracking.md` defines
   `PROGRESS.md`, a per-learner, LLM-optimized index (structured track, Next up, Focus
   areas, Stats, Recent sessions) derived from lesson front matter, plus Workflow P for
@@ -38,6 +46,13 @@ this file.
   styled code blocks (the generator now emits theme-aware Pygments syntax-highlighting
   CSS, which was previously missing). `website/build.py` computes reading time, the TOC,
   and lesson neighbors; the templates and stylesheet were rewritten to match.
+- **Root `README.md` restructured as a public landing page** - user-facing "how to get
+  started in 2 minutes" now leads (fork/branch, agent onboarding, first discussion, and
+  the `PROGRESS.md` track/Next-up/Focus-areas loop), followed by a condensed 8-row
+  domain table and the new `CATALOG.md` link. Internals (full repository model,
+  contribution steps, the agent's contract) were trimmed out of the root README in favor
+  of linking to `CONTRIBUTING.md` and `AGENTS.md`, which already carried that detail, to
+  keep the landing page readable in one pass.
 
 ## [0.2.0] - 2026-07-02
 

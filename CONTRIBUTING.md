@@ -119,8 +119,11 @@ an existing one** - do not spin up a domain for a single loosely-related book.
    ```
 3. Add a section for the domain to the root [`SUMMARY.md`](SUMMARY.md), and remove it from
    the "Other domains: none yet" note once it has real content.
-4. Add the domain to the **Subjects** area of the root [`README.md`](README.md).
+4. Add a row for the domain to the condensed domain table in the root
+   [`README.md`](README.md#dominios-de-un-vistazo) (theme, subject count, lesson count).
 5. Place the first subject inside it via [Adding a new subject](#adding-a-new-subject-a-book).
+6. Regenerate `CATALOG.md`: `python3 scripts/generate_catalog.py` (see
+   [agent-docs/repository-model.md](agent-docs/repository-model.md)).
 
 A domain with no subjects yet is fine as a scaffold, but prefer to land it together with
 its first subject so the indexes are never empty.
@@ -145,14 +148,16 @@ scope before mass-authoring.
    - `lessons/` - empty, to be filled.
    - `discussions/` - empty (records are created later, during discussions, and stay off
      `main`).
-4. **Add the subject's row** to the domain `README.md` table, the root `README.md`
-   Subjects table, and the root `SUMMARY.md`.
+4. **Add the subject's row** to the domain `README.md` table and the root `SUMMARY.md`;
+   update the domain's subject/lesson counts in the root `README.md`'s condensed domain
+   table.
 5. **Author the lessons** per [Adding a single lesson](#adding-a-single-lesson), either the
    agreed batch or on demand.
 6. **Verify and ship.** When all agreed lessons are authored and verified and every index
-   is in sync, the subject is complete. Creating a new book is the one case where the agent
-   commits and pushes **automatically** (maintainer -> `main`; contributor -> a branch +
-   pull request). See [Branches, commits, and pull requests](#branches-commits-and-pull-requests).
+   is in sync, regenerate `CATALOG.md` (`python3 scripts/generate_catalog.py`) - the
+   subject is then complete. Creating a new book is the one case where the agent commits
+   and pushes **automatically** (maintainer -> `main`; contributor -> a branch + pull
+   request). See [Branches, commits, and pull requests](#branches-commits-and-pull-requests).
 
 **Subject `README.md` shape** (mirror an existing one such as
 [`architecture/system-design/README.md`](architecture/system-design/README.md)):
@@ -211,6 +216,7 @@ lesson** - if it sprawls into two ideas, split it into two lessons.
 5. **Add the row** to the subject `README.md` concepts table.
 6. **Update summaries** - regenerate the subject `SUMMARY.md` and the root `SUMMARY.md`
    (see [Keeping indexes and summaries in sync](#keeping-indexes-and-summaries-in-sync)).
+7. **Regenerate `CATALOG.md`** - `python3 scripts/generate_catalog.py`.
 
 ---
 
@@ -254,8 +260,11 @@ Drift is the main failure mode. After adding or restructuring lessons, update **
   high-importance concepts; keep solid basics brief. Cross-link to lessons and records.
 - The root **`SUMMARY.md`** - one section per subject plus the top-level **"Focus areas"**
   callout that aggregates open weak spots across every subject.
-- The domain **`README.md`** and root **`README.md`** tables when a subject's lesson count
-  or a domain/subject set changes.
+- The domain **`README.md`** table, and the root **`README.md`**'s condensed domain
+  table, when a subject's lesson count or a domain/subject set changes.
+- **`CATALOG.md`** - regenerate with `python3 scripts/generate_catalog.py` (never
+  hand-edit; it is derived from lesson front matter). Run
+  `python3 scripts/generate_catalog.py --check` to confirm it's current.
 - **`CHANGELOG.md`** - add a bullet under `[Unreleased]` for the content or agent-rule
   change, in the right category. The full versioning and category rules are in
   [agent-docs/release-policy.md](agent-docs/release-policy.md). Never list personal
@@ -347,7 +356,9 @@ Before opening a PR (or before the maintainer pushes), confirm:
       internal links resolve.
 - [ ] The subject `README.md` table has an accurate row for each new lesson.
 - [ ] Subject `SUMMARY.md` and root `SUMMARY.md` are regenerated and consistent.
-- [ ] Domain `README.md` / root `README.md` updated if a domain or subject set changed.
+- [ ] Domain `README.md` / root `README.md` condensed domain table updated if a domain or
+      subject set changed.
+- [ ] `CATALOG.md` regenerated (`python3 scripts/generate_catalog.py --check` passes).
 - [ ] `CHANGELOG.md` `[Unreleased]` has a bullet for this change, under the right category
       (Added / Deepened / Changed / Restructured / Fixed / Removed) - see
       [agent-docs/release-policy.md](agent-docs/release-policy.md). Personal progress is
