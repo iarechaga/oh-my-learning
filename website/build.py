@@ -34,6 +34,13 @@ TEMPLATE_DIR = WEBSITE_ROOT / "templates"
 STATIC_DIR = WEBSITE_ROOT / "static"
 DIST_DIR = WEBSITE_ROOT / "dist"
 
+# Site-root path all generated links are prefixed with. Always starts and ends with "/".
+# Defaults to "/" for local serving; a GitHub Pages *project* site (served from
+# https://<user>.github.io/<repo>/, not a custom domain or a <user>.github.io user site)
+# needs this set to "/<repo>/" via --base-path, since every internal link and static
+# asset reference is otherwise root-relative and would 404 under the repo subpath.
+BASE_PATH = "/"
+
 # Top-level directories that are not learning domains.
 NON_DOMAIN_DIRS = {
     ".git",
@@ -109,7 +116,7 @@ class Lesson:
 
     @property
     def url(self) -> str:
-        return f"/{self.domain_slug}/{self.subject_slug}/{self.number:02d}-{self.slug}.html"
+        return f"{BASE_PATH}{self.domain_slug}/{self.subject_slug}/{self.number:02d}-{self.slug}.html"
 
     @property
     def is_discussed(self) -> bool:
@@ -141,7 +148,7 @@ class Subject:
 
     @property
     def url(self) -> str:
-        return f"/{self.domain_slug}/{self.slug}/index.html"
+        return f"{BASE_PATH}{self.domain_slug}/{self.slug}/index.html"
 
     @property
     def title(self) -> str:
@@ -178,7 +185,7 @@ class Domain:
 
     @property
     def url(self) -> str:
-        return f"/{self.slug}/index.html"
+        return f"{BASE_PATH}{self.slug}/index.html"
 
     @property
     def title(self) -> str:
@@ -314,8 +321,21 @@ def write_highlight_css(dest: Path) -> None:
     dest.write_text(css, encoding="utf-8")
 
 
-def build_site() -> None:
-    """Generate the complete static website."""
+def build_site(base_path: str = "/") -> None:
+    """Generate the complete static website.
+
+    base_path is the site-root prefix for every internal link and static asset
+    (see BASE_PATH above) - "/" for local serving, "/<repo>/" for a GitHub Pages
+    project site.
+    """
+    global BASE_PATH
+    base_path = base_path.strip()
+    if not base_path.startswith("/"):
+        base_path = "/" + base_path
+    if not base_path.endswith("/"):
+        base_path += "/"
+    BASE_PATH = base_path
+
     if DIST_DIR.exists():
         shutil.rmtree(DIST_DIR)
     DIST_DIR.mkdir(parents=True)
@@ -330,6 +350,7 @@ def build_site() -> None:
         autoescape=select_autoescape(["html", "xml"]),
     )
     env.filters["format_label"] = format_label
+    env.globals["base"] = BASE_PATH
 
     domains = discover_domains()
 
@@ -424,9 +445,15 @@ def build_site() -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build the Oh My Learning website.")
     parser.add_argument("--watch", action="store_true", help="Rebuild when source files change")
+    parser.add_argument(
+        "--base-path",
+        default="/",
+        help="Site-root prefix for links and assets, e.g. /oh-my-learning/ for a "
+        "GitHub Pages project site. Defaults to / for local serving.",
+    )
     args = parser.parse_args()
 
-    build_site()
+    build_site(args.base_path)
 
     if args.watch:
         try:
@@ -443,7 +470,7 @@ def main() -> int:
                 if "website/dist" in event.src_path or event.src_path.endswith(".html") and "dist" in event.src_path:
                     return
                 print(f"Change detected: {event.src_path}")
-                build_site()
+                build_site(args.base_path)
 
         observer = Observer()
         observer.schedule(Rebuilder(), str(REPO_ROOT), recursive=True)

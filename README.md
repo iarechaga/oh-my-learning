@@ -73,8 +73,13 @@ sync by hand.
 
 ## Other ways to read
 
-Besides reading the Markdown directly on GitHub or in your editor, there's a local
-static website with navigation, seniority badges, and reading status:
+Besides reading the Markdown directly on GitHub or in your editor, there's a static
+website with navigation, seniority badges, and reading status.
+
+**-> [Browse it online](https://iarechaga.github.io/oh-my-learning/)** - published via
+GitHub Pages and rebuilt automatically on every push to `main`.
+
+Or run it locally:
 
 ```bash
 pip3 install -r website/requirements.txt

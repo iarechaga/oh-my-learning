@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/static/highlight.css">
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ base }}static/highlight.css">
+  <link rel="stylesheet" href="{{ base }}static/style.css">
   <script>
     // Apply the saved theme before first paint to avoid a flash.
     (function () {
@@ -22,7 +22,7 @@
   <div class="layout">
     <aside class="sidebar">
       <div class="sidebar-head">
-        <a class="brand" href="/index.html">
+        <a class="brand" href="{{ base }}index.html">
           <span class="brand-mark" aria-hidden="true">◆</span>
           <span class="brand-text">Oh My Learning</span>
         </a>
@@ -66,7 +66,7 @@
         <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
         </label>
-        <a class="topbar-brand" href="/index.html">Oh My Learning</a>
+        <a class="topbar-brand" href="{{ base }}index.html">Oh My Learning</a>
       </header>
       <main class="content">
         {% block content %}{% endblock %}

@@ -14,6 +14,18 @@ this file.
 
 ## [Unreleased]
 
+### Added
+
+- **Website published on GitHub Pages** - the reading site now auto-deploys to
+  <https://iarechaga.github.io/oh-my-learning/> via
+  `.github/workflows/deploy-pages.yml` on every push to `main` (and on manual
+  `workflow_dispatch`); no manual build/publish step is required. `website/build.py`
+  gained a `--base-path` option so generated links and static assets work correctly
+  under a GitHub Pages project-site subpath (`/oh-my-learning/`) instead of only at
+  the domain root; the `website/templates/` were updated to use it. Documented in
+  [`agent-docs/website.md`](agent-docs/website.md). `README.md` links to the published
+  site and the repository's GitHub "homepage" URL now points to it.
+
 ## [1.0.0] - 2026-08-10
 
 First stable release: the full library is authored (609 lessons, 45 subjects, 8

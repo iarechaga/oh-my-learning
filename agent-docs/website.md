@@ -100,3 +100,27 @@ pip install -r website/requirements.txt
 ```
 
 Required packages: Jinja2, Markdown, PyYAML, Pygments.
+
+## Publishing (GitHub Pages)
+
+The site is published at <https://iarechaga.github.io/oh-my-learning/> and rebuilt
+**automatically** by [`.github/workflows/deploy-pages.yml`](../.github/workflows/deploy-pages.yml)
+on every push to `main` (and on manual `workflow_dispatch`). There is no manual publish
+step, and the agent does not need to run anything after a push - the workflow builds
+and deploys the site itself.
+
+Two things matter if you touch the generator or the workflow:
+
+- **GitHub Pages project sites are served from a subpath**, not the domain root
+  (`https://<user>.github.io/<repo>/`, not `/`). `website/build.py` accepts
+  `--base-path` for exactly this: every internal link, static asset reference, and the
+  `Lesson`/`Subject`/`Domain` `.url` properties are prefixed with it (see `BASE_PATH` in
+  `website/build.py`). The workflow passes
+  `--base-path "/${{ github.event.repository.name }}/"`; local builds
+  (`python3 website/build.py`, no flag) default to `/` and are meant for
+  `website/serve.py`, not for deploying elsewhere. If you ever add a hardcoded
+  root-relative link (`href="/..."`) to a template instead of `{{ base }}...`, it will
+  work locally and 404 on the published site - always use `{{ base }}`.
+- **`website/dist/` stays out of git.** The workflow builds it fresh in CI and uploads
+  it as a Pages artifact (`actions/upload-pages-artifact`); it is never committed, on
+  `main` or anywhere else.
