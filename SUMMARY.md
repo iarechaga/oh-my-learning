@@ -180,9 +180,9 @@ organizational language and constraints - Domain-Driven Design, strategic and ta
 
 ### 2. Implementing Domain-Driven Design (Vernon, the "red book")
 
-- **Status:** scaffolded - 15 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
-- **Covers:** practical strategic design; aggregates and consistency boundaries in depth; domain events; integrating bounded contexts; application/architecture concerns for DDD execution.
-- **Read:** [progress table](domain-modeling/implementing-ddd/README.md).
+- **Status:** 15/15 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
+- **Covers:** distilling strategic design into implementation decisions; domain model building blocks in code; bounded contexts as service boundaries; effective aggregate design, true invariants, and identity references; eventual consistency; domain events; repositories and persistence mapping; application services; published language and context-map contracts; anti-corruption layers; messaging integration; event sourcing; CQRS; sagas and process managers.
+- **Read:** [progress table](domain-modeling/implementing-ddd/README.md) and [concept-by-concept recap](domain-modeling/implementing-ddd/SUMMARY.md).
 
 ### 3. Learning Domain-Driven Design (Khononov)
 
