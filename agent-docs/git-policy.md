@@ -17,9 +17,10 @@ email (`git config user.email`):
 
 ## The learner branch (the agent sets it up)
 
-Personal learning - discussion records, `status`/`mastery` edits, progress tables, and
-the learner's `LEARNER.md` - never happens on `main`. **The agent creates the branch; the
-learner never has to.** On the first interaction with a learner (see
+Personal learning - discussion records, `status`/`mastery` edits, progress tables,
+`PROGRESS.md`, and the learner's `LEARNER.md` - never happens on `main`. **The agent
+creates the branch; the learner never has to.** On the first interaction with a learner
+(see
 [learner-profile.md](learner-profile.md)), before onboarding:
 
 1. Check the current branch. If it is `main` (or any shared/protected branch), the agent
@@ -38,6 +39,22 @@ learner never has to.** On the first interaction with a learner (see
 
 This applies to **both identities**: even the maintainer, who *may* push to `main`, does
 personal learning on a `learn/<slug>` branch and keeps `LEARNER.md` off `main`.
+
+## PROGRESS.md and merge conflicts
+
+`PROGRESS.md` (see [progress-tracking.md](progress-tracking.md)) is committed - unlike
+`LEARNER.md`, which stays gitignored - but only ever on the learner's own `learn/<slug>`
+branch or personal fork, never on `main`. Because each learner's fork/branch is expected
+to periodically pull upstream changes (new subjects, new lessons, updated agent-docs),
+`PROGRESS.md` can conflict with itself across a merge/rebase only if upstream also ships
+a `PROGRESS.md` - it does not: `main` never contains a `PROGRESS.md` (it is personal, not
+library content), so a plain `git pull`/`git merge` from upstream never touches this file
+and cannot conflict on it. The realistic conflict case is a learner working from **two
+machines/sessions on the same branch**: if that happens, prefer regenerating the
+derived sections (Stats, Focus areas, Next up, Recent sessions - see the regeneration
+rule in [progress-tracking.md](progress-tracking.md)) from the front matter and the
+Track table's hand-authored parts rather than attempting a line-by-line merge; the file
+is cheap to regenerate and expensive to merge by hand.
 
 ## When to commit and push
 

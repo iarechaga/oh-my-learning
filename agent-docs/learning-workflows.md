@@ -186,6 +186,14 @@ if helpful, ask the learner how confident they already feel.
    to the new record.
 4. Regenerate the subject `SUMMARY.md` and the root `SUMMARY.md` so they reflect this
    session.
+5. If `PROGRESS.md` exists at the repo root, update it too - see
+   [progress-tracking.md](progress-tracking.md) for the full schema and regeneration rule.
+   In short: update this concept's row (`Lesson status`, `Mastery`, `Last discussed`),
+   flip its `Track status` from `current` to `done`, promote the next `queued` row to
+   `current` and rewrite **Next up**, recompute **Stats** and **Focus areas** by tallying
+   the Track table, and append one line to **Recent sessions**. If `PROGRESS.md` does not
+   exist yet (no structured track was set up during onboarding), skip this step - do not
+   create one mid-discussion.
 
 **Verify after a discussion before declaring done:**
 - The record file exists with all sections filled.
@@ -194,6 +202,8 @@ if helpful, ask the learner how confident they already feel.
 - Subject `SUMMARY.md` and root `SUMMARY.md` reflect the latest verdict and weak spots.
 - The record captures related next topics and the learner was told those recommendations
   before the session ended.
+- If `PROGRESS.md` exists: its row for this concept, **Next up**, **Stats**, **Focus
+  areas**, and **Recent sessions** all reflect this session's outcome.
 
 ## Templates
 

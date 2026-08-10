@@ -14,6 +14,19 @@ this file.
 
 ## [Unreleased]
 
+### Added
+
+- **Structured progress tracking** - a new `agent-docs/progress-tracking.md` defines
+  `PROGRESS.md`, a per-learner, LLM-optimized index (structured track, Next up, Focus
+  areas, Stats, Recent sessions) derived from lesson front matter, plus Workflow P for
+  answering progress questions from that file alone. `templates/progress-template.md`
+  seeds new instances. Onboarding (`learner-profile.md`, Step 4) now produces this
+  structured track alongside the prose learning path, and discussions
+  (`learning-workflows.md`, Workflow C) update it after every session.
+  `repository-model.md` and `git-policy.md` document its place in the repo layout and
+  its commit/anti-conflict treatment (personal, committed on the learner's branch/fork,
+  never on `main`).
+
 ### Changed
 
 - **Website redesign** - the static reading site (`website/`) got a full visual

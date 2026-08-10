@@ -130,13 +130,31 @@ When both are known:
 1. Use the catalog (see [learning-workflows.md](learning-workflows.md), Workflow C0) to
    find subjects/concepts that match the learner's goals, pitched to their band (a lower
    band may start with foundational lessons to build confidence; a higher band may skip
-   ahead to trade-off-heavy concepts).
+   ahead to trade-off-heavy concepts). Concretely: read each candidate subject's
+   `README.md` concept table (not the lessons themselves yet) for `seniority` and
+   `prerequisites`, and keep only concepts that (a) match the learner's stated goal/target
+   subjects, (b) fall within the learner's band ±1 (a `senior` learner may reasonably start
+   at `mid` or reach into `staff`), and (c) respect prerequisite order (a concept cannot
+   precede an unresolved prerequisite on the list). The track is scoped to the goal, not
+   the whole repo - it is normal for it to cover a handful of subjects out of the many
+   available, and it can be expanded later (see Workflow P in
+   [progress-tracking.md](progress-tracking.md)).
 2. Propose an **ordered path** with a one-line reason per step, respecting prerequisites
    and dependency order.
 3. Present it and **let the learner accept or adjust** - do not start quizzing until they
    agree on a starting point.
 4. Record the path and its status (`proposed` / `accepted` / `revised`, with dates) in
    **Proposed learning path**.
+5. Once accepted, write the same ordered list as a **structured track** in `PROGRESS.md`
+   at the repo root: copy [templates/progress-template.md](../templates/progress-template.md)
+   if the file does not exist yet, fill **Track goal** and the **Track** table (one row per
+   accepted step, `Track status: queued`, first row `current`, one-line **Reason** per row
+   from step 2 above), and render **Next up** from the first few rows. See
+   [progress-tracking.md](progress-tracking.md) for the full schema and the regeneration
+   rule - load that file before writing or updating `PROGRESS.md`. `PROGRESS.md` follows
+   the same branch/commit rules as `LEARNER.md` (never on `main`; see
+   [git-policy.md](git-policy.md)), except it **is** committed on the learner's own
+   branch/fork (unlike `LEARNER.md`, which stays gitignored).
 
 ### Step 5 - Confirm and save
 Briefly reflect back what you recorded (name, how they will be addressed, level, goals,

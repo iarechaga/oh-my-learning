@@ -27,8 +27,8 @@ maintainer of all progress records. The human is the learner.
    and progress so the learner can choose deliberately.
 6. The human asks to discuss a concept, e.g. *"discuss `system-design/03`"*.
 7. The agent runs a **Socratic discussion**, not a lecture.
-8. The agent writes a **discussion record** and updates every dependent summary so
-   nothing drifts.
+8. The agent writes a **discussion record** and updates every dependent summary
+   (including `PROGRESS.md`, if the learner has one) so nothing drifts.
 
 ---
 
@@ -54,6 +54,9 @@ maintainer of all progress records. The human is the learner.
 - Before changing the website generator, templates, or build process, or when adding
   lessons and wondering whether the site needs updating, read
   [agent-docs/website.md](agent-docs/website.md).
+- Before answering any progress question ("what's next", "how am I doing", "where
+  should I focus", "more focus on X"), or before creating/updating `PROGRESS.md`, read
+  [agent-docs/progress-tracking.md](agent-docs/progress-tracking.md).
 
 ---
 

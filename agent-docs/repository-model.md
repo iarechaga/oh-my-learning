@@ -24,10 +24,21 @@ SUMMARY.md                              root: cross-domain comprehensive summary
 templates/
   lesson-template.md                    copy this to author a lesson
   discussion-template.md                copy this to write a discussion record
+  progress-template.md                  copy this to seed PROGRESS.md
 AGENTS.md                               short dispatcher for agents
 CLAUDE.md                               symlink to AGENTS.md for Claude Code
 agent-docs/                             detailed agent instructions loaded on demand
+PROGRESS.md                             per-learner: structured track + derived progress index
+LEARNER.md                              per-learner: profile (gitignored, never on main)
 ```
+
+`PROGRESS.md` is a **derived index**, not a new source of truth: the front matter
+`status`/`mastery` fields described below remain authoritative, and `PROGRESS.md` is a
+regenerable cache scoped to one learner's track, kept for fast progress answers. See
+[progress-tracking.md](progress-tracking.md) for its schema, the regeneration rule, and
+Workflow P (answering progress questions). Unlike `LEARNER.md`, `PROGRESS.md` **is**
+committed - but only on the learner's own branch/fork, never `main`; see
+[git-policy.md](git-policy.md).
 
 Current domains: `architecture/` (holds `ddia`, `system-design`, `hard-parts`, and
 `fundamentals`). Create a new domain folder only when a subject does not fit an
