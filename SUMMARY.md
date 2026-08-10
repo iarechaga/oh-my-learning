@@ -174,9 +174,9 @@ organizational language and constraints - Domain-Driven Design, strategic and ta
 
 ### 1. Domain-Driven Design (Evans, the "blue book")
 
-- **Status:** scaffolded - 16 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
-- **Covers:** ubiquitous language and model-driven design; entities, value objects, services; aggregates, repositories, factories; bounded contexts and context mapping; distillation of the core domain; strategic design and large-scale structure.
-- **Read:** [progress table](domain-modeling/ddd-evans/README.md).
+- **Status:** 16/16 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
+- **Covers:** knowledge crunching and ubiquitous language; model-driven design and the layered architecture; entities, value objects, services, and modules; aggregates, factories, and repositories; associations and supple design; distillation of the core domain; bounded contexts, context mapping, and large-scale structure.
+- **Read:** [progress table](domain-modeling/ddd-evans/README.md) and [concept-by-concept recap](domain-modeling/ddd-evans/SUMMARY.md).
 
 ### 2. Implementing Domain-Driven Design (Vernon, the "red book")
 

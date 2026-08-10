@@ -107,7 +107,7 @@ Domain-Driven Design. Being authored (DDD Distilled complete, the rest scaffolde
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
-| **DDD (Evans)** | *Domain-Driven Design* (Evans, the "blue book") - ubiquitous language, aggregates, bounded contexts, strategic design. | 16 *(scaffold)* | [domain-modeling/ddd-evans/README.md](domain-modeling/ddd-evans/README.md) |
+| **DDD (Evans)** | *Domain-Driven Design* (Evans, the "blue book") - ubiquitous language, aggregates, bounded contexts, strategic design. | 16 | [domain-modeling/ddd-evans/README.md](domain-modeling/ddd-evans/README.md) |
 | **Implementing DDD** | *Implementing Domain-Driven Design* (Vernon, the "red book") - aggregates, domain events, context integration in depth. | 15 | [domain-modeling/implementing-ddd/README.md](domain-modeling/implementing-ddd/README.md) |
 | **Learning DDD** | *Learning Domain-Driven Design* (Khononov) - a modern, strategic-design-first path. | 14 *(scaffold)* | [domain-modeling/learning-ddd/README.md](domain-modeling/learning-ddd/README.md) |
 | **DDD Distilled** | *Domain-Driven Design Distilled* (Vernon) - a concise primer of the core ideas. | 9 | [domain-modeling/ddd-distilled/README.md](domain-modeling/ddd-distilled/README.md) |
