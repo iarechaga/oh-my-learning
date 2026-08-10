@@ -285,9 +285,9 @@ feedback, and reliability engineering as one operating model.
 
 ### 1. The Phoenix Project (Kim, Behr, Spafford)
 
-- **Status:** scaffolded - 10 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** staff (senior->principal).
+- **Status:** 10/10 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** staff (senior->principal).
 - **Covers:** a narrative introduction to the Three Ways, flow, work-in-progress limits, the Theory of Constraints applied to IT, and business-level transformation.
-- **Read:** [progress table](devops-reliability/phoenix-project/README.md).
+- **Read:** [progress table](devops-reliability/phoenix-project/README.md) and [concept-by-concept recap](devops-reliability/phoenix-project/SUMMARY.md).
 
 ### 2. The DevOps Handbook (Kim, Humble, Debois, Willis)
 
