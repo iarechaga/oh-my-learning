@@ -227,9 +227,9 @@ design paradigms, and concurrency correctness.
 
 ### 1. Introduction to Algorithms (CLRS)
 
-- **Status:** scaffolded - 20 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (junior->senior).
+- **Status:** 20/20 lessons authored (all `drafted`); not yet discussed. **Seniority baseline:** mid (junior->senior).
 - **Covers:** the comprehensive algorithms reference - analysis and asymptotics, sorting, fundamental data structures, trees and hashing, graph algorithms, dynamic programming, greedy algorithms, flow, and complexity.
-- **Read:** [progress table](cs-fundamentals/clrs/README.md).
+- **Read:** [progress table](cs-fundamentals/clrs/README.md) · [summary](cs-fundamentals/clrs/SUMMARY.md).
 
 ### 2. Algorithms (Sedgewick & Wayne)
 
@@ -239,9 +239,9 @@ design paradigms, and concurrency correctness.
 
 ### 3. Algorithm Design (Kleinberg & Tardos)
 
-- **Status:** scaffolded - 12 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid-senior (mid->senior).
-- **Covers:** design techniques and proof patterns - greedy, divide and conquer, dynamic programming, network flow, and NP-completeness.
-- **Read:** [progress table](cs-fundamentals/algorithm-design/README.md).
+- **Status:** 12/12 lessons authored (all `drafted`); not yet discussed. **Seniority baseline:** mid-senior (mid->senior).
+- **Covers:** a design-pattern-first treatment - recognizing which paradigm a problem calls for and proving correctness (exchange arguments, induction, reductions), covering greedy, divide and conquer, dynamic programming, network flow, NP-completeness, and approximation/local search.
+- **Read:** [progress table](cs-fundamentals/algorithm-design/README.md) · [summary](cs-fundamentals/algorithm-design/SUMMARY.md).
 
 ### 4. Java Concurrency in Practice (Goetz et al.)
 
