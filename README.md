@@ -114,11 +114,11 @@ Domain-Driven Design. All four subjects are fully authored:
 
 **[data-engineering/](data-engineering/README.md)** - choosing, designing, and
 understanding storage systems (DDIA is the theory, cross-referenced from `architecture/`).
-All scaffolded:
+All three subjects are fully authored:
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |
-| **Database Internals** | *Database Internals* (Petrov) - storage engines (B-Trees, LSM) through replication, partitioning, and consensus. | 16 *(scaffold)* | [data-engineering/database-internals/README.md](data-engineering/database-internals/README.md) |
+| **Database Internals** | *Database Internals* (Petrov) - storage engines (B-Trees, LSM) through replication, partitioning, and consensus. | 16 | [data-engineering/database-internals/README.md](data-engineering/database-internals/README.md) |
 | **SQL Performance Explained** | *SQL Performance Explained* (Winand) - indexing and query-shape reasoning for predictable SQL performance. | 10 | [data-engineering/sql-performance-explained/README.md](data-engineering/sql-performance-explained/README.md) |
 | **Seven Databases in Seven Weeks** | *Seven Databases in Seven Weeks* (Perkins et al.) - a comparative tour of relational, document, wide-column, graph, and key-value stores. | 9 | [data-engineering/seven-databases/README.md](data-engineering/seven-databases/README.md) |
 
@@ -134,7 +134,7 @@ and concurrency. All five subjects are fully authored:
 | **The Art of Multiprocessor Programming** | *The Art of Multiprocessor Programming* (Herlihy & Shavit) - concurrent algorithms, linearizability, lock-free structures. | 13 | [cs-fundamentals/multiprocessor-programming/README.md](cs-fundamentals/multiprocessor-programming/README.md) |
 
 **[software-quality/](software-quality/README.md)** - testing and reliability through
-better test design. All scaffolded:
+better test design. All three subjects are fully authored:
 
 | Subject | What it is | Lessons | Start here |
 | --- | --- | --- | --- |

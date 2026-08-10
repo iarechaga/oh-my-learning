@@ -204,9 +204,9 @@ cross-referenced here rather than duplicated.
 
 ### 1. Database Internals (Petrov)
 
-- **Status:** scaffolded - 16 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 16/16 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** storage-engine internals (B-Trees, LSM trees, logging, compaction) through the distributed layer - replication, partitioning, and consensus mechanics.
-- **Read:** [progress table](data-engineering/database-internals/README.md).
+- **Read:** [progress table](data-engineering/database-internals/README.md) and [concept-by-concept recap](data-engineering/database-internals/SUMMARY.md).
 
 ### 2. SQL Performance Explained (Winand)
 
