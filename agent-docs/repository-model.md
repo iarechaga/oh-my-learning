@@ -108,3 +108,13 @@ every subject. "Greater detail where needed" means: expand on concepts rated `sh
 
 Regenerate the subject `SUMMARY.md` and root `SUMMARY.md` after every discussion and
 whenever lessons are added or restructured.
+
+## Root README.md
+
+The root `README.md` is public-facing and states, per subject, whether it is
+`*(scaffold)*` (concept list only) or fully authored, plus its lesson count. Whenever a
+subject's lesson count changes (new lessons authored, a subject reaches N/N complete) or
+a new domain/subject is scaffolded, update its row in `README.md`'s subject tables in the
+same commit - do not leave it describing a subject as `*(scaffold)*` once its lessons are
+authored, and keep lesson counts accurate. This is a separate step from updating
+`SUMMARY.md`; both must be kept current together.

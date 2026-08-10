@@ -86,6 +86,10 @@ maintainer of all progress records. The human is the learner.
   and update the slug everywhere it is referenced.
 - Keep summaries in sync. Regenerate subject and root summaries after every discussion
   and whenever lessons are added or restructured.
+- Keep the root `README.md` in sync. Whenever a subject's lesson count changes or it
+  moves from scaffolded to fully authored (or vice versa), update its row in the root
+  `README.md` subject tables in the same commit. See
+  [agent-docs/repository-model.md](agent-docs/repository-model.md).
 - Keep the changelog honest. When library content or agent rules change on `main`, add a
   matching entry under `[Unreleased]` in `CHANGELOG.md`; never list personal learning
   progress there. See [agent-docs/release-policy.md](agent-docs/release-policy.md).
