@@ -268,9 +268,9 @@ code with confidence through better test design and strategy.
 
 ### 2. Unit Testing: Principles, Practices, and Patterns (Khorikov)
 
-- **Status:** scaffolded - 13 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (junior->staff).
+- **Status:** 13/13 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (junior->staff).
 - **Covers:** what makes a test valuable vs brittle, the four pillars, the London vs classical schools, test doubles, and integration-testing strategy.
-- **Read:** [progress table](software-quality/unit-testing/README.md).
+- **Read:** [progress table](software-quality/unit-testing/README.md) and [concept-by-concept recap](software-quality/unit-testing/SUMMARY.md).
 
 ### 3. xUnit Test Patterns (Meszaros)
 
