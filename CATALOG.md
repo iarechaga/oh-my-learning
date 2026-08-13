@@ -2,12 +2,13 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**619 lessons across 9 domains, 46 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**627 lessons across 9 domains, 47 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 1 subjects, 10 lessons
+- [Agentic Engineering](#agentic-engineering) - 2 subjects, 18 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
+  - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 8 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
   - [Building Microservices](#building-microservices) - 17 lessons
   - [Designing Data-Intensive Applications (DDIA)](#ddia) - 16 lessons
@@ -84,6 +85,22 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 08 | Context Failure Modes: Poisoning, Distraction, and Confusion | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/08-context-failure-modes.md) |
 | 09 | Retrieval and Memory: RAG, Long-Term Memory, and When to Use Which | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/09-retrieval-and-memory.md) |
 | 10 | Context Compaction and Sub-Agent Handoff for Long-Horizon Tasks | staff | [lesson](agentic-engineering/prompting-context-engineering/lessons/10-context-compaction-and-handoff.md) |
+
+<a id="tool-use-agentic-loop"></a>
+### Tool Use & the Agentic Loop
+
+8 lessons - [subject index](agentic-engineering/tool-use-agentic-loop/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | Function Calling Mechanics: How Models Choose and Emit Tool Calls | mid | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/01-function-calling-mechanics.md) |
+| 02 | Designing Tool Schemas: JSON Schema, Typed Arguments, and Description Quality | mid | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/02-designing-tool-schemas.md) |
+| 03 | The Agentic Loop: Plan, Act, Observe, Repeat | mid | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/03-the-agentic-loop.md) |
+| 04 | Parallel vs Sequential Tool Calls: Latency and Correctness Trade-offs | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/04-parallel-vs-sequential-tool-calls.md) |
+| 05 | Harness vs Scaffolding: What Wraps the Model and What the Model Works From | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/05-harness-vs-scaffolding.md) |
+| 06 | Stateless vs Stateful Tool Execution and Retries | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/06-stateless-vs-stateful-tool-execution.md) |
+| 07 | Designing for Recoverable Failure: Idempotency, Timeouts, and Retry Budgets | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/07-designing-for-recoverable-failure.md) |
+| 08 | When to Stop: Termination Conditions and Runaway-Loop Prevention | staff | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/08-when-to-stop.md) |
 
 ---
 

@@ -16,6 +16,17 @@ this file.
 
 ### Added
 
+- **`tool-use-agentic-loop` subject fully authored (8/8 lessons)** - the second
+  authored subject in the `agentic-engineering` domain: function-calling mechanics,
+  designing tool schemas, the plan-act-observe agentic loop, parallel vs sequential
+  tool calls, the harness-vs-scaffolding distinction, stateless vs stateful tool
+  execution, designing for recoverable failure (idempotency, retry budgets), and
+  termination-condition design for runaway-loop prevention. Every lesson is tagged
+  `durability: durable` and follows the domain's rule that named products appear only
+  as dated, swappable examples. New
+  `agentic-engineering/tool-use-agentic-loop/SUMMARY.md`; root `README.md`/`SUMMARY.md`
+  and `CATALOG.md` updated (627 lessons, 47 subjects, 9 domains). Authored on
+  `feat/agentic-engineering-domain`.
 - **`prompting-context-engineering` subject fully authored (10/10 lessons)** - the
   first authored subject in the `agentic-engineering` domain: what LLMs actually do
   (tokens, autoregression, statelessness), prompt anatomy, core prompting techniques,

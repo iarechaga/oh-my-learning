@@ -10,7 +10,7 @@ it on your own; then you ask the agent to **discuss** it with you. The discussio
 Socratic - questions instead of lectures - and finds the gaps in your understanding
 before you find them in an interview or a production incident.
 
-**619 lessons, 46 subjects, 9 domains**, from architecture and distributed systems to
+**627 lessons, 47 subjects, 9 domains**, from architecture and distributed systems to
 DDD, testing, DevOps/SRE, technical leadership, and agentic engineering. This is not a
 code project - there is nothing to build or run. The "program" is the loop of *read,
 then get grilled on it until you actually understand it.*
@@ -62,9 +62,9 @@ optional "go deeper".
 | **[Domain Modeling](domain-modeling/README.md)** | Modeling business complexity with Domain-Driven Design. | 4 | 54 |
 | **[Data Engineering & Databases](data-engineering/README.md)** | Choosing, designing, and understanding storage systems. | 3 | 35 |
 | **[Software Quality](software-quality/README.md)** | Testing and reliability through better test design. | 3 | 37 |
-| **[Agentic Engineering](agentic-engineering/README.md)** | Working effectively with LLMs and building/operating today's agent capabilities: prompting, context and instruction design, tool use, MCP, orchestration, evaluation, and security/cost/operations. | 9 | 71 *(10 authored, rest scaffold)* |
+| **[Agentic Engineering](agentic-engineering/README.md)** | Working effectively with LLMs and building/operating today's agent capabilities: prompting, context and instruction design, tool use, MCP, orchestration, evaluation, and security/cost/operations. | 9 | 71 *(18 authored, rest scaffold)* |
 
-**-> [See all 619 lessons: CATALOG.md](CATALOG.md)** - the full catalog,
+**-> [See all 627 lessons: CATALOG.md](CATALOG.md)** - the full catalog,
 domain -> subject -> lesson, with seniority and a direct link to each one. It's
 generated programmatically from lesson front matter (see
 [scripts/generate_catalog.py](scripts/generate_catalog.py)), so it never drifts out of

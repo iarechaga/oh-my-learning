@@ -373,9 +373,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 2. Tool Use & the Agentic Loop
 
-- **Status:** scaffolded - 8 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, and recoverable failure/termination design.
-- **Read:** [progress table](agentic-engineering/tool-use-agentic-loop/README.md).
+- **Read:** [progress table](agentic-engineering/tool-use-agentic-loop/README.md) - [subject summary](agentic-engineering/tool-use-agentic-loop/SUMMARY.md).
 
 ### 3. Instruction & Context Design
 

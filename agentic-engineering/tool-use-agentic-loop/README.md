@@ -8,7 +8,7 @@ that determines what actually wraps and drives the model.
 **Sources:** primary model-provider documentation on function calling/tool use, the
 ReAct paper and its successors, and dated practitioner engineering write-ups - no
 single canonical book exists for this field. See each lesson's `source:` front matter
-once authored, and
+for its specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss
