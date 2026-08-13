@@ -16,6 +16,22 @@ this file.
 
 ### Added
 
+- **`agentic-engineering` domain fully authored: 9/9 subjects, 71/71 lessons.** The
+  final subject, `landscape-snapshot` (7/7 lessons), is the domain's one deliberately
+  perishable subject: current coding-agent products (Claude Code, Cursor, Copilot,
+  Devin, Codex, Amazon Q Developer), orchestration frameworks (LangGraph, CrewAI,
+  Microsoft's newly-merged Agent Framework, AG2), interoperability protocols beyond
+  MCP (A2A, AG-UI, AP2/x402, ANP), benchmarks in active use (SWE-bench Verified/Pro,
+  tau²-bench, Terminal-Bench, GAIA/WebArena, METR's Time Horizon), model capability
+  tiers and pricing across the three major providers, and current skill/instruction
+  file formats (`SKILL.md`, `AGENTS.md`) - each lesson dated (August 2026), tagged
+  `durability: perishable` with `next_review: 2026-11`, and researched live rather
+  than from training-data recall, with conflicting source data flagged explicitly
+  where found. Lesson 07 is the one durable lesson in the subject: how to keep
+  tracking what changed once the rest ages. New
+  `agentic-engineering/landscape-snapshot/SUMMARY.md`; root `README.md`/`SUMMARY.md`
+  and `CATALOG.md` updated to reflect the complete domain (680 lessons, 54 subjects,
+  9 domains). Authored on `feat/agentic-engineering-domain`.
 - **`agent-security-and-operations` subject fully authored (8/8 lessons)** - the
   architectural threat model (instructions and data share one token stream with no
   reliable trust boundary), prompt injection (direct/indirect, defense-in-depth),

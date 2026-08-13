@@ -2,15 +2,16 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**673 lessons across 9 domains, 53 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**680 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 8 subjects, 64 lessons
+- [Agentic Engineering](#agentic-engineering) - 9 subjects, 71 lessons
   - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
   - [Security, Cost, and Production Operations](#agent-security-and-operations) - 8 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
+  - [Landscape Snapshot](#landscape-snapshot) - 7 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
   - [Multi-Agent Systems & Orchestration](#multi-agent-orchestration) - 7 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
@@ -137,6 +138,21 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 09 | Evaluating Whether a Skill Actually Works | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/09-evaluating-whether-a-skill-works.md) |
 | 10 | Hooks, Slash Commands, and Other Deterministic Levers vs Model-Judged Triggers | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/10-hooks-commands-and-deterministic-levers.md) |
 | 11 | Choosing the Right Primitive: Instructions, Tools, Skills, Hooks, and Commands | staff | [lesson](agentic-engineering/instruction-and-context-design/lessons/11-choosing-the-right-primitive.md) |
+
+<a id="landscape-snapshot"></a>
+### Landscape Snapshot
+
+7 lessons - [subject index](agentic-engineering/landscape-snapshot/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | Coding Agent Products Today: Terminal, IDE, and Cloud Options | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/01-coding-agent-products-today.md) |
+| 02 | Orchestration Frameworks Today: LangGraph, CrewAI, AutoGen, and Alternatives | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/02-orchestration-frameworks-today.md) |
+| 03 | Interoperability Protocols Beyond MCP: What Else Exists Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/03-interoperability-protocols-beyond-mcp.md) |
+| 04 | Benchmarks and Leaderboards in Use Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/04-benchmarks-and-leaderboards-today.md) |
+| 05 | Model Capability Tiers and Pricing Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/05-model-capability-tiers-and-pricing-today.md) |
+| 06 | Skill and Instruction File Formats Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/06-skill-and-instruction-file-formats-today.md) |
+| 07 | Where to Track What Changed: Staying Current After This Domain Ages | staff | [lesson](agentic-engineering/landscape-snapshot/lessons/07-where-to-track-what-changed.md) |
 
 <a id="model-context-protocol"></a>
 ### Model Context Protocol & Agent Interoperability

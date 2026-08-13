@@ -415,9 +415,11 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 9. Landscape Snapshot
 
-- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (mid->staff). **Perishable by design** - reviewed quarterly; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
+- **Status:** 7/7 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (mid->staff). **Perishable by design** - lessons 01-06 tagged `next_review: 2026-11`; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
 - **Covers:** today's coding-agent products, orchestration frameworks, interoperability protocols beyond MCP, benchmarks/leaderboards, model pricing tiers, skill/instruction file formats, and how to keep tracking what changed after this domain ages.
-- **Read:** [progress table](agentic-engineering/landscape-snapshot/README.md).
+- **Read:** [progress table](agentic-engineering/landscape-snapshot/README.md) - [subject summary](agentic-engineering/landscape-snapshot/SUMMARY.md).
+
+**`agentic-engineering` is now fully authored: 9/9 subjects, 71/71 lessons.**
 
 ## Focus areas (aggregated weak spots)
 

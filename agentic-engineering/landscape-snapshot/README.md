@@ -8,7 +8,7 @@ to date. Read the other subjects for the concepts that outlast this one.
 
 **Sources:** current product documentation, pricing pages, benchmark leaderboards, and
 recent (dated) practitioner comparisons - deliberately the most perishable sources in
-the domain. See each lesson's `source:` front matter once authored, and
+the domain. See each lesson's `source:` front matter for its specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md)
 for the review policy this subject follows.
 
@@ -34,19 +34,19 @@ changelog.
 
 | ID  | Concept | Seniority | Durability | Next review | Status | Mastery | Last discussed | Lesson | Records |
 | --- | ------- | --------- | ---------- | ------------ | ------ | ------- | -------------- | ------ | ------- |
-| 01  | Coding agent products today: terminal, IDE, and cloud options | mid | perishable | — (set on authoring) | drafted | — | — | [lesson](lessons/01-coding-agent-products-today.md) | — |
-| 02  | Orchestration frameworks today: LangGraph, CrewAI, AutoGen, and alternatives | mid | perishable | — (set on authoring) | drafted | — | — | [lesson](lessons/02-orchestration-frameworks-today.md) | — |
-| 03  | Interoperability protocols beyond MCP: what else exists today | mid | perishable | — (set on authoring) | drafted | — | — | [lesson](lessons/03-interoperability-protocols-beyond-mcp.md) | — |
-| 04  | Benchmarks and leaderboards in use today | mid | perishable | — (set on authoring) | drafted | — | — | [lesson](lessons/04-benchmarks-and-leaderboards-today.md) | — |
-| 05  | Model capability tiers and pricing today | mid | perishable | — (set on authoring) | drafted | — | — | [lesson](lessons/05-model-capability-tiers-and-pricing-today.md) | — |
-| 06  | Skill and instruction file formats today | mid | perishable | — (set on authoring) | drafted | — | — | [lesson](lessons/06-skill-and-instruction-file-formats-today.md) | — |
+| 01  | Coding agent products today: terminal, IDE, and cloud options | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/01-coding-agent-products-today.md) | — |
+| 02  | Orchestration frameworks today: LangGraph, CrewAI, AutoGen, and alternatives | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/02-orchestration-frameworks-today.md) | — |
+| 03  | Interoperability protocols beyond MCP: what else exists today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/03-interoperability-protocols-beyond-mcp.md) | — |
+| 04  | Benchmarks and leaderboards in use today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/04-benchmarks-and-leaderboards-today.md) | — |
+| 05  | Model capability tiers and pricing today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/05-model-capability-tiers-and-pricing-today.md) | — |
+| 06  | Skill and instruction file formats today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/06-skill-and-instruction-file-formats-today.md) | — |
 | 07  | Where to track what changed: staying current after this domain ages | staff | durable | n/a | drafted | — | — | [lesson](lessons/07-where-to-track-what-changed.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent
 discussion's verdict; empty until first discussed.
-**Next review** is set the moment a lesson is authored (typically its `created` date
-plus one quarter), not before - there is nothing to review yet. See
+**Next review** is set to each lesson's `created` date plus one quarter at authoring
+time; `01`-`06` were authored 2026-08-10, so their first review is due 2026-11. See
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 **Cross-subject prerequisites**: `01`->`agentic-software-engineering/01`,
 `02`->`multi-agent-orchestration/05`, `03`->`model-context-protocol/03`,
