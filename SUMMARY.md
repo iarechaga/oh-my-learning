@@ -367,9 +367,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 1. Prompting & Context Engineering
 
-- **Status:** scaffolded - 10 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (junior->staff).
+- **Status:** 10/10 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (junior->staff).
 - **Covers:** how LLMs process a prompt, core prompting techniques and their limits, structured output, and context engineering as a discipline (the budget, its failure modes, retrieval/memory, and compaction for long-horizon tasks).
-- **Read:** [progress table](agentic-engineering/prompting-context-engineering/README.md).
+- **Read:** [progress table](agentic-engineering/prompting-context-engineering/README.md) - [subject summary](agentic-engineering/prompting-context-engineering/SUMMARY.md).
 
 ### 2. Tool Use & the Agentic Loop
 

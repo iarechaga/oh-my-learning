@@ -2,10 +2,12 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**609 lessons across 8 domains, 45 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**619 lessons across 9 domains, 46 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
+- [Agentic Engineering](#agentic-engineering) - 1 subjects, 10 lessons
+  - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
   - [Building Microservices](#building-microservices) - 17 lessons
   - [Designing Data-Intensive Applications (DDIA)](#ddia) - 16 lessons
@@ -59,6 +61,29 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
   - [Staff Engineer: Leadership Beyond the Management Track](#staff-engineer) - 12 lessons
   - [The Staff Engineer's Path](#staff-engineers-path) - 14 lessons
   - [Thinking, Fast and Slow](#thinking-fast-and-slow) - 14 lessons
+
+---
+
+<a id="agentic-engineering"></a>
+## Agentic Engineering
+
+<a id="prompting-context-engineering"></a>
+### Prompting & Context Engineering
+
+10 lessons - [subject index](agentic-engineering/prompting-context-engineering/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | What LLMs Actually Do: Tokens, Context Windows, and Autoregression | junior | [lesson](agentic-engineering/prompting-context-engineering/lessons/01-what-llms-actually-do.md) |
+| 02 | Prompt Anatomy: System, Developer, User, and Tool Turns | junior | [lesson](agentic-engineering/prompting-context-engineering/lessons/02-prompt-anatomy.md) |
+| 03 | Core Prompting Techniques: Few-Shot, Role, and Output Formatting | mid | [lesson](agentic-engineering/prompting-context-engineering/lessons/03-core-prompting-techniques.md) |
+| 04 | Chain-of-Thought and Reasoning Effort: What Actually Helps and What's Theater | mid | [lesson](agentic-engineering/prompting-context-engineering/lessons/04-chain-of-thought-and-reasoning-effort.md) |
+| 05 | Structured Output: Constrained Decoding and Why It Beats Free-Form Parsing | mid | [lesson](agentic-engineering/prompting-context-engineering/lessons/05-structured-output.md) |
+| 06 | The Limits of Prompting: Why Some Failures Aren't Prompt Problems | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/06-limits-of-prompting.md) |
+| 07 | Context Engineering as a Discipline: The Context Window as a Budget | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/07-context-engineering-as-a-discipline.md) |
+| 08 | Context Failure Modes: Poisoning, Distraction, and Confusion | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/08-context-failure-modes.md) |
+| 09 | Retrieval and Memory: RAG, Long-Term Memory, and When to Use Which | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/09-retrieval-and-memory.md) |
+| 10 | Context Compaction and Sub-Agent Handoff for Long-Horizon Tasks | staff | [lesson](agentic-engineering/prompting-context-engineering/lessons/10-context-compaction-and-handoff.md) |
 
 ---
 

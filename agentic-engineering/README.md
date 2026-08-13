@@ -45,7 +45,7 @@ Ordered by dependency - each subject builds on the ones before it.
 
 | Subject | What it is | Lessons | Index |
 | --- | --- | --- | --- |
-| **[Prompting & Context Engineering](prompting-context-engineering/README.md)** | How a model actually consumes what you give it, advanced prompting and its limits, and the context window as a finite, manageable budget. | 10 *(scaffold)* | [prompting-context-engineering/README.md](prompting-context-engineering/README.md) |
+| **[Prompting & Context Engineering](prompting-context-engineering/README.md)** | How a model actually consumes what you give it, advanced prompting and its limits, and the context window as a finite, manageable budget. | 10 | [prompting-context-engineering/README.md](prompting-context-engineering/README.md) |
 | **[Tool Use & the Agentic Loop](tool-use-agentic-loop/README.md)** | Function calling mechanics, the plan-act-observe loop, harness vs scaffolding, and knowing when to stop. | 8 *(scaffold)* | [tool-use-agentic-loop/README.md](tool-use-agentic-loop/README.md) |
 | **[Instruction & Context Design](instruction-and-context-design/README.md)** | Engineering the scaffolding around an agent: structured metadata, always-loaded vs on-demand instructions, trigger design, and authoring skills, hooks, and commands. | 11 *(scaffold)* | [instruction-and-context-design/README.md](instruction-and-context-design/README.md) |
 | **[Model Context Protocol & Agent Interoperability](model-context-protocol/README.md)** | Why MCP exists, its architecture and primitives, building and trusting servers, and the wider interoperability picture. | 7 *(scaffold)* | [model-context-protocol/README.md](model-context-protocol/README.md) |
@@ -55,8 +55,9 @@ Ordered by dependency - each subject builds on the ones before it.
 | **[Security, Cost, and Production Operations](agent-security-and-operations/README.md)** | The prompt-injection threat model, least-privilege permissions, token economics, observability, and operating agent fleets. | 8 *(scaffold)* | [agent-security-and-operations/README.md](agent-security-and-operations/README.md) |
 | **[Landscape Snapshot](landscape-snapshot/README.md)** | A dated survey of today's coding agents, orchestration frameworks, protocols, benchmarks, model pricing, and file formats - the one subject in this domain built to be rewritten, not preserved. | 7 *(scaffold)* | [landscape-snapshot/README.md](landscape-snapshot/README.md) |
 
-All nine subjects are scaffolded (concept lists and indexes ready); lesson bodies are
-not yet authored.
+All nine subjects are scaffolded (concept lists and indexes ready). One,
+**Prompting & Context Engineering**, is fully authored (10/10 lessons); the remaining
+eight have lesson bodies not yet authored.
 
 The track moves from raw model behavior (Prompting & Context Engineering), to giving
 that model the ability to act (Tool Use & the Agentic Loop), to engineering everything

@@ -8,7 +8,7 @@ unlimited scratchpad. Everything else in `agentic-engineering` assumes this.
 **Sources:** primary model-provider documentation and engineering blogs, foundational
 papers on prompting and context behavior, and dated practitioner write-ups - no single
 canonical book exists for this field. See each lesson's `source:` front matter for its
-specific citations once authored, and
+specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md)
 for why this domain cites this way.
 

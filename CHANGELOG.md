@@ -16,6 +16,20 @@ this file.
 
 ### Added
 
+- **`prompting-context-engineering` subject fully authored (10/10 lessons)** - the
+  first authored subject in the `agentic-engineering` domain: what LLMs actually do
+  (tokens, autoregression, statelessness), prompt anatomy, core prompting techniques,
+  chain-of-thought and reasoning effort (including the 2025-2026 research on when CoT
+  helps vs. is theater and its faithfulness limits), structured output/constrained
+  decoding, the limits of prompting, and context engineering as a discipline (the
+  budget framing, named failure modes, retrieval/memory, and compaction/handoff for
+  long-horizon tasks). Every lesson is tagged `durability: durable` per
+  [`agent-docs/fast-moving-domain-policy.md`](agent-docs/fast-moving-domain-policy.md) -
+  named products appear only as dated, swappable examples in blockquotes, never as a
+  concept's defining identity. New `agentic-engineering/prompting-context-engineering/SUMMARY.md`;
+  root `README.md`/`SUMMARY.md` and `CATALOG.md` updated to match (619 lessons, 46
+  subjects, 9 domains). Authored on `feat/agentic-engineering-domain`; the other eight
+  subjects in the domain remain scaffolded.
 - **Website published on GitHub Pages** - the reading site now auto-deploys to
   <https://iarechaga.github.io/oh-my-learning/> via
   `.github/workflows/deploy-pages.yml` on every push to `main` (and on manual
