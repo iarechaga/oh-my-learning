@@ -379,9 +379,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 3. Instruction & Context Design
 
-- **Status:** scaffolded - 11 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** every place an agent reads instructions from, structured metadata as cheap signal, always-loaded vs on-demand instructions, designing trigger descriptions and their failure modes, authoring and evaluating skills, and hooks/commands as deterministic alternatives.
-- **Read:** [progress table](agentic-engineering/instruction-and-context-design/README.md).
+- **Read:** [progress table](agentic-engineering/instruction-and-context-design/README.md) - [subject summary](agentic-engineering/instruction-and-context-design/SUMMARY.md).
 
 ### 4. Model Context Protocol & Agent Interoperability
 

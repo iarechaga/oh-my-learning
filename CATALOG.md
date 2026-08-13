@@ -2,11 +2,12 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**627 lessons across 9 domains, 47 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**638 lessons across 9 domains, 48 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 2 subjects, 18 lessons
+- [Agentic Engineering](#agentic-engineering) - 3 subjects, 29 lessons
+  - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
   - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 8 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
@@ -67,6 +68,25 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 
 <a id="agentic-engineering"></a>
 ## Agentic Engineering
+
+<a id="instruction-and-context-design"></a>
+### Instruction & Context Design
+
+11 lessons - [subject index](agentic-engineering/instruction-and-context-design/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | The Scaffolding Surface: Every Place an Agent Reads Instructions From | mid | [lesson](agentic-engineering/instruction-and-context-design/lessons/01-the-scaffolding-surface.md) |
+| 02 | Structured Metadata as Cheap Signal: Front Matter, Schemas, and Machine-Readable Config | mid | [lesson](agentic-engineering/instruction-and-context-design/lessons/02-structured-metadata-as-cheap-signal.md) |
+| 03 | Always-Loaded vs On-Demand: Drawing the Line in a System Prompt | mid | [lesson](agentic-engineering/instruction-and-context-design/lessons/03-always-loaded-vs-on-demand.md) |
+| 04 | Designing Trigger Descriptions: How an Agent Decides What to Load | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/04-designing-trigger-descriptions.md) |
+| 05 | Failure Modes of Deferred Loading: Over-Triggering, Under-Triggering, and Silent Gaps | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/05-failure-modes-of-deferred-loading.md) |
+| 06 | Writing Instructions That Survive Being Read Out of Order | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/06-writing-instructions-that-survive-out-of-order-reading.md) |
+| 07 | What a Skill Is and When It's Worth Building One | mid | [lesson](agentic-engineering/instruction-and-context-design/lessons/07-what-a-skill-is.md) |
+| 08 | Authoring a Skill End to End: Trigger, Body, and Supporting Files | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/08-authoring-a-skill-end-to-end.md) |
+| 09 | Evaluating Whether a Skill Actually Works | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/09-evaluating-whether-a-skill-works.md) |
+| 10 | Hooks, Slash Commands, and Other Deterministic Levers vs Model-Judged Triggers | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/10-hooks-commands-and-deterministic-levers.md) |
+| 11 | Choosing the Right Primitive: Instructions, Tools, Skills, Hooks, and Commands | staff | [lesson](agentic-engineering/instruction-and-context-design/lessons/11-choosing-the-right-primitive.md) |
 
 <a id="prompting-context-engineering"></a>
 ### Prompting & Context Engineering

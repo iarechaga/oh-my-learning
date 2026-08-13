@@ -15,7 +15,7 @@ pattern taught here - used as one worked example among others, not as the subjec
 instructions, and skills; dated practitioner engineering write-ups on context and
 prompt design; this repository's own `AGENTS.md`/`agent-docs/` dispatcher as one
 concrete, inspectable case study. No single canonical book exists for this field. See
-each lesson's `source:` front matter once authored, and
+each lesson's `source:` front matter for its specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss

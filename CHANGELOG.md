@@ -16,6 +16,19 @@ this file.
 
 ### Added
 
+- **`instruction-and-context-design` subject fully authored (11/11 lessons)** - the
+  domain's most differentiated subject: the full set of surfaces an agent reads
+  instructions from, structured metadata as cheap signal, the always-loaded-vs-on-demand
+  decision, designing trigger descriptions (how an agent decides what to load) and
+  their failure modes (over-triggering, under-triggering, ambiguity), writing
+  instructions that survive out-of-order loading, what a skill is and authoring one end
+  to end, evaluating whether a skill actually works, hooks/commands as deterministic
+  alternatives to model-judged triggers, and a (deliberately incomplete) capstone on
+  choosing the right primitive. Uses this repository's own `AGENTS.md`/`agent-docs/`
+  dispatcher as one worked example among several, never the lesson's subject. New
+  `agentic-engineering/instruction-and-context-design/SUMMARY.md`; root
+  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (638 lessons, 48 subjects, 9
+  domains). Authored on `feat/agentic-engineering-domain`.
 - **`tool-use-agentic-loop` subject fully authored (8/8 lessons)** - the second
   authored subject in the `agentic-engineering` domain: function-calling mechanics,
   designing tool schemas, the plan-act-observe agentic loop, parallel vs sequential
