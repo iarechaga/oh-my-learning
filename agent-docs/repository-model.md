@@ -90,6 +90,17 @@ the discussion-depth calibration, and worked examples live in
 seniority. While a subject is only scaffolded, per-lesson bands are provisional and the
 subject baseline is the reliable signal.
 
+## Durability (domain-scoped extension)
+
+`agentic-engineering/` lessons carry two additional front-matter fields,
+`durability: durable | perishable` and `next_review: YYYY-MM`, not used anywhere else
+in the repo. They exist because that domain has no settled literature to anchor to and
+ages faster than the rest of the repository - see
+[fast-moving-domain-policy.md](fast-moving-domain-policy.md) before touching any lesson
+there. These are additive, domain-scoped fields: they do not change the schema for the
+other eight domains and are not a "restructuring the front-matter schema" event under
+[release-policy.md](release-policy.md).
+
 ## Subject README index
 
 Short "about this subject" line + the source book + a **seniority baseline** line, then a

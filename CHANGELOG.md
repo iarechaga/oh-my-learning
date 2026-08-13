@@ -30,6 +30,25 @@ this file.
   links; verified zero broken internal links across all 663 generated pages. Documented
   in [`agent-docs/website.md`](agent-docs/website.md). `README.md` links to the
   published site and the repository's GitHub "homepage" URL now points to it.
+- **`agentic-engineering` domain scaffolded (9 subjects, 71 concepts, 0 lessons
+  authored yet)** - working effectively with LLMs at an advanced level and building
+  the agent capabilities that exist today: `prompting-context-engineering` (10),
+  `tool-use-agentic-loop` (8), `instruction-and-context-design` (11),
+  `model-context-protocol` (7), `multi-agent-orchestration` (7),
+  `agentic-software-engineering` (6), `agent-evaluation` (7),
+  `agent-security-and-operations` (8), and `landscape-snapshot` (7). This domain has
+  no canonical book to anchor to - the field moves faster than the rest of the
+  repository's subject matter - so it introduces a new, domain-scoped
+  durable-vs-perishable content split: eight subjects teach durable capability, and
+  one (`landscape-snapshot`) is an explicitly dated survey of today's concrete
+  products, reviewed on a fixed quarterly cadence rather than opportunistically. New
+  `durability`/`next_review` front-matter fields (used only in this domain) and the
+  full policy - what's durable vs perishable, the review cadence, and what it implies
+  for versioning - are documented in new
+  [`agent-docs/fast-moving-domain-policy.md`](agent-docs/fast-moving-domain-policy.md);
+  `AGENTS.md`, `agent-docs/repository-model.md`, and `agent-docs/release-policy.md`
+  wired to reference it. Scaffolded on `feat/agentic-engineering-domain`; lesson
+  bodies not yet authored.
 
 ## [1.0.0] - 2026-08-10
 

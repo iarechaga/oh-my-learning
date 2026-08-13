@@ -355,6 +355,70 @@ high-stakes decisions. This is the most senior-weighted domain in the library.
 - **Covers:** applied measurement - calibrated estimation, reducing uncertainty, and the value of information for high-stakes decisions.
 - **Read:** [progress table](technical-leadership/how-to-measure-anything/README.md) - [subject summary](technical-leadership/how-to-measure-anything/SUMMARY.md).
 
+## Agentic Engineering
+
+The domain covering how to work effectively with LLMs at an advanced level and build,
+wire, and operate the agent capabilities that exist today. Unlike the other domains,
+it has no single canonical book per subject - eight subjects teach durable capability
+(prompting, context, tool use, instruction/context design, MCP, orchestration, agentic
+software engineering, evaluation, security/operations); a ninth, `landscape-snapshot`,
+is an explicitly dated survey of today's concrete products and reviewed quarterly. See
+[agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
+
+### 1. Prompting & Context Engineering
+
+- **Status:** scaffolded - 10 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (junior->staff).
+- **Covers:** how LLMs process a prompt, core prompting techniques and their limits, structured output, and context engineering as a discipline (the budget, its failure modes, retrieval/memory, and compaction for long-horizon tasks).
+- **Read:** [progress table](agentic-engineering/prompting-context-engineering/README.md).
+
+### 2. Tool Use & the Agentic Loop
+
+- **Status:** scaffolded - 8 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, and recoverable failure/termination design.
+- **Read:** [progress table](agentic-engineering/tool-use-agentic-loop/README.md).
+
+### 3. Instruction & Context Design
+
+- **Status:** scaffolded - 11 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Covers:** every place an agent reads instructions from, structured metadata as cheap signal, always-loaded vs on-demand instructions, designing trigger descriptions and their failure modes, authoring and evaluating skills, and hooks/commands as deterministic alternatives.
+- **Read:** [progress table](agentic-engineering/instruction-and-context-design/README.md).
+
+### 4. Model Context Protocol & Agent Interoperability
+
+- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (mid->staff).
+- **Covers:** why MCP exists, its architecture and primitives, building and securing a server, trusting third-party servers, and MCP in a multi-agent system.
+- **Read:** [progress table](agentic-engineering/model-context-protocol/README.md).
+
+### 5. Multi-Agent Systems & Orchestration
+
+- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Covers:** when splitting into multiple agents helps, subagent delegation, orchestration and coordination patterns, multi-agent failure modes, and governance/authorization propagation.
+- **Read:** [progress table](agentic-engineering/multi-agent-orchestration/README.md).
+
+### 6. Agentic Software Engineering
+
+- **Status:** scaffolded - 6 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Covers:** where coding agents run, vibe coding vs controlled use, spec-driven development, plan-then-execute workflows, reviewing agent-generated work, and autonomous/async agents.
+- **Read:** [progress table](agentic-engineering/agentic-software-engineering/README.md).
+
+### 7. Evaluating & Testing Agentic Systems
+
+- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Covers:** why agent evaluation isn't unit testing, reading benchmark methodology, LLM-as-judge design and bias, trajectory evaluation, offline vs online evaluation, and regression testing.
+- **Read:** [progress table](agentic-engineering/agent-evaluation/README.md).
+
+### 8. Security, Cost, and Production Operations
+
+- **Status:** scaffolded - 8 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->principal).
+- **Covers:** the prompt-injection threat model and defenses, least-privilege permissions, human-in-the-loop gates, token economics, observability, failure modes/verification, and operating agent fleets.
+- **Read:** [progress table](agentic-engineering/agent-security-and-operations/README.md).
+
+### 9. Landscape Snapshot
+
+- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (mid->staff). **Perishable by design** - reviewed quarterly; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
+- **Covers:** today's coding-agent products, orchestration frameworks, interoperability protocols beyond MCP, benchmarks/leaderboards, model pricing tiers, skill/instruction file formats, and how to keep tracking what changed after this domain ages.
+- **Read:** [progress table](agentic-engineering/landscape-snapshot/README.md).
+
 ## Focus areas (aggregated weak spots)
 
 None yet - discussions have not started. As discussions happen across subjects, the

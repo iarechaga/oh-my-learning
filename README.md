@@ -62,6 +62,7 @@ optional "go deeper".
 | **[Domain Modeling](domain-modeling/README.md)** | Modeling business complexity with Domain-Driven Design. | 4 | 54 |
 | **[Data Engineering & Databases](data-engineering/README.md)** | Choosing, designing, and understanding storage systems. | 3 | 35 |
 | **[Software Quality](software-quality/README.md)** | Testing and reliability through better test design. | 3 | 37 |
+| **[Agentic Engineering](agentic-engineering/README.md)** | Working effectively with LLMs and building/operating today's agent capabilities: prompting, context and instruction design, tool use, MCP, orchestration, evaluation, and security/cost/operations. | 9 | 71 *(scaffold)* |
 
 **-> [See all 609 lessons: CATALOG.md](CATALOG.md)** - the full catalog,
 domain -> subject -> lesson, with seniority and a direct link to each one. It's

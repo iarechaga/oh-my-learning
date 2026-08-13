@@ -141,12 +141,18 @@ reconstruct it from `git log` at release time if you can avoid it.
 2. **Reconcile `[Unreleased]`** against what actually changed. Cross-check with
    `git log <last-tag>..HEAD` (or the full history for `0.1.0`) so nothing is missing and
    nothing personal slipped in. Edit, group, and order the bullets to read well.
-3. **Promote the section:** rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` (today's
+3. **Check for an overdue `agentic-engineering/landscape-snapshot` review.** If that
+   domain exists, scan `agentic-engineering/landscape-snapshot/README.md`'s concept
+   table for any `Next review` date in the past and flag it to the human before
+   finalizing - see
+   [fast-moving-domain-policy.md](fast-moving-domain-policy.md). This does not block
+   the release; it is a heads-up, not a gate.
+4. **Promote the section:** rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` (today's
    date, real date - never fabricate), and add a fresh empty `## [Unreleased]` above it.
-4. **Verify** per the [checklist](#verification).
-5. **Commit** the changelog with a message like `Release X.Y.Z` (or fold it into the final
+5. **Verify** per the [checklist](#verification).
+6. **Commit** the changelog with a message like `Release X.Y.Z` (or fold it into the final
    content commit). Per git-policy, the maintainer pushes to `main`.
-6. **Tag and publish only when the human explicitly asks.** Do not create the git tag or
+7. **Tag and publish only when the human explicitly asks.** Do not create the git tag or
    GitHub Release as part of routine work. When asked:
    - tag the release commit: `git tag -a vX.Y.Z -m "Release X.Y.Z"` and push the tag
      (`git push origin vX.Y.Z`);

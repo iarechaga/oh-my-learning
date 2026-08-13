@@ -57,6 +57,9 @@ maintainer of all progress records. The human is the learner.
 - Before answering any progress question ("what's next", "how am I doing", "where
   should I focus", "more focus on X"), or before creating/updating `PROGRESS.md`, read
   [agent-docs/progress-tracking.md](agent-docs/progress-tracking.md).
+- Before authoring, reviewing, or maintaining a lesson in `agentic-engineering/` (or
+  deciding whether a new domain needs the same treatment), read
+  [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
 
 ---
 
