@@ -126,6 +126,91 @@ about this domain, group each refresh under one recognizable, skippable bullet:
   model-capability-tiers-and-pricing-today.
 ```
 
+## Workflow V - Currency review
+
+Trigger: the human asks whether this domain (or a subject/lesson in it) is still
+current - e.g. *"check whether `agentic-engineering` still holds up"*, *"is
+`landscape-snapshot` out of date?"*, *"audit the agentic-engineering domain"*,
+*"find out if there's anything new in the field this domain should cover"* - in any
+language the human happens to be using; the trigger is the intent, not the exact
+wording. This is a different action from the quarterly
+`landscape-snapshot` maintenance cadence above (which is a scheduled push); this is a
+learner- or maintainer-triggered pull, on demand, and it always ends in an explicit
+verdict, never a hedge.
+
+**Scope, cheapest check first:**
+
+1. **Triage from front matter alone - no web research yet.** Read every lesson's
+   `durability`/`next_review` in the requested scope (whole domain, one subject, or one
+   lesson). Any `perishable` lesson with `next_review` in the past is automatically
+   in scope for full verification. `durable` lessons are only verified if the human
+   asked for a full audit, or if gap detection (below) surfaces something that might
+   invalidate one.
+2. **Deep-verify `landscape-snapshot` in full** whenever the domain or that subject is
+   in scope - it is cheap (7 lessons) and is precisely the subject this workflow exists
+   to check.
+3. **Spot-check the eight durable subjects lightly** when a full-domain audit is
+   requested: the question for a durable lesson is *"has anything happened that
+   invalidates the concept," not "is every boxed example still current"* - boxed
+   examples are expected to age and are not what durability claims to protect.
+
+**Verification - real sources, not recall.** For every lesson in scope, re-derive its
+specific factual claims (named products, protocol/benchmark status, prices, file
+formats, or - for durable lessons - the architectural claim itself) and check each one
+against a live web search or fetch. This is exactly the domain where the agent's own
+training data is guaranteed to be stale - never assess currency from memory. Cite what
+you checked, the same way lesson `source:` fields do.
+
+**Verdict - exactly one of three per lesson, stated explicitly, no softer alternative:**
+
+- **Current** - the lesson's claims still hold (durable lessons: the concept is
+  architecturally unchanged; perishable lessons: the named products/numbers/status
+  still match, or differ only in inconsequential ways - e.g. a price moved 10%, a
+  version number ticked up with no capability change).
+- **Outdated** - specific facts have measurably changed (a new tier, a renamed or
+  merged product, a superseded benchmark, a spec revision) such that a reader would be
+  misled, but the lesson's structure and durable teaching are still sound - it needs an
+  edit, not a rewrite.
+- **Obsolete** - the concept itself no longer applies as described (a protocol fully
+  deprecated and replaced, an execution model that no longer exists, a durable claim
+  that turned out to be wrong) - it needs a rewrite, not a patch.
+- **Unable to determine** - only when the above three genuinely cannot be assigned
+  (no reliable current source found, or sources conflict badly enough that neither
+  side can be trusted). State this explicitly, name what you searched for, and why it
+  didn't resolve - never default to "current" because verification was inconclusive.
+
+**Gap detection - separate from verifying what exists.** Independently research what
+has emerged in the field (new products, protocols, benchmarks, or genuinely new
+capability categories) that no existing lesson covers. For each finding, propose where
+it belongs: a new `landscape-snapshot` entry (a new instance of an existing durable
+concept), a new lesson in an existing durable subject (a genuinely new *durable*
+concept, not just a new product), or - rarely - a new subject, if nothing existing
+fits. Proposals only; this workflow never mass-authors on its own, same as Workflow A.
+
+**Report - the actionable output:**
+
+- A per-lesson verdict table (ID, verdict, one-line reason, what was checked).
+- An ordered action list grouped by verdict: Obsolete (rewrite) first, Outdated
+  (edit) next, Unable to determine (needs a human or a deeper follow-up) after that,
+  Current (no action) last.
+- Gap-detection proposals, each with a suggested location and a one-line reason.
+- **`next_review` updates** - bump to `created`/today plus one quarter *only* for
+  lessons verdicted Current. Leave `next_review` untouched (still overdue and visibly
+  stale) for Outdated, Obsolete, and Unable-to-determine lessons until someone actually
+  fixes the content - never launder staleness by bumping the date without fixing what's
+  wrong.
+
+This workflow **reports and updates `next_review`; it does not rewrite lesson bodies**
+unless the human then asks for that as a follow-up (an ordinary authoring/edit pass
+under the usual PATCH/MINOR rules).
+
+**Future extension, noted but not implemented:** the other eight domains age too, just
+on a different timescale (a book's ideas rarely invalidate, but a citation, a tool
+mentioned in passing, or an industry statistic can still go stale). A lighter version
+of this workflow - verdict-based, source-checked, but without the durability/
+`next_review` machinery those domains don't have - could generalize here eventually.
+Not built now; flagged so it isn't rediscovered as if novel.
+
 ## A known gap this does not fix
 
 `PROGRESS.md`'s `mastery` field (see [progress-tracking.md](progress-tracking.md)) has

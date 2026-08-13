@@ -60,6 +60,11 @@ maintainer of all progress records. The human is the learner.
 - Before authoring, reviewing, or maintaining a lesson in `agentic-engineering/` (or
   deciding whether a new domain needs the same treatment), read
   [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
+- Before answering "is `agentic-engineering` still current?", "check if this domain is
+  out of date", or any request to audit that domain or find what's new in the field,
+  read [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md)'s
+  Workflow V - it requires a real web-verified Current/Outdated/Obsolete verdict per
+  lesson, never a hedge.
 
 ---
 

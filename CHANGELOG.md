@@ -16,6 +16,20 @@ this file.
 
 ### Added
 
+- **Currency review workflow for `agentic-engineering`** - a new "Workflow V" in
+  `agent-docs/fast-moving-domain-policy.md` lets anyone ask whether the domain (or a
+  subject/lesson) is still current and get an explicit, real-web-verified verdict per
+  lesson - `Current` / `Outdated` / `Obsolete` / `Unable to determine` - never a hedge.
+  Triages from `durability`/`next_review` first (cheap), always deep-verifies
+  `landscape-snapshot` in full, spot-checks the eight durable subjects only for
+  invalidated architecture (not aging examples), and separately researches gaps -
+  new products/protocols/capabilities not covered by any lesson - proposing where each
+  belongs rather than auto-authoring. Produces an ordered, actionable report and bumps
+  `next_review` only for lessons verdicted `Current`, leaving staleness visible on
+  anything else until it's actually fixed. `AGENTS.md` wired with a trigger so a fork
+  can invoke it with a plain-language ask ("revisa si agentic-engineering sigue
+  vigente"). Generalizing a lighter version to the other eight domains is noted as
+  future work, not implemented. Authored on `feat/agentic-engineering-domain`.
 - **`agentic-engineering` domain fully authored: 9/9 subjects, 71/71 lessons.** The
   final subject, `landscape-snapshot` (7/7 lessons), is the domain's one deliberately
   perishable subject: current coding-agent products (Claude Code, Cursor, Copilot,
