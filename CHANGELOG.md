@@ -16,6 +16,21 @@ this file.
 
 ### Added
 
+- **`agent-security-and-operations` subject fully authored (8/8 lessons)** - the
+  architectural threat model (instructions and data share one token stream with no
+  reliable trust boundary), prompt injection (direct/indirect, defense-in-depth),
+  least-privilege tool permissions and scoped credentials, human-in-the-loop gates for
+  irreversible actions, token economics (routing, caching, budgets), observability for
+  non-deterministic agent runs, failure modes and verification for deployed systems
+  (hallucination, silent drift, distribution shift), and operating agent fleets at
+  organizational scale (accountability, governance, incident response). This is the
+  domain's highest-seniority subject, reaching `principal` on its capstone lesson.
+  Named products stay boxed illustrative examples throughout (including a real,
+  documented 2026 postmortem used as concrete evidence, not as the concept's
+  identity); current pricing deferred to `landscape-snapshot/05`. New
+  `agentic-engineering/agent-security-and-operations/SUMMARY.md`; root
+  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (673 lessons, 53 subjects, 9
+  domains). Authored on `feat/agentic-engineering-domain`.
 - **`agent-evaluation` subject fully authored (7/7 lessons)** - why agent evaluation
   isn't unit testing (non-determinism, no single correct output, trajectory-dependent
   correctness), what benchmarks measure and their documented blind spots

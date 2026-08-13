@@ -2,12 +2,13 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**665 lessons across 9 domains, 52 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**673 lessons across 9 domains, 53 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 7 subjects, 56 lessons
+- [Agentic Engineering](#agentic-engineering) - 8 subjects, 64 lessons
   - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
+  - [Security, Cost, and Production Operations](#agent-security-and-operations) - 8 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
@@ -87,6 +88,22 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 05 | Offline vs Online Evaluation: What Runs Before Ship vs in Production | senior | [lesson](agentic-engineering/agent-evaluation/lessons/05-offline-vs-online-evaluation.md) |
 | 06 | Regression Testing for Prompts and Agent Behavior | staff | [lesson](agentic-engineering/agent-evaluation/lessons/06-regression-testing-for-agent-behavior.md) |
 | 07 | Multi-Judge and Debate-Based Evaluation | staff | [lesson](agentic-engineering/agent-evaluation/lessons/07-multi-judge-and-debate-based-evaluation.md) |
+
+<a id="agent-security-and-operations"></a>
+### Security, Cost, and Production Operations
+
+8 lessons - [subject index](agentic-engineering/agent-security-and-operations/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | The Threat Model: Why Agents Can't Reliably Separate Instructions from Data | mid | [lesson](agentic-engineering/agent-security-and-operations/lessons/01-the-threat-model.md) |
+| 02 | Prompt Injection: Direct, Indirect, and Defense-in-Depth | senior | [lesson](agentic-engineering/agent-security-and-operations/lessons/02-prompt-injection.md) |
+| 03 | Least-Privilege Tool Permissions and Scoped Credentials | senior | [lesson](agentic-engineering/agent-security-and-operations/lessons/03-least-privilege-tool-permissions.md) |
+| 04 | Human-in-the-Loop Gates for Irreversible Actions | senior | [lesson](agentic-engineering/agent-security-and-operations/lessons/04-human-in-the-loop-gates.md) |
+| 05 | Token Economics: Model Routing, Caching, and Budget Design | senior | [lesson](agentic-engineering/agent-security-and-operations/lessons/05-token-economics.md) |
+| 06 | Observability for Agents: Tracing, Logging, and Debugging Non-Determinism | staff | [lesson](agentic-engineering/agent-security-and-operations/lessons/06-observability-for-agents.md) |
+| 07 | Failure Modes and Verification: Hallucination, Silent Drift, and Trust Calibration | staff | [lesson](agentic-engineering/agent-security-and-operations/lessons/07-failure-modes-and-verification.md) |
+| 08 | Operating Agent Fleets: Governance, Incident Response, and Organizational Risk | principal | [lesson](agentic-engineering/agent-security-and-operations/lessons/08-operating-agent-fleets.md) |
 
 <a id="agentic-software-engineering"></a>
 ### Agentic Software Engineering

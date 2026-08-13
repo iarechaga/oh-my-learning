@@ -52,15 +52,16 @@ Ordered by dependency - each subject builds on the ones before it.
 | **[Multi-Agent Systems & Orchestration](multi-agent-orchestration/README.md)** | Subagents, orchestration patterns, coordination mechanisms, and the failure modes unique to multiple agents working together. | 7 | [multi-agent-orchestration/README.md](multi-agent-orchestration/README.md) |
 | **[Agentic Software Engineering](agentic-software-engineering/README.md)** | Where coding agents run, vibe coding vs controlled use, spec-driven development, and reviewing agent-generated work. | 6 | [agentic-software-engineering/README.md](agentic-software-engineering/README.md) |
 | **[Evaluating & Testing Agentic Systems](agent-evaluation/README.md)** | Why agent evaluation isn't unit testing, benchmarks, LLM-as-judge, trajectory evaluation, and regression testing for agent behavior. | 7 | [agent-evaluation/README.md](agent-evaluation/README.md) |
-| **[Security, Cost, and Production Operations](agent-security-and-operations/README.md)** | The prompt-injection threat model, least-privilege permissions, token economics, observability, and operating agent fleets. | 8 *(scaffold)* | [agent-security-and-operations/README.md](agent-security-and-operations/README.md) |
+| **[Security, Cost, and Production Operations](agent-security-and-operations/README.md)** | The prompt-injection threat model, least-privilege permissions, token economics, observability, and operating agent fleets. | 8 | [agent-security-and-operations/README.md](agent-security-and-operations/README.md) |
 | **[Landscape Snapshot](landscape-snapshot/README.md)** | A dated survey of today's coding agents, orchestration frameworks, protocols, benchmarks, model pricing, and file formats - the one subject in this domain built to be rewritten, not preserved. | 7 *(scaffold)* | [landscape-snapshot/README.md](landscape-snapshot/README.md) |
 
-All nine subjects are scaffolded (concept lists and indexes ready). Seven are fully
+All nine subjects are scaffolded (concept lists and indexes ready). Eight are fully
 authored - **Prompting & Context Engineering** (10/10), **Tool Use & the Agentic Loop**
 (8/8), **Instruction & Context Design** (11/11), **Model Context Protocol & Agent
 Interoperability** (7/7), **Multi-Agent Systems & Orchestration** (7/7), **Agentic
-Software Engineering** (6/6), and **Evaluating & Testing Agentic Systems** (7/7); the
-remaining two have lesson bodies not yet authored.
+Software Engineering** (6/6), **Evaluating & Testing Agentic Systems** (7/7), and
+**Security, Cost, and Production Operations** (8/8); only `landscape-snapshot` has
+lesson bodies not yet authored.
 
 The track moves from raw model behavior (Prompting & Context Engineering), to giving
 that model the ability to act (Tool Use & the Agentic Loop), to engineering everything

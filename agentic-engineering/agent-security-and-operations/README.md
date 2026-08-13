@@ -9,7 +9,8 @@ fleet of agents with organizational accountability.
 **Sources:** primary security-research publications on prompt injection and agent
 threat models, primary vendor documentation on permissions and observability, and
 dated practitioner write-ups on cost/FinOps practice. No single canonical book exists
-for this field. See each lesson's `source:` front matter once authored, and
+for this field. See each lesson's `source:` front matter for its specific citations,
+and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss
