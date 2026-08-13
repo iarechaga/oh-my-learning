@@ -16,6 +16,19 @@ this file.
 
 ### Added
 
+- **`agent-evaluation` subject fully authored (7/7 lessons)** - why agent evaluation
+  isn't unit testing (non-determinism, no single correct output, trajectory-dependent
+  correctness), what benchmarks measure and their documented blind spots
+  (contamination, narrow distribution, saturation), LLM-as-judge design and its
+  documented biases (position, verbosity, self-preference), trajectory evaluation
+  (scoring the path, not just the outcome), offline vs online evaluation, regression
+  testing for a probabilistic system (paired statistical comparison against a pinned
+  baseline, not exact-match assertions), and multi-judge/debate-based evaluation.
+  Named benchmarks and eval products stay boxed illustrative examples, pointing to
+  `landscape-snapshot/04` for the current landscape. New
+  `agentic-engineering/agent-evaluation/SUMMARY.md`; root `README.md`/`SUMMARY.md` and
+  `CATALOG.md` updated (665 lessons, 52 subjects, 9 domains). Authored on
+  `feat/agentic-engineering-domain`.
 - **`agentic-software-engineering` subject fully authored (6/6 lessons)** - the three
   durable coding-agent execution models (IDE-integrated, terminal-native, cloud/async),
   vibe coding vs. controlled agent use as a real spectrum, spec-driven development (and

@@ -2,11 +2,12 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**658 lessons across 9 domains, 51 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**665 lessons across 9 domains, 52 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 6 subjects, 49 lessons
+- [Agentic Engineering](#agentic-engineering) - 7 subjects, 56 lessons
+  - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
@@ -71,6 +72,21 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 
 <a id="agentic-engineering"></a>
 ## Agentic Engineering
+
+<a id="agent-evaluation"></a>
+### Evaluating & Testing Agentic Systems
+
+7 lessons - [subject index](agentic-engineering/agent-evaluation/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | Why Agent Evaluation Isn't Unit Testing: Non-Determinism and Trajectories | mid | [lesson](agentic-engineering/agent-evaluation/lessons/01-why-agent-evaluation-isnt-unit-testing.md) |
+| 02 | What Benchmarks Measure and Their Blind Spots | mid | [lesson](agentic-engineering/agent-evaluation/lessons/02-what-benchmarks-measure.md) |
+| 03 | LLM-as-Judge: Design, Calibration, and Known Biases | senior | [lesson](agentic-engineering/agent-evaluation/lessons/03-llm-as-judge.md) |
+| 04 | Trajectory Evaluation: Scoring the Path, Not Just the Outcome | senior | [lesson](agentic-engineering/agent-evaluation/lessons/04-trajectory-evaluation.md) |
+| 05 | Offline vs Online Evaluation: What Runs Before Ship vs in Production | senior | [lesson](agentic-engineering/agent-evaluation/lessons/05-offline-vs-online-evaluation.md) |
+| 06 | Regression Testing for Prompts and Agent Behavior | staff | [lesson](agentic-engineering/agent-evaluation/lessons/06-regression-testing-for-agent-behavior.md) |
+| 07 | Multi-Judge and Debate-Based Evaluation | staff | [lesson](agentic-engineering/agent-evaluation/lessons/07-multi-judge-and-debate-based-evaluation.md) |
 
 <a id="agentic-software-engineering"></a>
 ### Agentic Software Engineering

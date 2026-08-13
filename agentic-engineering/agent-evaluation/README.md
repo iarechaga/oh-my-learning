@@ -8,7 +8,7 @@ vs online evaluation, and regression testing for prompts and agent behavior.
 **Sources:** primary evaluation-framework documentation, benchmark papers and their
 methodology sections, and dated practitioner write-ups on LLM-as-judge practice. No
 single canonical book exists for this field. See each lesson's `source:` front matter
-once authored, and
+for its specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss

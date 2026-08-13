@@ -403,9 +403,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 7. Evaluating & Testing Agentic Systems
 
-- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 7/7 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** why agent evaluation isn't unit testing, reading benchmark methodology, LLM-as-judge design and bias, trajectory evaluation, offline vs online evaluation, and regression testing.
-- **Read:** [progress table](agentic-engineering/agent-evaluation/README.md).
+- **Read:** [progress table](agentic-engineering/agent-evaluation/README.md) - [subject summary](agentic-engineering/agent-evaluation/SUMMARY.md).
 
 ### 8. Security, Cost, and Production Operations
 

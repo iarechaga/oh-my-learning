@@ -1,0 +1,99 @@
+---
+id: agent-evaluation/06
+subject: agent-evaluation
+title: Regression Testing for Prompts and Agent Behavior
+slug: regression-testing-for-agent-behavior
+status: drafted
+mastery:
+seniority: staff
+source: "FutureAGI: Prompt Regression Testing - A Practical 2026 Guide; FutureAGI: LLM Regression Testing Guide (2026); Medium/QuarkAndCode: LLM Prompt Testing and Regression Testing - A Practical Guide (Jul 2026); Confident AI: 5 Best CI/CD Tools for Testing AI Agents Before Production in 2026; qaskills.sh: Offline vs Online LLM Evaluation - When to Use Each (2026)"
+durability: durable
+prerequisites: [agent-evaluation/05]
+created: 2026-08-10
+updated: 2026-08-10
+---
+
+# Regression Testing for Prompts and Agent Behavior
+
+## TL;DR
+"Regression" in a traditional test suite means an assertion that used to pass now fails - a binary, deterministic signal. An agent has no such signal available: the same prompt against the same model can legitimately produce a different (but equally correct) response on two runs, so a useful regression suite has to replace exact-match assertions with paired statistical comparisons - score distributions, tolerance bands, and confidence intervals against a pinned baseline - and accept that "did this change make things worse" is a probabilistic judgment, not a pass/fail bit. Building that suite well is a staff-level cost/coverage trade-off: every additional golden case, rubric, and judge call is a recurring cost against a release pipeline, not a one-time investment.
+
+## The idea
+Lesson 01 established why agent evaluation isn't unit testing: no single right answer, non-deterministic trajectories. Regression testing is where that gap becomes an operational problem rather than a philosophical one, because regression testing is specifically the practice of asking "did a *change* - a new prompt, a new model version, a new tool schema, a new retrieval index - make behavior worse than it was," and answering that question well requires a notion of "worse" that survives the fact that "the same" input doesn't reliably produce "the same" output even with nothing changed.
+
+A traditional regression suite works because its oracle is deterministic: `add(2, 2)` returns `4` or the test fails, full stop, and if it passes today it will pass tomorrow with the same code. An agent's regression suite has no such oracle. The support agent that answered a billing question well yesterday might phrase tomorrow's answer to the *identical* question differently - different wording, different ordering of the same facts, maybe a slightly different but still-correct level of detail - and none of that is a regression. The real regression is buried in that same noise: the prompt edit that quietly makes the agent 8% more likely to skip the required disclaimer, the model swap that shifts tool-call argument formatting just enough to break 3% of downstream parsing, the retrieval index rebuild that drops the right document into position 6 instead of position 2 on a subset of queries. Both live in "we don't get exactly the same output twice." The staff-level problem is designing a suite that catches the second pattern while not crying wolf on the first - and doing it at a cost that doesn't make every prompt change a multi-day ordeal.
+
+## How it works
+
+### What "regression" has to mean for a probabilistic system
+Redefine the oracle before building anything. Three components replace "assert equals":
+1. **A pinned baseline, not a single expected answer.** Instead of one "correct" output per test case, store the score distribution the *previous* version produced on that case (or a small set of prior runs, since even the previous version has run-to-run variance). The question shifts from "does the new output match the old output" to "does the new version's score distribution look worse than the old version's score distribution, on the same input."
+2. **A rubric-based or reference-based score, not string equality.** Each golden case is scored - by an LLM-judge against a rubric (lesson 03), by a task-completion check against an expected outcome, by a trajectory metric (lesson 04) - producing a number or small set of numbers per run, not a boolean.
+3. **A statistical decision rule, not a diff.** Because both the baseline and the candidate have run-to-run noise, a single new score below a single old score is not evidence of regression - it might just be that run's variance. The decision needs to account for the noise on both sides.
+
+### Worked example: paired comparison instead of independent scoring
+Run the *same* golden case through both the old and new version, back to back, and score the *difference* per case rather than comparing two independently-computed averages. If version A scores 0.88 on average and version B scores 0.85 on average across 200 different-noise runs, that 0.03 gap could easily be sampling noise. But if, for each of the 200 cases individually, B's score is compared to A's score on that *same* case, the paired differences cancel out the per-case difficulty variance that dominates an unpaired comparison - a hard case that both versions score low on contributes ~0 to the paired delta instead of adding noise to both averages independently. Practitioner guidance on this pattern reports the paired design reduces between-example noise by roughly an order of magnitude compared to scoring the two versions independently and comparing means - which is the difference between a regression suite that can actually detect a real 3% quality drop and one that can only detect drops large enough to survive being buried in unpaired variance.
+
+### Worked example: tolerance bands and statistical thresholds, not pass/fail
+A concrete gate design used in practice for prompt regression testing sets three independent triggers, any one of which blocks a release:
+- **Floor assertion**: the new version's mean score on a rubric must stay at or above a route-specific absolute threshold (e.g., groundedness >= 0.85, refusal-correctness >= 0.90) - this catches an absolute quality floor being breached regardless of what the old version scored.
+- **Paired-delta confidence interval**: compute a bootstrap 95% confidence interval (commonly ~10,000 resamples) on the per-case paired differences between new and old; if the *entire* interval sits below zero, that's a confirmed regression - not just a lower point estimate, but a difference unlikely to be sampling noise. If the interval straddles zero, the honest read is "no detectable difference," not "no regression" and not "regression."
+- **Hard-flip on safety-critical cases**: a small subset of cases (safety, compliance, previously-fixed incidents) get a stricter rule - any single case flipping from pass to fail on this subset blocks the release outright, because the statistical-noise argument that's appropriate for a groundedness rubric is not appropriate for "did the agent disclose this legally required warning."
+
+This is the shape of "tolerance band" reasoning: most of the suite tolerates run-to-run noise and only flags a change large enough to be statistically credible; a small, deliberately chosen subset tolerates zero regression at all because the cost of a false negative there is disproportionate.
+
+### Worked example: what a golden set actually needs to contain
+A regression suite's coverage is a direct function of what's in its golden set, and a set of 100-300 stratified cases per route/intent is a commonly cited practical range - large enough for the paired-delta confidence interval to be informative, small enough to run in a few minutes with judge concurrency rather than requiring a distributed job. Composition matters more than raw count: a set skewed entirely toward easy, common cases will pass every release cleanly while a regression specifically in edge-case handling ships undetected. A workable stratification blends roughly: majority of cases from real historical traffic (happy path, the actual distribution the agent will face), a meaningful minority of deliberately hard edge cases (long input, ambiguous intent, adversarial phrasing), a slice of cases whose correct behavior is *refusal* (so a regression that makes the agent newly over-eager gets caught, not just under-eager), and - critically - every real production failure the online-evaluation pipeline (lesson 05) has ever caught, promoted permanently into the suite so the same failure can never silently ship twice.
+
+### The cost side of the trade-off, quantified
+None of this is free, and a staff engineer has to own the trade-off explicitly rather than defaulting to "add more tests":
+- **Judge cost scales with suite size and judge tier.** Running a frontier-tier LLM-judge on every case, on every release, for every rubric, gets expensive fast; a practical mitigation is a cascade - a cheap classifier or smaller judge handles the bulk of cases, and the expensive judge is reserved for cases where the cheap judge disagrees with the baseline or flags low confidence, cutting the per-release judge bill by roughly an order of magnitude in reported practice.
+- **Suite maintenance is recurring, not one-time.** A golden set decays: the "correct" answer to a factual case can go stale as the underlying facts change, a case written against last quarter's product surface can silently test the wrong thing, and a suite nobody re-validates against reality drifts into false confidence exactly like an offline eval that's never fed production failures (lesson 05).
+- **Coverage vs. iteration speed is a real tension, not a solved problem.** A 300-case suite with a full statistical gate might take a few minutes to run in parallel - tolerable for a release gate, intolerable if it runs on every single commit during active prompt iteration. The practical resolution most teams converge on is tiered: a small, fast smoke subset runs on every commit for quick feedback, and the full statistical suite gates the actual release.
+- **False positives have an organizational cost that's easy to undercount.** A gate that fires on noise erodes trust in the gate itself; the first few times a paired-CI trigger turns out to be noise rather than a real regression, engineers start reflexively re-running or overriding the gate instead of investigating it, which defeats the purpose of having a statistical threshold at all. This is why the calibration-first pattern (run the gate in reporting-only mode, compare its verdicts against human judgment, tune thresholds, *then* make it blocking) matters more here than in a deterministic test suite, where a false positive essentially cannot happen by construction.
+
+### Worked example: a model or tool-schema upgrade as the regression trigger
+Regression testing for agent behavior isn't only triggered by prompt edits. A model provider ships a new version of the underlying model; the team swaps it in expecting a pure upgrade. The regression suite catches that the new model formats tool-call arguments slightly differently - technically still valid JSON, but with a field ordering or nesting the downstream parser wasn't written to expect, breaking 4% of tool calls on the golden set even though the model's *reasoning* quality improved on every rubric. Nothing about the prompt changed; the regression is downstream-integration breakage triggered by an upstream model update, which is exactly the kind of change a step-level, tool-call-correctness check (lesson 04) catches and a purely outcome-level rubric would miss entirely, because the final answer text can look fine while the machine-readable call underneath it silently broke.
+
+## Pros
+- **Turns "did this change make things worse" from a hunch into a defensible, statistically grounded answer**, replacing manual spot-checking with a repeatable, automatable gate.
+- **The hybrid loop with online evaluation (lesson 05) means the suite gets strictly better over time** - every real production failure becomes a permanent regression case, so past mistakes structurally cannot silently ship again.
+- **Catches integration-shaped regressions** (tool-call format breakage, schema drift) that a purely subjective "does this read well" review would miss.
+- **Tiered gating (fast smoke test + full statistical suite) preserves iteration speed** without giving up release-time rigor.
+
+## Cons
+- **Every threshold is a judgment call with real failure modes on both sides** - too loose and real regressions ship; too tight and false positives erode trust in the gate until people start overriding it.
+- **A golden set decays** - stale expected answers, cases written against an outdated product surface, and coverage gaps around new behavior all quietly reduce how much protection the suite actually provides, without the suite ever "failing" to signal that decay.
+- **Cost scales with rigor** - a suite thorough enough to catch subtle regressions with a frontier-tier judge, on every release, can become expensive enough that teams are tempted to shrink it, which is exactly the wrong response to the underlying risk.
+- **Paired, statistically-gated comparison is more infrastructure than "run the same prompts and eyeball the diffs"** - version-pinned baselines, bootstrap CI computation, judge-concurrency management, and a triage pipeline from production failures back into the suite are all real, ongoing engineering, not a one-time script.
+
+## Alternatives
+- **Manual spot-checking before release** - a person reviews a handful of outputs by eye. Cheap and requires no infrastructure; scales poorly, catches only regressions large and obvious enough for a human skim to notice, and provides no defensible record of what was actually checked. Reasonable only for very low-stakes, low-frequency changes.
+- **Exact-match or string-similarity assertions on agent output** - the simplest possible port of traditional unit testing. Cheap to write, but produces overwhelming false-positive noise on any agent with genuine output variance, training teams to ignore the suite - actively counterproductive once an agent's outputs aren't near-deterministic.
+- **A single fixed threshold with no statistical treatment** ("new score must be >= old score") - simpler to implement than a bootstrap CI, but with no way to distinguish a real regression from ordinary run-to-run noise, it either fires constantly on noise (if strict) or misses real regressions hiding inside the noise band (if loose).
+- **Monitoring-only, no pre-release gate** - rely entirely on lesson 05's online evaluation to catch problems after they ship. Skips the suite-maintenance cost entirely, at the cost of every regression being caught only after real users have already been affected by it.
+
+## When to use it
+Any agent or prompt-driven system that changes over time - prompt edits, model version bumps, tool schema changes, retrieval index rebuilds, config changes - and has enough usage or stakes that a silent quality drop would matter needs a regression suite with paired, statistically-gated comparison rather than ad hoc review. Weight the suite's size, judge tier, and gating strictness to the release frequency and blast radius: a system that changes weekly and touches real customers earns a more thorough suite than one that changes quarterly in an internal tool.
+
+## When NOT to use it
+Do not build the full statistical apparatus - bootstrap CIs, paired comparison infrastructure, judge cascades - for a prototype or a system with negligible release frequency and blast radius; a lighter-weight smoke check is proportionate there, and the suite-maintenance cost of the full version would exceed the risk it protects against. Do not treat a passing regression suite as proof of correctness rather than proof of "no detected change from baseline on the cases we included" - a suite with poor coverage (skewed golden set, no production-failure promotion loop) can pass cleanly while a real regression ships in exactly the input space the suite never sampled. And do not make the gate blocking before it's been calibrated against human judgment in reporting-only mode first - a strict gate on an uncalibrated threshold produces false-positive noise that teaches engineers to route around it, which is worse than not having the gate at all.
+
+## Key takeaways / mental model
+A traditional regression test asks "does this still equal what it equaled before" and gets a clean yes or no. An agent regression suite has to ask "is this still *as good as* it was before, on cases that themselves have run-to-run noise" - and that question only has a defensible answer through paired comparison against a pinned baseline, statistical thresholds (floor + confidence-interval-on-delta + hard-flip-on-critical-subset) rather than a single pass/fail bit, and a golden set that's continuously fed by real production failures rather than frozen at whatever the test-writer imagined on day one. The staff-level judgment is not "write more tests" - it's choosing suite size, judge tier, gating strictness, and update cadence as an explicit, ongoing cost against the release risk they're bought against, and knowing that an uncalibrated or unmaintained gate is worse than a well-calibrated smaller one.
+
+## Self-check questions
+1. A new prompt version scores 0.86 average on a rubric versus the old version's 0.88 average, across 200 independently-run cases (not paired). A teammate calls this a regression and wants to block the release. What's wrong with that conclusion, and what would you ask for instead?
+2. Design the three-trigger gate (floor, paired-delta CI, hard-flip subset) for a medical-appointment-scheduling agent. Which rubrics get a floor assertion, which get the CI treatment, and what goes in the hard-flip subset? Justify the split.
+3. A regression suite has passed cleanly for six months, but a known class of failure (mishandling a specific date-format edge case) has shipped to production twice in that period, caught only after users reported it both times. Diagnose what's wrong with the suite, not with the prompt.
+4. Your regression suite takes 25 minutes to run and blocks every commit during active prompt iteration, and engineers have started skipping it locally and only running it right before merge. What's the underlying design problem, and how would you restructure the gating to fix it without weakening release-time rigor?
+5. A model provider ships a routine model upgrade that improves every quality rubric in your suite, but breaks tool-call argument formatting for 4% of cases. Would an outcome-only rubric (final answer text quality) have caught this? What kind of check would you add, and where does it fit relative to lesson 04's trajectory evaluation?
+
+## References
+- [Prompt Regression Testing: A Practical 2026 Guide - FutureAGI](https://futureagi.com/blog/prompt-regression-testing-2026/)
+- [LLM Regression Testing: FutureAGI Guide (2026)](https://futureagi.com/glossary/llm-regression-testing/)
+- [LLM Prompt Testing and Regression Testing: A Practical Guide - Medium/QuarkAndCode (Jul 2026)](https://medium.com/@QuarkAndCode/llm-prompt-testing-and-regression-testing-a-practical-guide-e0d44de823cf)
+- [5 Best CI/CD Tools for Testing AI Agents Before Production in 2026 - Confident AI](https://www.confident-ai.com/knowledge-base/compare/best-ci-cd-tools-testing-ai-agents-before-production-2026)
+- [Offline vs Online LLM Evaluation: When to Use Each (2026) - qaskills.sh](https://qaskills.sh/blog/offline-vs-online-llm-evaluation-2026)
+- `agentic-engineering/agent-evaluation/lessons/05-offline-vs-online-evaluation.md` (prerequisite: the offline pipeline this suite runs inside, and the online-to-offline promotion loop)
+- `agentic-engineering/agent-evaluation/lessons/04-trajectory-evaluation.md` (referenced: step-level checks that catch integration-shaped regressions outcome-only rubrics miss)
