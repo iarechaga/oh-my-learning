@@ -8,7 +8,7 @@ interoperability picture beyond MCP specifically.
 **Sources:** the Model Context Protocol specification and its governing body's
 documentation, primary vendor documentation on MCP adoption, and dated practitioner
 write-ups. No single canonical book exists for this field. See each lesson's `source:`
-front matter once authored, and
+front matter for its specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss

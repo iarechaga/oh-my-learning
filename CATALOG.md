@@ -2,12 +2,13 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**638 lessons across 9 domains, 48 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**645 lessons across 9 domains, 49 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 3 subjects, 29 lessons
+- [Agentic Engineering](#agentic-engineering) - 4 subjects, 36 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
+  - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
   - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 8 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
@@ -87,6 +88,21 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 09 | Evaluating Whether a Skill Actually Works | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/09-evaluating-whether-a-skill-works.md) |
 | 10 | Hooks, Slash Commands, and Other Deterministic Levers vs Model-Judged Triggers | senior | [lesson](agentic-engineering/instruction-and-context-design/lessons/10-hooks-commands-and-deterministic-levers.md) |
 | 11 | Choosing the Right Primitive: Instructions, Tools, Skills, Hooks, and Commands | staff | [lesson](agentic-engineering/instruction-and-context-design/lessons/11-choosing-the-right-primitive.md) |
+
+<a id="model-context-protocol"></a>
+### Model Context Protocol & Agent Interoperability
+
+7 lessons - [subject index](agentic-engineering/model-context-protocol/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | Why MCP Exists: The M x N Integration Problem | mid | [lesson](agentic-engineering/model-context-protocol/lessons/01-why-mcp-exists.md) |
+| 02 | MCP Architecture: Hosts, Clients, and Servers | mid | [lesson](agentic-engineering/model-context-protocol/lessons/02-mcp-architecture.md) |
+| 03 | MCP Primitives: Tools, Resources, and Prompts | mid | [lesson](agentic-engineering/model-context-protocol/lessons/03-mcp-primitives.md) |
+| 04 | Building an MCP Server: Design Choices That Matter | senior | [lesson](agentic-engineering/model-context-protocol/lessons/04-building-an-mcp-server.md) |
+| 05 | Authorization and Statelessness in Agent Protocols: Why It Matters for Scaling | senior | [lesson](agentic-engineering/model-context-protocol/lessons/05-authorization-and-statelessness-in-agent-protocols.md) |
+| 06 | Discovering and Trusting Third-Party MCP Servers | senior | [lesson](agentic-engineering/model-context-protocol/lessons/06-discovering-and-trusting-mcp-servers.md) |
+| 07 | MCP in a Multi-Agent System: Shared Tooling Across Agents | staff | [lesson](agentic-engineering/model-context-protocol/lessons/07-mcp-in-a-multi-agent-system.md) |
 
 <a id="prompting-context-engineering"></a>
 ### Prompting & Context Engineering

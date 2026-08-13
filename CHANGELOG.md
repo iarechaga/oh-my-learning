@@ -16,6 +16,19 @@ this file.
 
 ### Added
 
+- **`model-context-protocol` subject fully authored (7/7 lessons)** - why MCP exists
+  (the M x N integration problem, with a worked count), MCP architecture (host/client/
+  server), MCP primitives (tools/resources/prompts), building an MCP server well
+  (granularity, context cost, recoverable errors), authorization and the 2026
+  stateless-protocol-core shift, discovering and trusting third-party servers (tool
+  poisoning, registry verification vs. behavioral trust), and MCP as a shared tooling
+  layer across multiple agents. This subject is this domain's one explicit exception to
+  "no product is the concept": MCP-the-protocol itself is treated as durable (Linux
+  Foundation governance, cross-vendor adoption - cited with real 2026 figures), while
+  every *other* named product stays a swappable boxed example. New
+  `agentic-engineering/model-context-protocol/SUMMARY.md`; root `README.md`/`SUMMARY.md`
+  and `CATALOG.md` updated (645 lessons, 49 subjects, 9 domains). Authored on
+  `feat/agentic-engineering-domain`.
 - **`instruction-and-context-design` subject fully authored (11/11 lessons)** - the
   domain's most differentiated subject: the full set of surfaces an agent reads
   instructions from, structured metadata as cheap signal, the always-loaded-vs-on-demand

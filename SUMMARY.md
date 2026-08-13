@@ -385,9 +385,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 4. Model Context Protocol & Agent Interoperability
 
-- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** mid (mid->staff).
+- **Status:** 7/7 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (mid->staff).
 - **Covers:** why MCP exists, its architecture and primitives, building and securing a server, trusting third-party servers, and MCP in a multi-agent system.
-- **Read:** [progress table](agentic-engineering/model-context-protocol/README.md).
+- **Read:** [progress table](agentic-engineering/model-context-protocol/README.md) - [subject summary](agentic-engineering/model-context-protocol/SUMMARY.md).
 
 ### 5. Multi-Agent Systems & Orchestration
 
