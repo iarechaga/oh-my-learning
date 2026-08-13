@@ -8,8 +8,8 @@ to multiple agents working together.
 
 **Sources:** primary orchestration-framework documentation, papers on multi-agent
 coordination and its failure modes, and dated practitioner write-ups. No single
-canonical book exists for this field. See each lesson's `source:` front matter once
-authored, and
+canonical book exists for this field. See each lesson's `source:` front matter for its
+specific citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss

@@ -16,6 +16,19 @@ this file.
 
 ### Added
 
+- **`multi-agent-orchestration` subject fully authored (7/7 lessons)** - when
+  splitting work across multiple agents actually helps (vs. adding cost and
+  coordination overhead for nothing), subagents as a delegation boundary with context
+  isolation, orchestration patterns (deterministic workflows vs. autonomous
+  delegation), coordination mechanisms, the three durable orchestration architecture
+  patterns (graph-based, role-based, deterministic-script), documented multi-agent
+  failure modes (coordination overhead, emergent behavior, 41-87% production failure
+  rates per a validated 2026 taxonomy), and authorization propagation across
+  delegation chains. Named frameworks (LangGraph, CrewAI) stay boxed illustrative
+  examples throughout. New
+  `agentic-engineering/multi-agent-orchestration/SUMMARY.md`; root
+  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (652 lessons, 50 subjects, 9
+  domains). Authored on `feat/agentic-engineering-domain`.
 - **`model-context-protocol` subject fully authored (7/7 lessons)** - why MCP exists
   (the M x N integration problem, with a worked count), MCP architecture (host/client/
   server), MCP primitives (tools/resources/prompts), building an MCP server well

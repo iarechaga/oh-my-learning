@@ -391,9 +391,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 5. Multi-Agent Systems & Orchestration
 
-- **Status:** scaffolded - 7 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 7/7 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** when splitting into multiple agents helps, subagent delegation, orchestration and coordination patterns, multi-agent failure modes, and governance/authorization propagation.
-- **Read:** [progress table](agentic-engineering/multi-agent-orchestration/README.md).
+- **Read:** [progress table](agentic-engineering/multi-agent-orchestration/README.md) - [subject summary](agentic-engineering/multi-agent-orchestration/SUMMARY.md).
 
 ### 6. Agentic Software Engineering
 

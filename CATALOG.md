@@ -2,13 +2,14 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**645 lessons across 9 domains, 49 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**652 lessons across 9 domains, 50 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 4 subjects, 36 lessons
+- [Agentic Engineering](#agentic-engineering) - 5 subjects, 43 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
+  - [Multi-Agent Systems & Orchestration](#multi-agent-orchestration) - 7 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
   - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 8 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
@@ -103,6 +104,21 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 05 | Authorization and Statelessness in Agent Protocols: Why It Matters for Scaling | senior | [lesson](agentic-engineering/model-context-protocol/lessons/05-authorization-and-statelessness-in-agent-protocols.md) |
 | 06 | Discovering and Trusting Third-Party MCP Servers | senior | [lesson](agentic-engineering/model-context-protocol/lessons/06-discovering-and-trusting-mcp-servers.md) |
 | 07 | MCP in a Multi-Agent System: Shared Tooling Across Agents | staff | [lesson](agentic-engineering/model-context-protocol/lessons/07-mcp-in-a-multi-agent-system.md) |
+
+<a id="multi-agent-orchestration"></a>
+### Multi-Agent Systems & Orchestration
+
+7 lessons - [subject index](agentic-engineering/multi-agent-orchestration/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | Single-Agent vs Multi-Agent: When Splitting Actually Helps | mid | [lesson](agentic-engineering/multi-agent-orchestration/lessons/01-single-agent-vs-multi-agent.md) |
+| 02 | Subagents: Delegation with Context Isolation | mid | [lesson](agentic-engineering/multi-agent-orchestration/lessons/02-subagents-delegation-with-context-isolation.md) |
+| 03 | Orchestration Patterns: Deterministic Workflows vs Autonomous Delegation | senior | [lesson](agentic-engineering/multi-agent-orchestration/lessons/03-orchestration-patterns.md) |
+| 04 | Coordination Mechanisms: Shared State, Message Passing, and Task Lists | senior | [lesson](agentic-engineering/multi-agent-orchestration/lessons/04-coordination-mechanisms.md) |
+| 05 | Orchestration Architecture Patterns: Graph-Based, Role-Based, and Deterministic-Script Approaches | senior | [lesson](agentic-engineering/multi-agent-orchestration/lessons/05-orchestration-architecture-patterns.md) |
+| 06 | Multi-Agent Failure Modes: Coordination Overhead and Emergent Behavior | staff | [lesson](agentic-engineering/multi-agent-orchestration/lessons/06-multi-agent-failure-modes.md) |
+| 07 | Governance in Multi-Agent Systems: Authorization Propagation | staff | [lesson](agentic-engineering/multi-agent-orchestration/lessons/07-governance-in-multi-agent-systems.md) |
 
 <a id="prompting-context-engineering"></a>
 ### Prompting & Context Engineering
