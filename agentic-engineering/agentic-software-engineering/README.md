@@ -8,8 +8,8 @@ work, and what changes once agents work asynchronously at PR granularity.
 **Sources:** primary coding-agent product documentation, dated practitioner
 engineering write-ups on agentic development practice, and this repository's own
 `AGENTS.md`-driven workflow as one worked example among others. No single canonical
-book exists for this field. See each lesson's `source:` front matter once authored,
-and
+book exists for this field. See each lesson's `source:` front matter for its specific
+citations, and
 [agent-docs/fast-moving-domain-policy.md](../../agent-docs/fast-moving-domain-policy.md).
 
 **How to use this subject:** read a lesson on your own, then ask to *discuss

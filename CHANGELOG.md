@@ -16,6 +16,16 @@ this file.
 
 ### Added
 
+- **`agentic-software-engineering` subject fully authored (6/6 lessons)** - the three
+  durable coding-agent execution models (IDE-integrated, terminal-native, cloud/async),
+  vibe coding vs. controlled agent use as a real spectrum, spec-driven development (and
+  the three documented failure modes that motivated it), plan-then-execute workflows,
+  what genuinely changes in code review when the author is an agent, and staff-level
+  trust calibration for autonomous/async agents grounded in real 2025-2026 merge-rate
+  data. Named products (Devin, etc.) stay boxed illustrative examples throughout. New
+  `agentic-engineering/agentic-software-engineering/SUMMARY.md`; root
+  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (658 lessons, 51 subjects, 9
+  domains). Authored on `feat/agentic-engineering-domain`.
 - **`multi-agent-orchestration` subject fully authored (7/7 lessons)** - when
   splitting work across multiple agents actually helps (vs. adding cost and
   coordination overhead for nothing), subagents as a delegation boundary with context

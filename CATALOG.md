@@ -2,11 +2,12 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**652 lessons across 9 domains, 50 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**658 lessons across 9 domains, 51 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 5 subjects, 43 lessons
+- [Agentic Engineering](#agentic-engineering) - 6 subjects, 49 lessons
+  - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
   - [Multi-Agent Systems & Orchestration](#multi-agent-orchestration) - 7 lessons
@@ -70,6 +71,20 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 
 <a id="agentic-engineering"></a>
 ## Agentic Engineering
+
+<a id="agentic-software-engineering"></a>
+### Agentic Software Engineering
+
+6 lessons - [subject index](agentic-engineering/agentic-software-engineering/README.md)
+
+| # | Concept | Seniority | Lesson |
+| - | ------- | --------- | ------ |
+| 01 | Where Coding Agents Run: Terminal, IDE, and Cloud Execution Models | mid | [lesson](agentic-engineering/agentic-software-engineering/lessons/01-where-coding-agents-run.md) |
+| 02 | Vibe Coding vs Controlled Agent Use: Where the Line Actually Is | mid | [lesson](agentic-engineering/agentic-software-engineering/lessons/02-vibe-coding-vs-controlled-agent-use.md) |
+| 03 | Spec-Driven Development: Specs as the Source of Truth | senior | [lesson](agentic-engineering/agentic-software-engineering/lessons/03-spec-driven-development.md) |
+| 04 | Plan-Then-Execute Workflows and Task Decomposition | senior | [lesson](agentic-engineering/agentic-software-engineering/lessons/04-plan-then-execute-workflows.md) |
+| 05 | Code Review for Agent-Generated Work | senior | [lesson](agentic-engineering/agentic-software-engineering/lessons/05-code-review-for-agent-generated-work.md) |
+| 06 | Autonomous Software Engineering: Async Agents and Trust Calibration | staff | [lesson](agentic-engineering/agentic-software-engineering/lessons/06-autonomous-software-engineering.md) |
 
 <a id="instruction-and-context-design"></a>
 ### Instruction & Context Design

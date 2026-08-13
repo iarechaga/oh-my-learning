@@ -397,9 +397,9 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 6. Agentic Software Engineering
 
-- **Status:** scaffolded - 6 concepts listed (all `drafted`), lesson bodies not yet authored; not yet discussed. **Seniority baseline:** senior (mid->staff).
+- **Status:** 6/6 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
 - **Covers:** where coding agents run, vibe coding vs controlled use, spec-driven development, plan-then-execute workflows, reviewing agent-generated work, and autonomous/async agents.
-- **Read:** [progress table](agentic-engineering/agentic-software-engineering/README.md).
+- **Read:** [progress table](agentic-engineering/agentic-software-engineering/README.md) - [subject summary](agentic-engineering/agentic-software-engineering/SUMMARY.md).
 
 ### 7. Evaluating & Testing Agentic Systems
 
