@@ -14,173 +14,96 @@ this file.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-13
+
+A new domain, `agentic-engineering` - working effectively with LLMs at an advanced
+level and building the agent capabilities that exist today - fully authored: 9
+subjects, 71 lessons. This domain has no canonical book to anchor to; see
+[`agent-docs/fast-moving-domain-policy.md`](agent-docs/fast-moving-domain-policy.md)
+for how it copes with that (the durable-vs-perishable split, the
+`durability`/`next_review` front-matter fields, and the new currency-review
+workflow below).
+
 ### Added
 
+- **`agentic-engineering` domain (9/9 subjects, 71/71 lessons)**:
+  - **Prompting & Context Engineering** (10) - what LLMs actually do (tokens,
+    autoregression, statelessness), prompt anatomy, core prompting techniques,
+    chain-of-thought and reasoning effort (including 2025-2026 research on when it
+    helps vs. is theater), structured output, the limits of prompting, and context
+    engineering as a discipline (budget framing, failure modes, retrieval/memory,
+    compaction/handoff).
+  - **Tool Use & the Agentic Loop** (8) - function-calling mechanics, designing tool
+    schemas, the plan-act-observe loop, parallel vs sequential tool calls, the
+    harness-vs-scaffolding distinction, stateless vs stateful tool execution,
+    recoverable-failure design, and termination-condition design.
+  - **Instruction & Context Design** (11) - the domain's most differentiated
+    subject: every surface an agent reads instructions from, structured metadata as
+    cheap signal, always-loaded vs on-demand, designing trigger descriptions and
+    their failure modes, writing instructions that survive out-of-order loading,
+    authoring and evaluating skills, hooks/commands, and choosing the right
+    primitive. Uses this repository's own `AGENTS.md`/`agent-docs/` dispatcher as
+    one worked example among several.
+  - **Model Context Protocol & Agent Interoperability** (7) - why MCP exists (the
+    M x N integration problem), its architecture and primitives, building a server
+    well, authorization/statelessness, trusting third-party servers, and MCP across
+    multiple agents. This domain's one exception to "no product is the concept":
+    MCP itself is treated as durable, cited with real 2026 adoption figures.
+  - **Multi-Agent Systems & Orchestration** (7) - when splitting across agents
+    actually helps, subagent delegation with context isolation, orchestration
+    patterns, coordination mechanisms, the three durable orchestration
+    architecture patterns, documented multi-agent failure modes, and
+    authorization propagation.
+  - **Agentic Software Engineering** (6) - the three coding-agent execution
+    models, vibe coding vs. controlled use, spec-driven development, plan-then-
+    execute workflows, code review for agent-generated work, and trust
+    calibration for autonomous/async agents.
+  - **Evaluating & Testing Agentic Systems** (7) - why agent evaluation isn't unit
+    testing, what benchmarks measure and their blind spots, LLM-as-judge design
+    and documented biases, trajectory evaluation, offline vs online evaluation,
+    regression testing for a probabilistic system, and multi-judge/debate-based
+    evaluation.
+  - **Security, Cost, and Production Operations** (8) - the architectural threat
+    model, prompt injection and defense-in-depth, least-privilege tool
+    permissions, human-in-the-loop gates, token economics, observability for
+    agents, failure modes and verification in production, and operating agent
+    fleets (this domain's highest-seniority subject, reaching `principal`).
+  - **Landscape Snapshot** (7) - the domain's one deliberately perishable
+    subject: current coding-agent products, orchestration frameworks,
+    interoperability protocols beyond MCP, active benchmarks, model pricing
+    tiers, and skill/instruction file formats, each tagged
+    `durability: perishable` with `next_review: 2026-11`; plus one durable
+    capstone lesson on staying current once the rest ages.
+  - Throughout: every lesson researched live via web search rather than from
+    training-data recall (no textbook exists for this field); named products
+    appear only as swappable, dated examples except where a subject's own README
+    states otherwise. Every subject has a `SUMMARY.md`; root `README.md`,
+    `SUMMARY.md`, and `CATALOG.md` reflect the complete domain (680 lessons, 54
+    subjects, 9 domains).
 - **Currency review workflow for `agentic-engineering`** - a new "Workflow V" in
   `agent-docs/fast-moving-domain-policy.md` lets anyone ask whether the domain (or a
   subject/lesson) is still current and get an explicit, real-web-verified verdict per
   lesson - `Current` / `Outdated` / `Obsolete` / `Unable to determine` - never a hedge.
-  Triages from `durability`/`next_review` first (cheap), always deep-verifies
+  Triages from `durability`/`next_review` first, always deep-verifies
   `landscape-snapshot` in full, spot-checks the eight durable subjects only for
   invalidated architecture (not aging examples), and separately researches gaps -
   new products/protocols/capabilities not covered by any lesson - proposing where each
   belongs rather than auto-authoring. Produces an ordered, actionable report and bumps
-  `next_review` only for lessons verdicted `Current`, leaving staleness visible on
-  anything else until it's actually fixed. `AGENTS.md` wired with a trigger so a fork
-  can invoke it with a plain-language ask ("revisa si agentic-engineering sigue
-  vigente"). Generalizing a lighter version to the other eight domains is noted as
-  future work, not implemented. Authored on `feat/agentic-engineering-domain`.
-- **`agentic-engineering` domain fully authored: 9/9 subjects, 71/71 lessons.** The
-  final subject, `landscape-snapshot` (7/7 lessons), is the domain's one deliberately
-  perishable subject: current coding-agent products (Claude Code, Cursor, Copilot,
-  Devin, Codex, Amazon Q Developer), orchestration frameworks (LangGraph, CrewAI,
-  Microsoft's newly-merged Agent Framework, AG2), interoperability protocols beyond
-  MCP (A2A, AG-UI, AP2/x402, ANP), benchmarks in active use (SWE-bench Verified/Pro,
-  tau²-bench, Terminal-Bench, GAIA/WebArena, METR's Time Horizon), model capability
-  tiers and pricing across the three major providers, and current skill/instruction
-  file formats (`SKILL.md`, `AGENTS.md`) - each lesson dated (August 2026), tagged
-  `durability: perishable` with `next_review: 2026-11`, and researched live rather
-  than from training-data recall, with conflicting source data flagged explicitly
-  where found. Lesson 07 is the one durable lesson in the subject: how to keep
-  tracking what changed once the rest ages. New
-  `agentic-engineering/landscape-snapshot/SUMMARY.md`; root `README.md`/`SUMMARY.md`
-  and `CATALOG.md` updated to reflect the complete domain (680 lessons, 54 subjects,
-  9 domains). Authored on `feat/agentic-engineering-domain`.
-- **`agent-security-and-operations` subject fully authored (8/8 lessons)** - the
-  architectural threat model (instructions and data share one token stream with no
-  reliable trust boundary), prompt injection (direct/indirect, defense-in-depth),
-  least-privilege tool permissions and scoped credentials, human-in-the-loop gates for
-  irreversible actions, token economics (routing, caching, budgets), observability for
-  non-deterministic agent runs, failure modes and verification for deployed systems
-  (hallucination, silent drift, distribution shift), and operating agent fleets at
-  organizational scale (accountability, governance, incident response). This is the
-  domain's highest-seniority subject, reaching `principal` on its capstone lesson.
-  Named products stay boxed illustrative examples throughout (including a real,
-  documented 2026 postmortem used as concrete evidence, not as the concept's
-  identity); current pricing deferred to `landscape-snapshot/05`. New
-  `agentic-engineering/agent-security-and-operations/SUMMARY.md`; root
-  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (673 lessons, 53 subjects, 9
-  domains). Authored on `feat/agentic-engineering-domain`.
-- **`agent-evaluation` subject fully authored (7/7 lessons)** - why agent evaluation
-  isn't unit testing (non-determinism, no single correct output, trajectory-dependent
-  correctness), what benchmarks measure and their documented blind spots
-  (contamination, narrow distribution, saturation), LLM-as-judge design and its
-  documented biases (position, verbosity, self-preference), trajectory evaluation
-  (scoring the path, not just the outcome), offline vs online evaluation, regression
-  testing for a probabilistic system (paired statistical comparison against a pinned
-  baseline, not exact-match assertions), and multi-judge/debate-based evaluation.
-  Named benchmarks and eval products stay boxed illustrative examples, pointing to
-  `landscape-snapshot/04` for the current landscape. New
-  `agentic-engineering/agent-evaluation/SUMMARY.md`; root `README.md`/`SUMMARY.md` and
-  `CATALOG.md` updated (665 lessons, 52 subjects, 9 domains). Authored on
-  `feat/agentic-engineering-domain`.
-- **`agentic-software-engineering` subject fully authored (6/6 lessons)** - the three
-  durable coding-agent execution models (IDE-integrated, terminal-native, cloud/async),
-  vibe coding vs. controlled agent use as a real spectrum, spec-driven development (and
-  the three documented failure modes that motivated it), plan-then-execute workflows,
-  what genuinely changes in code review when the author is an agent, and staff-level
-  trust calibration for autonomous/async agents grounded in real 2025-2026 merge-rate
-  data. Named products (Devin, etc.) stay boxed illustrative examples throughout. New
-  `agentic-engineering/agentic-software-engineering/SUMMARY.md`; root
-  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (658 lessons, 51 subjects, 9
-  domains). Authored on `feat/agentic-engineering-domain`.
-- **`multi-agent-orchestration` subject fully authored (7/7 lessons)** - when
-  splitting work across multiple agents actually helps (vs. adding cost and
-  coordination overhead for nothing), subagents as a delegation boundary with context
-  isolation, orchestration patterns (deterministic workflows vs. autonomous
-  delegation), coordination mechanisms, the three durable orchestration architecture
-  patterns (graph-based, role-based, deterministic-script), documented multi-agent
-  failure modes (coordination overhead, emergent behavior, 41-87% production failure
-  rates per a validated 2026 taxonomy), and authorization propagation across
-  delegation chains. Named frameworks (LangGraph, CrewAI) stay boxed illustrative
-  examples throughout. New
-  `agentic-engineering/multi-agent-orchestration/SUMMARY.md`; root
-  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (652 lessons, 50 subjects, 9
-  domains). Authored on `feat/agentic-engineering-domain`.
-- **`model-context-protocol` subject fully authored (7/7 lessons)** - why MCP exists
-  (the M x N integration problem, with a worked count), MCP architecture (host/client/
-  server), MCP primitives (tools/resources/prompts), building an MCP server well
-  (granularity, context cost, recoverable errors), authorization and the 2026
-  stateless-protocol-core shift, discovering and trusting third-party servers (tool
-  poisoning, registry verification vs. behavioral trust), and MCP as a shared tooling
-  layer across multiple agents. This subject is this domain's one explicit exception to
-  "no product is the concept": MCP-the-protocol itself is treated as durable (Linux
-  Foundation governance, cross-vendor adoption - cited with real 2026 figures), while
-  every *other* named product stays a swappable boxed example. New
-  `agentic-engineering/model-context-protocol/SUMMARY.md`; root `README.md`/`SUMMARY.md`
-  and `CATALOG.md` updated (645 lessons, 49 subjects, 9 domains). Authored on
-  `feat/agentic-engineering-domain`.
-- **`instruction-and-context-design` subject fully authored (11/11 lessons)** - the
-  domain's most differentiated subject: the full set of surfaces an agent reads
-  instructions from, structured metadata as cheap signal, the always-loaded-vs-on-demand
-  decision, designing trigger descriptions (how an agent decides what to load) and
-  their failure modes (over-triggering, under-triggering, ambiguity), writing
-  instructions that survive out-of-order loading, what a skill is and authoring one end
-  to end, evaluating whether a skill actually works, hooks/commands as deterministic
-  alternatives to model-judged triggers, and a (deliberately incomplete) capstone on
-  choosing the right primitive. Uses this repository's own `AGENTS.md`/`agent-docs/`
-  dispatcher as one worked example among several, never the lesson's subject. New
-  `agentic-engineering/instruction-and-context-design/SUMMARY.md`; root
-  `README.md`/`SUMMARY.md` and `CATALOG.md` updated (638 lessons, 48 subjects, 9
-  domains). Authored on `feat/agentic-engineering-domain`.
-- **`tool-use-agentic-loop` subject fully authored (8/8 lessons)** - the second
-  authored subject in the `agentic-engineering` domain: function-calling mechanics,
-  designing tool schemas, the plan-act-observe agentic loop, parallel vs sequential
-  tool calls, the harness-vs-scaffolding distinction, stateless vs stateful tool
-  execution, designing for recoverable failure (idempotency, retry budgets), and
-  termination-condition design for runaway-loop prevention. Every lesson is tagged
-  `durability: durable` and follows the domain's rule that named products appear only
-  as dated, swappable examples. New
-  `agentic-engineering/tool-use-agentic-loop/SUMMARY.md`; root `README.md`/`SUMMARY.md`
-  and `CATALOG.md` updated (627 lessons, 47 subjects, 9 domains). Authored on
-  `feat/agentic-engineering-domain`.
-- **`prompting-context-engineering` subject fully authored (10/10 lessons)** - the
-  first authored subject in the `agentic-engineering` domain: what LLMs actually do
-  (tokens, autoregression, statelessness), prompt anatomy, core prompting techniques,
-  chain-of-thought and reasoning effort (including the 2025-2026 research on when CoT
-  helps vs. is theater and its faithfulness limits), structured output/constrained
-  decoding, the limits of prompting, and context engineering as a discipline (the
-  budget framing, named failure modes, retrieval/memory, and compaction/handoff for
-  long-horizon tasks). Every lesson is tagged `durability: durable` per
-  [`agent-docs/fast-moving-domain-policy.md`](agent-docs/fast-moving-domain-policy.md) -
-  named products appear only as dated, swappable examples in blockquotes, never as a
-  concept's defining identity. New `agentic-engineering/prompting-context-engineering/SUMMARY.md`;
-  root `README.md`/`SUMMARY.md` and `CATALOG.md` updated to match (619 lessons, 46
-  subjects, 9 domains). Authored on `feat/agentic-engineering-domain`; the other eight
-  subjects in the domain remain scaffolded.
+  `next_review` only for lessons verdicted `Current`. `AGENTS.md` wired with a
+  trigger. Generalizing a lighter version to the other eight domains is noted as
+  future work, not implemented.
 - **Website published on GitHub Pages** - the reading site now auto-deploys to
   <https://iarechaga.github.io/oh-my-learning/> via
   `.github/workflows/deploy-pages.yml` on every push to `main` (and on manual
   `workflow_dispatch`); no manual build/publish step is required. `website/build.py`
   gained a `--base-path` option so generated links and static assets work correctly
-  under a GitHub Pages project-site subpath (`/oh-my-learning/`) instead of only at
-  the domain root; the `website/templates/` were updated to use it. Also fixed: 44
-  lessons' in-prose relative links to sibling/cross-subject lessons
-  (`[01-fundamentals.md](01-fundamentals.md)`-style) resolved to `.md` files that don't
-  exist in the generated site (only `.html` pages do) - `website/build.py` now rewrites
-  those to the correct rendered page during the build instead of leaving them as dead
-  links; verified zero broken internal links across all 663 generated pages. Documented
-  in [`agent-docs/website.md`](agent-docs/website.md). `README.md` links to the
-  published site and the repository's GitHub "homepage" URL now points to it.
-- **`agentic-engineering` domain scaffolded (9 subjects, 71 concepts, 0 lessons
-  authored yet)** - working effectively with LLMs at an advanced level and building
-  the agent capabilities that exist today: `prompting-context-engineering` (10),
-  `tool-use-agentic-loop` (8), `instruction-and-context-design` (11),
-  `model-context-protocol` (7), `multi-agent-orchestration` (7),
-  `agentic-software-engineering` (6), `agent-evaluation` (7),
-  `agent-security-and-operations` (8), and `landscape-snapshot` (7). This domain has
-  no canonical book to anchor to - the field moves faster than the rest of the
-  repository's subject matter - so it introduces a new, domain-scoped
-  durable-vs-perishable content split: eight subjects teach durable capability, and
-  one (`landscape-snapshot`) is an explicitly dated survey of today's concrete
-  products, reviewed on a fixed quarterly cadence rather than opportunistically. New
-  `durability`/`next_review` front-matter fields (used only in this domain) and the
-  full policy - what's durable vs perishable, the review cadence, and what it implies
-  for versioning - are documented in new
-  [`agent-docs/fast-moving-domain-policy.md`](agent-docs/fast-moving-domain-policy.md);
-  `AGENTS.md`, `agent-docs/repository-model.md`, and `agent-docs/release-policy.md`
-  wired to reference it. Scaffolded on `feat/agentic-engineering-domain`; lesson
-  bodies not yet authored.
+  under a GitHub Pages project-site subpath instead of only at the domain root.
+  Also fixed: 44 lessons' in-prose relative links to sibling/cross-subject lessons
+  resolved to `.md` files that don't exist in the generated site - `website/build.py`
+  now rewrites those to the correct rendered page during the build; verified zero
+  broken internal links across all generated pages. Documented in
+  [`agent-docs/website.md`](agent-docs/website.md); `README.md` links to the
+  published site and the repository's GitHub "homepage" now points to it.
 
 ## [1.0.0] - 2026-08-10
 
