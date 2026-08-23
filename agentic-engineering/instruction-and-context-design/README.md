@@ -51,7 +51,7 @@ discussion's verdict; empty until first discussed.
 **Cross-subject prerequisites**: `01` and `03` build on
 `prompting-context-engineering/07`; `04` builds on `tool-use-agentic-loop/02`; `09`
 cross-links to `agent-evaluation` for the general evaluation methodology applied here;
-`11` is deliberately incomplete on first read and points forward to
-`model-context-protocol` and `multi-agent-orchestration`, which add MCP servers and
-subagents as further primitives to weigh. All named per lesson in front matter and
-prose.
+`11` also builds on `model-context-protocol/01` and `multi-agent-orchestration/01-02`,
+completing its seven-primitive decision framework with external capability servers and
+delegated sub-agents now that both subjects exist. All named per lesson in front
+matter and prose.

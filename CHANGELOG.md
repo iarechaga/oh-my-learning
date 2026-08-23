@@ -14,6 +14,17 @@ this file.
 
 ## [Unreleased]
 
+### Deepened
+
+- **`instruction-and-context-design/11` (Choosing the Right Primitive) completed** -
+  the lesson explicitly flagged itself as incomplete pending `model-context-protocol`
+  and `multi-agent-orchestration`, which now exist. Extended the decision framework
+  from five to seven primitives (adding external capability servers and delegated
+  sub-agents), reworked the worked decision walk to cover both new cases, replaced the
+  "not the final word" section with the actual resolution (how the two new primitives
+  retroactively change earlier answers), and updated the self-check question that
+  previously assumed the reader hadn't studied those subjects yet.
+
 ## [1.1.0] - 2026-08-13
 
 A new domain, `agentic-engineering` - working effectively with LLMs at an advanced
