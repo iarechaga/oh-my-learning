@@ -62,6 +62,78 @@ Use `MAJOR.MINOR.PATCH`, reinterpreted for a learning library. Decide the bump f
 
 ---
 
+## Renaming, splitting, or merging a lesson
+
+Load this section before renaming a lesson file, splitting one lesson into several, or
+merging several into one - this is where MAJOR-vs-MINOR is easiest to get wrong, because
+two different identifiers are involved and only one of them is this repo's stable
+contract.
+
+**ID vs. URL - they are not the same guarantee.**
+- The concept **ID** (`<subject-slug>/<NN>`) is the stable, canonical identifier.
+  `prerequisites`, in-prose cross-references, and `CATALOG.md` all resolve by ID. Keeping
+  the ID unchanged during a rename/split keeps all of that working - this is why ID
+  stability is a repo-wide non-negotiable (see `AGENTS.md`).
+- The lesson's **filename/`slug`** is a *different*, weaker identifier, and the
+  published website URL is derived from it, not from the ID (`website/build.py` builds
+  `<domain>/<subject>/<NN>-<slug>.html`). **Changing the filename changes the public URL
+  even when the ID is untouched.** Preserving the ID does not save a bookmark to the old
+  page - this is the exact gap that broke `prompting-context-engineering/09`'s URL in
+  `v1.2.0` despite its ID staying `09` throughout the split.
+- Consequence for versioning: a rename/split that keeps the ID stable is **not
+  automatically MINOR**. It is MINOR for the repo's own internal-reference contract, but
+  it is a breaking change for anyone who bookmarked or linked the old published URL. Both
+  facts have to be evaluated, not just the first one.
+
+**Check whether the project has real external usage before deciding the bump.**
+Do not guess. Run:
+```
+gh repo view iarechaga/oh-my-learning --json stargazerCount,forkCount \
+  -q '.stargazerCount, .forkCount'
+```
+- If stars and forks are effectively zero (the maintainer's own activity aside) and there
+  is no other evidence of external readers (no issues/PRs from other accounts, no
+  reported broken links), a URL-breaking rename **may still ship as MINOR**, exactly as
+  decided for `v1.2.0` - state that reasoning explicitly in the CHANGELOG entry (see
+  below) so it's an auditable decision, not a silent one.
+- The moment that check shows real external usage - nonzero forks from accounts other
+  than `iarechaga`, a meaningful star count, inbound links, or any report of a broken
+  page - **this exception is gone.** From that point on, a published-URL-breaking rename
+  requires either a MAJOR bump or a mandatory redirect (see procedure below) before it
+  ships; do not fall back on "nobody probably has this bookmarked" once there is evidence
+  someone might.
+- This check has no fixed threshold to hit forever - re-run it every time this situation
+  comes up, don't rely on a past answer.
+
+**Procedure for a rename/split/merge that changes a lesson's filename:**
+1. **Warn the human before renaming, not after.** State plainly that the published URL
+   will change, what the old and new URLs are, and run the traction check above so they
+   decide with real information - do not rename first and disclose the URL break in the
+   report.
+2. **Preserve the concept ID** whenever the concept is continuous with what existed
+   before (a split of one lesson into several keeps the ID on the piece that's the
+   closest continuation; a genuinely new concept gets a new, appended ID instead - see
+   `repository-model.md`'s ID-stability rule).
+3. **Add a redirect from the old URL to the new one.** See `LEGACY_URL_REDIRECTS` in
+   `website/build.py` for the current (manual, one-entry-per-rename) mechanism - add an
+   entry there before the release ships, every time, not only when usage numbers look
+   high enough to bother.
+4. **Document it under `Restructured`** in `CHANGELOG.md` with the path/URL change called
+   out explicitly, even when the ID itself didn't change - see the
+   [CHANGELOG.md format](#changelogmd-format) rule below that already requires this for
+   ID/slug/path changes.
+
+**Prevention: prefer a new lesson over renaming an existing one.**
+When a new lesson would serve just as well as renaming/splitting an existing one -
+e.g. the old content stays valid and a genuinely new angle is what's actually being
+added - add the new lesson under the next available ID instead of touching the existing
+file. This sidesteps the whole MAJOR/MINOR/redirect question, keeps every existing URL
+alive, and costs nothing but one more ID. Reach for a rename/split only when the old
+content is actually wrong, thin, or in the wrong place - not merely to make the index
+read better.
+
+---
+
 ## CHANGELOG.md format
 
 Follow **[Keep a Changelog](https://keepachangelog.com/en/1.1.0/)** conventions, with

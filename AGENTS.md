@@ -51,6 +51,10 @@ maintainer of all progress records. The human is the learner.
   whether work belongs on `main`, read [agent-docs/git-policy.md](agent-docs/git-policy.md).
 - Before cutting a release, writing a `CHANGELOG.md` entry, choosing a version number, or
   tagging, read [agent-docs/release-policy.md](agent-docs/release-policy.md).
+- Before renaming a lesson file, splitting one lesson into several, or merging several
+  into one, read [agent-docs/release-policy.md](agent-docs/release-policy.md)'s
+  "Renaming, splitting, or merging a lesson" section - preserving a concept ID does not
+  by itself preserve the lesson's published URL.
 - Before changing the website generator, templates, or build process, or when adding
   lessons and wondering whether the site needs updating, read
   [agent-docs/website.md](agent-docs/website.md).

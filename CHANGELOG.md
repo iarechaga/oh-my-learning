@@ -14,6 +14,20 @@ this file.
 
 ## [Unreleased]
 
+### Added
+
+- **Permanent agent rules for renaming, splitting, or merging a lesson** -
+  `agent-docs/release-policy.md` gained a section codifying what the `v1.2.0` retrieval
+  split had to resolve ad hoc: the concept ID is the stable, canonical identifier, but
+  the published lesson URL is derived from the filename/slug and breaks on rename even
+  when the ID is preserved; a concrete `gh repo view` check for whether the project has
+  real external usage (forks/stars/reports) yet, which determines whether a
+  URL-breaking rename can still ship as MINOR or requires MAJOR/a mandatory redirect;
+  the required procedure (warn the human before renaming, preserve the ID, add a
+  redirect, document under `Restructured` with the path change called out); and a
+  preventive rule to add a new lesson instead of renaming an existing one whenever
+  either would serve. `AGENTS.md` wired with a trigger.
+
 ## [1.2.0] - 2026-08-23
 
 Six new lessons and one restructuring across `agentic-engineering`, plus two rounds of
