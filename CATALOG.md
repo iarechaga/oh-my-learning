@@ -2,20 +2,20 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**680 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**682 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 9 subjects, 71 lessons
+- [Agentic Engineering](#agentic-engineering) - 9 subjects, 73 lessons
   - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
   - [Security, Cost, and Production Operations](#agent-security-and-operations) - 8 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
-  - [Landscape Snapshot](#landscape-snapshot) - 7 lessons
+  - [Landscape Snapshot](#landscape-snapshot) - 8 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
   - [Multi-Agent Systems & Orchestration](#multi-agent-orchestration) - 7 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
-  - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 8 lessons
+  - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 9 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
   - [Building Microservices](#building-microservices) - 17 lessons
   - [Designing Data-Intensive Applications (DDIA)](#ddia) - 16 lessons
@@ -142,7 +142,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 <a id="landscape-snapshot"></a>
 ### Landscape Snapshot
 
-7 lessons - [subject index](agentic-engineering/landscape-snapshot/README.md)
+8 lessons - [subject index](agentic-engineering/landscape-snapshot/README.md)
 
 | # | Concept | Seniority | Lesson |
 | - | ------- | --------- | ------ |
@@ -153,6 +153,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 05 | Model Capability Tiers and Pricing Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/05-model-capability-tiers-and-pricing-today.md) |
 | 06 | Skill and Instruction File Formats Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/06-skill-and-instruction-file-formats-today.md) |
 | 07 | Where to Track What Changed: Staying Current After This Domain Ages | staff | [lesson](agentic-engineering/landscape-snapshot/lessons/07-where-to-track-what-changed.md) |
+| 08 | Computer Use Products Today | mid | [lesson](agentic-engineering/landscape-snapshot/lessons/08-computer-use-products-today.md) |
 
 <a id="model-context-protocol"></a>
 ### Model Context Protocol & Agent Interoperability
@@ -205,7 +206,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 <a id="tool-use-agentic-loop"></a>
 ### Tool Use & the Agentic Loop
 
-8 lessons - [subject index](agentic-engineering/tool-use-agentic-loop/README.md)
+9 lessons - [subject index](agentic-engineering/tool-use-agentic-loop/README.md)
 
 | # | Concept | Seniority | Lesson |
 | - | ------- | --------- | ------ |
@@ -217,6 +218,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 06 | Stateless vs Stateful Tool Execution and Retries | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/06-stateless-vs-stateful-tool-execution.md) |
 | 07 | Designing for Recoverable Failure: Idempotency, Timeouts, and Retry Budgets | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/07-designing-for-recoverable-failure.md) |
 | 08 | When to Stop: Termination Conditions and Runaway-Loop Prevention | staff | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/08-when-to-stop.md) |
+| 09 | Computer Use: Screen-Based Perception and Action as a Tool Modality | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/09-computer-use-as-a-tool-modality.md) |
 
 ---
 

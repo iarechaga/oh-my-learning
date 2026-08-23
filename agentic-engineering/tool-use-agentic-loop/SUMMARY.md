@@ -2,7 +2,7 @@
 
 A comprehensive recap of this subject, concept by concept.
 
-**Progress note:** all 8 lessons are `drafted`; none have been discussed yet, so
+**Progress note:** all 9 lessons are `drafted`; none have been discussed yet, so
 mastery is pending across the board and no weak spots are recorded. This summary will
 gain depth (especially on the concepts you find hard) as discussions happen - the
 "Focus areas" section at the bottom will fill in from discussion records.
@@ -57,6 +57,11 @@ See the progress table in [README.md](README.md). Reading order is top to bottom
   no-progress detection, confidence self-assessment, and human checkpoints each catch
   a different failure, and staff-level judgment is choosing which combination to
   compose for a task's blast radius. ([lesson](lessons/08-when-to-stop.md))
+- **[tool-use-agentic-loop/09] Computer use** - a structurally different tool modality
+  from function calling: perception through a screenshot or accessibility-tree read,
+  action through a synthesized click/keystroke/drag, and grounding (mapping semantic
+  intent to an actual screen location) as the new hard problem this modality
+  introduces. ([lesson](lessons/09-computer-use-as-a-tool-modality.md))
 
 ## Focus areas
 

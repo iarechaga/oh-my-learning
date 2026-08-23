@@ -373,8 +373,8 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 2. Tool Use & the Agentic Loop
 
-- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
-- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, and recoverable failure/termination design.
+- **Status:** 9/9 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
+- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, recoverable failure/termination design, and computer use as a screen-based tool modality.
 - **Read:** [progress table](agentic-engineering/tool-use-agentic-loop/README.md) - [subject summary](agentic-engineering/tool-use-agentic-loop/SUMMARY.md).
 
 ### 3. Instruction & Context Design
@@ -415,8 +415,8 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 9. Landscape Snapshot
 
-- **Status:** 7/7 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (mid->staff). **Perishable by design** - lessons 01-06 tagged `next_review: 2026-11`; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
-- **Covers:** today's coding-agent products, orchestration frameworks, interoperability protocols beyond MCP, benchmarks/leaderboards, model pricing tiers, skill/instruction file formats, and how to keep tracking what changed after this domain ages.
+- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (mid->staff). **Perishable by design** - lessons 01-06 and 08 tagged `next_review: 2026-11`; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
+- **Covers:** today's coding-agent products, orchestration frameworks, interoperability protocols beyond MCP, benchmarks/leaderboards, model pricing tiers, skill/instruction file formats, computer use products, and how to keep tracking what changed after this domain ages.
 - **Read:** [progress table](agentic-engineering/landscape-snapshot/README.md) - [subject summary](agentic-engineering/landscape-snapshot/SUMMARY.md).
 
 **`agentic-engineering` is now fully authored: 9/9 subjects, 71/71 lessons.**

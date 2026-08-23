@@ -2,7 +2,7 @@
 
 A comprehensive recap of this subject, concept by concept.
 
-**Progress note:** all 7 lessons are `drafted`; none have been discussed yet, so
+**Progress note:** all 8 lessons are `drafted`; none have been discussed yet, so
 mastery is pending across the board and no weak spots are recorded. This summary will
 gain depth (especially on the concepts you find hard) as discussions happen - the
 "Focus areas" section at the bottom will fill in from discussion records.
@@ -47,6 +47,11 @@ lesson 07 is durable methodology. See the progress table in [README.md](README.m
   what changed - primary sources over secondary aggregators, evaluating source
   reliability, and a sustainable review cadence.
   ([lesson](lessons/07-where-to-track-what-changed.md))
+- **[landscape-snapshot/08] Computer use products today** - all three frontier labs
+  ship it (Anthropic's Computer Use and Browser Use tools, OpenAI's ChatGPT Agent mode,
+  Google's Gemini computer-use capability), plus three open-source frameworks (Browser
+  Use, Stagehand, Skyvern) - the current instances of the durable modality taught in
+  `tool-use-agentic-loop/09`. ([lesson](lessons/08-computer-use-products-today.md))
 
 ## Focus areas
 

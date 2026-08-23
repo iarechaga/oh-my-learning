@@ -14,6 +14,21 @@ this file.
 
 ## [Unreleased]
 
+### Added
+
+- **Computer use as a tool modality** - a new durable lesson,
+  `tool-use-agentic-loop/09`, covers screen-based perception (screenshot or
+  accessibility-tree reads) and synthesized action (clicks, keystrokes, drags) as a
+  structurally different tool modality from function calling, with grounding
+  (mapping semantic intent to an actual screen location) as its defining hard
+  problem. Its perishable companion, `landscape-snapshot/08`, surveys current
+  offerings (Anthropic's Computer Use and Browser Use tools, OpenAI's ChatGPT Agent
+  mode, Google's Gemini computer-use capability, and open-source Browser Use/
+  Stagehand/Skyvern), tagged `next_review: 2026-11`, with a pricing discrepancy
+  flagged explicitly rather than silently resolved. `tool-use-agentic-loop` and
+  `landscape-snapshot` `SUMMARY.md` files, the domain README, root `README.md`/
+  `SUMMARY.md`, and `CATALOG.md` updated (682 lessons, 54 subjects, 9 domains).
+
 ### Deepened
 
 - **`instruction-and-context-design/11` (Choosing the Right Primitive) completed** -

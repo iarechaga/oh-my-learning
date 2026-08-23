@@ -32,9 +32,12 @@ are ordered by dependency, so top-to-bottom is a sensible reading order.
 | 06  | Stateless vs stateful tool execution and retries | senior | drafted | — | — | [lesson](lessons/06-stateless-vs-stateful-tool-execution.md) | — |
 | 07  | Designing for recoverable failure: idempotency, timeouts, and retry budgets | senior | drafted | — | — | [lesson](lessons/07-designing-for-recoverable-failure.md) | — |
 | 08  | When to stop: termination conditions and runaway-loop prevention | staff | drafted | — | — | [lesson](lessons/08-when-to-stop.md) | — |
+| 09  | Computer use: screen-based perception and action as a tool modality | senior | drafted | — | — | [lesson](lessons/09-computer-use-as-a-tool-modality.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent
 discussion's verdict; empty until first discussed.
 **Cross-subject prerequisites**: `01` and `03` build on
-`prompting-context-engineering/03`; named per lesson in front matter and prose.
+`prompting-context-engineering/03`; `09` builds on `01` and `02`, and its current
+product examples are tracked in `landscape-snapshot/08`. All named per lesson in front
+matter and prose.

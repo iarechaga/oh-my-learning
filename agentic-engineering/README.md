@@ -46,16 +46,16 @@ Ordered by dependency - each subject builds on the ones before it.
 | Subject | What it is | Lessons | Index |
 | --- | --- | --- | --- |
 | **[Prompting & Context Engineering](prompting-context-engineering/README.md)** | How a model actually consumes what you give it, advanced prompting and its limits, and the context window as a finite, manageable budget. | 10 | [prompting-context-engineering/README.md](prompting-context-engineering/README.md) |
-| **[Tool Use & the Agentic Loop](tool-use-agentic-loop/README.md)** | Function calling mechanics, the plan-act-observe loop, harness vs scaffolding, and knowing when to stop. | 8 | [tool-use-agentic-loop/README.md](tool-use-agentic-loop/README.md) |
+| **[Tool Use & the Agentic Loop](tool-use-agentic-loop/README.md)** | Function calling mechanics, the plan-act-observe loop, harness vs scaffolding, computer use, and knowing when to stop. | 9 | [tool-use-agentic-loop/README.md](tool-use-agentic-loop/README.md) |
 | **[Instruction & Context Design](instruction-and-context-design/README.md)** | Engineering the scaffolding around an agent: structured metadata, always-loaded vs on-demand instructions, trigger design, and authoring skills, hooks, and commands. | 11 | [instruction-and-context-design/README.md](instruction-and-context-design/README.md) |
 | **[Model Context Protocol & Agent Interoperability](model-context-protocol/README.md)** | Why MCP exists, its architecture and primitives, building and trusting servers, and the wider interoperability picture. | 7 | [model-context-protocol/README.md](model-context-protocol/README.md) |
 | **[Multi-Agent Systems & Orchestration](multi-agent-orchestration/README.md)** | Subagents, orchestration patterns, coordination mechanisms, and the failure modes unique to multiple agents working together. | 7 | [multi-agent-orchestration/README.md](multi-agent-orchestration/README.md) |
 | **[Agentic Software Engineering](agentic-software-engineering/README.md)** | Where coding agents run, vibe coding vs controlled use, spec-driven development, and reviewing agent-generated work. | 6 | [agentic-software-engineering/README.md](agentic-software-engineering/README.md) |
 | **[Evaluating & Testing Agentic Systems](agent-evaluation/README.md)** | Why agent evaluation isn't unit testing, benchmarks, LLM-as-judge, trajectory evaluation, and regression testing for agent behavior. | 7 | [agent-evaluation/README.md](agent-evaluation/README.md) |
 | **[Security, Cost, and Production Operations](agent-security-and-operations/README.md)** | The prompt-injection threat model, least-privilege permissions, token economics, observability, and operating agent fleets. | 8 | [agent-security-and-operations/README.md](agent-security-and-operations/README.md) |
-| **[Landscape Snapshot](landscape-snapshot/README.md)** | A dated survey of today's coding agents, orchestration frameworks, protocols, benchmarks, model pricing, and file formats - the one subject in this domain built to be rewritten, not preserved. | 7 | [landscape-snapshot/README.md](landscape-snapshot/README.md) |
+| **[Landscape Snapshot](landscape-snapshot/README.md)** | A dated survey of today's coding agents, orchestration frameworks, protocols, benchmarks, model pricing, and file formats - the one subject in this domain built to be rewritten, not preserved. | 8 | [landscape-snapshot/README.md](landscape-snapshot/README.md) |
 
-**All nine subjects are fully authored (71/71 lessons).** Eight teach durable
+**All nine subjects are fully authored, now 73/73 lessons after two post-1.1.0 additions.** Eight teach durable
 capability; the ninth, `landscape-snapshot`, is the dated, perishable snapshot
 described above - reviewed quarterly rather than left to age silently.
 

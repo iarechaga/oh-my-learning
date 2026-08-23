@@ -41,6 +41,7 @@ changelog.
 | 05  | Model capability tiers and pricing today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/05-model-capability-tiers-and-pricing-today.md) | — |
 | 06  | Skill and instruction file formats today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/06-skill-and-instruction-file-formats-today.md) | — |
 | 07  | Where to track what changed: staying current after this domain ages | staff | durable | n/a | drafted | — | — | [lesson](lessons/07-where-to-track-what-changed.md) | — |
+| 08  | Computer use products today | mid | perishable | 2026-11 | drafted | — | — | [lesson](lessons/08-computer-use-products-today.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent
@@ -51,5 +52,5 @@ time; `01`-`06` were authored 2026-08-10, so their first review is due 2026-11. 
 **Cross-subject prerequisites**: `01`->`agentic-software-engineering/01`,
 `02`->`multi-agent-orchestration/05`, `03`->`model-context-protocol/03`,
 `04`->`agent-evaluation/02`, `05`->`agent-security-and-operations/05`,
-`06`->`instruction-and-context-design/08`. All named per lesson in front matter and
-prose.
+`06`->`instruction-and-context-design/08`, `08`->`tool-use-agentic-loop/09`. All named
+per lesson in front matter and prose.
