@@ -367,14 +367,14 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 1. Prompting & Context Engineering
 
-- **Status:** 10/10 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (junior->staff).
-- **Covers:** how LLMs process a prompt, core prompting techniques and their limits, structured output, and context engineering as a discipline (the budget, its failure modes, retrieval/memory, and compaction for long-horizon tasks).
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (junior->staff).
+- **Covers:** how LLMs process a prompt, core prompting techniques and their limits, structured output, context engineering as a discipline (the budget, its failure modes, retrieval vs. long context, and compaction for long-horizon tasks), and persistent memory architecture (types, benchmarks, cross-session identity, staleness).
 - **Read:** [progress table](agentic-engineering/prompting-context-engineering/README.md) - [subject summary](agentic-engineering/prompting-context-engineering/SUMMARY.md).
 
 ### 2. Tool Use & the Agentic Loop
 
-- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
-- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, and recoverable failure/termination design.
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
+- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, recoverable failure/termination design, computer use as a screen-based tool modality, code execution as a tool-invocation pattern, and continuous/always-on agent execution.
 - **Read:** [progress table](agentic-engineering/tool-use-agentic-loop/README.md) - [subject summary](agentic-engineering/tool-use-agentic-loop/SUMMARY.md).
 
 ### 3. Instruction & Context Design
@@ -409,14 +409,14 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 8. Security, Cost, and Production Operations
 
-- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->principal).
-- **Covers:** the prompt-injection threat model and defenses, least-privilege permissions, human-in-the-loop gates, token economics, observability, failure modes/verification, and operating agent fleets.
+- **Status:** 9/9 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->principal).
+- **Covers:** the prompt-injection threat model and defenses, least-privilege permissions, human-in-the-loop gates, token economics, observability, failure modes/verification, agent identity as a distinct principal, and operating agent fleets.
 - **Read:** [progress table](agentic-engineering/agent-security-and-operations/README.md) - [subject summary](agentic-engineering/agent-security-and-operations/SUMMARY.md).
 
 ### 9. Landscape Snapshot
 
-- **Status:** 7/7 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (mid->staff). **Perishable by design** - lessons 01-06 tagged `next_review: 2026-11`; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
-- **Covers:** today's coding-agent products, orchestration frameworks, interoperability protocols beyond MCP, benchmarks/leaderboards, model pricing tiers, skill/instruction file formats, and how to keep tracking what changed after this domain ages.
+- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** mid (mid->staff). **Perishable by design** - lessons 01-06 and 08 tagged `next_review: 2026-11`; see [agent-docs/fast-moving-domain-policy.md](agent-docs/fast-moving-domain-policy.md).
+- **Covers:** today's coding-agent products, orchestration frameworks, interoperability protocols beyond MCP, benchmarks/leaderboards, model pricing tiers, skill/instruction file formats, computer use products, and how to keep tracking what changed after this domain ages.
 - **Read:** [progress table](agentic-engineering/landscape-snapshot/README.md) - [subject summary](agentic-engineering/landscape-snapshot/SUMMARY.md).
 
 **`agentic-engineering` is now fully authored: 9/9 subjects, 71/71 lessons.**

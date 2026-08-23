@@ -32,9 +32,16 @@ are ordered by dependency, so top-to-bottom is a sensible reading order.
 | 06  | Stateless vs stateful tool execution and retries | senior | drafted | — | — | [lesson](lessons/06-stateless-vs-stateful-tool-execution.md) | — |
 | 07  | Designing for recoverable failure: idempotency, timeouts, and retry budgets | senior | drafted | — | — | [lesson](lessons/07-designing-for-recoverable-failure.md) | — |
 | 08  | When to stop: termination conditions and runaway-loop prevention | staff | drafted | — | — | [lesson](lessons/08-when-to-stop.md) | — |
+| 09  | Computer use: screen-based perception and action as a tool modality | senior | drafted | — | — | [lesson](lessons/09-computer-use-as-a-tool-modality.md) | — |
+| 10  | Code execution as a tool-invocation pattern | senior | drafted | — | — | [lesson](lessons/10-code-execution-as-a-tool-pattern.md) | — |
+| 11  | Continuous agent execution: pausing, resuming, and operating without a session boundary | staff | drafted | — | — | [lesson](lessons/11-continuous-agent-execution.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent
 discussion's verdict; empty until first discussed.
 **Cross-subject prerequisites**: `01` and `03` build on
-`prompting-context-engineering/03`; named per lesson in front matter and prose.
+`prompting-context-engineering/03`; `09` builds on `01` and `02`, and its current
+product examples are tracked in `landscape-snapshot/08`; `10` builds on `02` and `04`; `11` builds on `08` and
+`prompting-context-engineering/10`, and optionally cross-references
+`agent-security-and-operations/05` in prose (not a prerequisite - the lesson stands
+on its own without it). All named per lesson in front matter and prose.

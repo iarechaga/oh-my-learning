@@ -2,7 +2,7 @@
 
 A comprehensive recap of this subject, concept by concept.
 
-**Progress note:** all 8 lessons are `drafted`; none have been discussed yet, so
+**Progress note:** all 11 lessons are `drafted`; none have been discussed yet, so
 mastery is pending across the board and no weak spots are recorded. This summary will
 gain depth (especially on the concepts you find hard) as discussions happen - the
 "Focus areas" section at the bottom will fill in from discussion records.
@@ -57,6 +57,22 @@ See the progress table in [README.md](README.md). Reading order is top to bottom
   no-progress detection, confidence self-assessment, and human checkpoints each catch
   a different failure, and staff-level judgment is choosing which combination to
   compose for a task's blast radius. ([lesson](lessons/08-when-to-stop.md))
+- **[tool-use-agentic-loop/09] Computer use** - a structurally different tool modality
+  from function calling: perception through a screenshot or accessibility-tree read,
+  action through a synthesized click/keystroke/drag, and grounding (mapping semantic
+  intent to an actual screen location) as the new hard problem this modality
+  introduces. ([lesson](lessons/09-computer-use-as-a-tool-modality.md))
+- **[tool-use-agentic-loop/10] Code execution as a tool-invocation pattern** - the
+  model writes a short program that calls several tools itself inside a sandbox,
+  returning only a distilled result instead of every intermediate result - documented
+  cases report 98-99.9% token reductions for the same task, at the cost of a real
+  sandbox and debugging shifting into model-written glue code.
+  ([lesson](lessons/10-code-execution-as-a-tool-pattern.md))
+- **[tool-use-agentic-loop/11] Continuous agent execution** - agents designed to watch
+  for events or wait days for a response must survive a restart or dropped connection
+  without losing their place, which needs durable state, an explicit resumption
+  mechanism, and an idle-time cost model - three requirements a request-response loop
+  never has. ([lesson](lessons/11-continuous-agent-execution.md))
 
 ## Focus areas
 

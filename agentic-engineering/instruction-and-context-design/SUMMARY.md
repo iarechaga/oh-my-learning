@@ -65,10 +65,10 @@ See the progress table in [README.md](README.md). Reading order is top to bottom
   the choice is really about what must never fail to happen versus what should happen
   when it makes sense.
   ([lesson](lessons/10-hooks-commands-and-deterministic-levers.md))
-- **[instruction-and-context-design/11] Choosing the right primitive** - a decision
-  framework across instructions, tools, skills, hooks, and commands, deliberately
-  incomplete: MCP servers and subagents still have to be weighed in once those
-  subjects exist. ([lesson](lessons/11-choosing-the-right-primitive.md))
+- **[instruction-and-context-design/11] Choosing the right primitive** - a complete
+  decision framework across all seven primitives this domain teaches: instructions,
+  tools, skills, hooks, commands, external capability servers, and delegated
+  sub-agents. ([lesson](lessons/11-choosing-the-right-primitive.md))
 
 ## Focus areas
 

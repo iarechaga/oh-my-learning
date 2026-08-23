@@ -14,6 +14,126 @@ this file.
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-08-23
+
+Six new lessons and one restructuring across `agentic-engineering`, plus two rounds of
+self-review (a currency-workflow fix and an internal-coherence audit) since `v1.1.0`.
+The domain now stands at 9 subjects, 77 lessons.
+
+### Added
+
+- **Computer use as a tool modality** - a new durable lesson,
+  `tool-use-agentic-loop/09`, covers screen-based perception (screenshot or
+  accessibility-tree reads) and synthesized action (clicks, keystrokes, drags) as a
+  structurally different tool modality from function calling, with grounding
+  (mapping semantic intent to an actual screen location) as its defining hard
+  problem. Its perishable companion, `landscape-snapshot/08`, surveys current
+  offerings (Anthropic's Computer Use and Browser Use tools, OpenAI's ChatGPT Agent
+  mode, Google's Gemini computer-use capability, and open-source Browser Use/
+  Stagehand/Skyvern), tagged `next_review: 2026-11`, with a pricing discrepancy
+  flagged explicitly rather than silently resolved. `tool-use-agentic-loop` and
+  `landscape-snapshot` `SUMMARY.md` files, the domain README, root `README.md`/
+  `SUMMARY.md`, and `CATALOG.md` updated (682 lessons, 54 subjects, 9 domains).
+- **Code execution as a tool-invocation pattern** - a new durable lesson,
+  `tool-use-agentic-loop/10`, covers the model writing and running a short sandboxed
+  program that calls several tools itself, returning only a distilled result instead
+  of every intermediate result to the model's context - collapsing N round trips into
+  one. Documented cases report 98-99.9% token reductions for the same underlying task
+  (Anthropic's "Code execution with MCP" and Cloudflare's "Code Mode," cited with real
+  figures, not invented ones), traded against needing a real code sandbox and
+  debugging shifting into model-written glue code. Differentiated explicitly from
+  parallel tool calls (`04`, a latency optimization) and named sandbox
+  vendors/technologies confined to swappable background. `tool-use-agentic-loop`
+  `SUMMARY.md`, the domain README, root `README.md`/`SUMMARY.md`, and `CATALOG.md`
+  updated (684 lessons, 54 subjects, 9 domains).
+- **Continuous agent execution** - a new durable lesson, `tool-use-agentic-loop/11`
+  (the subject's highest-seniority lesson, staff), covers agents designed to run
+  indefinitely across real interruptions - a process restart, a deploy, a days-long
+  wait for a human or a third-party API - rather than stop at the end of one session.
+  Distinct from `08` (deciding when to stop): this is about surviving an involuntary
+  pause. Covers durable state, resumption mechanisms (continuation tokens as one
+  vendor-specific implementation, boxed as swappable), the gap between plain
+  checkpointing and true durable-execution guarantees (crash detection, exactly-once
+  resumption), and the idle-time cost model that a per-task budget doesn't capture.
+  Named platforms (Microsoft Agent Framework, OpenAI, Google ADK) confined to
+  swappable examples. `tool-use-agentic-loop` `SUMMARY.md`, the domain README, root
+  `README.md`/`SUMMARY.md`, and `CATALOG.md` updated (685 lessons, 54 subjects, 9
+  domains).
+- **Agent identity as a distinct security principal** - a new durable lesson,
+  `agent-security-and-operations/09`, establishes that access-control systems tracking
+  only "which human authorized this" cannot distinguish which specific agent acted,
+  and that agent identity - separate from delegated authority and from provenance - is
+  what enables precise revocation, accurate auditing, and bounded blast radius. Grounds
+  the durable claim in the actively-evolving 2026 standards landscape (NIST's AI Agent
+  Standards Initiative, the NCCoE concept paper, OIDC-A, KYA-OS/MCP-I), explicitly
+  framed as dated evidence that this is real infrastructure work, not marketing -
+  no single standard has consolidated, and the lesson says so directly rather than
+  picking a winner. `agent-security-and-operations` `SUMMARY.md`, the domain README,
+  root `README.md`/`SUMMARY.md`, and `CATALOG.md` updated (683 lessons, 54 subjects,
+  9 domains).
+
+### Restructured
+
+- **`prompting-context-engineering/09` split into retrieval and memory architecture,
+  with a filename/URL change (breaking) - concept ID preserved (non-breaking)** - the
+  old combined lesson ("Retrieval and Memory") covered RAG-vs-long-context and
+  persistent memory together, thinly on the memory side; the field's own treatment of
+  agent memory has since matured enough (dedicated benchmarks, a settled type
+  taxonomy, named hard problems) to deserve its own lesson. `09` keeps its concept ID
+  (`prompting-context-engineering/09`, so `prerequisites` and cross-references
+  resolve unchanged) but changes filename/slug from `09-retrieval-and-memory.md` to
+  `09-retrieval-rag-vs-long-context.md` (retitled "Retrieval: RAG vs. Long Context,
+  and When Each Wins") and now covers retrieval only. **This does change the
+  published website URL** for this lesson
+  (`.../prompting-context-engineering/09-retrieval-and-memory.html` ->
+  `.../09-retrieval-rag-vs-long-context.html`); any external bookmark to the old URL
+  from the `v1.1.0` site breaks. New `prompting-context-engineering/11` ("Memory
+  Architecture: Types, Persistence, and Staleness," staff-level capstone) covers the
+  memory-type taxonomy, three current dedicated memory benchmarks (LoCoMo,
+  LongMemEval, BEAM) explained as measuring genuinely different failure surfaces,
+  cross-session identity and staleness (a fact that *was* true vs. one that *never*
+  was) as distinct named problems, and how memory extraction relates to
+  session-scoped compaction (`10`) without repeating it. Zero content duplication
+  between `09` and `11`, verified. `prompting-context-engineering` `SUMMARY.md`, the
+  domain README, root `README.md`/`SUMMARY.md`, and `CATALOG.md` updated (686
+  lessons, 54 subjects, 9 domains).
+
+### Deepened
+
+- **`instruction-and-context-design/11` (Choosing the Right Primitive) completed** -
+  the lesson explicitly flagged itself as incomplete pending `model-context-protocol`
+  and `multi-agent-orchestration`, which now exist. Extended the decision framework
+  from five to seven primitives (adding external capability servers and delegated
+  sub-agents), reworked the worked decision walk to cover both new cases, replaced the
+  "not the final word" section with the actual resolution (how the two new primitives
+  retroactively change earlier answers), and updated the self-check question that
+  previously assumed the reader hadn't studied those subjects yet.
+
+### Fixed
+
+- **Three gaps closed in Workflow V (currency review), found by running it for real** -
+  `agent-docs/fast-moving-domain-policy.md`'s currency-review workflow lacked (1) a
+  step to build a coverage map from existing subject `SUMMARY.md` files before
+  researching gaps, risking duplicate proposals from a run without full authorship
+  context; (2) a way to flag an existing lesson whose *depth* has been outpaced by the
+  field even though nothing in it is factually wrong - a real category distinct from
+  the Current/Outdated/Obsolete verdicts, which judge correctness, not completeness;
+  and (3) any bound on how much research "gap detection" should do. Added a step 0
+  (coverage map), split gap detection into missing-lesson and depth-gap findings as
+  two explicit report categories, and added a one-or-two-searches-per-subject research
+  bound.
+- **Four internal-coherence fixes found by an audit of the six post-1.1.0 additions** -
+  `tool-use-agentic-loop/11` listed `agent-security-and-operations/05` (a subject
+  read much later in the domain's own dependency order) as a hard prerequisite;
+  demoted to an optional in-prose cross-reference, with the prose reworded so the
+  lesson stands on its own without it. `multi-agent-orchestration/01` and
+  `prompting-context-engineering/01` still referenced the pre-split
+  `prompting-context-engineering/09` (retrieval-only after the split) for claims that
+  also cover memory; updated to also cite `prompting-context-engineering/11`.
+  `multi-agent-orchestration/01`'s 4x/15x token-cost figures and
+  `agent-security-and-operations/05`'s 3-10x LLM-call-count figure now cross-reference
+  each other as measuring different axes of cost, not conflicting numbers.
+
 ## [1.1.0] - 2026-08-13
 
 A new domain, `agentic-engineering` - working effectively with LLMs at an advanced
