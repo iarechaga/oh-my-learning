@@ -106,6 +106,17 @@ this file.
   (coverage map), split gap detection into missing-lesson and depth-gap findings as
   two explicit report categories, and added a one-or-two-searches-per-subject research
   bound.
+- **Four internal-coherence fixes found by an audit of the six post-1.1.0 additions** -
+  `tool-use-agentic-loop/11` listed `agent-security-and-operations/05` (a subject
+  read much later in the domain's own dependency order) as a hard prerequisite;
+  demoted to an optional in-prose cross-reference, with the prose reworded so the
+  lesson stands on its own without it. `multi-agent-orchestration/01` and
+  `prompting-context-engineering/01` still referenced the pre-split
+  `prompting-context-engineering/09` (retrieval-only after the split) for claims that
+  also cover memory; updated to also cite `prompting-context-engineering/11`.
+  `multi-agent-orchestration/01`'s 4x/15x token-cost figures and
+  `agent-security-and-operations/05`'s 3-10x LLM-call-count figure now cross-reference
+  each other as measuring different axes of cost, not conflicting numbers.
 
 ## [1.1.0] - 2026-08-13
 

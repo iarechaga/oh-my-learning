@@ -83,7 +83,7 @@ A second, subtler property: even within the window, a model's ability to use inf
 Every technique in the rest of this domain is a response to one of these three mechanics:
 - Because the model only sees tokens, prompt engineering is partly an exercise in token-efficient communication (concise instructions, well-chosen examples) rather than natural-language politeness.
 - Because generation is autoregressive and conditioned on its own prior output, techniques that get the model to "think" through intermediate steps before committing to an answer (chain-of-thought, covered in lesson 04) work by changing what the model is conditioning on when it produces the final answer.
-- Because there is no memory between calls and the context window is finite, the entire second half of this subject - context engineering, retrieval, compaction, sub-agent handoff - exists to manage what gets included in that resent, budget-constrained input on every call.
+- Because there is no memory between calls and the context window is finite, the entire second half of this subject - context engineering, retrieval, memory architecture, compaction, sub-agent handoff - exists to manage what gets included in that resent, budget-constrained input on every call.
 
 ## Pros
 - A precise mental model (predict-the-next-token, no hidden memory, finite window) makes model behavior far more predictable and debuggable than treating the system as a black box with intentions.

@@ -41,6 +41,7 @@ are ordered by dependency, so top-to-bottom is a sensible reading order.
 discussion's verdict; empty until first discussed.
 **Cross-subject prerequisites**: `01` and `03` build on
 `prompting-context-engineering/03`; `09` builds on `01` and `02`, and its current
-product examples are tracked in `landscape-snapshot/08`; `10` builds on `02` and `04`; `11` builds on `08` and cross-links to
-`prompting-context-engineering/10` and `agent-security-and-operations/05`. All named
-per lesson in front matter and prose.
+product examples are tracked in `landscape-snapshot/08`; `10` builds on `02` and `04`; `11` builds on `08` and
+`prompting-context-engineering/10`, and optionally cross-references
+`agent-security-and-operations/05` in prose (not a prerequisite - the lesson stands
+on its own without it). All named per lesson in front matter and prose.
