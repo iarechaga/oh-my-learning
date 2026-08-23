@@ -52,10 +52,10 @@ Ordered by dependency - each subject builds on the ones before it.
 | **[Multi-Agent Systems & Orchestration](multi-agent-orchestration/README.md)** | Subagents, orchestration patterns, coordination mechanisms, and the failure modes unique to multiple agents working together. | 7 | [multi-agent-orchestration/README.md](multi-agent-orchestration/README.md) |
 | **[Agentic Software Engineering](agentic-software-engineering/README.md)** | Where coding agents run, vibe coding vs controlled use, spec-driven development, and reviewing agent-generated work. | 6 | [agentic-software-engineering/README.md](agentic-software-engineering/README.md) |
 | **[Evaluating & Testing Agentic Systems](agent-evaluation/README.md)** | Why agent evaluation isn't unit testing, benchmarks, LLM-as-judge, trajectory evaluation, and regression testing for agent behavior. | 7 | [agent-evaluation/README.md](agent-evaluation/README.md) |
-| **[Security, Cost, and Production Operations](agent-security-and-operations/README.md)** | The prompt-injection threat model, least-privilege permissions, token economics, observability, and operating agent fleets. | 8 | [agent-security-and-operations/README.md](agent-security-and-operations/README.md) |
+| **[Security, Cost, and Production Operations](agent-security-and-operations/README.md)** | The prompt-injection threat model, least-privilege permissions, token economics, observability, agent identity, and operating agent fleets. | 9 | [agent-security-and-operations/README.md](agent-security-and-operations/README.md) |
 | **[Landscape Snapshot](landscape-snapshot/README.md)** | A dated survey of today's coding agents, orchestration frameworks, protocols, benchmarks, model pricing, and file formats - the one subject in this domain built to be rewritten, not preserved. | 8 | [landscape-snapshot/README.md](landscape-snapshot/README.md) |
 
-**All nine subjects are fully authored, now 73/73 lessons after two post-1.1.0 additions.** Eight teach durable
+**All nine subjects are fully authored, now 74/74 lessons after three post-1.1.0 additions.** Eight teach durable
 capability; the ninth, `landscape-snapshot`, is the dated, perishable snapshot
 described above - reviewed quarterly rather than left to age silently.
 

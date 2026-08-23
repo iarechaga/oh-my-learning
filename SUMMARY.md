@@ -409,8 +409,8 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 8. Security, Cost, and Production Operations
 
-- **Status:** 8/8 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->principal).
-- **Covers:** the prompt-injection threat model and defenses, least-privilege permissions, human-in-the-loop gates, token economics, observability, failure modes/verification, and operating agent fleets.
+- **Status:** 9/9 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->principal).
+- **Covers:** the prompt-injection threat model and defenses, least-privilege permissions, human-in-the-loop gates, token economics, observability, failure modes/verification, agent identity as a distinct principal, and operating agent fleets.
 - **Read:** [progress table](agentic-engineering/agent-security-and-operations/README.md) - [subject summary](agentic-engineering/agent-security-and-operations/SUMMARY.md).
 
 ### 9. Landscape Snapshot

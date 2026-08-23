@@ -29,6 +29,19 @@ this file.
   `landscape-snapshot` `SUMMARY.md` files, the domain README, root `README.md`/
   `SUMMARY.md`, and `CATALOG.md` updated (682 lessons, 54 subjects, 9 domains).
 
+- **Agent identity as a distinct security principal** - a new durable lesson,
+  `agent-security-and-operations/09`, establishes that access-control systems tracking
+  only "which human authorized this" cannot distinguish which specific agent acted,
+  and that agent identity - separate from delegated authority and from provenance - is
+  what enables precise revocation, accurate auditing, and bounded blast radius. Grounds
+  the durable claim in the actively-evolving 2026 standards landscape (NIST's AI Agent
+  Standards Initiative, the NCCoE concept paper, OIDC-A, KYA-OS/MCP-I), explicitly
+  framed as dated evidence that this is real infrastructure work, not marketing -
+  no single standard has consolidated, and the lesson says so directly rather than
+  picking a winner. `agent-security-and-operations` `SUMMARY.md`, the domain README,
+  root `README.md`/`SUMMARY.md`, and `CATALOG.md` updated (683 lessons, 54 subjects,
+  9 domains).
+
 ### Deepened
 
 - **`instruction-and-context-design/11` (Choosing the Right Primitive) completed** -

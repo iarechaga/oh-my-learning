@@ -2,7 +2,7 @@
 
 A comprehensive recap of this subject, concept by concept.
 
-**Progress note:** all 8 lessons are `drafted`; none have been discussed yet, so
+**Progress note:** all 9 lessons are `drafted`; none have been discussed yet, so
 mastery is pending across the board and no weak spots are recorded. This summary will
 gain depth (especially on the concepts you find hard) as discussions happen - the
 "Focus areas" section at the bottom will fill in from discussion records.
@@ -48,6 +48,11 @@ See the progress table in [README.md](README.md). Reading order is top to bottom
   delegation depth, and the principal-level job is making an explicit, defensible,
   org-communicated bet about where accountability lives.
   ([lesson](lessons/08-operating-agent-fleets.md))
+- **[agent-security-and-operations/09] Agent identity** - most access-control systems
+  track "which human authorized this" but collapse "which specific agent actually did
+  it" into the same fact; treating the agent as its own principal, distinct from the
+  human and from the authority it was delegated, is what enables precise revocation
+  and bounded blast radius. ([lesson](lessons/09-agent-identity.md))
 
 ## Focus areas
 

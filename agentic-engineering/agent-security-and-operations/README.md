@@ -36,6 +36,7 @@ live in `landscape-snapshot/05`. See
 | 06  | Observability for agents: tracing, logging, and debugging non-determinism | staff | drafted | — | — | [lesson](lessons/06-observability-for-agents.md) | — |
 | 07  | Failure modes and verification: hallucination, silent drift, and trust calibration | staff | drafted | — | — | [lesson](lessons/07-failure-modes-and-verification.md) | — |
 | 08  | Operating agent fleets: governance, incident response, and organizational risk | principal | drafted | — | — | [lesson](lessons/08-operating-agent-fleets.md) | — |
+| 09  | Agent identity: distinguishing who is acting from who authorized it | senior | drafted | — | — | [lesson](lessons/09-agent-identity.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent
@@ -43,5 +44,6 @@ discussion's verdict; empty until first discussed.
 **Cross-subject prerequisites**: `01` builds on `tool-use-agentic-loop/03`; `03` builds
 on `model-context-protocol/05`; `05` builds on `tool-use-agentic-loop/06`; `06` builds
 on `multi-agent-orchestration/04` and cross-links to `devops-reliability/sre`; `07`
-builds on `agent-evaluation/04`; `08` cross-links to `technical-leadership/staff-engineer`.
-All named per lesson in front matter and prose.
+builds on `agent-evaluation/04`; `08` cross-links to `technical-leadership/staff-engineer`;
+`09` builds on `03` and cross-links to `model-context-protocol/05` and
+`multi-agent-orchestration/07`. All named per lesson in front matter and prose.

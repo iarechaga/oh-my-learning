@@ -2,13 +2,13 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**682 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**683 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 9 subjects, 73 lessons
+- [Agentic Engineering](#agentic-engineering) - 9 subjects, 74 lessons
   - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
-  - [Security, Cost, and Production Operations](#agent-security-and-operations) - 8 lessons
+  - [Security, Cost, and Production Operations](#agent-security-and-operations) - 9 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
   - [Instruction & Context Design](#instruction-and-context-design) - 11 lessons
   - [Landscape Snapshot](#landscape-snapshot) - 8 lessons
@@ -93,7 +93,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 <a id="agent-security-and-operations"></a>
 ### Security, Cost, and Production Operations
 
-8 lessons - [subject index](agentic-engineering/agent-security-and-operations/README.md)
+9 lessons - [subject index](agentic-engineering/agent-security-and-operations/README.md)
 
 | # | Concept | Seniority | Lesson |
 | - | ------- | --------- | ------ |
@@ -105,6 +105,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 06 | Observability for Agents: Tracing, Logging, and Debugging Non-Determinism | staff | [lesson](agentic-engineering/agent-security-and-operations/lessons/06-observability-for-agents.md) |
 | 07 | Failure Modes and Verification: Hallucination, Silent Drift, and Trust Calibration | staff | [lesson](agentic-engineering/agent-security-and-operations/lessons/07-failure-modes-and-verification.md) |
 | 08 | Operating Agent Fleets: Governance, Incident Response, and Organizational Risk | principal | [lesson](agentic-engineering/agent-security-and-operations/lessons/08-operating-agent-fleets.md) |
+| 09 | Agent Identity: Distinguishing Who Is Acting from Who Authorized It | senior | [lesson](agentic-engineering/agent-security-and-operations/lessons/09-agent-identity.md) |
 
 <a id="agentic-software-engineering"></a>
 ### Agentic Software Engineering
