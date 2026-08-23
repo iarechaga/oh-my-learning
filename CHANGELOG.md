@@ -93,6 +93,20 @@ this file.
   retroactively change earlier answers), and updated the self-check question that
   previously assumed the reader hadn't studied those subjects yet.
 
+### Fixed
+
+- **Three gaps closed in Workflow V (currency review), found by running it for real** -
+  `agent-docs/fast-moving-domain-policy.md`'s currency-review workflow lacked (1) a
+  step to build a coverage map from existing subject `SUMMARY.md` files before
+  researching gaps, risking duplicate proposals from a run without full authorship
+  context; (2) a way to flag an existing lesson whose *depth* has been outpaced by the
+  field even though nothing in it is factually wrong - a real category distinct from
+  the Current/Outdated/Obsolete verdicts, which judge correctness, not completeness;
+  and (3) any bound on how much research "gap detection" should do. Added a step 0
+  (coverage map), split gap detection into missing-lesson and depth-gap findings as
+  two explicit report categories, and added a one-or-two-searches-per-subject research
+  bound.
+
 ## [1.1.0] - 2026-08-13
 
 A new domain, `agentic-engineering` - working effectively with LLMs at an advanced

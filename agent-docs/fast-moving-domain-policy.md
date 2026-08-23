@@ -140,6 +140,13 @@ verdict, never a hedge.
 
 **Scope, cheapest check first:**
 
+0. **Build a coverage map before researching anything.** Read every in-scope subject's
+   `SUMMARY.md` (cheap - no web research, just local files) to know what concepts
+   already exist before triaging currency or researching gaps. Skipping this step is
+   the single most likely way this workflow wastes its own research budget: without a
+   coverage map, gap detection can "discover" something the domain already teaches and
+   propose a duplicate, and a run without full authorship context has no other way to
+   know what's already covered.
 1. **Triage from front matter alone - no web research yet.** Read every lesson's
    `durability`/`next_review` in the requested scope (whole domain, one subject, or one
    lesson). Any `perishable` lesson with `next_review` in the past is automatically
@@ -179,13 +186,30 @@ you checked, the same way lesson `source:` fields do.
   side can be trusted). State this explicitly, name what you searched for, and why it
   didn't resolve - never default to "current" because verification was inconclusive.
 
-**Gap detection - separate from verifying what exists.** Independently research what
-has emerged in the field (new products, protocols, benchmarks, or genuinely new
-capability categories) that no existing lesson covers. For each finding, propose where
-it belongs: a new `landscape-snapshot` entry (a new instance of an existing durable
-concept), a new lesson in an existing durable subject (a genuinely new *durable*
-concept, not just a new product), or - rarely - a new subject, if nothing existing
-fits. Proposals only; this workflow never mass-authors on its own, same as Workflow A.
+**Gap detection - separate from verifying what exists, and covers two distinct kinds of
+gap.** Independently research the field and compare findings against the coverage map
+from step 0. Two categories, not one:
+
+- **Missing-lesson gaps** - a genuinely new product, protocol, benchmark, or capability
+  category that no existing lesson covers at all. For each finding, propose where it
+  belongs: a new `landscape-snapshot` entry (a new instance of an existing durable
+  concept), a new lesson in an existing durable subject (a genuinely new *durable*
+  concept, not just a new product), or - rarely - a new subject, if nothing existing
+  fits.
+- **Depth gaps** - an existing lesson that isn't *wrong* (so it doesn't earn an
+  Outdated or Obsolete verdict above) but whose treatment has been outpaced by how far
+  the field has gone since it was written - e.g. a lesson that mentions a concept only
+  in passing where the field has since developed dedicated taxonomy, benchmarks, or
+  named sub-problems around it. This is a real, distinct category, not a softer version
+  of Outdated: the lesson's claims are all still true, there's just more to teach now
+  than there was when it was authored. For each finding, propose whether the fix is
+  expanding the existing lesson in place or splitting it into two.
+
+Both categories are proposals only; this workflow never mass-authors on its own, same
+as Workflow A. Keep the research itself bounded: for a full-domain audit, one or two
+targeted searches per durable subject is enough to surface a real gap if one exists -
+open-ended research with no stopping point defeats the purpose of a workflow meant to
+be invoked on demand.
 
 **Report - the actionable output:**
 
@@ -193,7 +217,8 @@ fits. Proposals only; this workflow never mass-authors on its own, same as Workf
 - An ordered action list grouped by verdict: Obsolete (rewrite) first, Outdated
   (edit) next, Unable to determine (needs a human or a deeper follow-up) after that,
   Current (no action) last.
-- Gap-detection proposals, each with a suggested location and a one-line reason.
+- Gap-detection proposals, each with a suggested location and a one-line reason -
+  missing-lesson and depth-gap findings listed as two separate groups, not merged.
 - **`next_review` updates** - bump to `created`/today plus one quarter *only* for
   lessons verdicted Current. Leave `next_review` untouched (still overdue and visibly
   stale) for Outdated, Obsolete, and Unable-to-determine lessons until someone actually
