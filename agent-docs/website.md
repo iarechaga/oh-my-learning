@@ -124,3 +124,15 @@ Two things matter if you touch the generator or the workflow:
 - **`website/dist/` stays out of git.** The workflow builds it fresh in CI and uploads
   it as a Pages artifact (`actions/upload-pages-artifact`); it is never committed, on
   `main` or anywhere else.
+- **A lesson's URL is derived from its filename/`slug`, not its stable concept `id`.**
+  Renaming a lesson's file (e.g. splitting or retitling a concept while keeping the same
+  `id`) silently changes its published URL and breaks any external bookmark to the old
+  one - the `id` staying stable does not save the URL. `LEGACY_URL_REDIRECTS` in
+  `website/build.py` is a manual, one-entry-per-rename stopgap (writes a meta-refresh
+  page at the old path) added when this first bit `prompting-context-engineering/09`'s
+  split (`v1.2.0`) - it does not scale and has to be remembered by hand on every future
+  rename. **Future improvement, not yet implemented:** derive lesson URLs from the
+  stable `id` instead of the mutable filename slug, or generate a redirect
+  automatically whenever a lesson's `slug`/filename changes between builds (e.g. by
+  diffing against the previous `manifest.json`), so this stops being something an agent
+  has to remember to do by hand.

@@ -133,6 +133,14 @@ The domain now stands at 9 subjects, 77 lessons.
   `multi-agent-orchestration/01`'s 4x/15x token-cost figures and
   `agent-security-and-operations/05`'s 3-10x LLM-call-count figure now cross-reference
   each other as measuring different axes of cost, not conflicting numbers.
+- **Redirect for the retrieval-lesson URL broken by the split above** - the
+  `prompting-context-engineering/09` split changed its published filename/URL (see
+  Restructured above); `website/build.py` now emits a one-off meta-refresh redirect
+  page at the old URL (`LEGACY_URL_REDIRECTS`) so the `v1.1.0`-published link resolves
+  to the new page instead of 404ing. Documented as a manual, non-scaling stopgap in
+  [`agent-docs/website.md`](agent-docs/website.md), which also records the underlying
+  fix (deriving lesson URLs from the stable `id` instead of the mutable filename slug)
+  as unimplemented future work.
 
 ## [1.1.0] - 2026-08-13
 

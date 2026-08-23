@@ -34,6 +34,16 @@ TEMPLATE_DIR = WEBSITE_ROOT / "templates"
 STATIC_DIR = WEBSITE_ROOT / "static"
 DIST_DIR = WEBSITE_ROOT / "dist"
 
+# One-off redirects for lesson pages whose filename/slug changed after a prior
+# release already published the old URL. Keyed and valued by path relative to
+# DIST_DIR, e.g. "agentic-engineering/prompting-context-engineering/09-old.html".
+# Not a general mechanism - see agent-docs/website.md for why.
+LEGACY_URL_REDIRECTS: dict[str, str] = {
+    "agentic-engineering/prompting-context-engineering/09-retrieval-and-memory.html": (
+        "agentic-engineering/prompting-context-engineering/09-retrieval-rag-vs-long-context.html"
+    ),
+}
+
 # Site-root path all generated links are prefixed with. Always starts and ends with "/".
 # Defaults to "/" for local serving; a GitHub Pages *project* site (served from
 # https://<user>.github.io/<repo>/, not a custom domain or a <user>.github.io user site)
@@ -465,6 +475,20 @@ def build_site(base_path: str = "/") -> None:
                     ),
                     encoding="utf-8",
                 )
+
+    # Legacy URL redirects (see LEGACY_URL_REDIRECTS above).
+    for old_rel, new_rel in LEGACY_URL_REDIRECTS.items():
+        old_path = DIST_DIR / old_rel
+        new_url = f"{BASE_PATH}{new_rel}"
+        old_path.parent.mkdir(parents=True, exist_ok=True)
+        old_path.write_text(
+            "<!doctype html><html><head><meta charset=\"utf-8\">"
+            f"<meta http-equiv=\"refresh\" content=\"0; url={new_url}\">"
+            f"<link rel=\"canonical\" href=\"{new_url}\">"
+            "<title>Page moved</title></head>"
+            f"<body>This lesson moved to <a href=\"{new_url}\">{new_url}</a>.</body></html>",
+            encoding="utf-8",
+        )
 
     print(f"Built site with {sum(len(d.subjects) for d in domains)} subjects and "
           f"{sum(len(s.lessons) for d in domains for s in d.subjects)} lessons.")
