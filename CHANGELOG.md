@@ -40,6 +40,19 @@ this file.
   vendors/technologies confined to swappable background. `tool-use-agentic-loop`
   `SUMMARY.md`, the domain README, root `README.md`/`SUMMARY.md`, and `CATALOG.md`
   updated (684 lessons, 54 subjects, 9 domains).
+- **Continuous agent execution** - a new durable lesson, `tool-use-agentic-loop/11`
+  (the subject's highest-seniority lesson, staff), covers agents designed to run
+  indefinitely across real interruptions - a process restart, a deploy, a days-long
+  wait for a human or a third-party API - rather than stop at the end of one session.
+  Distinct from `08` (deciding when to stop): this is about surviving an involuntary
+  pause. Covers durable state, resumption mechanisms (continuation tokens as one
+  vendor-specific implementation, boxed as swappable), the gap between plain
+  checkpointing and true durable-execution guarantees (crash detection, exactly-once
+  resumption), and the idle-time cost model that a per-task budget doesn't capture.
+  Named platforms (Microsoft Agent Framework, OpenAI, Google ADK) confined to
+  swappable examples. `tool-use-agentic-loop` `SUMMARY.md`, the domain README, root
+  `README.md`/`SUMMARY.md`, and `CATALOG.md` updated (685 lessons, 54 subjects, 9
+  domains).
 - **Agent identity as a distinct security principal** - a new durable lesson,
   `agent-security-and-operations/09`, establishes that access-control systems tracking
   only "which human authorized this" cannot distinguish which specific agent acted,

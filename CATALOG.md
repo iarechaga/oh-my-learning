@@ -2,11 +2,11 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**684 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**685 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 9 subjects, 75 lessons
+- [Agentic Engineering](#agentic-engineering) - 9 subjects, 76 lessons
   - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
   - [Security, Cost, and Production Operations](#agent-security-and-operations) - 9 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
@@ -15,7 +15,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
   - [Multi-Agent Systems & Orchestration](#multi-agent-orchestration) - 7 lessons
   - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
-  - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 10 lessons
+  - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 11 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
   - [Building Microservices](#building-microservices) - 17 lessons
   - [Designing Data-Intensive Applications (DDIA)](#ddia) - 16 lessons
@@ -207,7 +207,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 <a id="tool-use-agentic-loop"></a>
 ### Tool Use & the Agentic Loop
 
-10 lessons - [subject index](agentic-engineering/tool-use-agentic-loop/README.md)
+11 lessons - [subject index](agentic-engineering/tool-use-agentic-loop/README.md)
 
 | # | Concept | Seniority | Lesson |
 | - | ------- | --------- | ------ |
@@ -221,6 +221,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 08 | When to Stop: Termination Conditions and Runaway-Loop Prevention | staff | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/08-when-to-stop.md) |
 | 09 | Computer Use: Screen-Based Perception and Action as a Tool Modality | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/09-computer-use-as-a-tool-modality.md) |
 | 10 | Code Execution as a Tool-Invocation Pattern | senior | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/10-code-execution-as-a-tool-pattern.md) |
+| 11 | Continuous Agent Execution: Pausing, Resuming, and Operating Without a Session Boundary | staff | [lesson](agentic-engineering/tool-use-agentic-loop/lessons/11-continuous-agent-execution.md) |
 
 ---
 

@@ -373,8 +373,8 @@ is an explicitly dated survey of today's concrete products and reviewed quarterl
 
 ### 2. Tool Use & the Agentic Loop
 
-- **Status:** 10/10 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
-- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, recoverable failure/termination design, computer use as a screen-based tool modality, and code execution as a tool-invocation pattern.
+- **Status:** 11/11 lessons authored (all `drafted`); not yet discussed, mastery pending. **Seniority baseline:** senior (mid->staff).
+- **Covers:** function-calling mechanics, designing tool schemas, the plan-act-observe loop, parallel vs sequential calls, harness vs scaffolding, recoverable failure/termination design, computer use as a screen-based tool modality, code execution as a tool-invocation pattern, and continuous/always-on agent execution.
 - **Read:** [progress table](agentic-engineering/tool-use-agentic-loop/README.md) - [subject summary](agentic-engineering/tool-use-agentic-loop/SUMMARY.md).
 
 ### 3. Instruction & Context Design
