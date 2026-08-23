@@ -28,7 +28,18 @@ this file.
   flagged explicitly rather than silently resolved. `tool-use-agentic-loop` and
   `landscape-snapshot` `SUMMARY.md` files, the domain README, root `README.md`/
   `SUMMARY.md`, and `CATALOG.md` updated (682 lessons, 54 subjects, 9 domains).
-
+- **Code execution as a tool-invocation pattern** - a new durable lesson,
+  `tool-use-agentic-loop/10`, covers the model writing and running a short sandboxed
+  program that calls several tools itself, returning only a distilled result instead
+  of every intermediate result to the model's context - collapsing N round trips into
+  one. Documented cases report 98-99.9% token reductions for the same underlying task
+  (Anthropic's "Code execution with MCP" and Cloudflare's "Code Mode," cited with real
+  figures, not invented ones), traded against needing a real code sandbox and
+  debugging shifting into model-written glue code. Differentiated explicitly from
+  parallel tool calls (`04`, a latency optimization) and named sandbox
+  vendors/technologies confined to swappable background. `tool-use-agentic-loop`
+  `SUMMARY.md`, the domain README, root `README.md`/`SUMMARY.md`, and `CATALOG.md`
+  updated (684 lessons, 54 subjects, 9 domains).
 - **Agent identity as a distinct security principal** - a new durable lesson,
   `agent-security-and-operations/09`, establishes that access-control systems tracking
   only "which human authorized this" cannot distinguish which specific agent acted,
