@@ -68,6 +68,22 @@ this file.
 
 ### Deepened
 
+- **`prompting-context-engineering/09` split into retrieval and memory architecture**
+  - the old combined lesson ("Retrieval and Memory") covered RAG-vs-long-context and
+  persistent memory together, thinly on the memory side; the field's own treatment of
+  agent memory has since matured enough (dedicated benchmarks, a settled type
+  taxonomy, named hard problems) to deserve its own lesson. `09` (same concept ID, new
+  slug/filename: `09-retrieval-rag-vs-long-context.md`, retitled "Retrieval: RAG vs.
+  Long Context, and When Each Wins") now covers retrieval only. New
+  `prompting-context-engineering/11` ("Memory Architecture: Types, Persistence, and
+  Staleness," staff-level capstone) covers the memory-type taxonomy, three current
+  dedicated memory benchmarks (LoCoMo, LongMemEval, BEAM) explained as measuring
+  genuinely different failure surfaces, cross-session identity and staleness (a fact
+  that *was* true vs. one that *never* was) as distinct named problems, and how memory
+  extraction relates to session-scoped compaction (`10`) without repeating it. Zero
+  content duplication between `09` and `11`, verified. `prompting-context-engineering`
+  `SUMMARY.md`, the domain README, root `README.md`/`SUMMARY.md`, and `CATALOG.md`
+  updated (686 lessons, 54 subjects, 9 domains).
 - **`instruction-and-context-design/11` (Choosing the Right Primitive) completed** -
   the lesson explicitly flagged itself as incomplete pending `model-context-protocol`
   and `multi-agent-orchestration`, which now exist. Extended the decision framework

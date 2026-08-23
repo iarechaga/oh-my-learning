@@ -34,8 +34,9 @@ has no `landscape-snapshot`-style perishable content of its own. See
 | 06  | The limits of prompting: why some failures aren't prompt problems | senior | drafted | — | — | [lesson](lessons/06-limits-of-prompting.md) | — |
 | 07  | Context engineering as a discipline: the context window as a budget | senior | drafted | — | — | [lesson](lessons/07-context-engineering-as-a-discipline.md) | — |
 | 08  | Context failure modes: poisoning, distraction, and confusion | senior | drafted | — | — | [lesson](lessons/08-context-failure-modes.md) | — |
-| 09  | Retrieval and memory: RAG, long-term memory, and when to use which | senior | drafted | — | — | [lesson](lessons/09-retrieval-and-memory.md) | — |
+| 09  | Retrieval: RAG vs. long context, and when each wins | senior | drafted | — | — | [lesson](lessons/09-retrieval-rag-vs-long-context.md) | — |
 | 10  | Context compaction and sub-agent handoff for long-horizon tasks | staff | drafted | — | — | [lesson](lessons/10-context-compaction-and-handoff.md) | — |
+| 11  | Memory architecture: types, persistence, and staleness | staff | drafted | — | — | [lesson](lessons/11-memory-architecture.md) | — |
 
 **Status:** `drafted` (lesson written) · `discussed` (at least one discussion held).
 **Mastery:** `solid` · `partial` · `shaky` · `not-yet` - set from the most recent

@@ -3,7 +3,7 @@
 A comprehensive recap of the foundation subject of the `agentic-engineering` domain,
 concept by concept.
 
-**Progress note:** all 10 lessons are `drafted`; none have been discussed yet, so
+**Progress note:** all 11 lessons are `drafted`; none have been discussed yet, so
 mastery is pending across the board and no weak spots are recorded. This summary will
 gain depth (especially on the concepts you find hard) as discussions happen - the
 "Focus areas" section at the bottom will fill in from discussion records.
@@ -55,16 +55,22 @@ See the progress table in [README.md](README.md). Reading order is top to bottom
   window fails through at least four nameable mechanisms - poisoning, distraction,
   confusion, and clash - and naming the mechanism tells you which fix applies.
   ([lesson](lessons/08-context-failure-modes.md))
-- **[prompting-context-engineering/09] Retrieval and memory** - retrieval (fetching
-  exactly what's relevant right now) and persistent memory (carrying facts across
-  sessions) are related but distinct answers to a context window that's small relative
-  to everything an agent might need to know; neither retrieval nor a bigger window is
-  a universal winner. ([lesson](lessons/09-retrieval-and-memory.md))
+- **[prompting-context-engineering/09] Retrieval: RAG vs. long context** - retrieval
+  (fetching exactly what's relevant right now, from a large external corpus) and plain
+  long-context stuffing are two ways to give an agent more knowledge than fits in its
+  window; neither is a universal winner - it depends on corpus size, dynamism,
+  precision needs, and cost. ([lesson](lessons/09-retrieval-rag-vs-long-context.md))
 - **[prompting-context-engineering/10] Context compaction and sub-agent handoff** - two
   structurally different escape hatches for a long-running task approaching its context
   budget: compacting the current thread's history, or handing remaining work to a fresh
   context. They are not interchangeable defaults, and choosing wrong quietly caps how
   far a long-horizon task can go. ([lesson](lessons/10-context-compaction-and-handoff.md))
+- **[prompting-context-engineering/11] Memory architecture** - persistent memory
+  (what an agent carries across sessions) is its own architectural component, with a
+  type taxonomy, dedicated evaluation benchmarks, and named hard failure modes -
+  cross-session identity and staleness (a fact that WAS true, not one that never was) -
+  distinct from retrieval over an external corpus and from within-session compaction.
+  ([lesson](lessons/11-memory-architecture.md))
 
 ## Focus areas
 

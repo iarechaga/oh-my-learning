@@ -2,11 +2,11 @@
 
 Generated from lesson front matter by `scripts/generate_catalog.py` - do **not** hand-edit. Regenerate with `python3 scripts/generate_catalog.py` after adding, renumbering, or removing lessons, subjects, or domains, and commit the result in the same change. See [agent-docs/repository-model.md](agent-docs/repository-model.md).
 
-**685 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
+**686 lessons across 9 domains, 54 subjects.** Every row links straight to the lesson; `status`/`mastery` are personal (per learner branch/fork), so this catalog only shows what exists, not who has studied it.
 
 ## Contents
 
-- [Agentic Engineering](#agentic-engineering) - 9 subjects, 76 lessons
+- [Agentic Engineering](#agentic-engineering) - 9 subjects, 77 lessons
   - [Evaluating & Testing Agentic Systems](#agent-evaluation) - 7 lessons
   - [Security, Cost, and Production Operations](#agent-security-and-operations) - 9 lessons
   - [Agentic Software Engineering](#agentic-software-engineering) - 6 lessons
@@ -14,7 +14,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
   - [Landscape Snapshot](#landscape-snapshot) - 8 lessons
   - [Model Context Protocol & Agent Interoperability](#model-context-protocol) - 7 lessons
   - [Multi-Agent Systems & Orchestration](#multi-agent-orchestration) - 7 lessons
-  - [Prompting & Context Engineering](#prompting-context-engineering) - 10 lessons
+  - [Prompting & Context Engineering](#prompting-context-engineering) - 11 lessons
   - [Tool Use & the Agentic Loop](#tool-use-agentic-loop) - 11 lessons
 - [Architecture](#architecture) - 10 subjects, 152 lessons
   - [Building Microservices](#building-microservices) - 17 lessons
@@ -189,7 +189,7 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 <a id="prompting-context-engineering"></a>
 ### Prompting & Context Engineering
 
-10 lessons - [subject index](agentic-engineering/prompting-context-engineering/README.md)
+11 lessons - [subject index](agentic-engineering/prompting-context-engineering/README.md)
 
 | # | Concept | Seniority | Lesson |
 | - | ------- | --------- | ------ |
@@ -201,8 +201,9 @@ Generated from lesson front matter by `scripts/generate_catalog.py` - do **not**
 | 06 | The Limits of Prompting: Why Some Failures Aren't Prompt Problems | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/06-limits-of-prompting.md) |
 | 07 | Context Engineering as a Discipline: The Context Window as a Budget | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/07-context-engineering-as-a-discipline.md) |
 | 08 | Context Failure Modes: Poisoning, Distraction, and Confusion | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/08-context-failure-modes.md) |
-| 09 | Retrieval and Memory: RAG, Long-Term Memory, and When to Use Which | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/09-retrieval-and-memory.md) |
+| 09 | Retrieval: RAG vs. Long Context, and When Each Wins | senior | [lesson](agentic-engineering/prompting-context-engineering/lessons/09-retrieval-rag-vs-long-context.md) |
 | 10 | Context Compaction and Sub-Agent Handoff for Long-Horizon Tasks | staff | [lesson](agentic-engineering/prompting-context-engineering/lessons/10-context-compaction-and-handoff.md) |
+| 11 | Memory Architecture: Types, Persistence, and Staleness | staff | [lesson](agentic-engineering/prompting-context-engineering/lessons/11-memory-architecture.md) |
 
 <a id="tool-use-agentic-loop"></a>
 ### Tool Use & the Agentic Loop
